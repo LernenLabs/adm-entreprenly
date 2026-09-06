@@ -75,7 +75,7 @@ Proyecto
 
 # Project Report Collaboration Insights
 
-Por completar.
+En esta sección se presenta la evidencia de colaboración del equipo Lernen Labs durante el desarrollo del AV1. La elaboración del informe se llevó a cabo de forma distribuida a través del repositorio **adm-entreprenly** bajo la organización https://github.com/LernenLabs, donde todos los miembros del equipo participaron activamente mediante commits y revisiones a lo largo del desarrollo de esta entrega.
 
 ## Repositorio del Informe
 
