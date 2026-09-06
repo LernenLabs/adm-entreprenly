@@ -28,8 +28,6 @@ Proyecto
 
 #### Entreprenly
 
-#
-
 #### Integrantes
 
 |   Código   | Apellidos y Nombres                |
