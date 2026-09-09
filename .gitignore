@@ -1,0 +1,10 @@
+# PDF output
+dist/
+
+# Temporary render and LaTeX files
+tmp/pdfs/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz

@@ -1,3 +1,4 @@
+<!-- pdf:omit-start -->
 <div align="center">
 
 ---
@@ -32,46 +33,82 @@ Proyecto
 
 #### Integrantes
 
-|   Código   | Apellidos y Nombres                |
-| :--------: | :--------------------------------- |
-| u202416151 | Chavez Carrasco, Lionel Abraham    |
-| u20241a972 | Palma De Los Santos, Elynor Mikela |
-| u202418655 | Laura Acosta, Victor Jhosef        |
-| u20161a304 | Villon Amez, Enrique Manuel        |
-| u202120836 | Gonza Morales, Anderson            |
+<p>
+<strong>Código&emsp;&emsp;Apellidos y Nombres</strong><br>
+u202416151&emsp;Chavez Carrasco, Lionel Abraham<br>
+u20241a972&emsp;Palma De Los Santos, Elynor Mikela<br>
+u202418655&emsp;Laura Acosta, Victor Jhosef<br>
+u20161a304&emsp;Villon Amez, Enrique Manuel<br>
+u202120836&emsp;Gonza Morales, Anderson
+</p>
 
-#### Período 202602
+#### Período 202620
 
 #### Setiembre 2026
 
 ---
 
 </div>
+<!-- pdf:omit-end -->
+
+<!-- pdf:only
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+\singlespacing
+\setlength{\parindent}{0pt}
+\vspace*{0.15in}
+\includegraphics[width=0.75in]{docs/images/upc_logo.png}\par
+\vspace{0.25cm}
+Universidad Peruana de Ciencias Aplicadas\par
+\vspace{0.22cm}
+Carrera de Ingeniería de Software\par
+\vspace{0.65cm}
+\textbf{1ACC0238}\par
+\vspace{0.20cm}
+\textbf{Aplicaciones para Dispositivos Móviles}\par
+\vspace{0.32cm}
+NRC\par
+\vspace{0.15cm}
+\textbf{13975}\par
+\vspace{0.32cm}
+\textbf{Informe del Trabajo Final}\par
+\vspace{0.30cm}
+Docente\par
+\vspace{0.15cm}
+\textbf{David Gerardo Quevedo Velasco}\par
+\vspace{0.48cm}
+Equipo\par
+\vspace{0.15cm}
+\textbf{Lernen Labs}\par
+\vspace{0.25cm}
+Proyecto\par
+\vspace{0.15cm}
+\textbf{Entreprenly}\par
+\vspace{0.48cm}
+Integrantes\par
+\vspace{0.15cm}
+\begin{tabular}{@{}ll@{}}
+\textbf{Código} & \textbf{Apellidos y Nombres} \\
+u202416151 & Chavez Carrasco, Lionel Abraham \\
+u20241a972 & Palma De Los Santos, Elynor Mikela \\
+u202418655 & Laura Acosta, Victor Jhosef \\
+u20161a304 & Villon Amez, Enrique Manuel \\
+u202120836 & Gonza Morales, Anderson
+\end{tabular}\par
+\vfill
+\textbf{Período 202620}\par
+\vspace{0.20cm}
+\textbf{Setiembre 2026}\par
+\end{titlepage}
+\onehalfspacing
+-->
 
 # Registro de Versiones del Informe
 
-<div align="center">
-
-<table>
-  <thead>
-    <tr>
-      <th align="center">Versión</th>
-      <th align="center">Fecha</th>
-      <th align="center">Autor</th>
-      <th align="center">Descripción de modificación</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">AV1</td>
-      <td align="center">Por completar.</td>
-      <td align="center">Todos los integrantes</td>
-      <td align="justify">Por completar.</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
+| Versión | Fecha | Autor | Descripción de modificación |
+| :---: | :---: | :---: | --- |
+| AV1 | Por completar. | Todos los integrantes | Por completar. |
 
 # Project Report Collaboration Insights
 
@@ -87,37 +124,15 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
 
 #### Distribución de contribuciones por integrante (AV1)
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Integrante</th>
-      <th align="left">Secciones principales del informe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">Chavez Carrasco, Lionel Abraham</td>
-      <td align="left">1.1 Startup Profile · 1.3 Segmentos objetivo · 2.4 Requirements Specification · Bounded Context: Profile · Integración y revisión final de los capítulos I y II</td>
-    </tr>
-    <tr>
-      <td align="left">Palma De Los Santos, Elynor Mikela</td>
-      <td align="left">1.2 Solution Profile · 1.2.1 Antecedentes y problemática · 1.2.2 Lean UX Process · Bounded Context: Chatbot</td>
-    </tr>
-    <tr>
-      <td align="left">Laura Acosta, Victor Jhosef</td>
-      <td align="left">2.1 Competidores · 2.2.1 Diseño de entrevistas · Coordinación de la sección de entrevistas · Bounded Context: Inventory</td>
-    </tr>
-    <tr>
-      <td align="left">Villon Amez, Enrique Manuel</td>
-      <td align="left">2.2.2 Registro de entrevistas · 2.2.3 Análisis de entrevistas · 2.3.1–2.3.4 Artefactos de Needfinding · Bounded Context: Subscription</td>
-    </tr>
-    <tr>
-      <td align="left">Gonza Morales, Anderson</td>
-      <td align="left">2.3.5 Big Picture EventStorming · 2.3.6 Ubiquitous Language · 2.5 Strategic-Level Domain-Driven Design · Bounded Context: Sales</td>
-    </tr>
-  </tbody>
-</table>
+| Integrante | Secciones principales del informe |
+| --- | --- |
+| Chavez Carrasco, Lionel Abraham | 1.1 Startup Profile · 1.3 Segmentos objetivo · 2.4 Requirements Specification · Bounded Context: Profile · Integración y revisión final de los capítulos I y II |
+| Palma De Los Santos, Elynor Mikela | 1.2 Solution Profile · 1.2.1 Antecedentes y problemática · 1.2.2 Lean UX Process · Bounded Context: Chatbot |
+| Laura Acosta, Victor Jhosef | 2.1 Competidores · 2.2.1 Diseño de entrevistas · Coordinación de la sección de entrevistas · Bounded Context: Inventory |
+| Villon Amez, Enrique Manuel | 2.2.2 Registro de entrevistas · 2.2.3 Análisis de entrevistas · 2.3.1–2.3.4 Artefactos de Needfinding · Bounded Context: Subscription |
+| Gonza Morales, Anderson | 2.3.5 Big Picture EventStorming · 2.3.6 Ubiquitous Language · 2.5 Strategic-Level Domain-Driven Design · Bounded Context: Sales |
 
+<!-- pdf:omit-start -->
 # Contenido
 
 - [Student Outcome](#student-outcome)
@@ -219,50 +234,17 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
 - [Bibliografía](docs/bibliografia.md)
 - [Anexos](docs/anexos.md)
 
+<!-- pdf:omit-end -->
+
+<!-- pdf:only
+\tableofcontents
+-->
+
 # Student Outcome
 
 En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 7 (ABET – EAC), el cual se define como la capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas. La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Criterio específico</th>
-      <th align="left">Acciones realizadas</th>
-      <th align="left">Conclusiones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top" width="15%">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
-      <td valign="top" width="50%">
-        <strong>Chavez Carrasco, Lionel Abraham</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Palma De Los Santos, Elynor Mikela</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Laura Acosta, Victor Jhosef</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Villon Amez, Enrique Manuel</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Gonza Morales, Anderson</strong><br>
-        <em>AV1:</em> Por completar.
-      </td>
-      <td valign="top" width="35%">Por completar.</td>
-    </tr>
-    <tr>
-      <td valign="top">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.</td>
-      <td valign="top">
-        <strong>Chavez Carrasco, Lionel Abraham</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Palma De Los Santos, Elynor Mikela</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Laura Acosta, Victor Jhosef</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Villon Amez, Enrique Manuel</strong><br>
-        <em>AV1:</em> Por completar.<br><br>
-        <strong>Gonza Morales, Anderson</strong><br>
-        <em>AV1:</em> Por completar.
-      </td>
-      <td valign="top">Por completar.</td>
-    </tr>
-  </tbody>
-</table>
+| Criterio específico | Acciones realizadas | Conclusiones |
+| --- | --- | --- |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Por completar.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Por completar.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
