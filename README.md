@@ -106,9 +106,17 @@ u202120836 & Gonza Morales, Anderson
 
 # Registro de Versiones del Informe
 
-| Versión | Fecha | Autor | Descripción de modificación |
-| :---: | :---: | :---: | --- |
-| AV1 | Por completar. | Todos los integrantes | Por completar. |
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Versión</th><th>Fecha</th><th>Autor</th><th>Descripción de modificación</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">AV1</td>
+    <td style="vertical-align:middle; text-align:center;">Setiembre 2026</td>
+    <td style="vertical-align:middle; text-align:center;">Todos los integrantes</td>
+    <td>Versión AV1: 2.1 Competidores, 2.2 Entrevistas y 2.6.2 Bounded Context Inventory (Domain, Application, Interface e Infrastructure Layers con diagramas de componentes, clases y base de datos y diccionario BC4).</td>
+  </tr>
+</table>
 
 # Project Report Collaboration Insights
 
@@ -246,5 +254,5 @@ En esta sección se detallan las actividades realizadas en el trabajo final y el
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | --- | --- | --- |
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Por completar.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Por completar.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Documentó el Bounded Context Inventory (2.6.2) en sus capas Domain, Application, Interface e Infrastructure, con agregados UnitProduct, WeightProduct, UnitLot y WeightLot, commands, queries y events, servicio StockAlertGenerator y persistencia en PostgreSQL con aislamiento por owner_email; normalizó los diagramas de componentes, clases y base de datos y el diccionario BC4.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Aplicó DDD táctico y Clean Architecture al modelar inventario por unidad y por peso con validación de balanza inteligente, interiorizando la separación en jerarquías paralelas para evitar nulos y la exposición del catálogo mediante InventoryContextFacade.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
