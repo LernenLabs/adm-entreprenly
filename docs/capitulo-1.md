@@ -4,9 +4,9 @@
 
 ### 1.1.1. Descripción de la Startup
 
-LernenLabs es una startup tecnológica fundada por estudiantes de Ingeniería de Software, orientada a digitalizar la gestión operativa de los pequeños y medianos negocios de retail en Latinoamérica a través de una aplicación móvil. El foco está en los emprendedores que operan minimarkets, tiendas de barrio y puestos de mercado que, pese a su relevancia económica y social, siguen dependiendo de procesos manuales poco eficientes para administrar su día a día.
+Lernen Labs es una startup tecnológica fundada por estudiantes de Ingeniería de Software, orientada a digitalizar la gestión operativa de los pequeños y medianos negocios de retail en Latinoamérica a través de una aplicación móvil. El foco está en los emprendedores que operan minimarkets, tiendas de barrio y puestos de mercado que, pese a su relevancia económica y social, siguen dependiendo de procesos manuales poco eficientes para administrar su día a día.
 
-Hemos identificado que la mayoría de estos comerciantes no cuenta con herramientas tecnológicas accesibles ni adaptadas a su realidad, lo que ocasiona pérdidas por productos vencidos, desabastecimiento que pasa inadvertido y ventas sin ningún tipo de trazabilidad. Ante esta problemática, LernenLabs nace con la misión de cerrar esa brecha tecnológica mediante una app móvil simple, asequible e intuitiva, que permita a estos negocios operar con mayor control, eficiencia y rentabilidad.
+Hemos identificado que la mayoría de estos comerciantes no cuenta con herramientas tecnológicas accesibles ni adaptadas a su realidad, lo que ocasiona pérdidas por productos vencidos, desabastecimiento que pasa inadvertido y ventas sin ningún tipo de trazabilidad. Ante esta problemática, Lernen Labs nace con la misión de cerrar esa brecha tecnológica mediante una app móvil simple, asequible e intuitiva, que permita a estos negocios operar con mayor control, eficiencia y rentabilidad.
 
 <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <tr>
@@ -37,9 +37,9 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
   <tbody>
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
-      <td align="center" valign="middle">"NOMBRE"</td>
+      <td align="center" valign="middle">Chavez Carrasco, Lionel Abraham</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/capitulo1/.png" alt="NOMBRE" width="250">
+        <img src="./images/capitulo1/foto_lionel.png" alt="Lionel Abraham" width="250">
       </td>
     </tr>
     <tr>
@@ -48,12 +48,12 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Código</strong></td>
-      <td align="center" valign="middle">"CODIGO"</td>
+      <td align="center" valign="middle">U202416151</td>
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
       <td colspan="2">
-      POR COMPLETAR
+        Soy Lionel Abraham Chavez Carrasco, estudiante de Ingeniería de Software con experiencia en desarrollo de videojuegos 2D en Unity y en aplicaciones. Me caracterizo por ser responsable, creativo y adaptable, con interés en la innovación tecnológica, el diseño de interfaces (UX/UI) y la gestión ágil de proyectos. Me motiva aplicar mis conocimientos en proyectos que integren tecnología y creatividad, aportando valor real a los usuarios y fortaleciendo mis competencias como futuro ingeniero de software.
       </td>
     </tr>
   </tbody>
@@ -87,9 +87,9 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
   <tbody>
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
-      <td align="center" valign="middle">"NOMBRE"</td>
+      <td align="center" valign="middle">Laura Acosta, Victor Jhosef</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/capitulo1/.png" alt="NOMBRE" width="250">
+        Fotografía por completar.
       </td>
     </tr>
     <tr>
@@ -98,12 +98,12 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Código</strong></td>
-      <td align="center" valign="middle">"CODIGO"</td>
+      <td align="center" valign="middle">U202418655</td>
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
       <td colspan="2">
-      POR COMPLETAR
+        Por completar.
       </td>
     </tr>
   </tbody>
@@ -112,9 +112,9 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
   <tbody>
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
-      <td align="center" valign="middle">"NOMBRE"</td>
+      <td align="center" valign="middle">Villon Amez, Enrique Manuel</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/capitulo1/.png" alt="NOMBRE" width="250">
+        Fotografía por completar.
       </td>
     </tr>
     <tr>
@@ -123,12 +123,12 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Código</strong></td>
-      <td align="center" valign="middle">"CODIGO"</td>
+      <td align="center" valign="middle">U20161A304</td>
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
       <td colspan="2">
-      POR COMPLETAR
+        Por completar.
       </td>
     </tr>
   </tbody>
@@ -137,9 +137,9 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
   <tbody>
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
-      <td align="center" valign="middle">Chavez Carrasco, Lionel Abraham</td>
+      <td align="center" valign="middle">Gonza Morales, Anderson</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/capitulo1/foto_lionel.png" alt="Lionel Abraham" width="250">
+        Fotografía por completar.
       </td>
     </tr>
     <tr>
@@ -148,12 +148,12 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Código</strong></td>
-      <td align="center" valign="middle">U202416151</td>
+      <td align="center" valign="middle">U202120836</td>
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
       <td colspan="2">
-        Soy Lionel Abraham Chavez Carrasco, estudiante de Ingeniería de Software (quinto ciclo) con experiencia en desarrollo de videojuegos 2D en Unity (C++/C#) y en aplicaciones. Me caracterizo por ser responsable, creativo y adaptable, con interés en la innovación tecnológica, el diseño de interfaces (UX/UI) y la gestión ágil de proyectos. Me motiva aplicar mis conocimientos en proyectos que integren tecnología y creatividad, aportando valor real a los usuarios y fortaleciendo mis competencias como futuro ingeniero de software.
+        Por completar.
       </td>
     </tr>
   </tbody>
@@ -438,7 +438,7 @@ Nuestro usuario central es el comerciante minorista que necesita mantener el con
 En el retail de productos perecederos en el Perú existe un “caos multicanal”, donde los pedidos por WhatsApp y las ventas presenciales no están sincronizados, generando:
 
 - Errores de stock
-- Pérdidas por productos malogrados 
+- Pérdidas por productos malogrados.
 - Procesos lentos y poco eficientes
 
 ### Segmento objetivo 1: Comerciantes (Dueños de Minimarkets/Mercados)
@@ -453,14 +453,12 @@ Entreprenly está enfocado en negocios minoristas de alimentos frescos que requi
 #### B. Aspectos geográficos:
 - Nacionalidad: peruana.
 - Zona geográfica: concentrada mayormente en Lima Metropolitana y capitales de región.
-- Cobertura: Mercados pequeños y MiniMarkets.
+- Cobertura: mercados pequeños y minimarkets.
 
 #### C. Aspectos psicográficos:
-- Motivaciones: Reducir pérdidas de productos,
-tener control en tiempo real del stock y mejorar la eficiencia operativa. 
-- Actitudes: Apertura a soluciones digitales simples y rechazo a sistemas complejos o costosos. 
-- Comportamientos: Uso intensivo de WhatsApp para ventas, registro manual de pedidos
-y falta de integración entre canales de venta.
+- Motivaciones: reducir pérdidas de productos, tener control en tiempo real del stock y mejorar la eficiencia operativa.
+- Actitudes: apertura a soluciones digitales simples y rechazo a sistemas complejos o costosos.
+- Comportamientos: uso intensivo de WhatsApp para ventas, registro manual de pedidos y falta de integración entre canales de venta.
 
 
 #### D. Información estadística de sustento:
@@ -486,10 +484,9 @@ Personas que compran en mercados o minimarkets y que se ven afectadas por la fal
 - Cobertura: consumidores de mercados, minimarkets y compras por delivery.
 
 #### C. Aspectos psicográficos:
-- Motivaciones: Comprar rápido sin hacer colas
-,acceder a información actualizada de productos y evitar pérdida de tiempo por falta de stock.
-- Actitudes: Preferencia por soluciones prácticas y rápidas e interés en canales digitales como apps o chats.
-- Comportamientos: Uso de redes sociales como Whatsapp para consultas y pedidos, compra recurrente de productos frescos y baja tolerancia a demoras o desinformación.
+- Motivaciones: comprar rápido sin hacer colas, acceder a información actualizada de productos y evitar pérdidas de tiempo por falta de stock.
+- Actitudes: preferencia por soluciones prácticas y rápidas e interés en canales digitales como apps o chats.
+- Comportamientos: uso de redes sociales como WhatsApp para consultas y pedidos, compra recurrente de productos frescos y baja tolerancia a demoras o desinformación.
 
 
 #### D. Información estadística de sustento:

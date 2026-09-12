@@ -300,7 +300,7 @@ Por completar.
 
 ## 2.4. Requirements Specification
 
-Por completar.
+En esta sección se especifican los requisitos funcionales de Entreprenly mediante las User Stories, el Impact Mapping y el Product Backlog. Estos artefactos permiten definir el alcance del producto, relacionar los objetivos de negocio con las funcionalidades propuestas y organizar el trabajo del equipo de acuerdo con el valor y la prioridad de cada requerimiento.
 
 ### 2.4.1. User Stories
 
