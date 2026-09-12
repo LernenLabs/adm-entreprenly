@@ -89,7 +89,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Laura Acosta, Victor Jhosef</td>
       <td align="center" valign="middle" rowspan="3">
-        Fotografía por completar.
+        <img src="./images/capitulo1/foto_victor.jpg" alt="Victor Laura" width="250">
       </td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
       <td colspan="2">
-        Por completar.
+        Estudiante de Ingeniería de Software, con conocimientos en C++, C# y Java, y experiencia en Visual Studio Code y Visual Studio. Cuento con habilidades en diseño de bases de datos, elaborando modelos conceptuales y físicos. Me caracterizo por estar en constante aprendizaje y disposición para trabajar en equipo.
       </td>
     </tr>
   </tbody>
