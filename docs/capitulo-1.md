@@ -139,7 +139,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Gonza Morales, Anderson</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/capitulo1/foto_anderson.jpg" alt="Victor Laura" width="250">
+        <img src="./images/capitulo1/foto_Anderson.jpg" alt="Anderson Gonza" width="250">
       </td>
     </tr>
     <tr>
