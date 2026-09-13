@@ -132,7 +132,7 @@ try {
     $chapters | ForEach-Object { Write-Host ("  {0}" -f $_) -ForegroundColor DarkGray }
 
     & pandoc $chapters `
-        --from=markdown-yaml_metadata_block `
+        --from=markdown-yaml_metadata_block-markdown_in_html_blocks `
         --metadata-file=config/format.yaml `
         "--variable=mainfont:$mainFont" `
         --include-in-header=config/apa7.tex `

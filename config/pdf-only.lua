@@ -18,6 +18,54 @@ function RawInline(el)
   end
 end
 
+-- Al desactivar markdown_in_html_blocks, Pandoc conserva cada bloque HTML
+-- completo. Volver a leerlo con el lector HTML permite que tablas, imagenes y
+-- contenedores se conviertan en elementos nativos que el escritor LaTeX si
+-- puede representar.
+function RawBlock(el)
+  if el.format ~= 'html' or el.text:match('pdf:') then
+    return nil
+  end
+
+  local ok, parsed = pcall(pandoc.read, el.text, 'html')
+  if ok and #parsed.blocks > 0 then
+    return parsed.blocks
+  end
+
+  return nil
+end
+
+local function contains_raw_html(inlines)
+  for _, inline in ipairs(inlines) do
+    if inline.t == 'RawInline' and inline.format == 'html' then
+      return true
+    end
+  end
+  return false
+end
+
+local function convert_mixed_html_block(block)
+  if not contains_raw_html(block.content) then
+    return nil
+  end
+
+  local html = pandoc.write(pandoc.Pandoc({ block }), 'html')
+  local ok, parsed = pcall(pandoc.read, html, 'html')
+  if ok and #parsed.blocks > 0 then
+    return parsed.blocks
+  end
+
+  return nil
+end
+
+function Para(el)
+  return convert_mixed_html_block(el)
+end
+
+function Plain(el)
+  return convert_mixed_html_block(el)
+end
+
 function Pandoc(doc)
   local out = {}
   local omit = false
