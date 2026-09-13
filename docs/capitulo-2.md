@@ -6144,36 +6144,275 @@ Los datos de auditoría created_at y updated_at complementan las tablas de agreg
 
 ### 2.6.5. Bounded Context: Sales
 
-Por completar.
+Este Bounded Context es el núcleo transaccional responsable del registro, procesamiento y consolidación de las ventas comerciales en Entreprenly. Su propósito principal es permitir a los comerciantes gestionar tanto las ventas presenciales en el punto de venta móvil (POS para bodegas y puestos de mercado) como las ventas originadas de manera omnicanal a través del canal conversacional de WhatsApp. 
+
+Sales gestiona de forma integral la composición de los ítems de venta (diferenciando productos unitarios de productos por peso con integración a balanza), el cálculo automático de subtotales e importes finales, la validación de métodos de pago peruanos populares (Yape, Plin y efectivo con cálculo de cambio), y la emisión del comprobante de venta digital. Asimismo, se comunica de manera desacoplada con el Bounded Context de Inventory para la deducción oportuna del stock físico y expone una fachada de Anti-Corruption Layer (ACL) para registrar ventas provenientes de pedidos confirmados por el Chatbot. El diseño respeta los estándares de Domain-Driven Design (DDD) y Clean Architecture, organizándose en las capas Domain, Interface, Application e Infrastructure.
 
 #### 2.6.5.1. Domain Layer
 
-Por completar.
+**Sub-capa Model - Aggregates:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>Sale</td>
+    <td>Representa la transacción comercial y ciclo de vida de una venta presencial o digital. Extiende <code>AbstractDomainAggregateRoot</code>.</td>
+    <td>Garantizar la consistencia transaccional de los ítems, calcular subtotales y total general, validar transiciones de estado (<code>IN_PROGRESS</code>, <code>PENDING_PAYMENT</code>, <code>COMPLETED</code>, <code>CANCELLED</code>) y aplicar el pago correspondiente.</td>
+    <td>Compone una colección de <code>SaleItem</code> y una referencia a <code>SalePayment</code>; emite eventos como <code>SaleCompleted</code> y es gestionado por <code>SaleCommandService</code> y <code>SaleQueryService</code>.</td>
+  </tr>
+</table>
+
+El agregado `Sale` mantiene las invariantes de negocio: una venta debe contener al menos un ítem para proceder al cobro, los importes deben ser no negativos, las ventas completadas son inmutables y la deducción de inventario solo se activa ante la confirmación exitosa del pago.
+
+**Sub-capa Model - Entities:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Entity</td><td>SaleItem</td>
+    <td>Línea de detalle individual asociada a la venta.</td>
+    <td>Congelar el precio unitario histórico y nombre del producto al momento de la venta; calcular el subtotal de línea según sea por unidad (cantidad entera) o por peso (kilogramos decimales).</td>
+    <td>Pertenece exclusivamente a <code>Sale</code>; referencia de forma lógica a <code>productId</code> del contexto Inventory.</td>
+  </tr>
+  <tr>
+    <td>Entity</td><td>SalePayment</td>
+    <td>Registro del abono y método de pago liquidado para la venta.</td>
+    <td>Validar el importe pagado, el tipo de método de pago (Yape, Plin o efectivo), registrar el número de operación digital o el importe entregado y el vuelto a devolver.</td>
+    <td>Asociada unívocamente a <code>Sale</code>; utiliza el Value Object <code>PaymentMethodType</code>.</td>
+  </tr>
+</table>
+
+**Sub-capa Model - Commands:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Command</td><td>CreateSaleCommand</td><td>Solicita iniciar una nueva venta asociada al comerciante autenticado.</td><td>Inicializar el agregado <code>Sale</code> en estado <code>IN_PROGRESS</code> con numeración única.</td><td>Atendido por <code>SaleCommandService</code>; originado desde <code>SalesController</code> o <code>SalesContextFacade</code>.</td></tr>
+  <tr><td>Command</td><td>AddUnitItemToSaleCommand</td><td>Agrega un producto de tipo unitario indicando <code>productId</code>, cantidad entera y precio.</td><td>Validar disponibilidad y calcular subtotal acumulado en la venta en curso.</td><td>Atendido por <code>SaleCommandService</code>; modifica la colección de ítems de <code>Sale</code>.</td></tr>
+  <tr><td>Command</td><td>AddWeightItemToSaleCommand</td><td>Agrega un producto comercializado por peso indicando <code>productId</code>, peso en kilogramos y precio por kg.</td><td>Capturar pesaje (manual o vía balanza Bluetooth/sensor) y calcular subtotal proporcional.</td><td>Atendido por <code>SaleCommandService</code>; modifica la colección de ítems de <code>Sale</code>.</td></tr>
+  <tr><td>Command</td><td>ProcessSalePaymentCommand</td><td>Registra el método de pago seleccionado y valida el abono.</td><td>Verificar suficiencia del pago, conciliar montos y generar comprobante de venta.</td><td>Transiciona la venta a estado <code>COMPLETED</code> y dispara la emisión de comprobante.</td></tr>
+  <tr><td>Command</td><td>CancelSaleCommand</td><td>Anula una venta en curso antes o durante el proceso de cobro.</td><td>Liberar la transacción sin afectar saldos financieros ni descontar stock.</td><td>Transiciona el estado de <code>Sale</code> a <code>CANCELLED</code>.</td></tr>
+</table>
+
+**Sub-capa Model - Queries:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Query</td><td>GetAllSalesQuery</td><td>Consulta el listado histórico de ventas del comerciante autenticado.</td><td>Recuperar colecciones paginadas de ventas con filtros de estado y orden cronológico descendente.</td><td>Atendida por <code>SaleQueryService</code> para alimentar la vista de historial en la app móvil.</td></tr>
+  <tr><td>Query</td><td>GetSaleByIdQuery</td><td>Recupera el detalle exhaustivo de una venta específica mediante su identificador.</td><td>Retornar la cabecera, desglose completo de ítems, totales, método de pago y datos del comprobante.</td><td>Atendida por <code>SaleQueryService</code> para la pantalla de detalle de venta.</td></tr>
+  <tr><td>Query</td><td>GetSalesByDateQuery</td><td>Consulta las ventas realizadas en una fecha o rango temporal específico.</td><td>Filtrar transacciones por fecha calendario para permitir el arqueo de caja diario del comerciante.</td><td>Atendida por <code>SaleQueryService</code> invocada desde <code>SalesController</code>.</td></tr>
+</table>
+
+**Sub-capa Model - Events:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Event</td><td>SaleInitiated</td><td>Se emite al abrir una nueva transacción de venta en el terminal móvil.</td><td>Registrar el inicio de la operación de venta en auditoría.</td><td>Publicado por el agregado <code>Sale</code>.</td></tr>
+  <tr><td>Event</td><td>ItemAddedToSale</td><td>Se emite cada vez que un producto unitario o por peso se añade al carrito del POS.</td><td>Notificar la actualización de ítems e importes parciales.</td><td>Alimenta el recálculo reactivo en la interfaz móvil.</td></tr>
+  <tr><td>Event</td><td>SalePaymentReceived</td><td>Se emite cuando el importe de pago es registrado y verificado con éxito.</td><td>Constatar la liquidación económica de la transacción.</td><td>Precondición para el cierre definitivo de la venta.</td></tr>
+  <tr><td>Event</td><td>SaleCompleted</td><td>Evento clave emitido cuando la venta queda formalmente consolidada y pagada.</td><td>Disparar la deducción de inventario en el Bounded Context de Inventory y registrar métricas contables.</td><td>Consumido internamente por el sistema Outbox y por Inventory BC.</td></tr>
+  <tr><td>Event</td><td>SaleCancelled</td><td>Se emite al anular o descartar una venta en progreso.</td><td>Registrar la cancelación y liberar cualquier bloqueo temporal de ítems.</td><td>Auditoría de operaciones descartadas.</td></tr>
+</table>
+
+**Sub-capa Model - Value Objects:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Value Object</td><td>SaleNumber</td><td>Código alfanumérico secuencial y legible del comprobante (ej. <code>TKT-001042</code>).</td><td>Garantizar identificación única externa para el cliente y control de correlativos por comerciante.</td><td>Atributo inmutable de <code>Sale</code>.</td></tr>
+  <tr><td>Value Object</td><td>Money</td><td>Encapsula importes monetarios con validación de valores no negativos y dos decimales.</td><td>Garantizar consistencia aritmética en precios, subtotales, totales y cálculo de vuelto.</td><td>Embebido en <code>Sale</code>, <code>SaleItem</code> y <code>SalePayment</code>.</td></tr>
+  <tr><td>Value Object</td><td>PaymentMethodType</td><td>Enumeración de medios de pago soportados: <code>YAPE</code>, <code>PLIN</code>, <code>CASH</code>.</td><td>Clasificar la modalidad de liquidación y exigir datos requeridos (número de operación vs. efectivo).</td><td>Atributo de <code>SalePayment</code>.</td></tr>
+  <tr><td>Value Object</td><td>ItemType</td><td>Enumeración del tipo de producto vendido: <code>UNIT</code> o <code>WEIGHT</code>.</td><td>Definir la regla de cálculo (multiplicación por enteros vs. multiplicación por masa en kilogramos).</td><td>Atributo de <code>SaleItem</code>.</td></tr>
+  <tr><td>Value Object</td><td>SaleStatus</td><td>Enumeración de ciclo de vida: <code>IN_PROGRESS</code>, <code>PENDING_PAYMENT</code>, <code>COMPLETED</code>, <code>CANCELLED</code>.</td><td>Controlar el flujo de estados válidos del agregado para prevenir modificaciones post-pago.</td><td>Atributo de estado de <code>Sale</code>.</td></tr>
+</table>
+
+**Sub-capa Repositories:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Repository</td><td>SaleRepository</td><td>Interfaz de persistencia para el agregado <code>Sale</code>.</td><td>Operaciones CRUD, persistencia en cascada de ítems y pagos, y consultas especializadas por comerciante y fecha.</td><td>Definida en Domain e implementada en Infrastructure mediante Spring Data JPA.</td></tr>
+</table>
 
 #### 2.6.5.2. Interface Layer
 
-Por completar.
+La capa de interfaz expone los puntos de entrada HTTP RESTful hacia la aplicación móvil y la fachada de Anti-Corruption Layer (ACL) para la integración con otros Bounded Contexts.
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Inbound Controller</td><td>SalesController</td>
+    <td>Controlador Spring MVC bajo la ruta <code>/api/v1/sales</code>.</td>
+    <td>Exponer endpoints HTTP GET/POST para crear ventas presenciales, consultar ventas por identificador, listar historial y filtrar por fecha.</td>
+    <td>Transforma peticiones HTTP en comandos/queries y delega a <code>SaleCommandService</code> y <code>SaleQueryService</code>.</td>
+  </tr>
+  <tr>
+    <td>Inbound ACL Facade</td><td>SalesContextFacade</td>
+    <td>Fachada de integración para comunicación entre contextos (In-process).</td>
+    <td>Recibir peticiones de registro de venta provenientes de pedidos confirmados por WhatsApp (<code>registerSale(ChatSaleLine)</code>) desde el Chatbot BC.</td>
+    <td>Adapta la estructura de <code>ChatSaleLine</code> a un <code>CreateSaleCommand</code> y lo delega a <code>SaleCommandService</code>.</td>
+  </tr>
+  <tr>
+    <td>Resource / DTO</td><td>CreateSaleResource</td>
+    <td>Cuerpo de solicitud para registrar una nueva venta con sus ítems.</td>
+    <td>Transportar datos de entrada validados (lista de productos, cantidades/pesos, precios pactados).</td>
+    <td>Recibido por <code>SalesController</code> en operaciones <code>POST /sales</code>.</td>
+  </tr>
+  <tr>
+    <td>Resource / DTO</td><td>ProcessPaymentResource</td>
+    <td>Cuerpo de solicitud para liquidar el pago de la venta.</td>
+    <td>Transportar el método de pago seleccionado, monto entregado y referencia de operación digital.</td>
+    <td>Mapeado a <code>ProcessSalePaymentCommand</code>.</td>
+  </tr>
+  <tr>
+    <td>Resource / DTO</td><td>SaleResource</td>
+    <td>Representación de salida JSON de la venta consolidada.</td>
+    <td>Presentar al cliente móvil el correlativo de ticket, lista de ítems detallados, totales, estado y fecha de emisión.</td>
+    <td>Retornado en endpoints <code>GET /sales</code> y <code>GET /sales/{saleId}</code>.</td>
+  </tr>
+  <tr>
+    <td>Assembler</td><td>SaleResourceFromEntityAssembler</td>
+    <td>Transformador bidireccional entre agregados de dominio y DTOs de interfaz.</td>
+    <td>Aislar el modelo de dominio interno de las estructuras públicas de la API REST.</td>
+    <td>Invocado por controladores para construir respuestas <code>SaleResource</code>.</td>
+  </tr>
+</table>
 
 #### 2.6.5.3. Application Layer
 
-Por completar.
+La capa de aplicación implementa el patrón CQRS (Command Query Responsibility Segregation), separando estrictamente las operaciones de modificación de estado de las consultas de lectura, y coordinando la consistencia eventual con otros contextos:
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Command Service</td><td>SaleCommandService</td>
+    <td>Servicio de aplicación para la gestión transaccional de comandos de venta.</td>
+    <td>Orquestar la lógica de creación de ventas, adición y cálculo de ítems, validación de pagos, emisión de eventos de dominio y persistencia de comprobantes.</td>
+    <td>Implementa <code>handle(CreateSaleCommand)</code> y <code>handle(ProcessSalePaymentCommand)</code>; interactúa con <code>SaleRepository</code> y publica eventos en el Outbox.</td>
+  </tr>
+  <tr>
+    <td>Query Service</td><td>SaleQueryService</td>
+    <td>Servicio de aplicación optimizado para la consulta de información de ventas.</td>
+    <td>Atender consultas de lectura del historial comercial, detalle por identificador y filtrado cronológico diario.</td>
+    <td>Implementa <code>handle(GetAllSalesQuery)</code>, <code>handle(GetSaleByIdQuery)</code> y <code>handle(GetSalesByDateQuery)</code> consultando directamente <code>SaleRepository</code>.</td>
+  </tr>
+  <tr>
+    <td>Outbound ACL / Handler</td><td>InventoryAclService</td>
+    <td>Servicio de integración y desacoplamiento con el contexto de Inventario.</td>
+    <td>Notificar la finalización exitosa de una venta para que el Bounded Context de Inventory descuente automáticamente el stock de los lotes correspondientes.</td>
+    <td>Consume el evento <code>SaleCompleted</code> e invoca las interfaces de decremento de inventario.</td>
+  </tr>
+</table>
 
 #### 2.6.5.4. Infrastructure Layer
 
-Por completar.
+La capa de infraestructura provee las implementaciones técnicas concretas para el almacenamiento relacional, la seguridad y los adaptadores de integración:
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Persistence Adapter</td><td>SaleRepositoryImpl</td>
+    <td>Implementación concreta del repositorio de dominio <code>SaleRepository</code>.</td>
+    <td>Mapear las entidades del dominio al modelo relacional de base de datos utilizando Spring Data JPA y ejecutar transacciones SQL seguras.</td>
+    <td>Interactúa con la base de datos PostgreSQL alojada en Google Cloud SQL.</td>
+  </tr>
+  <tr>
+    <td>Persistence Adapter</td><td>SpringDataJpaSaleRepository</td>
+    <td>Interfaz interna de Spring Data JPA con consultas JPQL especializadas.</td>
+    <td>Proveer operaciones de persistencia estándar y consultas por rangos de fecha y propietario.</td>
+    <td>Utilizada por <code>SaleRepositoryImpl</code>.</td>
+  </tr>
+  <tr>
+    <td>Outbox Adapter</td><td>SalesOutboxService</td>
+    <td>Mecanismo transaccional para garantizar la publicación confiable de eventos de dominio.</td>
+    <td>Persistir los eventos como <code>SaleCompleted</code> en la misma transacción que la venta para asegurar entrega garantizada (Transactional Outbox Pattern).</td>
+    <td>Alimenta la comunicación asíncrona hacia otros Bounded Contexts.</td>
+  </tr>
+  <tr>
+    <td>Receipt Adapter</td><td>DigitalReceiptPdfAdapter</td>
+    <td>Adaptador técnico de generación y compartición de comprobantes digitales.</td>
+    <td>Generar el comprobante estructurado en formato PDF o texto formateado para ser compartido directamente por WhatsApp o guardado en el dispositivo móvil.</td>
+    <td>Invocado tras la finalización exitosa de la venta.</td>
+  </tr>
+</table>
 
 #### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-Por completar.
+A continuación se presenta el diagrama de componentes del Bounded Context de Ventas (Sales BC), el cual ilustra la separación de responsabilidades y la interacción entre sus elementos de software:
+
+<p align="center">
+  <img src="images/capitulo2/structurizr-104049-SalesComponent.png" alt="Diagrama de componentes del Bounded Context Sales" width="1000"/>
+</p>
+
+**Figura 2.6.5.1:** *Diagrama de componentes de Sales BC. Las peticiones web externas ingresan por la capa de API / Security Layer con validación JWT hacia `SalesController`. Las ventas originadas desde el Chatbot de WhatsApp ingresan vía ACL a través de `SalesContextFacade`. El flujo de comandos delega la lógica de negocio a `SaleCommandService`, mientras las consultas de historial y fecha son resueltas por `SaleQueryService`. La persistencia se resuelve mediante `SaleRepository` sobre la base de datos PostgreSQL (Google Cloud SQL).*
 
 #### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
 
-Por completar.
+El modelo del Bounded Context de Sales separa rigurosamente la raíz de agregado transaccional, sus entidades subordinadas y los objetos de valor inmutables. A continuación se presentan el diagrama de clases de dominio y el diagrama relacional de base de datos.
 
 ##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/sales-class-diagram.png" alt="Diagrama de clases del Bounded Context Sales" width="1000"/>
+</p>
+
+**Figura 2.6.5.2:** *Diagrama de clases del modelo de dominio de Sales. El agregado raíz `Sale` encapsula sus entidades subordinadas `SaleItem` y `SalePayment`, garantizando el cálculo inmutable de los importes y aplicando los objetos de valor `Money`, `SaleNumber`, `ItemType` y `PaymentMethodType`.*
 
 ##### 2.6.5.6.2. Bounded Context Database Design Diagram
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/sales-database.png" alt="Diagrama de base de datos del Bounded Context Sales" width="800"/>
+</p>
+
+**Figura 2.6.5.3:** *Modelo relacional de base de datos del Bounded Context Sales en PostgreSQL (Google Cloud SQL), compuesto por las tablas transaccionales de ventas, líneas de detalle, pagos y la tabla de Outbox para publicación de eventos.*
+
+**Diccionario de persistencia:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Table</td><td>sales</td>
+    <td>Almacena las cabeceras de las transacciones comerciales realizadas.</td>
+    <td>Registrar el identificador único, código correlativo de ticket (`sale_number` UNIQUE), propietario (`merchant_id`), estado de la venta, totales e importes consolidados.</td>
+    <td>Clave foránea lógica hacia el usuario/comerciante en IAM; se relaciona 1 a N con `sale_items` y 1 a 1 opcional con `sale_payments`.</td>
+  </tr>
+  <tr>
+    <td>Table</td><td>sale_items</td>
+    <td>Almacena las líneas de detalle de los productos vendidos por cada venta.</td>
+    <td>Registrar el nombre y precio histórico del producto (`product_id`), el tipo de comercialización (`UNIT` o `WEIGHT`), cantidad entera o peso en kilogramos con precisión de tres decimales (`weight_kg`) y subtotal de línea.</td>
+    <td>Clave foránea `sale_id` con borrado en cascada referenciando a `sales`.</td>
+  </tr>
+  <tr>
+    <td>Table</td><td>sale_payments</td>
+    <td>Registra la liquidación económica del comprobante de venta.</td>
+    <td>Almacenar el método de pago (`YAPE`, `PLIN`, `CASH`), importe exacto cancelado, código de operación digital y cálculo de efectivo recibido y vuelto entregado.</td>
+    <td>Clave foránea `sale_id` con restricción de unicidad (1 pago por venta confirmada).</td>
+  </tr>
+  <tr>
+    <td>Outbox</td><td>sales_outbox</td>
+    <td>Tabla transaccional para la publicación de eventos de dominio hacia otros contextos.</td>
+    <td>Garantizar atomicidad en la publicación de `SaleCompleted` para orquestar la deducción de inventario en Inventory BC de forma confiable sin pérdida de mensajes.</td>
+    <td>Leída y despachada por el servicio de mensajería asíncrona en Infrastructure.</td>
+  </tr>
+</table>
+
+Los campos de auditoría `created_at` y `updated_at` garantizan la trazabilidad temporal de cada registro. El esquema utiliza tipos de datos estándar de PostgreSQL (`decimal(12,2)` para dinero y `decimal(10,3)` para pesajes), asegurando máxima precisión en el cálculo financiero y el pesaje comercial.
