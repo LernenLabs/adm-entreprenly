@@ -1208,10 +1208,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
 
 ### Épicas
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 01</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 01</strong></td>
       <td colspan="2"><strong>Gestión de inventario</strong></td>
     </tr>
     <tr>
@@ -1272,10 +1272,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 02</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 02</strong></td>
       <td colspan="2"><strong>Alertas y notificaciones móviles de inventario</strong></td>
     </tr>
     <tr>
@@ -1304,10 +1304,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 03</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 03</strong></td>
       <td colspan="2"><strong>Proceso de suscripción</strong></td>
     </tr>
     <tr>
@@ -1340,10 +1340,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 04</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 04</strong></td>
       <td colspan="2"><strong>Configuración de suscripción</strong></td>
     </tr>
     <tr>
@@ -1392,10 +1392,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 05</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 05</strong></td>
       <td colspan="2"><strong>Gestión de Transacciones y Operaciones de Venta</strong></td>
     </tr>
     <tr>
@@ -1436,10 +1436,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 06</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 06</strong></td>
       <td colspan="2"><strong>Control de Ingresos y Monitoreo de Caja</strong></td>
     </tr>
     <tr>
@@ -1468,10 +1468,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 07</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 07</strong></td>
       <td colspan="2"><strong>Configurar Chatbot de WhatsApp Business</strong></td>
     </tr>
     <tr>
@@ -1492,10 +1492,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 08</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 08</strong></td>
       <td colspan="2"><strong>Gestionar conversaciones desde la aplicación móvil</strong></td>
     </tr>
     <tr>
@@ -1516,10 +1516,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 09</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 09</strong></td>
       <td colspan="2"><strong>Procesar Pedidos mediante Bot Automático</strong></td>
     </tr>
     <tr>
@@ -1544,10 +1544,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 10</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 10</strong></td>
       <td colspan="2"><strong>Gestionar Pago Digital P2P</strong></td>
     </tr>
     <tr>
@@ -1576,10 +1576,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 11</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 11</strong></td>
       <td colspan="2"><strong>Confirmar Venta y Emitir Comprobante</strong></td>
     </tr>
     <tr>
@@ -1600,10 +1600,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 12</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 12</strong></td>
       <td colspan="2"><strong>Manejar Flujos Alternativos y Restricciones</strong></td>
     </tr>
     <tr>
@@ -1628,10 +1628,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 13</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 13</strong></td>
       <td colspan="2"><strong>Technical Stories – Implementar RESTful API</strong></td>
     </tr>
     <tr>
@@ -1672,10 +1672,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 14</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 14</strong></td>
       <td colspan="2"><strong>Inicio de sesión y registro</strong></td>
     </tr>
     <tr>
@@ -1712,10 +1712,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 15</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 15</strong></td>
       <td colspan="2"><strong>Perfil y configuración</strong></td>
     </tr>
     <tr>
@@ -1760,10 +1760,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 16</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 16</strong></td>
       <td colspan="2"><strong>Panel de Inicio (Home)</strong></td>
     </tr>
     <tr>
@@ -1800,10 +1800,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 17</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 17</strong></td>
       <td colspan="2"><strong>Centro de Soporte y Ayuda</strong></td>
     </tr>
     <tr>
@@ -1836,10 +1836,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 18</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 18</strong></td>
       <td colspan="2"><strong>Experiencia global de la aplicación móvil</strong></td>
     </tr>
     <tr>
@@ -1864,10 +1864,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
   </tbody>
 </table>
 
-<table>
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr>
-      <td><strong>EPIC - 19</strong></td>
+      <td width="18%" style="width:18%;"><strong>EPIC - 19</strong></td>
       <td colspan="2"><strong>Landing Page</strong></td>
     </tr>
     <tr>
