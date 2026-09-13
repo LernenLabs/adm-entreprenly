@@ -1094,7 +1094,98 @@ Como resultado de la sesión, el equipo consolidó una visión compartida del do
 
 ### 2.3.6. Ubiquitous Language
 
-Por completar.
+A continuación se presenta el glosario de términos y conceptos del dominio de negocio de Entreprenly. Estos términos han sido definidos de forma clara y sin ambigüedad, con el objetivo de que todos los miembros del equipo y stakeholders compartan un lenguaje común durante el ciclo de vida del proyecto. Los términos se presentan en inglés, idioma base del dominio, acompañados de su definición en español.
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr color: white;">
+      <th style="width: 25%;">Término (EN)</th>
+      <th>Definición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Merchant</strong></td>
+      <td>Dueño o administrador de un minimarket, bodega o puesto de mercado que gestiona su operación a través de Entreprenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Customer</strong></td>
+      <td>Cliente final que realiza pedidos a través del canal de WhatsApp.</td>
+    </tr>
+    <tr>
+      <td><strong>Product</strong></td>
+      <td>Artículo registrado en el sistema con nombre, precio y categoría. Puede ser de tipo unitario o vendido por peso.</td>
+    </tr>
+    <tr>
+      <td><strong>Unit Product</strong></td>
+      <td>Producto cuyo stock se mide en unidades individuales y tiene un precio fijo por unidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Weight Product</strong></td>
+      <td>Producto cuyo stock se representa como el peso total disponible en kilogramos y tiene un precio por kilogramo.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock</strong></td>
+      <td>Cantidad disponible de un producto en el local, expresada en unidades o kilogramos según el tipo de producto.</td>
+    </tr>
+    <tr>
+      <td><strong>Batch</strong></td>
+      <td>Lote de un producto registrado con fecha de caducidad, utilizado para el control y trazabilidad de productos perecederos.</td>
+    </tr>
+    <tr>
+      <td><strong>Scale Reading</strong></td>
+      <td>Lectura enviada por la balanza inteligente que indica el peso actual de un producto en el estante en tiempo real.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock Discrepancy</strong></td>
+      <td>Diferencia detectada entre el stock registrado en el sistema y el peso real reportado por la balanza inteligente.</td>
+    </tr>
+    <tr>
+      <td><strong>Sale</strong></td>
+      <td>Transacción registrada por la venta de uno o más productos a un cliente, ya sea de forma presencial o a través del chatbot de WhatsApp.</td>
+    </tr>
+    <tr>
+      <td><strong>Cash Register</strong></td>
+      <td>Registro digital de los ingresos en efectivo acumulados durante un turno de trabajo del comerciante.</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong></td>
+      <td>Período de trabajo del comerciante durante el cual se registran ventas y al final del cual se realiza el cierre y conciliación de caja.</td>
+    </tr>
+    <tr>
+      <td><strong>Order</strong></td>
+      <td>Pedido realizado por un cliente a través del chatbot de WhatsApp, con los productos y cantidades especificadas.</td>
+    </tr>
+    <tr>
+      <td><strong>Alert</strong></td>
+      <td>Notificación generada automáticamente por el sistema ante situaciones críticas como stock bajo o descuadre detectado entre inventario físico y digital.</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription</strong></td>
+      <td>Plan contratado por el comerciante para acceder a las funcionalidades de la plataforma Entreprenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Smart Scale</strong></td>
+      <td>Balanza inteligente conectada al sistema que envía lecturas de peso en tiempo real para validar el stock físico disponible en el estante.</td>
+    </tr>
+    <tr>
+      <td><strong>Inventory Sync</strong></td>
+      <td>Proceso de conciliación entre el stock registrado digitalmente en el sistema y el peso real detectado por la balanza inteligente.</td>
+    </tr>
+    <tr>
+      <td><strong>Chatbot</strong></td>
+      <td>Asistente conversacional integrado en WhatsApp que permite a los clientes realizar pedidos, consultar disponibilidad de productos y recibir confirmaciones de compra de forma automatizada.</td>
+    </tr>
+    <tr>
+      <td><strong>Perishable Product</strong></td>
+      <td>Producto con fecha de caducidad definida que requiere control especial de rotación y merma para evitar pérdidas económicas.</td>
+    </tr>
+    <tr>
+      <td><strong>Shrinkage</strong></td>
+      <td>Pérdida de producto no registrada como venta, que puede deberse a merma, deterioro, error de pesaje o retiro no autorizado.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 2.4. Requirements Specification
 
