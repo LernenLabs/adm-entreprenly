@@ -4942,7 +4942,9 @@ Por completar.
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
-Por completar.
+En esta sección se presenta el diseño táctico de los Bounded Contexts que conforman Entreprenly: Profile, Inventory, Chatbot, Subscription y Sales. Para cada contexto se describen los elementos que implementan su modelo de dominio y sus principales reglas de negocio, incluyendo agregados, entidades, objetos de valor, comandos, consultas, eventos, servicios y repositorios.
+
+El diseño se organiza siguiendo los principios de Domain-Driven Design y Clean Architecture, mediante la separación de las capas Domain, Application, Interface e Infrastructure. Esta distribución permite mantener la lógica de negocio independiente de los frameworks, la persistencia y la aplicación móvil, además de establecer contratos claros para la comunicación entre contextos. Finalmente, cada Bounded Context se complementa con diagramas de componentes, clases y base de datos que representan su estructura, dependencias y decisiones de implementación.
 
 ### 2.6.1. Bounded Context: Profile
 
