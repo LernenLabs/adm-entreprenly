@@ -33,7 +33,8 @@ El objetivo es diseñar una solución que resuelva el "caos multicanal" en peque
 
 **Perfil**
 
-##### Overview 
+##### Overview
+
 <table>
   <thead>
     <tr>
@@ -49,9 +50,10 @@ El objetivo es diseñar una solución que resuelva el "caos multicanal" en peque
       <td>Sistema de punto de venta basado en la nube que permite gestionar ventas físicas, inventario y reportes en tiempo real para comercios minoristas.</td>
     </tr>
   </tbody>
-</table>                     
+</table>
 
-##### ¿Qué valor ofrece a los clientes? 
+##### ¿Qué valor ofrece a los clientes?
+
 <table>
   <thead>
     <tr>
@@ -69,7 +71,8 @@ El objetivo es diseñar una solución que resuelva el "caos multicanal" en peque
   </tbody>
 </table>
 
-##### Perfil de marketing 
+##### Perfil de marketing
+
 <table>
   <thead>
     <tr>
@@ -95,7 +98,8 @@ El objetivo es diseñar una solución que resuelva el "caos multicanal" en peque
   </tbody>
 </table>
 
-##### Perfil de producto 
+##### Perfil de producto
+
 <table>
   <thead>
     <tr>
@@ -122,6 +126,7 @@ El objetivo es diseñar una solución que resuelva el "caos multicanal" en peque
 </table>
 
 ##### Análisis SWOT
+
 <table>
   <thead>
     <tr>
@@ -165,61 +170,72 @@ Tras evaluar el ecosistema actual, se definen los siguientes ejes estratégicos:
 
 #### Estrategias
 
-#### Diferenciación de Producto: 
+#### Diferenciación de Producto:
+
 - Resolución del caos multicanal: El problema central del segmento es la falta de sincronización entre los pedidos recibidos por WhatsApp y las ventas presenciales. Entreprenly lo resuelve unificando ambos flujos en un único panel de control.
 
 - Automatización física del inventario (IoT):
-Entreprenly valida el inventario digital mediante una balanza inteligente conectada al sistema, permitiendo contrastar el stock esperado con el peso real y detectar descuadres en tiempo real.
+  Entreprenly valida el inventario digital mediante una balanza inteligente conectada al sistema, permitiendo contrastar el stock esperado con el peso real y detectar descuadres en tiempo real.
 
 - Gestión activa de perecederos: A diferencia de soluciones generalistas, Entreprenly está diseñado para productos de alta rotación y riesgo de merma, generando alertas automáticas cuando el stock está por debajo de niveles críticos.
 
-#### Segmentación del Mercado: 
+#### Segmentación del Mercado:
+
 - Foco en microcomercio peruano de alimentos frescos: fruterías, minimarkets y negocios tradicionales con gestión manual o semi-digital.
 
-#### Costos Competitivos: 
+#### Costos Competitivos:
+
 - Modelo de suscripción accesible, sin requerir infraestructura compleja.
 
 - Retorno visible desde el primer mes gracias a reducción de merma y errores operativos.
 
-#### Relaciones Estratégicas: 
+#### Relaciones Estratégicas:
+
 - Alianzas con mercados locales y asociaciones de comerciantes.
 
 - Uso de canales de comunicación comunes para facilitar adopción.
 
 ---
 
-#### Tácticas: 
+#### Tácticas:
 
-#### Lanzamiento de Productos Innovadores: 
+#### Lanzamiento de Productos Innovadores:
+
 - Implementación inicial con balanza inteligente conectada al sistema.
 
-#### Campañas de Marketing Dirigidas: 
+#### Campañas de Marketing Dirigidas:
 
 - Demostraciones en mercados mostrando reducción de pérdidas y control de stock en tiempo real.
 
 - Comunicación enfocada en beneficios tangibles (menos merma, menos errores, más control).
 
-#### Inversión en I+D (Investigación y Desarrollo): 
+#### Inversión en I+D (Investigación y Desarrollo):
+
 - Optimización continua del módulo de inventario en tiempo real.
 - Mejora en la precisión del cálculo de stock basado en peso.
 - Integración y calibración de balanza inteligente (IoT) adaptada a microcomercios.
-#### Mejora de la Experiencia del Cliente: 
+
+#### Mejora de la Experiencia del Cliente:
 
 - Visualización del stock actualizado en tiempo real desde cualquier dispositivo.
 - Reducción de errores en pedidos gracias a la sincronización entre ventas y validación física del inventario.
 
 ## 2.2. Entrevistas
+
 Esta sección presenta el estudio cualitativo basado en entrevistas semiestructuradas orientadas a validar una solución tecnológica que integra <b>Inteligencia Artificial (Chatbots), Internet de las Cosas (Sensores de peso) y automatización de pagos</b>. El estudio exploró las deficiencias actuales en el control de inventarios, la falta de transparencia en el pesaje de productos y la fricción en la atención al cliente vía WhatsApp. Participaron dueños de negocios con hasta 40 años de experiencia, expertos en procesos operativos y clientes finales, permitiendo identificar que la "inercia operativa" y el desorden financiero son las principales barreras para la digitalización de la microempresa local.
 
 ### 2.2.1. Diseño de entrevistas
+
 "Antes de iniciar la entrevista, se brinda un saludo cordial y una breve presentación del entrevistador, explicando que el propósito de la conversación es conocer los desafíos y experiencias de los emprendedores en su gestión diaria. Se aclara que la información recopilada será utilizada únicamente con fines académicos para el desarrollo del proyecto y se mantendrá en estricta confidencialidad. Como primer paso, se solicita al entrevistado brindar su nombre completo, edad y lugar de residencia para fines de registro. Asimismo, se señala que la entrevista tendrá una duración aproximada de 5 a 10 minutos y se desarrollará de manera abierta, por lo que se le invita a responder con total libertad y basándose en ejemplos de su experiencia real, destacando que no existen respuestas correctas o incorrectas."
 
 **Preguntas introductorias**
--   ¿Cuál es su nombre?
--   ¿Cuántos años tiene?
--   ¿Dónde vive?
+
+- ¿Cuál es su nombre?
+- ¿Cuántos años tiene?
+- ¿Dónde vive?
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
 1. Actualmente, ¿cómo lleva el control de los productos que tiene en estantes? (¿Usa cuaderno, Excel o solo memoria?).
 
 2. ¿Con qué frecuencia nota que el stock que debería tener en el sistema o cuaderno no coincide con lo que físicamente hay en el estante?
@@ -241,6 +257,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 10. Si el sistema le permitiera vender 24/7 mediante un bot sin errores de stock, ¿cree que su volumen de ventas aumentaría significativamente?
 
 **Segmento 2: Clientes Finales**
+
 1. ¿Qué es lo que más le molesta cuando intenta comprar en un minimarket local por delivery o WhatsApp?
 
 2. ¿Alguna vez ha pedido un producto por chat y, luego de pagar, le dijeron que ya se había agotado? ¿Cómo afectó eso su confianza en la tienda?
@@ -261,72 +278,71 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 10. ¿Preferiría comprar en un minimarket que use esta tecnología sobre uno tradicional que no garantiza el stock ni acepta todos los medios de pago?
 
-
 ### 2.2.2. Registro de entrevistas
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
 
--   Primera entrevista:
-<div align="center">
-<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+- Primera entrevista:
+  <div align="center">
+  <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
 
-  <!-- Encabezado -->
-  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
-  
-  </div>
+    <!-- Encabezado -->
+    <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+    
+    </div>
 
-  <!-- Imagen de la captura de pantalla -->
-  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo2/abuelito.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
-  </div>
+    <!-- Imagen de la captura de pantalla -->
+    <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+      <img src="images/capitulo2/abuelito.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+    </div>
 
-  <!-- Datos en dos columnas -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistado:</strong> Hercilio Carrasco Herrera
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Género:</strong> Masculino
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> Fernando Flores
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Edad:</strong> 62
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 8:17 - 15:03     </td>
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
-      </td>
-    </tr>
-  </table>
+    <!-- Datos en dos columnas -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Entrevistado:</strong> Hercilio Carrasco Herrera
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Género:</strong> Masculino
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Entrevistador(a):</strong> Fernando Flores
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Edad:</strong> 62
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Duración:</strong> 8:17 - 15:03     </td>
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+        </td>
+      </tr>
+    </table>
 
-  <!-- Link -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Link de la entrevista:</strong>
-        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
-      </td>
-    </tr>
-  </table>
+    <!-- Link -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Link de la entrevista:</strong>
+          https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+        </td>
+      </tr>
+    </table>
 
-  <!-- Descripción -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        Herilio es un comerciante con cuatro décadas de trayectoria que actualmente utiliza Excel para su control de productos, aunque admite tener dificultades con el descuadre de stock (errores manuales al comprar o registrar). Su mayor "punto de dolor" es el desorden financiero: mezcla el dinero de las ventas con los pagos a proveedores y no logra cuadrar el efectivo con los vouchers de tarjetas y billeteras digitales como Yape o Plin.
-        Valida con entusiasmo la implementación de balanzas inteligentes para inventario automático y un chatbot con IA que gestione los pedidos de WhatsApp, funciones que actualmente delega en su hijo. Considera que un sistema que automatice el arqueo de caja y permita ventas 24/7 sin errores de stock sería una solución "bacán" que le ahorraría tiempo, dinero y reduciría la carga operativa de su personal.
-      </td>
-    </tr>
-  </table>
+    <!-- Descripción -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+          Herilio es un comerciante con cuatro décadas de trayectoria que actualmente utiliza Excel para su control de productos, aunque admite tener dificultades con el descuadre de stock (errores manuales al comprar o registrar). Su mayor "punto de dolor" es el desorden financiero: mezcla el dinero de las ventas con los pagos a proveedores y no logra cuadrar el efectivo con los vouchers de tarjetas y billeteras digitales como Yape o Plin.
+          Valida con entusiasmo la implementación de balanzas inteligentes para inventario automático y un chatbot con IA que gestione los pedidos de WhatsApp, funciones que actualmente delega en su hijo. Considera que un sistema que automatice el arqueo de caja y permita ventas 24/7 sin errores de stock sería una solución "bacán" que le ahorraría tiempo, dinero y reduciría la carga operativa de su personal.
+        </td>
+      </tr>
+    </table>
 
 </div>
 
@@ -334,7 +350,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ---
 
--   Segunda entrevista:
+- Segunda entrevista:
 
 <div align="center">
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
@@ -403,67 +419,67 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ---
 
--   Tercera entrevista:
-<div align="center">
-<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+- Tercera entrevista:
+  <div align="center">
+  <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
 
-  <!-- Encabezado -->
-  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
-  
-  </div>
+    <!-- Encabezado -->
+    <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+    
+    </div>
 
-  <!-- Imagen de la captura de pantalla -->
-  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo2/luis.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
-  </div>
+    <!-- Imagen de la captura de pantalla -->
+    <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+      <img src="images/capitulo2/luis.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+    </div>
 
-  <!-- Datos en dos columnas -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistado:</strong> Luis Vargas
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Género:</strong> Masculino
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> Fernando Flores
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Edad:</strong> 54
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 15:03 - 19:34
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
-      </td>
-    </tr>
-  </table>
+    <!-- Datos en dos columnas -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Entrevistado:</strong> Luis Vargas
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Género:</strong> Masculino
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Entrevistador(a):</strong> Fernando Flores
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Edad:</strong> 54
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Duración:</strong> 15:03 - 19:34
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+        </td>
+      </tr>
+    </table>
 
-  <!-- Link -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Link de la entrevista:</strong>
-        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
-      </td>
-    </tr>
-  </table>
+    <!-- Link -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Link de la entrevista:</strong>
+          https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+        </td>
+      </tr>
+    </table>
 
-  <!-- Descripción -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-       Luis es un comerciante de 54 años que confía plenamente en su memoria para el control de inventarios. Al trabajar con fruta selecta, asegura que no tiene pérdidas económicas por calidad, aunque reconoce que actualmente no puede saber con exactitud si el stock físico coincide con lo que debería haber. Aunque no siente dificultad para revisar sus movimientos en Yape o Plin, admite que el proceso es manual.
-        Valida que un sistema de inventario por peso le ahorraría mucho tiempo, evitando el conteo unidad por unidad. Además, ve con buenos ojos la automatización de pedidos por WhatsApp, señalando que una impresión automática de comprobantes haría el despacho "mucho más rápido". Finalmente, coincide en que un sistema que funcione 24/7 mediante un bot aumentaría significativamente su volumen de ventas al eliminar la fricción de la atención manual.
-      </td>
-    </tr>
-  </table>
+    <!-- Descripción -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+         Luis es un comerciante de 54 años que confía plenamente en su memoria para el control de inventarios. Al trabajar con fruta selecta, asegura que no tiene pérdidas económicas por calidad, aunque reconoce que actualmente no puede saber con exactitud si el stock físico coincide con lo que debería haber. Aunque no siente dificultad para revisar sus movimientos en Yape o Plin, admite que el proceso es manual.
+          Valida que un sistema de inventario por peso le ahorraría mucho tiempo, evitando el conteo unidad por unidad. Además, ve con buenos ojos la automatización de pedidos por WhatsApp, señalando que una impresión automática de comprobantes haría el despacho "mucho más rápido". Finalmente, coincide en que un sistema que funcione 24/7 mediante un bot aumentaría significativamente su volumen de ventas al eliminar la fricción de la atención manual.
+        </td>
+      </tr>
+    </table>
 
 </div>
 
@@ -473,8 +489,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 **Segmento 2: Clientes Finales**
 
-
--   Primera entrevista:
+- Primera entrevista:
 
 <div align="center">
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
@@ -543,67 +558,67 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ---
 
--   Segunda entrevista:
-<div align="center">
-<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+- Segunda entrevista:
+  <div align="center">
+  <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
 
-  <!-- Encabezado -->
-  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
-  
-  </div>
+    <!-- Encabezado -->
+    <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+    
+    </div>
 
-  <!-- Imagen de la captura de pantalla -->
-  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo2/curay.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
-  </div>
+    <!-- Imagen de la captura de pantalla -->
+    <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+      <img src="images/capitulo2/curay.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+    </div>
 
-  <!-- Datos en dos columnas -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistado:</strong> Sebastián Curay
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Género:</strong> Masculino
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> Fernando Flores
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Edad:</strong> 19
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 24:18 -29:46
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Lugar de Residencia:</strong> San Martín de Porres, Lima
-      </td>
-    </tr>
-  </table>
+    <!-- Datos en dos columnas -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Entrevistado:</strong> Sebastián Curay
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Género:</strong> Masculino
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Entrevistador(a):</strong> Fernando Flores
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Edad:</strong> 19
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Duración:</strong> 24:18 -29:46
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Lugar de Residencia:</strong> San Martín de Porres, Lima
+        </td>
+      </tr>
+    </table>
 
-  <!-- Link -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Link de la entrevista:</strong>
-        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
-      </td>
-    </tr>
-  </table>
+    <!-- Link -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Link de la entrevista:</strong>
+          https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+        </td>
+      </tr>
+    </table>
 
-  <!-- Descripción -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        Sebastián es un estudiante de 19 años que prioriza la rapidez y los pagos digitales (Tarjeta y Yape/Plin) por encima del efectivo. Su mayor frustración es la incertidumbre del stock y la demora en la atención vía WhatsApp, habiendo experimentado varias veces el pagar por productos que finalmente estaban agotados, lo que ha erosionado su confianza en los negocios locales.
-        Debido a su carga académica, valora enormemente la posibilidad de realizar compras en "tres clics" para ahorrar tiempo. No cuenta con herramientas en casa para validar el peso de lo que recibe, por lo que un sistema con sensores de peso reales que valide el stock digitalmente le brindaría la seguridad que actualmente le falta. Además, considera indispensable recibir una confirmación automática e inmediata tras el pago para mitigar la sensación de riesgo al pagar por adelantado.
-      </td>
-    </tr>
-  </table>
+    <!-- Descripción -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+          Sebastián es un estudiante de 19 años que prioriza la rapidez y los pagos digitales (Tarjeta y Yape/Plin) por encima del efectivo. Su mayor frustración es la incertidumbre del stock y la demora en la atención vía WhatsApp, habiendo experimentado varias veces el pagar por productos que finalmente estaban agotados, lo que ha erosionado su confianza en los negocios locales.
+          Debido a su carga académica, valora enormemente la posibilidad de realizar compras en "tres clics" para ahorrar tiempo. No cuenta con herramientas en casa para validar el peso de lo que recibe, por lo que un sistema con sensores de peso reales que valide el stock digitalmente le brindaría la seguridad que actualmente le falta. Además, considera indispensable recibir una confirmación automática e inmediata tras el pago para mitigar la sensación de riesgo al pagar por adelantado.
+        </td>
+      </tr>
+    </table>
 
 </div>
 
@@ -611,73 +626,71 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ---
 
--   Tercera entrevista:
-<div align="center">
-<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+- Tercera entrevista:
+  <div align="center">
+  <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
 
-  <!-- Encabezado -->
-  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
-  
-  </div>
+    <!-- Encabezado -->
+    <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+    
+    </div>
 
-  <!-- Imagen de la captura de pantalla -->
-  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo2/cat.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
-  </div>
+    <!-- Imagen de la captura de pantalla -->
+    <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+      <img src="images/capitulo2/cat.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+    </div>
 
-  <!-- Datos en dos columnas -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistada:</strong> Rosmery Villa
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Género:</strong> Femenino
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> Fernando Flores
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Edad:</strong> 21
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-         <strong>Duración:</strong> 29:46 -35:55
-      </td>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Lugar de Residencia:</strong> an Martín de Porres, Lima
-      </td>
-    </tr>
-  </table>
+    <!-- Datos en dos columnas -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Entrevistada:</strong> Rosmery Villa
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+          <strong>Género:</strong> Femenino
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Entrevistador(a):</strong> Fernando Flores
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Edad:</strong> 21
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+           <strong>Duración:</strong> 29:46 -35:55
+        </td>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Lugar de Residencia:</strong> an Martín de Porres, Lima
+        </td>
+      </tr>
+    </table>
 
-  <!-- Link -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Link de la entrevista:</strong>
-        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
-      </td>
-    </tr>
-  </table>
+    <!-- Link -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+          <strong>Link de la entrevista:</strong>
+          https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+        </td>
+      </tr>
+    </table>
 
-  <!-- Descripción -->
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr>
-      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        Rosmery es una joven de 21 años que utiliza casi exclusivamente billeteras digitales (Yape) y tarjetas, evitando el uso de efectivo. Identifica la demora en la respuesta y la falta de stock actualizado como los principales motivos para abandonar una compra. Ha tenido experiencias negativas pagando por productos que luego resultan estar agotados, lo que genera una pérdida total de confianza en el negocio.
-        Se define como alguien que no sabe "escoger productos" en el mercado físico, por lo que prefiere una solución digital de "tres clics" que pueda usar incluso mientras viaja en el bus. Valida con entusiasmo la implementación de sensores de peso reales en los estantes, ya que desconfía de las balanzas tradicionales de los mercados. Aunque no le da importancia al comprobante físico, exige una confirmación automática del sistema al pagar por adelantado para evitar la sensación de inseguridad e insatisfacción.
-      </td>
-    </tr>
-  </table>
-
-</div>
+    <!-- Descripción -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+          Rosmery es una joven de 21 años que utiliza casi exclusivamente billeteras digitales (Yape) y tarjetas, evitando el uso de efectivo. Identifica la demora en la respuesta y la falta de stock actualizado como los principales motivos para abandonar una compra. Ha tenido experiencias negativas pagando por productos que luego resultan estar agotados, lo que genera una pérdida total de confianza en el negocio.
+          Se define como alguien que no sabe "escoger productos" en el mercado físico, por lo que prefiere una solución digital de "tres clics" que pueda usar incluso mientras viaja en el bus. Valida con entusiasmo la implementación de sensores de peso reales en los estantes, ya que desconfía de las balanzas tradicionales de los mercados. Aunque no le da importancia al comprobante físico, exige una confirmación automática del sistema al pagar por adelantado para evitar la sensación de inseguridad e insatisfacción.
+        </td>
+      </tr>
+    </table>
 
 </div>
 
-
+</div>
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -686,6 +699,7 @@ Se realizaron 6 entrevistas semiestructuradas distribuidas en dos segmentos obje
 #### Segmento objetivo #1: Comerciantes (Dueños de Minimarkets/Mercados)
 
 **Hallazgos**
+
 - El 100% de los comerciantes reportó enfrentar descuadres entre el stock físico y el registrado, ya sea por errores manuales al anotar entradas, por no contar con sistema alguno, o por no poder verificar con exactitud las unidades disponibles.
 - El 100% identificó el desorden en el cierre de caja como un problema recurrente, manifestado principalmente en la dificultad de separar y conciliar los ingresos en efectivo con los pagos por Yape, Plin o terminal POS.
 - El 67% mezcla el dinero de ventas con gastos operativos o compras a proveedores sin un registro formal, lo que genera pérdida de trazabilidad financiera al cierre del día.
@@ -702,13 +716,11 @@ Se realizaron 6 entrevistas semiestructuradas distribuidas en dos segmentos obje
 El descuadre de stock y el desorden en caja concentran el mayor porcentaje con un 100% cada uno, lo que los posiciona como los problemas más críticos y compartidos por la totalidad del segmento. La mezcla de medios de pago sin registro y la atención manual de WhatsApp, presentes en el 67% de los casos, complementan un panorama donde la falta de control operativo afecta tanto el inventario como la conciliación financiera y la atención al cliente.
 **Método de control de inventario actual**
 
-
 <p align="center">
   <img src="images/capitulo2/graf_metodoControl.png" alt="graf_metodoControl" width="500"/>
 </p>
 
 El 67% del segmento no cuenta con ninguna herramienta de registro estructurada y depende de la memoria o la revisión visual para controlar su inventario. Solo el 33% utiliza Excel, aunque con limitaciones reconocidas. Este dato indica que Entreprenly no compite con sistemas digitales existentes en estos perfiles, sino que se posiciona como la primera solución formal de gestión, lo que reduce la resistencia al cambio y facilita la adopción desde cero.
-
 
 **Aceptación de balanza inteligente para inventario**
 
@@ -717,7 +729,6 @@ El 67% del segmento no cuenta con ninguna herramienta de registro estructurada y
 </p>
 
 El 100% del segmento aceptó positivamente la propuesta de inventario automatizado por peso. El 67% lo hizo sin reservas, mientras que el 33% restante condicionó su aceptación a que el sistema sea sencillo de configurar y operar. La ausencia total de rechazo valida directamente una de las funcionalidades centrales de Entreprenly y confirma que el segmento percibe valor real en reemplazar el conteo manual por una solución basada en sensores.
-
 
 **Interés en automatización de pedidos por WhatsApp**
 
@@ -730,10 +741,10 @@ La totalidad del segmento mostró interés en automatizar la atención de pedido
 **Conclusiones**
 Los comerciantes entrevistados operan con herramientas insuficientes o inexistentes para el control de su negocio. La dependencia de la memoria, la mezcla de fondos y la gestión manual de WhatsApp generan pérdidas económicas y decisiones tardías. La totalidad del segmento validó positivamente las funcionalidades centrales de Entreprenly, lo que confirma que existe una necesidad real y una disposición clara hacia la digitalización, siempre que la solución sea práctica y fácil de adoptar desde el primer día.
 
-
 #### Segmento objetivo #2: Clientes finales
 
 **Hallazgos**
+
 - El 100% ha tenido al menos una experiencia negativa en la que pagó por un producto agotado, lo que generó pérdida de confianza en el negocio.
 - El 100% afirmó que un sistema con validación de stock por sensor de peso les brindaría mayor seguridad al comprar desde su celular.
 - El 100% señaló la demora en la respuesta por WhatsApp como una de sus principales frustraciones.
@@ -749,7 +760,6 @@ Los comerciantes entrevistados operan con herramientas insuficientes o inexisten
 </p>
 
 El gráfico evidencia una clara preferencia por los medios de pago digitales: el 67% de los entrevistados utiliza billeteras digitales como Yape o Plin como medio principal, mientras que el 33% restante combina tarjeta con billetera digital. Ningún entrevistado prioriza el efectivo, lo que confirma que la conciliación de pagos electrónicos es una necesidad central para este segmento y valida el enfoque de Entreprenly en la confirmación automática de cobros digitales.
-
 
 **Principales frustraciones al comprar en minimarkets locales**
 
@@ -767,8 +777,8 @@ Las principales frustraciones se concentran en la incertidumbre del stock y la d
 
 El 100% del segmento afirmó que un sistema con validación de stock mediante sensor de peso les brindaría mayor seguridad al comprar desde su celular. La unanimidad confirma que la desconfianza hacia el stock informado es una barrera real de compra y que la validación física del inventario por peso es percibida como un factor decisivo de confianza, respaldando directamente una de las funcionalidades centrales de Entreprenly.
 
-
 **Disposición a reemplazar la compra presencial por canal digital**
+
 <p align="center">
   <img src="images/capitulo2/graf_compraDigital.png" alt="graf_compraDigital" width="500"/>
 </p>
@@ -783,18 +793,18 @@ Los clientes finales entrevistados representan un perfil digital, exigente y con
 ### 2.3.1. User Personas
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
 <p align="center">
   <img src="images/capitulo2/user_persona_Don_Lucho.png" alt="user_persona_valentina" width="500"/>
 </p>
 
 **Segmento 2: Clientes Finales**
+
 <p align="center">
   <img src="images/capitulo2/user_persona_Andrea_Torres.png" alt="user_persona_andrea" width="500"/>
 </p>
 
-
 ### 2.3.2. User Task Matrix
-
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
 
@@ -948,11 +958,13 @@ La principal coincidencia entre ambos segmentos es que los dos otorgan alta impo
 ### 2.3.3. User Journey Mapping
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
 <p align="center">
   <img src="images/capitulo2/journey_mapin_segmento1.png" alt="user_persona_valentina" width="500"/>
 </p>
 
 **Segmento 2: Clientes Finales**
+
 <p align="center">
   <img src="images/capitulo2/journey_mapin_segmento2.png" alt="user_persona_andrea" width="500"/>
 </p>
@@ -960,15 +972,16 @@ La principal coincidencia entre ambos segmentos es que los dos otorgan alta impo
 ### 2.3.4. Empathy Mapping
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
 <p align="center">
   <img src="images/capitulo2/emp_comerciantes.png" alt="user_persona_valentina" width="500"/>
 </p>
 
 **Segmento 2: Clientes Finales**
+
 <p align="center">
   <img src="images/capitulo2/emp_clientes.png" alt="user_persona_andrea" width="500"/>
 </p>
-
 
 ### 2.3.5. Big Picture EventStorming
 
@@ -978,7 +991,6 @@ El equipo Kauflink realizó una sesión colaborativa de Big Picture Event Stormi
 **Proceso realizado por el equipo**
 
 A continuación se describe cada una de las etapas realizadas durante la sesión de Big Picture Event Storming, acompañadas de las capturas del tablero en Miro correspondientes a cada fase.
-
 
 **Paso 1: Preparación del espacio de trabajo**
 
@@ -1015,7 +1027,6 @@ Se definieron los colores de cada tipo de elemento según la convención del mé
 </table>
 </div>
 
-
 En esta primera etapa, cada miembro propuso de forma individual los eventos de dominio relevantes para el sistema, redactándolos en tiempo pasado y representándolos con post-its de color naranja. Se buscó cubrir los flujos del comerciante y del cliente final sin filtrar ni debatir, generando el mayor volumen posible de eventos. Los eventos identificados abarcaron los procesos de registro de productos, control de inventario por peso (IoT), ventas presenciales, pedidos por WhatsApp, conciliación de caja y gestión de alertas operativas.
 
 <div align="center">
@@ -1040,9 +1051,9 @@ El equipo definió y comunicó a todos los participantes el objetivo, el alcance
   - Gestión de inventario de productos perecederos
   - Registro de ventas presenciales con conciliación de pagos
   - Atención de pedidos por WhatsApp con validación de stock
-  - Detección de descuadres entre stock físico y digital 
+  - Detección de descuadres entre stock físico y digital
 
-Para arrancar la sesión, el facilitador colocó el primer Domain Event en el tablero como ejemplo: *Lote registrado*
+Para arrancar la sesión, el facilitador colocó el primer Domain Event en el tablero como ejemplo: _Lote registrado_
 
 <div align="center">
   <img src="./images/capitulo2/paso3.png" alt="Paso 3" width="800">
@@ -4847,43 +4858,48 @@ Para llevar a cabo los Bounded Context, se deben reconocer los eventos y organiz
 Para llevar a cabo el proceso de EventStorming empleamos la herramienta Miro.
 
 Generación y Autenticación de Cuenta
-<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Generación y Autenticación de Cuenta.jpg" width="500"/> 
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Generación y Autenticación de Cuenta.jpg" width="500"/>
 
 </p>
 
 En este Bounded Context se realiza la creación de cuentas y la gestión de inicios de sesión. El flujo inicia brindando la opción de registrarse como nuevo usuario o ingresar credenciales si ya posee una cuenta. La autenticación se resuelve con credenciales propias (email y contraseña), aplicando hashing BCrypt y emitiendo un token JWT firmado. Al registrarse un usuario se publica el evento de dominio `UserSignedUpEvent`, que otros contextos consumen para inicializar su información.
 
 Perfil y Configuración
+
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Perfil y Configuración.jpg" width="500"/> </p>
 
 En este Bounded Context se gestiona la configuración del perfil del usuario, incluyendo cambios de zona horaria, idioma, preferencias de interfaz (como modo oscuro), moneda y notificaciones. El cambio de contraseña y de email se gestiona en el contexto de Generación y Autenticación de Cuenta.
 
 Gestión y Proceso de Suscripción
+
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Gestión y Proceso de suscripción.jpg" width="500"/> </p>
 
 Este Bounded Context se encarga de la creación, renovación, cambio y cancelación de planes de suscripción, así como del registro de los datos de facturación del usuario. Además, realiza las validaciones necesarias y procesa el pago de la suscripción durante todo el proceso.
 
 Gestión de Inventario
+
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Gestión de inventario.jpg" width="500"/> </p>
 
 En este Bounded Context se realiza la creación y modificación de productos (por unidad y por peso). También incluye la gestión de lotes (creación, modificación y eliminación), así como funcionalidades adicionales como alertas de stock bajo, agotado y por vencer.
 
 Chatbot de WhatsApp
+
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Chatbot de WhatsApp.jpg" width="500"/> </p>
 
 Este Bounded Context permite la venta a través de un chatbot de WhatsApp. Para ello, consume el catálogo del contexto de Inventario para conocer la disponibilidad de productos, descuenta el stock al confirmar un pedido y registra la venta resultante en el contexto de Ventas.
 
-
 Ventas
+
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Ventas.jpg" width="500"/> </p>
 
 En este Bounded Context se realiza la gestión de ventas presenciales. El proceso registra los ítems vendidos según el tipo de producto (por unidad o por peso) y el método de pago con su comprobante (Yape, Plin o efectivo).
 
 Unión de Bounded Contexts
+
 <p align="center"> <img src="images/capitulo2/Entreprenly Open Source - BC union.jpg" width="500"/> </p>
 
 Este diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts, evidenciando las relaciones y dependencias dentro del sistema. La integración se resuelve mediante eventos de dominio (p. ej. `UserSignedUpEvent` de IAM hacia Perfil y Suscripción) y mediante Anti-Corruption Layers (ACL) entre contextos (p. ej. Chatbot consumiendo Inventario, Ventas, Suscripción e IAM).
- 
 
 #### 2.5.1.1. Candidate Context Discovery
 
@@ -4901,11 +4917,9 @@ Esta sección utilizará el Domain Message Flow Modelling, una técnica que ilus
 
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Gestion de inventario.jpg" width="500"/></p>
 
-
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
 
 <p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Perfil y Configuracion.jpg" width="500"/></p>
-
 
 #### 2.5.1.3. Bounded Context Canvases
 
@@ -4955,6 +4969,7 @@ Profile no administra credenciales, contraseñas ni tokens JWT. Estas responsabi
 #### 2.6.1.1. Domain Layer
 
 **Sub-capa Model - Aggregate:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4970,6 +4985,7 @@ Profile no administra credenciales, contraseñas ni tokens JWT. Estas responsabi
 El agregado `Profile` ofrece operaciones de dominio para actualizar datos personales, modificar preferencias, configurar notificaciones y reflejar un cambio de plan. El cambio de email o contraseña se deriva hacia IAM y no modifica directamente este agregado.
 
 **Sub-capa Model - Commands:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4982,6 +4998,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **Sub-capa Model - Queries:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4991,6 +5008,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **Sub-capa Model - Integration Events:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5000,6 +5018,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **Sub-capa Model - Value Objects:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5009,6 +5028,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **Sub-capa Repositories:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5019,6 +5039,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 #### 2.6.1.2. Interface Layer
 
 **REST - Controllers:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5029,6 +5050,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **REST - Resources y Transform (assemblers):**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5040,6 +5062,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **Events - Adaptadores de entrada:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5051,6 +5074,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 #### 2.6.1.3. Application Layer
 
 **Internal - Command Services:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5060,6 +5084,7 @@ El agregado `Profile` ofrece operaciones de dominio para actualizar datos person
 </table>
 
 **Internal - Query Services:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5073,6 +5098,7 @@ La capa de aplicación coordina el flujo, pero no contiene reglas de presentaci�
 #### 2.6.1.4. Infrastructure Layer
 
 **Persistence:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5086,6 +5112,7 @@ La capa de aplicación coordina el flujo, pero no contiene reglas de presentaci�
 </table>
 
 **Reglas de infraestructura y seguridad:**
+
 - Monolito modular Spring Boot con PostgreSQL compartida y límites lógicos por Bounded Context.
 - `user_id` es único y funciona como referencia lógica a la identidad administrada por IAM; las credenciales y el hash de contraseña nunca se almacenan en `profiles`.
 - Los endpoints requieren JWT válido y comprueban que el perfil solicitado corresponda al usuario autenticado.
@@ -5151,6 +5178,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 #### 2.6.2.1. Domain Layer
 
 **Sub-capa Model - Aggregates:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5182,6 +5210,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Model - Entities (lectura y alertas):**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5201,6 +5230,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Model - Commands:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5214,6 +5244,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Model - Queries:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5226,6 +5257,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Model - Events (mejora respecto a la guía, que los omite):**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5237,6 +5269,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Model - Value Objects:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5248,6 +5281,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Services:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5261,6 +5295,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Sub-capa Repositories:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5274,6 +5309,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 #### 2.6.2.2. Interface Layer
 
 **REST - Controllers:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5286,6 +5322,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **REST - Resources y Transform (assemblers):**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5296,6 +5333,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **ACL - Fachada anticorrupción:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5313,6 +5351,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 #### 2.6.2.3. Application Layer
 
 **Internal - CommandServices:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5323,6 +5362,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Internal - QueryServices:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5335,6 +5375,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 #### 2.6.2.4. Infrastructure Layer
 
 **Persistence:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -5343,6 +5384,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 </table>
 
 **Reglas de infraestructura y validación física:**
+
 - Monolito modular Spring Boot con despliegue único; base PostgreSQL compartida en 3FN.
 - Balanza inteligente (IoT): si el producto es `WEIGHT` y la balanza responde, captura automática del peso (valor grande en tiempo real); si no hay respuesta, fallback manual permitido. Funcionalidad premium ligada al Plan Control.
 - Bloqueo de venta sin stock: si cantidad/peso solicitado supera disponible, se retorna error y no se agrega el ítem al ticket. Búsqueda y filtrado en tiempo real por nombre/categoría con estado vacío controlado.
@@ -5742,39 +5784,357 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 
 ### 2.6.4. Bounded Context: Subscription
 
-Por completar.
+Este Bounded Context administra la relación de suscripción del comerciante con Entreprenly. Comprende el catálogo de planes Free y Control, la contratación, los datos de facturación, los métodos de pago, los cobros, la activación, la renovación, la cancelación y la consulta del historial. Free se establece como plan efectivo al crear la cuenta y permite el acceso básico sin vencimiento; Control habilita los beneficios contratados durante un periodo mensual o anual, una vez aprobado el pago correspondiente.
+
+El diseño sigue DDD táctico y Clean Architecture mediante las capas Domain, Interface, Application e Infrastructure. Subscription es responsable de las reglas de vigencia y de los cambios del plan efectivo. Una solicitud de cancelación conserva los beneficios hasta el final del periodo contratado; al concluir, se cancela la suscripción de pago y se restablece Free. Las consultas de acceso evalúan tanto el estado como las fechas, de modo que una ejecución tardía del procesamiento de vencimientos no prolongue el acceso premium.
+
+El propietario se identifica mediante userId como referencia lógica al módulo de identidad y acceso, sin incorporar sus entidades ni establecer dependencias de persistencia entre contextos. Profile recibe SubscriptionPlanChangedIntegrationEvent para actualizar el plan visible. La aplicación expone SubscriptionContextFacade para consultar la vigencia y las funcionalidades habilitadas. Inventory mantiene owner_email para sus datos; el adaptador de identidad obtiene userId y email del mismo usuario autenticado mediante IAM y utiliza userId al consultar Subscription. El correo no se convierte en clave de la suscripción. Chatbot y Sales pueden consumir el mismo contrato al ejecutar operaciones sujetas al plan, sin acceder a tablas de Subscription. Los cobros de este contexto corresponden al uso de Entreprenly; las ventas de productos del comerciante pertenecen a Sales.
 
 #### 2.6.4.1. Domain Layer
 
-Por completar.
+**Sub-capa Model - Aggregates:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>SubscriptionPlan</td><td>Define el código, nombre, descripción, precios, periodicidad y funcionalidades de Free y Control.</td><td>Mantener importes no negativos, moneda consistente y un código único; resolver el precio mensual o anual mediante getPriceFor. Free no requiere cobro.</td><td>Referenciado por Subscription y Payment mediante planId; contiene Money y BillingPeriod.</td>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>Subscription</td><td>Representa la suscripción de pago del usuario, con estado, periodo, solicitud de cancelación y último pago aplicado; el acceso Free se resuelve cuando no existe Control vigente.</td><td>Controlar applyPayment, activate, scheduleCancellation, cancel e isActiveAt; aplicar cada pago una sola vez y conservar el periodo vigente ante una cancelación programada.</td><td>Referencia a SubscriptionPlan, Payment y al propietario mediante identificadores; extiende AbstractDomainAggregateRoot.</td>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>Payment</td><td>Registra cada intento de cobro, importe, moneda, plan, periodo, resultado y referencia de transacción.</td><td>Conservar la trazabilidad del cobro y distinguir PENDING, APPROVED, DECLINED y FAILED. Un resultado no aprobado no habilita ni extiende Control.</td><td>Se vincula a Subscription mediante subscriptionId y al propietario mediante userId.</td>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>BillingSetup</td><td>Agrupa la configuración de facturación y los métodos de pago del usuario.</td><td>Mantener los datos fiscales y la colección de medios de pago, con un único método predeterminado cuando existan métodos disponibles.</td><td>Contiene FiscalData y PaymentMethod; se recupera por userId a través de BillingSetupRepository.</td>
+  </tr>
+</table>
+
+**Sub-capa Model - Entities:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Entity</td><td>SubscriptionPlan / Subscription / Payment / BillingSetup</td><td>Entidades con identidad propia que constituyen las raíces de agregado del contexto.</td><td>Mantener sus invariantes dentro de cada límite de consistencia; coordinar referencias entre agregados mediante identificadores.</td><td>No se requieren entidades subordinadas con ciclo de vida independiente; PaymentMethod es un valor reemplazable identificado por la referencia externa methodId.</td>
+  </tr>
+</table>
+
+El historial es una proyección de los eventos de negocio persistidos. SubscriptionActivity conserva eventId, userId, subscriptionId opcional, tipo, fecha y detalle de la operación. No es una raíz de agregado ni sustituye a Subscription; permite consultar cambios anteriores aunque el plan efectivo vuelva a Free.
+
+**Sub-capa Model - Commands:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Command</td><td>CreateSubscriptionPlanCommand</td><td>Solicita registrar un plan con código, precios, moneda y beneficios.</td><td>Transportar la configuración del catálogo; el servicio verifica unicidad y el agregado valida las condiciones monetarias.</td><td>Atendido por SubscriptionPlanCommandService; operación restringida a la administración del catálogo.</td>
+  </tr>
+  <tr>
+    <td>Command</td><td>CreateSubscriptionCommand</td><td>Solicita contratar el plan seleccionado para un usuario y una periodicidad.</td><td>Iniciar la contratación y el cobro sin retirar Free antes de la aprobación del pago.</td><td>Atendido por SubscriptionCommandService; utiliza SubscriptionPlanRepository y PaymentGateway.</td>
+  </tr>
+  <tr>
+    <td>Command</td><td>ProcessSubscriptionPaymentCommand</td><td>Solicita procesar el pago de una suscripción.</td><td>Identificar la suscripción y el medio de pago; el importe se obtiene del catálogo y no de un valor libre enviado por el cliente.</td><td>SubscriptionCommandService registra Payment y aplica el resultado mediante Subscription.applyPayment.</td>
+  </tr>
+  <tr>
+    <td>Command</td><td>RenewSubscriptionCommand</td><td>Solicita extender la vigencia de Control.</td><td>Comprobar que el periodo sea renovable, procesar el cobro y extender desde el vencimiento vigente únicamente tras su aprobación.</td><td>Atendido por SubscriptionCommandService; Free y las suscripciones canceladas no se renuevan mediante esta operación.</td>
+  </tr>
+  <tr>
+    <td>Command</td><td>CancelSubscriptionCommand</td><td>Solicita la cancelación de la suscripción de pago.</td><td>Programar el cese al finalizar el periodo; repetir la solicitud no modifica la fecha de vencimiento ni duplica sus efectos.</td><td>Atendido por SubscriptionCommandService; invoca scheduleCancellation sobre Subscription.</td>
+  </tr>
+  <tr><td>Command</td><td>UpdateBillingDetailsCommand</td><td>Actualiza los datos fiscales del propietario.</td><td>Validar FiscalData y modificar BillingSetup.</td><td>Atendido por BillingSetupCommandService.</td></tr>
+  <tr><td>Command</td><td>AddPaymentMethodCommand / RemovePaymentMethodCommand / SetDefaultPaymentMethodCommand</td><td>Gestiona referencias de métodos de pago.</td><td>Actualizar la colección sin duplicar methodId; si se elimina el predeterminado, seleccionar otro de forma explícita o dejar la colección vacía.</td><td>Atendidos por BillingSetupCommandService.</td></tr>
+  <tr><td>Command</td><td>CompleteSubscriptionPeriodCommand</td><td>Procesa una contratación cuyo periodo concluyó.</td><td>Cancelar si existe solicitud; expirar si no hay renovación aprobada.</td><td>Atendido por SubscriptionCommandService; operación interna idempotente.</td></tr>
+</table>
+
+Los comandos expresan una intención y transportan datos. La autorización corresponde a la aplicación y las invariantes se ejecutan en los agregados. El campo requestedPaymentStatus se limita al adaptador de pagos simulado; no constituye una confirmación válida emitida por un proveedor real.
+
+**Sub-capa Model - Queries:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Query</td><td>GetAllSubscriptionPlansQuery</td><td>Consulta el catálogo de planes.</td><td>Obtener las condiciones de Free y Control disponibles para contratación.</td><td>Atendida por SubscriptionPlanQueryService.</td>
+  </tr>
+  <tr>
+    <td>Query</td><td>GetSubscriptionPlanByIdQuery</td><td>Consulta un plan específico.</td><td>Recuperar precios, periodicidad y funcionalidades del plan solicitado.</td><td>Atendida por SubscriptionPlanQueryService.</td>
+  </tr>
+  <tr>
+    <td>Query</td><td>GetSubscriptionByIdQuery</td><td>Consulta el detalle de una suscripción.</td><td>Obtener estado, plan y fechas después de comprobar la pertenencia al usuario autenticado.</td><td>Atendida por SubscriptionQueryService.</td>
+  </tr>
+  <tr>
+    <td>Query</td><td>GetActiveSubscriptionByUserIdQuery</td><td>Consulta la suscripción vigente del propietario.</td><td>Resolver el plan efectivo considerando estado, periodo y cancelación programada.</td><td>Atendida por SubscriptionQueryService; sirve al panel y la validación de acceso.</td>
+  </tr>
+  <tr>
+    <td>Query</td><td>GetPaymentsBySubscriptionIdQuery</td><td>Consulta los intentos de cobro de una suscripción.</td><td>Obtener importes, fechas y resultados en orden cronológico, dentro del ámbito del propietario.</td><td>Atendida por SubscriptionQueryService; complementa el historial de actividad.</td>
+  </tr>
+  <tr><td>Query</td><td>GetBillingSetupByUserIdQuery</td><td>Consulta la configuración de facturación.</td><td>Entregar datos del propietario autenticado con métodos enmascarados.</td><td>Atendida por BillingSetupQueryService.</td></tr>
+  <tr><td>Query</td><td>GetSubscriptionHistoryQuery</td><td>Consulta la actividad con rango de fechas y paginación.</td><td>Recuperar solo registros del propietario; conservar orden por fecha y eventId.</td><td>Atendida por SubscriptionHistoryQueryService; utilizada también para exportar.</td></tr>
+</table>
+
+**Sub-capa Model - Events:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+<tr style="background-color:#2c3e50; color:white;"><th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th></tr>
+  <tr><td>Domain Event</td><td>SubscriptionActivated</td><td>Control fue activado tras un pago aprobado.</td><td>Registrar el inicio del periodo contratado.</td><td>Emitido por Subscription; origina actividad y cambio de plan efectivo.</td></tr>
+  <tr><td>Domain Event</td><td>SubscriptionRenewed</td><td>Se extendió el periodo tras aplicar un nuevo pago.</td><td>Conservar la fecha anterior y la nueva fecha de vencimiento.</td><td>Emitido por Subscription; actualiza el historial.</td></tr>
+  <tr><td>Domain Event</td><td>SubscriptionCancellationScheduled</td><td>Se confirmó la solicitud de cancelación.</td><td>Registrar cancellationRequestedAt sin retirar el acceso vigente.</td><td>Emitido por Subscription.</td></tr>
+  <tr><td>Domain Event</td><td>SubscriptionCancelled / SubscriptionExpired</td><td>Terminó la contratación por cancelación o vencimiento sin renovación aprobada.</td><td>Registrar el fin de Control y activar la resolución de Free.</td><td>Emitidos por Subscription; la aplicación comunica el plan efectivo a Profile.</td></tr>
+  <tr><td>Domain Event</td><td>PaymentProcessed</td><td>Se registró el resultado del intento de cobro.</td><td>Conservar paymentId, estado, importe y fecha sin datos sensibles.</td><td>Emitido por Payment; alimenta el historial.</td></tr>
+  <tr><td>Domain Event</td><td>BillingDetailsUpdated / PaymentMethodsChanged</td><td>Se actualizó la configuración de facturación.</td><td>Registrar la operación sin copiar documentos fiscales ni tokens al historial.</td><td>Emitidos por BillingSetup.</td></tr>
+</table>
+
+Los eventos de dominio expresan hechos del negocio. UserSignedUpIntegrationEvent y SubscriptionPlanChangedIntegrationEvent son contratos entre contextos y se describen en Interface; ApplicationReadyEvent pertenece exclusivamente al arranque de Application.
+
+**Sub-capa Model - Value Objects:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Value Object</td><td>Money</td><td>Importe decimal y moneda de un precio o cobro.</td><td>Mantener precisión monetaria y rechazar importes negativos; comparar importes junto con su moneda.</td><td>Utilizado por SubscriptionPlan y Payment.</td>
+  </tr>
+  <tr>
+    <td>Value Object</td><td>BillingPeriod</td><td>Periodicidad MONTHLY o YEARLY.</td><td>Determinar el precio y la extensión del periodo contratado.</td><td>Utilizado por SubscriptionPlan, Subscription y Payment para Control; el acceso Free no requiere periodo de cobro.</td>
+  </tr>
+  <tr>
+    <td>Value Object</td><td>SubscriptionStatus</td><td>Estados ACTIVE, PENDING_PAYMENT, CANCELLED, EXPIRED y SUSPENDED.</td><td>Representar el ciclo de vida; la vigencia se determina conjuntamente con currentPeriodEnd.</td><td>Utilizado por Subscription. Free es un plan, mientras que la cancelación programada se consulta mediante isCancellationScheduled.</td>
+  </tr>
+  <tr>
+    <td>Value Object</td><td>PaymentStatus</td><td>Resultados PENDING, APPROVED, DECLINED y FAILED.</td><td>Distinguir un pago pendiente, aprobado, rechazado o fallido.</td><td>Utilizado por Payment; solo APPROVED permite aplicar el pago.</td>
+  </tr>
+  <tr>
+    <td>Value Object</td><td>FiscalData</td><td>Documento, número, nombre o razón social, correo y dirección fiscal.</td><td>Agrupar información de facturación completa y válida antes de preparar el cobro.</td><td>Contenido en BillingSetup.</td>
+  </tr>
+  <tr>
+    <td>Value Object</td><td>PaymentMethod</td><td>Referencia del proveedor, marca, últimos cuatro dígitos, titular, vencimiento y selección predeterminada.</td><td>Representar un medio de pago mediante datos descriptivos y una referencia; sus cambios sustituyen el valor dentro del agregado.</td><td>Colección de BillingSetup; no almacena el número completo de tarjeta ni su código de seguridad.</td>
+  </tr>
+</table>
+
+La cancelación programada se representa mediante cancellationRequestedAt y autoRenew = false. Mientras status = ACTIVE y now < currentPeriodEnd, Control conserva sus beneficios. cancelledAt permanece vacío hasta que se ejecuta la cancelación efectiva; entonces status pasa a CANCELLED. Una contratación que vence sin renovación aprobada y sin solicitud de cancelación pasa a EXPIRED. SUSPENDED no concede beneficios premium y PENDING_PAYMENT no sustituye el acceso Free.
+
+Por usuario se admite como máximo una contratación abierta de Control, considerando PENDING_PAYMENT, ACTIVE y SUSPENDED. Un índice único condicionado por user_id y control de concurrencia protegen esta regla. Free se obtiene del catálogo cuando no existe Control vigente; no se crea una segunda fila activa para Free. Las contrataciones cerradas se conservan para el historial. GetActiveSubscriptionByUserIdQuery puede devolver ausencia de Control; SubscriptionContextFacade resuelve en ese caso el plan Free.
+
+La contratación pendiente se reutiliza cuando se reintenta un pago rechazado; no se abre una segunda contratación para el mismo usuario. Antes de una nueva contratación, Application procesa una contratación anterior cuyo periodo ya terminó.
+
+La renovación se procesa mientras Control esté vigente y no tenga cancelación programada. La aprobación extiende el periodo desde currentPeriodEnd; un rechazo conserva la fecha original. autoRenew permite al procesamiento periódico solicitar el mismo caso de uso con una clave de operación por suscripción y periodo. Al confirmar la cancelación se deshabilita esa renovación. Abrir y cerrar el diálogo de confirmación no produce ningún comando ni cambio de estado.
+
+**Sub-capa Services:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Domain Behavior</td><td>Subscription.applyPayment / activate</td><td>Aplica un pago aprobado y establece el periodo contratado.</td><td>Verificar correspondencia de suscripción, plan, moneda y periodo; impedir la reutilización de un pago.</td><td>Comportamiento de Subscription invocado por SubscriptionCommandService.</td>
+  </tr>
+  <tr>
+    <td>Domain Behavior</td><td>Subscription.scheduleCancellation / cancel / expire / isActiveAt</td><td>Gestiona cancelación y vigencia.</td><td>Conservar acceso hasta currentPeriodEnd y resolver el vencimiento con una fecha explícita.</td><td>La aplicación coordina su ejecución; la fachada resuelve Free al no existir Control vigente.</td>
+  </tr>
+  <tr>
+    <td>Domain Behavior</td><td>SubscriptionPlan.getPriceFor / hasFeature</td><td>Resuelve el precio y los beneficios del catálogo.</td><td>Mantener estas reglas junto a los datos del plan, sin depender del proveedor de pagos ni de controladores.</td><td>Utilizado por los servicios de aplicación al contratar o consultar acceso.</td>
+  </tr>
+</table>
+
+Las reglas anteriores pertenecen a las raíces de agregado y no requieren un servicio de dominio independiente. SubscriptionCommandService y SubscriptionQueryService son contratos de aplicación: coordinan casos de uso y no sustituyen las invariantes del dominio.
+
+**Sub-capa Repositories:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Repository</td><td>SubscriptionPlanRepository</td><td>Contrato de persistencia del catálogo.</td><td>Consultar por identificador o código y verificar unicidad antes de guardar.</td><td>Implementado en Infrastructure; utilizado por servicios del catálogo.</td>
+  </tr>
+  <tr>
+    <td>Repository</td><td>SubscriptionRepository</td><td>Contrato de persistencia de suscripciones.</td><td>Recuperar por identificador o propietario y estado; guardar cambios de vigencia con control de concurrencia.</td><td>Implementado en Infrastructure; conserva las contrataciones anteriores.</td>
+  </tr>
+  <tr>
+    <td>Repository</td><td>PaymentRepository</td><td>Contrato de persistencia de intentos de cobro.</td><td>Guardar resultados y consultar por subscriptionId, conservando la referencia de transacción.</td><td>Implementado en Infrastructure; utilizado por SubscriptionCommandService y SubscriptionQueryService.</td>
+  </tr>
+  <tr>
+    <td>Repository</td><td>BillingSetupRepository</td><td>Contrato de persistencia de facturación.</td><td>Recuperar y guardar la configuración completa del propietario mediante userId.</td><td>Implementado en Infrastructure; persiste los valores de BillingSetup.</td>
+  </tr>
+</table>
 
 #### 2.6.4.2. Interface Layer
 
-Por completar.
+**REST - Controllers:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Controller</td><td>SubscriptionsController</td><td>Expone contratación, consulta, renovación, cancelación, pagos y validación de acceso.</td><td>Validar recursos y pertenencia al usuario autenticado; delegar cada operación a los servicios de aplicación.</td><td>Utiliza SubscriptionCommandService y SubscriptionQueryService.</td>
+  </tr>
+  <tr>
+    <td>Controller</td><td>SubscriptionPlansController</td><td>Expone la consulta y administración del catálogo.</td><td>Separar la lectura de planes de las operaciones administrativas de creación.</td><td>Utiliza SubscriptionPlanCommandService y SubscriptionPlanQueryService.</td>
+  </tr>
+  <tr>
+    <td>Controller</td><td>SubscriptionDashboardController</td><td>Expone el panel, la configuración de facturación y la confirmación del pago.</td><td>Entregar plan efectivo, vigencia, métodos de pago y actividad del usuario; encauzar las modificaciones a través de la aplicación.</td><td>Delega en SubscriptionQueryService, BillingSetupCommandService, BillingSetupQueryService y SubscriptionHistoryQueryService; no accede directamente a repositorios.</td>
+  </tr>
+</table>
+
+**REST - Resources y Transform (assemblers):**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Resource</td><td>SubscriptionResource / AccessValidationResource</td><td>Representaciones de la suscripción y del acceso autorizado.</td><td>Exponer identificadores, plan, estado, fechas y beneficios sin entregar entidades persistentes.</td><td>Construidos a partir del resultado de los servicios de aplicación.</td>
+  </tr>
+  <tr>
+    <td>Resource</td><td>PaymentResource</td><td>Representación del cobro registrado.</td><td>Entregar importe, moneda, fecha y resultado; excluir tokens y datos internos del proveedor.</td><td>Utilizado en pagos y confirmaciones.</td>
+  </tr>
+  <tr>
+    <td>Resource</td><td>Recursos de contratación, renovación y facturación</td><td>Datos de entrada de las operaciones del usuario.</td><td>Validar formato y campos obligatorios; obtener el propietario de la identidad autenticada y los precios del catálogo.</td><td>Transformados en comandos o solicitudes de aplicación.</td>
+  </tr>
+  <tr>
+    <td>Assembler</td><td>Transformadores de Subscription y Payment</td><td>Conversión entre recursos y modelos de aplicación.</td><td>Mantener las decisiones de serialización fuera del dominio.</td><td>Utilizados por los controladores REST.</td>
+  </tr>
+</table>
+
+**ACL - Integración entre contextos:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Facade</td><td>IamContextFacade</td><td>Contrato de consulta del módulo de identidad y acceso.</td><td>Resolver la identidad del usuario sin acceder directamente a sus tablas.</td><td>Utilizado para comprobar el propietario de las operaciones.</td>
+  </tr>
+  <tr>
+    <td>Published Contract</td><td>Validación de acceso a funcionalidades</td><td>Contrato de lectura del plan efectivo y sus beneficios.</td><td>Evaluar vigencia y hasFeature; devolver una respuesta independiente del modelo interno de Subscription.</td><td>Expuesto mediante validateAccess y AccessValidationResource para los consumidores.</td>
+  </tr>
+  <tr>
+    <td>Integration Event</td><td>SubscriptionPlanChangedIntegrationEvent</td><td>Contrato de notificación a Profile.</td><td>Comunicar cambios confirmados del plan sin compartir agregados.</td><td>Profile actualiza su representación del plan; Subscription conserva la autoridad sobre la vigencia.</td>
+  </tr>
+  <tr><td>Facade</td><td>SubscriptionContextFacade</td><td>Expone getEffectivePlan(userId, at) y validateAccess(userId, feature, at).</td><td>Resolver Free o Control y sus beneficios usando la misma regla de vigencia del panel.</td><td>Consumida por adaptadores de otros contextos; no expone entidades ORM.</td></tr>
+  <tr><td>Integration Event</td><td>UserSignedUpIntegrationEvent</td><td>Notifica el alta en IAM.</td><td>Establecer Free como plan efectivo y sincronizar Profile de forma idempotente, sin crear una contratación de pago.</td><td>Consumido por UserSignedUpSubscriptionEventHandler.</td></tr>
+</table>
 
 #### 2.6.4.3. Application Layer
 
-Por completar.
+**Servicios de aplicación:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Command Service</td><td>SubscriptionCommandService</td><td>Coordina contratación, cobro, renovación y cancelación.</td><td>Autorizar al propietario, recuperar agregados, solicitar el cobro por PaymentGateway, aplicar las reglas y persistir el resultado.</td><td>Depende de repositorios y del contrato PaymentGateway; publica cambios de plan después de confirmar la persistencia.</td>
+  </tr>
+  <tr>
+    <td>Command Service</td><td>SubscriptionPlanCommandService</td><td>Coordina el registro del catálogo.</td><td>Verificar permisos administrativos y unicidad antes de crear SubscriptionPlan.</td><td>Utiliza SubscriptionPlanRepository.</td>
+  </tr>
+  <tr>
+    <td>Query Service</td><td>SubscriptionQueryService</td><td>Resuelve detalle, suscripción vigente y pagos.</td><td>Mantener las consultas dentro del ámbito del propietario y calcular el acceso con la fecha de consulta.</td><td>Utiliza SubscriptionRepository y PaymentRepository.</td>
+  </tr>
+  <tr>
+    <td>Query Service</td><td>SubscriptionPlanQueryService</td><td>Resuelve consultas de planes.</td><td>Obtener el catálogo y las condiciones del plan seleccionado.</td><td>Utiliza SubscriptionPlanRepository.</td>
+  </tr>
+  <tr>
+    <td>Application Use Case</td><td>Gestión de facturación e historial</td><td>Coordina los cambios en BillingSetup y la lectura de actividad.</td><td>Validar pertenencia, actualizar datos fiscales y métodos de pago; reunir cambios y cobros para su consulta y descarga.</td><td>Utiliza BillingSetupRepository y registros de actividad; los textos del panel se componen como recursos de presentación.</td>
+  </tr>
+  <tr>
+    <td>Event Handler</td><td>UserSignedUpSubscriptionEventHandler</td><td>Atiende la creación de una cuenta.</td><td>Resolver Free para el usuario recién creado y comunicar el plan efectivo una sola vez mediante una clave de evento procesado.</td><td>Consume UserSignedUpIntegrationEvent; resuelve el catálogo y registra la notificación en el outbox.</td>
+  </tr>
+  <tr>
+    <td>Event Handler</td><td>SubscriptionCatalogReadyEventHandler</td><td>Inicializa los planes predeterminados.</td><td>Crear Free y Control solo cuando no existan, sin sobrescribir configuraciones vigentes.</td><td>Consume ApplicationReadyEvent.</td>
+  </tr>
+  <tr>
+    <td>Application Use Case</td><td>Procesamiento de fin de periodo</td><td>Coordina las suscripciones que alcanzan su vencimiento.</td><td>Ejecutar cancelaciones programadas, conservar la contratación histórica y restablecer Free; una renovación aprobada extiende el periodo sin duplicación.</td><td>Invoca comportamiento de Subscription y comunica el cambio efectivo a Profile.</td>
+  </tr>
+  <tr><td>Command Service</td><td>BillingSetupCommandService</td><td>Atiende los comandos de facturación y métodos de pago.</td><td>Autorizar al propietario y ejecutar las invariantes de BillingSetup dentro de una transacción.</td><td>Depende de BillingSetupRepository.</td></tr>
+  <tr><td>Query Service</td><td>BillingSetupQueryService</td><td>Resuelve GetBillingSetupByUserIdQuery.</td><td>Retornar información fiscal y métodos enmascarados, sin tokens del proveedor.</td><td>Depende de BillingSetupRepository.</td></tr>
+  <tr><td>Query Service</td><td>SubscriptionHistoryQueryService</td><td>Resuelve consulta y descarga del historial.</td><td>Aplicar propietario, fechas y paginación; delegar la generación del archivo al adaptador de exportación.</td><td>Depende de SubscriptionActivityStore, puerto de lectura de Application.</td></tr>
+  <tr><td>Event Handler</td><td>SubscriptionActivityProjector</td><td>Proyecta los eventos de negocio persistidos.</td><td>Insertar una actividad por eventId y permitir reintentos sin duplicados.</td><td>Consume eventos del outbox y escribe mediante SubscriptionActivityStore.</td></tr>
+</table>
+
+La llamada al proveedor de pagos se separa de la transacción local de persistencia. El intento se identifica antes del cobro y su resultado se registra de manera idempotente. La actualización de la suscripción y el registro de que el pago fue aplicado deben conservarse de forma consistente; una repetición de la respuesta no extiende nuevamente el periodo. Los eventos se guardan en subscription_outbox dentro de la misma transacción local. Un publicador posterior entrega los eventos con reintentos; eventId permite deduplicar el historial y las notificaciones. Los cambios de plan destinados a un usuario se procesan en orden para impedir que Profile termine mostrando un plan anterior.
 
 #### 2.6.4.4. Infrastructure Layer
 
-Por completar.
+**Persistencia e integración:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Persistence Adapter</td><td>Implementaciones JPA de los repositorios</td><td>Adaptan los contratos a la base de datos relacional.</td><td>Mapear agregados y valores, aplicar transacciones y evitar actualizaciones concurrentes incompatibles.</td><td>Implementan SubscriptionPlanRepository, SubscriptionRepository, PaymentRepository y BillingSetupRepository.</td>
+  </tr>
+  <tr>
+    <td>Outbound Port</td><td>PaymentGateway</td><td>Contrato de aplicación para solicitar un cobro.</td><td>Intercambiar PaymentGatewayRequest y PaymentGatewayResponse sin acoplar el dominio a un proveedor.</td><td>Invocado por SubscriptionCommandService e implementado por adaptadores de Infrastructure.</td>
+  </tr>
+  <tr>
+    <td>Payment Adapter</td><td>FakePaymentGateway</td><td>Adaptador de simulación del resultado del cobro.</td><td>Producir respuestas controladas de aprobación, rechazo o fallo para validar los flujos de la aplicación.</td><td>Implementa PaymentGateway; no realiza cobros financieros reales.</td>
+  </tr>
+  <tr>
+    <td>Persistence Mechanism</td><td>Control de duplicados y concurrencia</td><td>Protección del registro y aplicación de pagos.</td><td>Usar una referencia única de operación y control transaccional para impedir cobros aplicados dos veces o periodos sobrescritos.</td><td>Complementa las invariantes de Subscription y la persistencia de Payment.</td>
+  </tr>
+  <tr>
+    <td>Scheduling Adapter</td><td>Ejecución periódica del fin de periodo</td><td>Activa el caso de uso de vencimiento.</td><td>Seleccionar suscripciones pendientes de procesamiento y delegar las decisiones a la aplicación.</td><td>No modifica directamente el plan ni reemplaza la comprobación de vigencia en las consultas.</td>
+  </tr>
+  <tr>
+    <td>Read Model</td><td>Persistencia de actividad y exportación</td><td>Conserva los cambios de suscripción necesarios para el historial.</td><td>Registrar fecha, usuario, suscripción y operación confirmada; generar la descarga a partir de registros autorizados.</td><td>Complementa los pagos persistidos y el modelo de consulta del panel.</td>
+  </tr>
+  <tr><td>Application Port</td><td>SubscriptionActivityStore</td><td>Contrato de lectura y escritura de la proyección de actividad.</td><td>Insertar por eventId único y consultar por userId, fechas y paginación.</td><td>Implementado por persistencia relacional; no es repositorio de agregado.</td></tr>
+  <tr><td>Outbox Adapter</td><td>SubscriptionOutboxPublisher</td><td>Entrega los eventos confirmados en la transacción local.</td><td>Reintentar entregas pendientes conservando orden por usuario y deduplicación por evento.</td><td>Alimenta SubscriptionActivityProjector y los consumidores de integración.</td></tr>
+  <tr><td>Export Adapter</td><td>SubscriptionHistoryExporter</td><td>Genera el archivo del historial autorizado.</td><td>Convertir los registros de lectura a CSV con fechas, operación y resultado.</td><td>Invocado por SubscriptionHistoryQueryService; no introduce reglas de dominio.</td></tr>
+</table>
 
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/subscription-component.png" alt="Diagrama de componentes del Bounded Context Subscription" width="1000"/>
+</p>
+
+**Figura 2.6.4.1:** Componentes y dependencias de Subscription. Los controladores delegan los casos de uso a Application; los adaptadores implementan los contratos de persistencia y pago. El dominio no depende de los controladores, JPA ni del proveedor de pagos. Profile recibe cambios confirmados, mientras los consumidores de funcionalidades consultan el plan efectivo mediante la fachada.
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 
-Por completar.
+El modelo separa las raíces de agregado, sus valores y las proyecciones de lectura. Las referencias externas se conservan como identificadores y la persistencia de eventos permite reconstruir la actividad sin convertir el historial en una raíz de agregado.
 
 ##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/CLASS DIAGRAM — Gestión y Proceso de Suscripción.svg" alt="Diagrama de clases del Bounded Context Subscription" width="1000"/>
+</p>
+
+**Figura 2.6.4.2:** Agregados y objetos de valor del dominio. La solicitud de cancelación y su ejecución utilizan fechas diferentes. Payment.appliedAt identifica la aplicación de cada cobro, mientras Subscription.version protege la actualización concurrente del periodo. Los textos y etiquetas del panel pertenecen a los recursos de interfaz y no se almacenan como reglas de BillingSetup.
 
 ##### 2.6.4.6.2. Bounded Context Database Design Diagram
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/subscription-database.png" alt="Diagrama de base de datos del Bounded Context Subscription" width="800"/>
+</p>
+
+**Figura 2.6.4.3:** Modelo de persistencia del contexto, incluida la configuración de facturación y las proyecciones de actividad. user_id conserva una referencia lógica a IAM; Profile e Inventory no se incorporan al esquema de Subscription.
+
+**Diccionario de persistencia:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+<tr style="background-color:#2c3e50; color:white;"><th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th></tr>
+  <tr><td>Table</td><td>subscription_plans / subscription_plan_features</td><td>Catálogo Free y Control con precios y beneficios.</td><td>Código único, importes no negativos y unicidad de la pareja plan_id–feature.</td><td>Los beneficios se consultan desde SubscriptionContextFacade.</td></tr>
+  <tr><td>Table</td><td>subscriptions</td><td>Contrataciones de Control; Free se resuelve sin una contratación adicional.</td><td>Índice único parcial por user_id para estados PENDING_PAYMENT, ACTIVE y SUSPENDED; version para concurrencia y current_period_end obligatorio al activar Control.</td><td>Conserva plan_id y latest_payment_id como referencias entre agregados.</td></tr>
+  <tr><td>Table</td><td>subscription_payments</td><td>Intentos de cobro y registro de su aplicación.</td><td>operation_key única y aplicada una sola vez mediante applied_at. El resultado y la extensión se guardan en la misma transacción local.</td><td>subscription_id referencia la contratación; latest_payment_id debe corresponder a esa misma contratación.</td></tr>
+  <tr><td>Table</td><td>billing_setups / subscription_payment_methods</td><td>Datos fiscales y valores de medios de pago.</td><td>user_id único; pareja billing_setup_id–method_id única y como máximo un método predeterminado por configuración.</td><td>FiscalData se embebe; la colección de valores pertenece a BillingSetup.</td></tr>
+  <tr><td>Read Model</td><td>subscription_activity</td><td>Historial inmutable de operaciones confirmadas.</td><td>event_id único para deduplicar; índice por user_id y occurred_at para consulta y exportación.</td><td>subscription_id es opcional y lógico para permitir actividad de facturación sin contratación.</td></tr>
+  <tr><td>Outbox</td><td>subscription_outbox</td><td>Eventos pendientes de entrega.</td><td>Guardar el evento en la transacción que modifica el agregado; publicar con reintentos y orden por usuario.</td><td>Alimenta la proyección de actividad y la integración con Profile.</td></tr>
+</table>
+
+Los datos de auditoría created_at y updated_at complementan las tablas de agregados. La referencia transaction_id se conserva cuando el proveedor la entrega; operation_key identifica también los intentos pendientes o fallidos. La pasarela simulada permite evaluar el flujo sin cobros reales y no convierte requestedPaymentStatus en una entrada válida para una integración financiera externa.
 
 ### 2.6.5. Bounded Context: Sales
 
