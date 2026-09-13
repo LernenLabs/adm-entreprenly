@@ -139,7 +139,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Gonza Morales, Anderson</td>
       <td align="center" valign="middle" rowspan="3">
-        Fotografía por completar.
+        <img src="./images/capitulo1/foto_anderson.jpg" alt="Victor Laura" width="250">
       </td>
     </tr>
     <tr>
@@ -153,7 +153,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
       <td colspan="2">
-        Por completar.
+        Estudiante de la carrera de Ingeniería de Software. Destaca por su capacidad de liderazgo y organizacion en equipos de trabajo. Tiene habilidades en coordinacion de tareas, comunicacion efectiva, analisis de requerimientos y seguimiento de actividades orientadas a cumplir objetivos del proyecto.
       </td>
     </tr>
   </tbody>
