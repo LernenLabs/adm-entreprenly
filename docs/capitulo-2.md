@@ -4934,25 +4934,29 @@ En esta parte, el Bounded Context Canvas delimitara cada parte del sistema a des
 
 ### 2.5.2. Context Mapping
 
-Por completar.
+<p align="center">
+<img src="images/capitulo2/Context Mapping.png" width="400"/>
+</p>
 
 ### 2.5.3. Software Architecture
-
-Por completar.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
 <p align="center">
-<img src="images/capitulo2/structurizr-104049-EntreprenlySystemContext.png" width="500"/>
+<img src="images/capitulo2/Context Level Diagram.png" width="500"/>
 </p>
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-Por completar.
+<p align="center">
+<img src="images/capitulo2/Container Level Diagram.png" width="500"/>
+</p>
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
-Por completar.
+<p align="center">
+<img src="images/capitulo2/Deployment Diagram.png" width="500"/>
+</p>
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
