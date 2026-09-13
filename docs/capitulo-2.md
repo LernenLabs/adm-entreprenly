@@ -5709,12 +5709,6 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-<p align="center">
-  <img src="images/capitulo2/chatbot-class-diagram.svg" alt="Diagrama de clases del dominio Chatbot" width="800"/>
-</p>
-
-**Figura 2.6.3.2:** Diagrama de clases de Chatbot con los cuatro aggregate roots (`Conversation`, `ChatMessage`, `ChatOrder`, `WhatsappSession`), los value objects de estado y los records inmutables, los commands, los repositorios, los servicios de dominio basados en reglas, los servicios de aplicación (command/query), los puertos de salida y sus adaptadores concretos en infraestructura (`«acl adapter»`, `«adapter»`, `«adapter (SSE)»`). Fuente: adaptado de `CLASS DIAGRAM — Chatbot de WhatsApp BC` del proyecto original.
-
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
 <p align="center">
