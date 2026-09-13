@@ -5446,40 +5446,297 @@ Este Bounded Context es responsable de la administración del inventario del com
 **Relaciones:** `inventory_unit_lots.product_id` → `inventory_unit_products.id`; `inventory_weight_lots.product_id` → `inventory_weight_products.id`. Sin FK físicas hacia otros BCs para preservar autonomía; `owner_email` referencia lógica a `users.email`.
 
 ### 2.6.3. Bounded Context: Chatbot
-
-Por completar.
+Este Bounded Context es responsable de la interacción conversacional entre el comerciante y sus clientes a través de WhatsApp: registro y actualización de conversaciones, procesamiento de mensajes entrantes y salientes, interpretación de solicitudes de productos contra el catálogo, generación y actualización de pedidos, validación de comprobantes de pago y administración de la sesión/puente (bridge) de conexión con WhatsApp. Está diseñado bajo Clean Architecture y DDD táctico con separación CQRS, exponiendo puertos de salida que son implementados como adaptadores ACL en Infrastructure para consumir, sin acoplamiento directo, información de Gestión de Inventario, IAM, Perfil y Configuración y Ventas.
 
 #### 2.6.3.1. Domain Layer
 
-Por completar.
+**Sub-capa Model - Aggregates:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>Conversation</td>
+    <td>Hilo de conversación entre el comerciante y un cliente. Extiende `AbstractDomainAggregateRoot`.</td>
+    <td>Mantener `sellerId`, `clientPhone`, `clientName`, `status` (ConversationStatus) y el último mensaje registrado.</td>
+    <td>registerLastMessage(content, time), changeStatus(status), restoreState(...). Agrega `ChatMessage` y `ChatOrder` vía `conversationId` lógico.</td>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>ChatMessage</td>
+    <td>Mensaje individual (entrante o saliente) dentro de una conversación.</td>
+    <td>Registrar `content`, `sender` (MessageSender), `type` (MessageType) y `sentAt`.</td>
+    <td>restoreState(...). Referencia lógica `conversationId` a `Conversation`.</td>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>ChatOrder</td>
+    <td>Pedido generado por el chatbot a partir del catálogo consultado por el cliente.</td>
+    <td>Mantener `items` (List&lt;OrderItem&gt;), `total`, `status` (OrderStatus), `hasReceipt` y `rejectionCount` (máx. 2, constante `MAX_RECEIPT_REJECTIONS`).</td>
+    <td>confirm(), rejectReceipt(), attachReceipt([image]), confirmDelivery(deliveryAddress), changeStatus(status), isPending(), isBlocked(), computeTotal(items) [privado], restoreState(...). Referencia lógica `conversationId`.</td>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>WhatsappSession</td>
+    <td>Sesión/puente de conexión entre el número de WhatsApp del comerciante y el sistema.</td>
+    <td>Mantener `sellerId`, `phone`, `businessName`, `status` (SessionStatus) y `qrCode`.</td>
+    <td>connect(), disconnect(), changeStatus(status), restoreState(...).</td>
+  </tr>
+</table>
+
+**Sub-capa Model - Value Objects:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Value Object (enum)</td><td>ConversationStatus</td><td>ACTIVE, WAITING_PAYMENT, COMPLETED, CLOSED.</td><td>Representar el estado del ciclo de vida de una conversación.</td><td>Atributo de `Conversation`.</td></tr>
+  <tr><td>Value Object (enum)</td><td>MessageSender</td><td>CLIENT, BOT, SYSTEM.</td><td>Identificar el origen de un mensaje.</td><td>Atributo de `ChatMessage`.</td></tr>
+  <tr><td>Value Object (enum)</td><td>MessageType</td><td>TEXT, IMAGE.</td><td>Clasificar el formato del contenido del mensaje.</td><td>Atributo de `ChatMessage`.</td></tr>
+  <tr><td>Value Object (enum)</td><td>OrderStatus</td><td>PENDING, WAITING_PAYMENT, CONFIRMED, CANCELLED, BLOCKED.</td><td>Representar el estado del ciclo de vida de un pedido.</td><td>Atributo de `ChatOrder`.</td></tr>
+  <tr><td>Value Object (enum)</td><td>SessionStatus</td><td>CONNECTED, DISCONNECTED, EXPIRED.</td><td>Representar el estado de conexión del bridge de WhatsApp.</td><td>Atributo de `WhatsappSession`.</td></tr>
+  <tr><td>Value Object (record)</td><td>OrderItem</td><td>`productName, quantity, unitPrice`, con `subtotal()` calculado.</td><td>Representar una línea de producto dentro de un pedido, sin identidad propia.</td><td>Contenido en `ChatOrder.items` (1..*).</td></tr>
+  <tr><td>Value Object (record)</td><td>CatalogProduct</td><td>`name, price, soldByWeight, availableStock`, con `isInStock()` calculado.</td><td>Proyección de solo lectura del catálogo de Inventory dentro del dominio del Chatbot.</td><td>Retornado por el puerto `ProductCatalogService` y usado por `ProductReplyComposer`.</td></tr>
+</table>
+
+**Sub-capa Model - Commands:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Command</td><td>HandleInboundMessageCommand</td><td>`fromPhone, clientName, content, ownerEmail`.</td><td>Representar un mensaje de texto entrante desde WhatsApp.</td><td>Manejado por `ChatbotConversationService`.</td></tr>
+  <tr><td>Command</td><td>HandleInboundReceiptCommand</td><td>`fromPhone, ownerEmail, image`.</td><td>Representar un comprobante de pago entrante (imagen).</td><td>Manejado por `ChatbotConversationService`.</td></tr>
+  <tr><td>Command</td><td>CreateChatOrderCommand / UpdateChatOrderCommand</td><td>`conversationId, orderNumber, items, deliveryAddress, paymentMethod, status` (create) / `orderId, status, hasReceipt` (update).</td><td>Crear o actualizar un pedido del chatbot.</td><td>Manejados por `ChatOrderCommandService`.</td></tr>
+  <tr><td>Command</td><td>ConfirmChatOrderDeliveryCommand / AttachReceiptCommand</td><td>Confirmar dirección de entrega / adjuntar comprobante.</td><td>Avanzar el ciclo de vida del pedido.</td><td>Manejados por `ChatOrderCommandService`.</td></tr>
+  <tr><td>Command</td><td>CreateConversationCommand / UpdateConversationCommand</td><td>Crear o actualizar una conversación.</td><td>Mantener el hilo conversacional por cliente.</td><td>Manejados por `ConversationCommandService`.</td></tr>
+  <tr><td>Command</td><td>CreateChatMessageCommand</td><td>Registrar un nuevo mensaje en una conversación.</td><td>Persistir mensajes entrantes o salientes.</td><td>Manejado por `ChatMessageCommandService`.</td></tr>
+  <tr><td>Command</td><td>ReportBridgeConnectionCommand</td><td>`connected, phone, businessName, sellerId`.</td><td>Reportar el estado de conexión del bridge de WhatsApp.</td><td>Manejado por `WhatsappSessionCommandService`.</td></tr>
+  <tr><td>Command</td><td>CreateWhatsappSessionCommand / UpdateWhatsappSessionCommand</td><td>Crear o actualizar una sesión de WhatsApp.</td><td>Registrar la vinculación del número del comerciante.</td><td>Manejados por `WhatsappSessionCommandService`.</td></tr>
+</table>
+
+**Sub-capa Model - Queries:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Query</td><td>GetAllConversationsQuery / GetConversationByIdQuery</td><td>Listar conversaciones o consultar una por id.</td><td>Alimentar la bandeja de chats de la aplicación móvil.</td><td>Manejadas por `ConversationQueryService`.</td></tr>
+  <tr><td>Query</td><td>GetAllChatMessagesQuery / GetChatMessagesByConversationIdQuery</td><td>Listar mensajes globales o por conversación.</td><td>Servir el hilo de mensajes de una conversación.</td><td>Manejadas por `ChatMessageQueryService`.</td></tr>
+  <tr><td>Query</td><td>GetAllChatOrdersQuery / GetChatOrderByIdQuery</td><td>Listar pedidos del chatbot o consultar uno por id.</td><td>Servir el panel de pedidos y su detalle.</td><td>Manejadas por `ChatOrderQueryService`.</td></tr>
+  <tr><td>Query</td><td>GetAllWhatsappSessionsQuery / GetWhatsappSessionByIdQuery</td><td>Listar sesiones de WhatsApp o consultar una por id.</td><td>Servir el estado de vinculación del bridge.</td><td>Manejadas por `WhatsappSessionQueryService`.</td></tr>
+</table>
+
+**Sub-capa Repositories:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Repository</td><td>ConversationRepository</td><td>Puerto de persistencia de `Conversation`.</td><td>findAll(), findById(id), findAllBySellerId(sellerId), findByClientPhoneAndSellerId(phone, sellerId), save(conversation).</td><td>Implementado en Infrastructure.</td></tr>
+  <tr><td>Repository</td><td>ChatMessageRepository</td><td>Puerto de persistencia de `ChatMessage`.</td><td>findByConversationId(id), findByConversationIdIn(ids), save(message).</td><td>Implementado en Infrastructure.</td></tr>
+  <tr><td>Repository</td><td>ChatOrderRepository</td><td>Puerto de persistencia de `ChatOrder`.</td><td>findById(id), findByConversationId(id), count(), save(order).</td><td>Implementado en Infrastructure.</td></tr>
+  <tr><td>Repository</td><td>WhatsappSessionRepository</td><td>Puerto de persistencia de `WhatsappSession`.</td><td>findBySellerId(sellerId), findById(id), save(session).</td><td>Implementado en Infrastructure.</td></tr>
+</table>
+
+**Sub-capa Services:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Domain Service</td><td>ChatbotResponder → RuleBasedChatbotResponder</td>
+    <td>Servicio conversacional basado en reglas.</td>
+    <td>reply(content, clientName): generar la respuesta textual del bot.</td>
+    <td>Invocado por `ChatbotConversationService`.</td>
+  </tr>
+  <tr>
+    <td>Domain Service</td><td>ProductReplyComposer → RuleBasedProductReplyComposer</td>
+    <td>Servicio de interpretación de intención de compra.</td>
+    <td>compose(content, catalog), detectOrder(content, catalog[, contextProduct]), matchProduct(content, catalog).</td>
+    <td>Consume `CatalogProduct` obtenido del puerto `ProductCatalogService`.</td>
+  </tr>
+</table>
 
 #### 2.6.3.2. Interface Layer
 
-Por completar.
+**REST - Controllers:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Controller</td><td>ChatbotWebhookController</td><td>Recibe los eventos entrantes de WhatsApp.</td><td>verify(mode, token, challenge), receive(resource), receiveReceipt(resource).</td><td>Delega en `ChatbotConversationService`.</td></tr>
+  <tr><td>Controller</td><td>ChatbotBridgeController</td><td>Gestiona la sesión/puente con WhatsApp.</td><td>pushQr(token, resource), pushStatus(token, resource), getQrState(auth), disconnectSession(auth).</td><td>Usa `WhatsAppBridgeState` y `WhatsappSessionCommandService`.</td></tr>
+  <tr><td>Controller (SSE)</td><td>ChatbotStreamController</td><td>Expone el canal de notificaciones en tiempo real.</td><td>stream(token?): ResponseEntity&lt;SseEmitter&gt;.</td><td>Usa `ChatbotSseService`.</td></tr>
+  <tr><td>Controller</td><td>ConversationsController</td><td>CRUD de conversaciones.</td><td>getAllConversations(auth), getConversationById(id, auth), createConversation(resource, auth), updateConversation(id, resource, auth).</td><td>Usa `ConversationCommandService` / `ConversationQueryService`.</td></tr>
+  <tr><td>Controller</td><td>ChatMessagesController</td><td>Lectura y creación de mensajes.</td><td>getMessages(conversationId?, auth), createMessage(resource, auth), deliverBotMessageToClient(message) [privado].</td><td>Usa `WhatsAppMessagingService` para entregar mensajes del bot.</td></tr>
+  <tr><td>Controller</td><td>ChatOrdersController</td><td>CRUD de pedidos del chatbot.</td><td>getAllOrders(auth), getOrderById(id, auth), createOrder(resource, auth), updateOrder(id, resource, auth).</td><td>Usa `ChatOrderCommandService` / `ChatOrderQueryService`.</td></tr>
+  <tr><td>Controller</td><td>WhatsappSessionsController</td><td>CRUD de sesiones de WhatsApp.</td><td>getAllSessions(auth), getSessionById(id, auth), createSession(resource, auth), updateSession(id, resource, auth).</td><td>Usa `WhatsappSessionCommandService` / `WhatsappSessionQueryService`.</td></tr>
+  <tr><td>Controller (temporal)</td><td>ChatbotAdminController</td><td>Endpoint administrativo protegido por token.</td><td>purgeTestData(token): limpieza de datos de prueba.</td><td>Uso exclusivo de entornos de desarrollo.</td></tr>
+</table>
+
+**Cross-cutting - Guard:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Guard</td><td>ChatbotSubscriptionGuard</td>
+    <td>Validador de acceso por suscripción, invocado en cada controller.</td>
+    <td>canAccess(authentication), canAccessOwner(ownerEmail): boolean.</td>
+    <td>Delega en el puerto `SubscriptionAccessChecker`.</td>
+  </tr>
+</table>
 
 #### 2.6.3.3. Application Layer
 
-Por completar.
+**Internal - Command Services:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Service</td><td>ChatbotConversationService</td><td>Punto de entrada principal del flujo conversacional.</td><td>handle(HandleInboundMessageCommand), handle(HandleInboundReceiptCommand).</td><td>Orquesta `ChatbotResponder` y `ProductReplyComposer`.</td></tr>
+  <tr><td>Service</td><td>ConversationCommandService</td><td>Escritura de conversaciones.</td><td>handle(CreateConversationCommand), handle(UpdateConversationCommand).</td><td>Usa `ConversationRepository`.</td></tr>
+  <tr><td>Service</td><td>ChatMessageCommandService</td><td>Escritura de mensajes.</td><td>handle(CreateChatMessageCommand).</td><td>Usa `ChatMessageRepository`.</td></tr>
+  <tr><td>Service</td><td>ChatOrderCommandService</td><td>Escritura de pedidos.</td><td>handle(Create/Update/ConfirmChatOrderDelivery/AttachReceiptCommand).</td><td>Usa `ChatOrderRepository`, `InventoryStockService` y `ChatSaleService`.</td></tr>
+  <tr><td>Service</td><td>WhatsappSessionCommandService</td><td>Escritura de sesiones de WhatsApp.</td><td>handle(Create/Update/ReportBridgeConnectionCommand).</td><td>Usa `WhatsappSessionRepository`.</td></tr>
+</table>
+Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de errores de aplicación.
+
+**Internal - Query Services:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Service</td><td>ConversationQueryService</td><td>Lectura de conversaciones.</td><td>handle(GetAllConversationsQuery), handle(GetConversationByIdQuery).</td><td>Usa `ConversationRepository`.</td></tr>
+  <tr><td>Service</td><td>ChatMessageQueryService</td><td>Lectura de mensajes.</td><td>handle(GetAllChatMessagesQuery), handle(GetChatMessagesByConversationIdQuery).</td><td>Usa `ChatMessageRepository`.</td></tr>
+  <tr><td>Service</td><td>ChatOrderQueryService</td><td>Lectura de pedidos.</td><td>handle(GetAllChatOrdersQuery), handle(GetChatOrderByIdQuery).</td><td>Usa `ChatOrderRepository`.</td></tr>
+  <tr><td>Service</td><td>WhatsappSessionQueryService</td><td>Lectura de sesiones.</td><td>handle(GetAllWhatsappSessionsQuery), handle(GetWhatsappSessionByIdQuery).</td><td>Usa `WhatsappSessionRepository`.</td></tr>
+</table>
+
+**Internal - Outbound Services (Ports):**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Port</td><td>SellerEmailResolver</td><td>Resolver identidad entre seller y email.</td><td>resolveEmail(sellerId), resolveSellerId(email).</td><td>Implementado por `IamSellerEmailResolver` (IAM BC).</td></tr>
+  <tr><td>Port</td><td>ProductCatalogService</td><td>Consultar catálogo del comerciante.</td><td>findByOwner(ownerEmail): List&lt;CatalogProduct&gt;.</td><td>Implementado por `InventoryProductCatalogService` (Gestión de Inventario BC).</td></tr>
+  <tr><td>Port</td><td>InventoryStockService</td><td>Descontar stock tras confirmar un pedido.</td><td>decrementForOrder(ownerEmail, items).</td><td>Implementado por `InventoryStockAdjuster` (Gestión de Inventario BC).</td></tr>
+  <tr><td>Port</td><td>ChatSaleService</td><td>Registrar la venta asociada a un pedido confirmado.</td><td>createSaleForOrder(ownerEmail, sellerId, order).</td><td>Implementado por `SalesBcChatSaleService` (Ventas BC).</td></tr>
+  <tr><td>Port</td><td>SubscriptionAccessChecker</td><td>Validar acceso al módulo por plan.</td><td>canUseChatbot(ownerEmail): boolean.</td><td>Implementado por `SubscriptionFeatureAccessChecker` (Perfil y Configuración BC).</td></tr>
+  <tr><td>Port</td><td>ConnectedSellerProvider</td><td>Resolver el vendedor conectado en el contexto del bridge.</td><td>currentOwnerEmail(): Optional&lt;String&gt;.</td><td>Implementado por `WhatsAppBridgeState`.</td></tr>
+  <tr><td>Port</td><td>WhatsAppMessagingService</td><td>Enviar mensajes salientes al cliente.</td><td>sendText(ownerEmail, toPhone, content): boolean.</td><td>Implementado por `BridgeWhatsAppMessagingService` / `LoggingWhatsAppMessagingService`.</td></tr>
+  <tr><td>Port</td><td>ChatbotEventPublisher</td><td>Publicar eventos para notificación en tiempo real.</td><td>publishMessageCreated, publishConversationChanged, publishOrderChanged.</td><td>Implementado por `ChatbotSseService`.</td></tr>
+</table>
 
 #### 2.6.3.4. Infrastructure Layer
 
-Por completar.
+**Adaptadores ACL (Anti-Corruption Layer):**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>ACL Adapter</td><td>IamSellerEmailResolver</td><td>Implementa `SellerEmailResolver` consultando IAM BC.</td><td>Traducir sellerId ↔ email sin exponer el modelo de IAM.</td><td>Consumido por los command/query services.</td></tr>
+  <tr><td>ACL Adapter</td><td>InventoryProductCatalogService</td><td>Implementa `ProductCatalogService` consultando Gestión de Inventario BC.</td><td>Traducir el catálogo de Inventory al VO `CatalogProduct` del Chatbot.</td><td>Consumido por `ProductReplyComposer`.</td></tr>
+  <tr><td>ACL Adapter</td><td>InventoryStockAdjuster</td><td>Implementa `InventoryStockService`.</td><td>Descontar stock en Gestión de Inventario BC tras confirmarse un pedido.</td><td>Consumido por `ChatOrderCommandService`.</td></tr>
+  <tr><td>ACL Adapter</td><td>SalesBcChatSaleService</td><td>Implementa `ChatSaleService`.</td><td>Registrar la venta correspondiente en Ventas BC.</td><td>Consumido por `ChatOrderCommandService`.</td></tr>
+  <tr><td>ACL Adapter</td><td>SubscriptionFeatureAccessChecker</td><td>Implementa `SubscriptionAccessChecker`.</td><td>Validar si el plan del comerciante habilita el uso del chatbot.</td><td>Consumido por `ChatbotSubscriptionGuard`.</td></tr>
+</table>
+
+**Adaptadores de mensajería WhatsApp y tiempo real:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Adapter</td><td>BridgeWhatsAppMessagingService</td><td>Implementa `WhatsAppMessagingService`.</td><td>sendText(ownerEmail, toPhone, content): envío real a través del bridge de WhatsApp.</td><td>Usado en producción por `ChatMessagesController`.</td></tr>
+  <tr><td>Adapter</td><td>LoggingWhatsAppMessagingService</td><td>Implementación alternativa de `WhatsAppMessagingService`.</td><td>Registrar el envío en logs (entornos de desarrollo/pruebas) en vez de despacharlo.</td><td>Sustituye al adapter de bridge en perfiles no productivos.</td></tr>
+  <tr><td>Adapter</td><td>WhatsAppBridgeState</td><td>Implementa `ConnectedSellerProvider`.</td><td>setQr, setConnected, getQr, isConnected, clear, currentOwnerEmail: estado en memoria por vendedor.</td><td>Usado por `ChatbotBridgeController`.</td></tr>
+  <tr><td>Adapter (SSE)</td><td>ChatbotSseService</td><td>Implementa `ChatbotEventPublisher`.</td><td>subscribe(), publishMessageCreated, publishConversationChanged, publishOrderChanged.</td><td>Usado por `ChatbotStreamController`.</td></tr>
+</table>
+
+**Reglas de infraestructura y seguridad:**
+- Monolito modular Spring Boot con PostgreSQL/MySQL compartida y límites lógicos por Bounded Context.
+- `owner_email` / `seller_id` se manejan como referencias lógicas a IAM, sin FK física inter-BC, igual que en Profile e Inventory.
+- Los endpoints requieren JWT válido y son protegidos por `ChatbotSubscriptionGuard`, que verifica el plan activo del comerciante antes de exponer cualquier dato de conversaciones, mensajes, pedidos o sesiones.
+- La confirmación de una venta electrónica queda bloqueada hasta que el terminal POS físico la apruebe, evitando registrar como completada una venta que aún no fue confirmada por el medio de pago.
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/chatbot-component.png" alt="Diagrama de componentes del Bounded Context Chatbot" width="800"/>
+</p>
+
+**Figura 2.6.3.1:** Diagrama de componentes de Chatbot. Presenta la separación Query Side / Command Side (CQRS), los controllers REST, los repositorios sobre la base de datos compartida y las dependencias hacia Gestión de Inventario BC, IAM BC, Perfil y Configuración BC y Ventas BC a través de los adaptadores ACL. Fuente: adaptado de `structurizr-109637-ChatbotComponent` del proyecto original.
 
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/chatbot-class-diagram.svg" alt="Diagrama de clases del dominio Chatbot" width="800"/>
+</p>
+
+**Figura 2.6.3.2:** Diagrama de clases de Chatbot con los cuatro aggregate roots (`Conversation`, `ChatMessage`, `ChatOrder`, `WhatsappSession`), los value objects de estado y los records inmutables, los commands, los repositorios, los servicios de dominio basados en reglas, los servicios de aplicación (command/query), los puertos de salida y sus adaptadores concretos en infraestructura (`«acl adapter»`, `«adapter»`, `«adapter (SSE)»`). Fuente: adaptado de `CLASS DIAGRAM — Chatbot de WhatsApp BC` del proyecto original.
 
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/chatbot-class-diagram.svg" alt="Diagrama de clases del dominio Chatbot" width="800"/>
+</p>
+
+**Figura 2.6.3.2:** Diagrama de clases de Chatbot con los cuatro aggregate roots (`Conversation`, `ChatMessage`, `ChatOrder`, `WhatsappSession`), los value objects de estado y los records inmutables, los commands, los repositorios, los servicios de dominio basados en reglas, los servicios de aplicación (command/query), los puertos de salida y sus adaptadores concretos en infraestructura (`«acl adapter»`, `«adapter»`, `«adapter (SSE)»`). Fuente: adaptado de `CLASS DIAGRAM — Chatbot de WhatsApp BC` del proyecto original.
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/Entreprenly_database_diagram.png" alt="Diagrama de base de datos del Bounded Context Chatbot" width="800"/>
+</p>
+
+**Figura 2.6.3.3:** Diagrama de base de datos (vista general del modelo con énfasis en Chatbot). Fuente: `Entreprenly_database_diagram` del proyecto original.
+ 
+**Diccionario de datos — Chatbot:**
+ 
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tabla</th><th>Campo</th><th>Key</th><th>Descripción</th>
+  </tr>
+  <tr>
+    <td rowspan="7" style="vertical-align:middle; text-align:center;"><code>conversations</code></td>
+    <td><code>id</code></td><td style="vertical-align:middle; text-align:center;">PK</td><td>Identificador autoincremental de la conversación.</td>
+  </tr>
+  <tr><td><code>created_at</code>, <code>updated_at</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Auditoría heredada.</td></tr>
+  <tr><td><code>seller_id</code></td><td style="vertical-align:middle; text-align:center;">IDX</td><td>Referencia lógica al comerciante propietario (IAM).</td></tr>
+  <tr><td><code>client_name</code>, <code>client_phone</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Identificación del cliente en WhatsApp.</td></tr>
+  <tr><td><code>last_message</code>, <code>last_message_time</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Cache del último mensaje para el listado de conversaciones.</td></tr>
+  <tr><td><code>status</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>ACTIVE, WAITING_PAYMENT, COMPLETED, CLOSED.</td></tr>
+  <tr><td><code>conversation_created_at</code>, <code>closed_at</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Marcas de negocio del ciclo de vida.</td></tr>
+  <tr>
+    <td rowspan="4" style="vertical-align:middle; text-align:center;"><code>chat_messages</code></td>
+    <td><code>id</code></td><td style="vertical-align:middle; text-align:center;">PK</td><td>Identificador del mensaje.</td>
+  </tr>
+  <tr><td><code>conversation_id</code></td><td style="vertical-align:middle; text-align:center;">FK → <code>conversations.id</code></td><td>Conversación a la que pertenece el mensaje.</td></tr>
+  <tr><td><code>content</code>, <code>sender</code>, <code>type</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Contenido, emisor (CLIENT/BOT/SYSTEM) y tipo (TEXT/IMAGE).</td></tr>
+  <tr><td><code>sent_at</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Marca de envío del mensaje.</td></tr>
+  <tr>
+    <td rowspan="7" style="vertical-align:middle; text-align:center;"><code>chat_orders</code></td>
+    <td><code>id</code></td><td style="vertical-align:middle; text-align:center;">PK</td><td>Identificador del pedido.</td>
+  </tr>
+  <tr><td><code>conversation_id</code></td><td style="vertical-align:middle; text-align:center;">FK → <code>conversations.id</code></td><td>Conversación de origen del pedido.</td></tr>
+  <tr><td><code>order_number</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Número de referencia del pedido.</td></tr>
+  <tr><td><code>delivery_address</code>, <code>payment_method</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Datos de entrega y medio de pago.</td></tr>
+  <tr><td><code>receipt_image</code>, <code>has_receipt</code>, <code>rejection_count</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Comprobante de pago y control de rechazos (máx. 2).</td></tr>
+  <tr><td><code>status</code>, <code>total</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Estado del pedido y monto total.</td></tr>
+  <tr><td><code>order_created_at</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Marca de creación del pedido.</td></tr>
+  <tr>
+    <td rowspan="3" style="vertical-align:middle; text-align:center;"><code>chat_order_items</code></td>
+    <td><code>id</code></td><td style="vertical-align:middle; text-align:center;">PK</td><td>Identificador del ítem.</td>
+  </tr>
+  <tr><td><code>chat_order_id</code></td><td style="vertical-align:middle; text-align:center;">FK → <code>chat_orders.id</code></td><td>Pedido al que pertenece el ítem.</td></tr>
+  <tr><td><code>product_name</code>, <code>quantity</code>, <code>unit_price</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Copia denormalizada del producto pedido (VO `OrderItem`).</td></tr>
+  <tr>
+    <td rowspan="5" style="vertical-align:middle; text-align:center;"><code>whatsapp_sessions</code></td>
+    <td><code>id</code></td><td style="vertical-align:middle; text-align:center;">PK</td><td>Identificador de la sesión.</td>
+  </tr>
+  <tr><td><code>seller_id</code></td><td style="vertical-align:middle; text-align:center;">IDX</td><td>Referencia lógica al comerciante propietario (IAM).</td></tr>
+  <tr><td><code>phone</code>, <code>business_name</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Número y nombre del negocio vinculados al bridge.</td></tr>
+  <tr><td><code>status</code>, <code>qr_code</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Estado de conexión (CONNECTED/DISCONNECTED/EXPIRED) y código QR vigente.</td></tr>
+  <tr><td><code>connected_at</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Marca de la última conexión exitosa.</td></tr>
+</table>
+
+**Relaciones:** `chat_messages.conversation_id` → `conversations.id`; `chat_orders.conversation_id` → `conversations.id`; `chat_order_items.chat_order_id` → `chat_orders.id`. Sin FK físicas hacia otros BCs: `seller_id` / `owner_email` son referencias lógicas a `users`/`profiles` (IAM), y el catálogo consultado (`inventory_unit_products` / `inventory_weight_products`), la venta registrada (`sales` / `sale_items`) y el plan validado (`subscriptions`) se acceden exclusivamente a través de los adaptadores ACL descritos en la capa de Infraestructura.
 
 ### 2.6.4. Bounded Context: Subscription
 
