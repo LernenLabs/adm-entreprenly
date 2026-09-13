@@ -972,11 +972,220 @@ La principal coincidencia entre ambos segmentos es que los dos otorgan alta impo
 
 ### 2.3.5. Big Picture EventStorming
 
-Por completar.
+El Big Picture Event Storming es una técnica de modelado colaborativo creada por Alberto Brandolini que permite a un equipo explorar y comprender el dominio de un negocio en pocas horas. A diferencia de las sesiones de análisis tradicionales, esta técnica se centra en identificar los Domain Events más significativos del negocio —es decir, los hechos relevantes que ocurren en el dominio— y organizarlos cronológicamente para construir una visión compartida del landscape del negocio. No se busca un diseño técnico detallado, sino una comprensión de alto nivel que exponga procesos clave, actores, sistemas externos y potenciales problemas u oportunidades.
+El equipo Kauflink realizó una sesión colaborativa de Big Picture Event Storming sobre el dominio de Entreprenly, la plataforma de gestión operativa para minimarkets, bodegas y puestos de mercado. El objetivo fue modelar el ciclo de vida completo de la operación diaria de un comercio minorista de alimentos frescos: desde la configuración de productos hasta el cierre financiero del turno. La sesión fue guiada siguiendo el Step-by-Step Guide disponible en https://bit.ly/bpes-guide, y se utilizó Miro como herramienta de tablero digital colaborativo.
+
+**Proceso realizado por el equipo**
+
+A continuación se describe cada una de las etapas realizadas durante la sesión de Big Picture Event Storming, acompañadas de las capturas del tablero en Miro correspondientes a cada fase.
+
+
+**Paso 1: Preparación del espacio de trabajo**
+
+Antes de iniciar la sesión, el equipo preparó el tablero de Miro con el espacio de diseño necesario: un área de trabajo infinita con la leyenda de colores de sticky notes visible para todos los participantes, y una agenda visual de los pasos a seguir fijada en el lateral del tablero.
+
+Se definieron los colores de cada tipo de elemento según la convención del método:
+
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td font-weight:bold; text-align:center;">Domain Event</td>
+      <td>Hecho relevante que ocurrió en el dominio del negocio. Se redacta en tiempo pasado.</td>
+    </tr>
+    <tr>
+      <td font-weight:bold; text-align:center;">Actor</td>
+      <td>Persona con un rol específico que desencadena o participa en un evento del dominio.</td>
+    </tr>
+    <tr>
+      <td font-weight:bold; text-align:center;">External System</td>
+      <td>Sistema externo que interactúa con la plataforma, enviando o recibiendo información.</td>
+    </tr>
+    <tr>
+      <td font-weight:bold; text-align:center;">Hot Spot</td>
+      <td>Área de incertidumbre, conflicto o riesgo que requiere atención o resolución posterior.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+En esta primera etapa, cada miembro propuso de forma individual los eventos de dominio relevantes para el sistema, redactándolos en tiempo pasado y representándolos con post-its de color naranja. Se buscó cubrir los flujos del comerciante y del cliente final sin filtrar ni debatir, generando el mayor volumen posible de eventos. Los eventos identificados abarcaron los procesos de registro de productos, control de inventario por peso (IoT), ventas presenciales, pedidos por WhatsApp, conciliación de caja y gestión de alertas operativas.
+
+<div align="center">
+  <img src="./images/capitulo2/paso1.png" alt="Paso 1" width="800">
+</div>
+
+---
+
+**Paso 2: Energizante colaborativo**
+
+Para activar la participación y romper la dinámica habitual de reuniones, el equipo inició la sesión con una dinámica colaborativa breve. Dado que la sesión fue realizada de forma remota, se utilizó la dinámica de Collaborative Word Storm: cada participante escribió libremente en el tablero de Miro los primeros términos o situaciones del negocio que le venían a la mente al pensar en un comerciante de barrio peruano gestionando su negocio. Esto preparó a todos los integrantes para la fase de generación de eventos.
+
+**Paso 3: Presentación del objetivo y alcance**
+
+El equipo definió y comunicó a todos los participantes el objetivo, el alcance y los casos de uso que guiarían la sesión
+
+- **Objetivo:** Obtener una visión de alto nivel del dominio de negocio de Entreprenly, identificando los eventos más relevantes del ciclo de vida operativo de un minimarket o puesto de mercado.
+
+- **Alcance:** La operación diaria completa de un comercio minorista de alimentos frescos, desde la apertura del turno hasta el cierre de caja, incluyendo los canales de venta presencial y por WhatsApp, y la integración con balanzas inteligentes (IoT).
+
+- Casos de uso principales a explorar:
+  - Gestión de inventario de productos perecederos
+  - Registro de ventas presenciales con conciliación de pagos
+  - Atención de pedidos por WhatsApp con validación de stock
+  - Detección de descuadres entre stock físico y digital 
+
+Para arrancar la sesión, el facilitador colocó el primer Domain Event en el tablero como ejemplo: *Lote registrado*
+
+<div align="center">
+  <img src="./images/capitulo2/paso3.png" alt="Paso 3" width="800">
+</div>
+
+---
+
+**Paso 4: Generación de Domain Events**
+
+En esta fase, cada integrante del equipo generó de forma libre e independiente todos los Domain Events que consideró relevantes para el dominio de Entreprenly. Los eventos se redactaron en tiempo pasado y en inglés, siguiendo la convención del Ubiquitous Language del proyecto. No hubo restricciones ni orden; la idea fue plasmar el mayor número posible de eventos significativos del negocio.
+
+La fase duró aproximadamente 20 minutos, hasta que el ritmo de generación de nuevos eventos disminuyó notablemente.
+
+<div align="center">
+  <img src="./images/capitulo2/paso4.svg" alt="Paso 4" width="800">
+</div>
+
+---
+
+**Paso 5: Ordenamiento cronológico de Domain Events**
+
+Una vez generados todos los eventos, el equipo procedió a organizarlos cronológicamente de izquierda a derecha en el tablero, representando el flujo temporal de la operación del negocio. Esta etapa fue la más rica en discusión, ya que los distintos puntos de vista de los integrantes afloraron al intentar acordar el orden y la relación entre eventos.
+
+<div align="center">
+  <img src="./images/capitulo2/paso5.svg" alt="Entreprenly Fase 2" width="800">
+</div>
+
+---
+
+**Paso 6: Incorporación de Actores y Sistemas externos**
+
+Con los eventos ya ordenados, el equipo identificó y colocó los Actores (personas con un rol específico) y los Sistemas externos que desencadenan o responden a los eventos del dominio.
+
+<div align="center">
+  <img src="./images/capitulo2/gestion_inventario.svg" alt="proceso_de_suscripcion" width="800">
+
+  <img src="./images/capitulo2/ventas.svg" alt="venta" width="800">
+
+  <img src="./images/capitulo2/perfil_configuracion.svg" alt="gestion_de_inventario" width="800">
+
+  <img src="./images/capitulo2/chatbot_whatsApp.svg" alt="perfil_configuracion" width="800">
+
+  <img src="./images/capitulo2/generación_autenticación_cuenta.svg" alt="chatbot" width="800">
+
+  <img src="./images/capitulo2/gestión_proceso_suscripción.svg" alt="inicion_sesion" width="800">
+</div>
+
+Como resultado de la sesión, el equipo consolidó una visión compartida del dominio operativo de Entreprenly, identificando siete flujos principales: inicio de sesión, proceso de suscripción, configuración de suscripción, venta presencial, gestión de inventario, chatbot de pedidos por WhatsApp y gestión de perfil y configuración. Esta base sirvió como punto de partida para la definición del Ubiquitous Language y el posterior Design-Level Event Storming.
 
 ### 2.3.6. Ubiquitous Language
 
-Por completar.
+A continuación se presenta el glosario de términos y conceptos del dominio de negocio de Entreprenly. Estos términos han sido definidos de forma clara y sin ambigüedad, con el objetivo de que todos los miembros del equipo y stakeholders compartan un lenguaje común durante el ciclo de vida del proyecto. Los términos se presentan en inglés, idioma base del dominio, acompañados de su definición en español.
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr color: white;">
+      <th style="width: 25%;">Término (EN)</th>
+      <th>Definición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Merchant</strong></td>
+      <td>Dueño o administrador de un minimarket, bodega o puesto de mercado que gestiona su operación a través de Entreprenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Customer</strong></td>
+      <td>Cliente final que realiza pedidos a través del canal de WhatsApp.</td>
+    </tr>
+    <tr>
+      <td><strong>Product</strong></td>
+      <td>Artículo registrado en el sistema con nombre, precio y categoría. Puede ser de tipo unitario o vendido por peso.</td>
+    </tr>
+    <tr>
+      <td><strong>Unit Product</strong></td>
+      <td>Producto cuyo stock se mide en unidades individuales y tiene un precio fijo por unidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Weight Product</strong></td>
+      <td>Producto cuyo stock se representa como el peso total disponible en kilogramos y tiene un precio por kilogramo.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock</strong></td>
+      <td>Cantidad disponible de un producto en el local, expresada en unidades o kilogramos según el tipo de producto.</td>
+    </tr>
+    <tr>
+      <td><strong>Batch</strong></td>
+      <td>Lote de un producto registrado con fecha de caducidad, utilizado para el control y trazabilidad de productos perecederos.</td>
+    </tr>
+    <tr>
+      <td><strong>Scale Reading</strong></td>
+      <td>Lectura enviada por la balanza inteligente que indica el peso actual de un producto en el estante en tiempo real.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock Discrepancy</strong></td>
+      <td>Diferencia detectada entre el stock registrado en el sistema y el peso real reportado por la balanza inteligente.</td>
+    </tr>
+    <tr>
+      <td><strong>Sale</strong></td>
+      <td>Transacción registrada por la venta de uno o más productos a un cliente, ya sea de forma presencial o a través del chatbot de WhatsApp.</td>
+    </tr>
+    <tr>
+      <td><strong>Cash Register</strong></td>
+      <td>Registro digital de los ingresos en efectivo acumulados durante un turno de trabajo del comerciante.</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong></td>
+      <td>Período de trabajo del comerciante durante el cual se registran ventas y al final del cual se realiza el cierre y conciliación de caja.</td>
+    </tr>
+    <tr>
+      <td><strong>Order</strong></td>
+      <td>Pedido realizado por un cliente a través del chatbot de WhatsApp, con los productos y cantidades especificadas.</td>
+    </tr>
+    <tr>
+      <td><strong>Alert</strong></td>
+      <td>Notificación generada automáticamente por el sistema ante situaciones críticas como stock bajo o descuadre detectado entre inventario físico y digital.</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription</strong></td>
+      <td>Plan contratado por el comerciante para acceder a las funcionalidades de la plataforma Entreprenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Smart Scale</strong></td>
+      <td>Balanza inteligente conectada al sistema que envía lecturas de peso en tiempo real para validar el stock físico disponible en el estante.</td>
+    </tr>
+    <tr>
+      <td><strong>Inventory Sync</strong></td>
+      <td>Proceso de conciliación entre el stock registrado digitalmente en el sistema y el peso real detectado por la balanza inteligente.</td>
+    </tr>
+    <tr>
+      <td><strong>Chatbot</strong></td>
+      <td>Asistente conversacional integrado en WhatsApp que permite a los clientes realizar pedidos, consultar disponibilidad de productos y recibir confirmaciones de compra de forma automatizada.</td>
+    </tr>
+    <tr>
+      <td><strong>Perishable Product</strong></td>
+      <td>Producto con fecha de caducidad definida que requiere control especial de rotación y merma para evitar pérdidas económicas.</td>
+    </tr>
+    <tr>
+      <td><strong>Shrinkage</strong></td>
+      <td>Pérdida de producto no registrada como venta, que puede deberse a merma, deterioro, error de pesaje o retiro no autorizado.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 2.4. Requirements Specification
 
@@ -4633,7 +4842,48 @@ Por completar.
 
 ### 2.5.1. EventStorming
 
-Por completar.
+Para llevar a cabo los Bounded Context, se deben reconocer los eventos y organizarlos.
+
+Para llevar a cabo el proceso de EventStorming empleamos la herramienta Miro.
+
+Generación y Autenticación de Cuenta
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Generación y Autenticación de Cuenta.jpg" width="500"/> 
+
+</p>
+
+En este Bounded Context se realiza la creación de cuentas y la gestión de inicios de sesión. El flujo inicia brindando la opción de registrarse como nuevo usuario o ingresar credenciales si ya posee una cuenta. La autenticación se resuelve con credenciales propias (email y contraseña), aplicando hashing BCrypt y emitiendo un token JWT firmado. Al registrarse un usuario se publica el evento de dominio `UserSignedUpEvent`, que otros contextos consumen para inicializar su información.
+
+Perfil y Configuración
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Perfil y Configuración.jpg" width="500"/> </p>
+
+En este Bounded Context se gestiona la configuración del perfil del usuario, incluyendo cambios de zona horaria, idioma, preferencias de interfaz (como modo oscuro), moneda y notificaciones. El cambio de contraseña y de email se gestiona en el contexto de Generación y Autenticación de Cuenta.
+
+Gestión y Proceso de Suscripción
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Gestión y Proceso de suscripción.jpg" width="500"/> </p>
+
+Este Bounded Context se encarga de la creación, renovación, cambio y cancelación de planes de suscripción, así como del registro de los datos de facturación del usuario. Además, realiza las validaciones necesarias y procesa el pago de la suscripción durante todo el proceso.
+
+Gestión de Inventario
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Gestión de inventario.jpg" width="500"/> </p>
+
+En este Bounded Context se realiza la creación y modificación de productos (por unidad y por peso). También incluye la gestión de lotes (creación, modificación y eliminación), así como funcionalidades adicionales como alertas de stock bajo, agotado y por vencer.
+
+Chatbot de WhatsApp
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Chatbot de WhatsApp.jpg" width="500"/> </p>
+
+Este Bounded Context permite la venta a través de un chatbot de WhatsApp. Para ello, consume el catálogo del contexto de Inventario para conocer la disponibilidad de productos, descuenta el stock al confirmar un pedido y registra la venta resultante en el contexto de Ventas.
+
+
+Ventas
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Ventas.jpg" width="500"/> </p>
+
+En este Bounded Context se realiza la gestión de ventas presenciales. El proceso registra los ítems vendidos según el tipo de producto (por unidad o por peso) y el método de pago con su comprobante (Yape, Plin o efectivo).
+
+Unión de Bounded Contexts
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - BC union.jpg" width="500"/> </p>
+
+Este diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts, evidenciando las relaciones y dependencias dentro del sistema. La integración se resuelve mediante eventos de dominio (p. ej. `UserSignedUpEvent` de IAM hacia Perfil y Suscripción) y mediante Anti-Corruption Layers (ACL) entre contextos (p. ej. Chatbot consumiendo Inventario, Ventas, Suscripción e IAM).
+ 
 
 #### 2.5.1.1. Candidate Context Discovery
 
@@ -4641,11 +4891,32 @@ Por completar.
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
-Por completar.
+Esta sección utilizará el Domain Message Flow Modelling, una técnica que ilustra cómo fluyen los mensajes de dominio, como comandos, eventos y consultas, entre los distintos contextos delimitados del sistema. Esto permite clarificar las interacciones y responsabilidades de cada contexto.
+
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Flujo Chatbot de WhatsApp.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Ventas.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Completo.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Gestion de inventario.jpg" width="500"/></p>
+
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Perfil y Configuracion.jpg" width="500"/></p>
+
 
 #### 2.5.1.3. Bounded Context Canvases
 
-Por completar.
+En esta parte, el Bounded Context Canvas delimitara cada parte del sistema a desarrollar. Permitiendo identificar con claridad qué responsabilidad tiene cada Bounded Context en cómo se relaciona con otros y qué elementos lo conforman, como entidades, agregados y las reglas del negocio.
+
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 1.jpg" width="500"/>
+</p>
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 3.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 6.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 5.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 4.jpg" width="500"/> </p>
 
 ### 2.5.2. Context Mapping
 
@@ -4657,7 +4928,9 @@ Por completar.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-Por completar.
+<p align="center">
+<img src="images/capitulo2/structurizr-104049-EntreprenlySystemContext.png" width="500"/>
+</p>
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
