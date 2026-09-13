@@ -5684,10 +5684,10 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
 
 <p align="center">
-  <img src="images/capitulo2/Entreprenly_database_diagram.png" alt="Diagrama de base de datos del Bounded Context Chatbot" width="800"/>
+  <img src="images/capitulo2/Entreprenly_database_diagram_chatbot.png" alt="Diagrama de base de datos del Bounded Context Chatbot" width="800"/>
 </p>
 
-**Figura 2.6.3.3:** Diagrama de base de datos (vista general del modelo con énfasis en Chatbot). Fuente: `Entreprenly_database_diagram` del proyecto original.
+**Figura 2.6.3.3:** Diagrama de base de datos (modelo con énfasis en Chatbot). Fuente: `Entreprenly_database_diagram` del proyecto original.
  
 **Diccionario de datos — Chatbot:**
  
