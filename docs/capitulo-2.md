@@ -5788,7 +5788,6 @@ Este Bounded Context administra la relación de suscripción del comerciante con
 
 El diseño sigue DDD táctico y Clean Architecture mediante las capas Domain, Interface, Application e Infrastructure. Subscription es responsable de las reglas de vigencia y de los cambios del plan efectivo. Una solicitud de cancelación conserva los beneficios hasta el final del periodo contratado; al concluir, se cancela la suscripción de pago y se restablece Free. Las consultas de acceso evalúan tanto el estado como las fechas, de modo que una ejecución tardía del procesamiento de vencimientos no prolongue el acceso premium.
 
-El propietario se identifica mediante userId como referencia lógica al módulo de identidad y acceso, sin incorporar sus entidades ni establecer dependencias de persistencia entre contextos. Profile recibe SubscriptionPlanChangedIntegrationEvent para actualizar el plan visible. La aplicación expone SubscriptionContextFacade para consultar la vigencia y las funcionalidades habilitadas. Inventory mantiene owner_email para sus datos; el adaptador de identidad obtiene userId y email del mismo usuario autenticado mediante IAM y utiliza userId al consultar Subscription. El correo no se convierte en clave de la suscripción. Chatbot y Sales pueden consumir el mismo contrato al ejecutar operaciones sujetas al plan, sin acceder a tablas de Subscription. Los cobros de este contexto corresponden al uso de Entreprenly; las ventas de productos del comerciante pertenecen a Sales.
 
 #### 2.6.4.1. Domain Layer
 
