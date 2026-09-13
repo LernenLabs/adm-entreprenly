@@ -4893,16 +4893,30 @@ Por completar.
 
 Esta sección utilizará el Domain Message Flow Modelling, una técnica que ilustra cómo fluyen los mensajes de dominio, como comandos, eventos y consultas, entre los distintos contextos delimitados del sistema. Esto permite clarificar las interacciones y responsabilidades de cada contexto.
 
+<p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Flujo Chatbot de WhatsApp.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Ventas.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Completo.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Gestion de inventario.jpg" width="500"/></p>
+
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
+
+<p align="center"><img src="images/capitulo2/Entreprenly Open Source - Flujo Perfil y Configuracion.jpg" width="500"/></p>
+
+
+#### 2.5.1.3. Bounded Context Canvases
+
+En esta parte, el Bounded Context Canvas delimitara cada parte del sistema a desarrollar. Permitiendo identificar con claridad qué responsabilidad tiene cada Bounded Context en cómo se relaciona con otros y qué elementos lo conforman, como entidades, agregados y las reglas del negocio.
+
 <p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 1.jpg" width="500"/>
 </p>
 <p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 3.jpg" width="500"/> </p>
 <p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 6.jpg" width="500"/> </p>
 <p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 5.jpg" width="500"/> </p>
 <p align="center"> <img src="images/capitulo2/Entreprenly Open Source - Frame 4.jpg" width="500"/> </p>
-
-#### 2.5.1.3. Bounded Context Canvases
-
-Por completar.
 
 ### 2.5.2. Context Mapping
 
