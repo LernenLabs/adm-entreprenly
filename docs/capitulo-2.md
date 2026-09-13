@@ -4673,39 +4673,201 @@ Por completar.
 
 ### 2.6.1. Bounded Context: Profile
 
-Por completar.
+Este Bounded Context es responsable de administrar la información personal del comerciante y las preferencias que personalizan su experiencia en la aplicación móvil Entreprenly. Centraliza el nombre, apellido, teléfono, fotografía, rol y plan visible del usuario, además del idioma, zona horaria, tema, moneda y configuración de notificaciones push. Está diseñado con Domain-Driven Design y Clean Architecture, separando las capas de dominio, aplicación, interfaz e infraestructura.
+
+Profile no administra credenciales, contraseñas ni tokens JWT. Estas responsabilidades pertenecen al módulo compartido de identidad y acceso (IAM). El perfil se crea al recibir `UserSignedUpIntegrationEvent` y mantiene el plan vigente al consumir `SubscriptionPlanChangedIntegrationEvent`. Para preservar la autonomía entre contextos, `userId` se maneja como una referencia lógica única, sin incorporar el agregado de usuario dentro del dominio de Profile.
 
 #### 2.6.1.1. Domain Layer
 
-Por completar.
+**Sub-capa Model - Aggregate:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr>
+    <td>Aggregate Root</td><td>Profile</td>
+    <td>Representa el perfil y la configuración del comerciante autenticado. Extiende `AbstractDomainAggregateRoot`.</td>
+    <td>Mantener la consistencia de los datos personales, la relación única con `userId`, el plan visible y las preferencias de experiencia móvil.</td>
+    <td>Compone `Preferences` y `NotificationSettings`; es creado y modificado mediante `ProfileCommandService` y consultado mediante `ProfileQueryService`.</td>
+  </tr>
+</table>
+
+El agregado `Profile` ofrece operaciones de dominio para actualizar datos personales, modificar preferencias, configurar notificaciones y reflejar un cambio de plan. El cambio de email o contraseña se deriva hacia IAM y no modifica directamente este agregado.
+
+**Sub-capa Model - Commands:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Command</td><td>CreateProfileCommand</td><td>Crear el perfil inicial con `userId`, nombres, rol, plan, teléfono y zona horaria.</td><td>Garantizar un único perfil por usuario e inicializar preferencias y notificaciones con valores por defecto.</td><td>Generado por `UserSignedUpEventHandler` y manejado por `ProfileCommandService`.</td></tr>
+  <tr><td>Command</td><td>UpdateProfileCommand</td><td>Actualizar nombre, apellido, teléfono y `avatarUrl`.</td><td>Validar datos personales y conservar la identidad del propietario.</td><td>Se origina en `ProfilesController` al editar el perfil desde la aplicación móvil.</td></tr>
+  <tr><td>Command</td><td>UpdatePreferencesCommand</td><td>Actualizar idioma, zona horaria, tema y moneda.</td><td>Sincronizar la configuración del usuario entre sesiones y dispositivos.</td><td>Modifica el value object `Preferences`.</td></tr>
+  <tr><td>Command</td><td>UpdateNotificationSettingsCommand</td><td>Activar o desactivar alertas de stock mediante notificaciones push.</td><td>Guardar el consentimiento y preferencia del comerciante para comunicaciones operativas.</td><td>Modifica `NotificationSettings` y es utilizado por la pantalla de configuración móvil.</td></tr>
+  <tr><td>Command</td><td>UpdateProfilePlanCommand</td><td>Actualizar la copia local del plan asociado al usuario.</td><td>Mantener el perfil sincronizado con el estado publicado por Subscription.</td><td>Generado por `SubscriptionPlanChangedEventHandler`.</td></tr>
+</table>
+
+**Sub-capa Model - Queries:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Query</td><td>GetProfileByIdQuery</td><td>Obtener un perfil mediante su identificador interno.</td><td>Recuperar el detalle completo para operaciones administrativas controladas.</td><td>Manejada por `ProfileQueryService`.</td></tr>
+  <tr><td>Query</td><td>GetProfileByUserIdQuery</td><td>Obtener el perfil del usuario autenticado.</td><td>Cargar la cabecera, la pantalla de perfil y las preferencias del dashboard móvil.</td><td>Usa el `userId` obtenido del token JWT como referencia lógica hacia IAM.</td></tr>
+</table>
+
+**Sub-capa Model - Integration Events:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Integration Event</td><td>UserSignedUpIntegrationEvent</td><td>Notifica que IAM registró correctamente una cuenta.</td><td>Proveer los datos mínimos para inicializar el perfil sin acoplar Profile al agregado `User`.</td><td>Consumido por `UserSignedUpEventHandler`.</td></tr>
+  <tr><td>Integration Event</td><td>SubscriptionPlanChangedIntegrationEvent</td><td>Notifica la activación, renovación o cambio del plan.</td><td>Actualizar el plan que la aplicación móvil muestra en el perfil.</td><td>Consumido por `SubscriptionPlanChangedEventHandler`.</td></tr>
+</table>
+
+**Sub-capa Model - Value Objects:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Value Object</td><td>Preferences</td><td>Agrupa `language`, `timezone`, `theme` y `currency`.</td><td>Validar y transportar como una unidad indivisible las preferencias visuales y regionales. Proporciona `defaults()` para perfiles nuevos.</td><td>Embebido en `Profile` y persistido como columnas de `profiles`.</td></tr>
+  <tr><td>Value Object</td><td>NotificationSettings</td><td>Agrupa la preferencia `stockAlerts`.</td><td>Controlar si el usuario desea recibir notificaciones push relacionadas con stock y vencimientos. Proporciona `defaults()`.</td><td>Embebido en `Profile`; Inventory consulta esta preferencia antes de entregar una alerta al canal móvil.</td></tr>
+</table>
+
+**Sub-capa Repositories:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Repository</td><td>ProfileRepository</td><td>Puerto de persistencia del agregado `Profile`.</td><td>Definir `findById`, `findByUserId`, `existsByUserId` y `save` sin depender de JPA.</td><td>Utilizado por los servicios de aplicación e implementado por `ProfileRepositoryImpl` en Infrastructure.</td></tr>
+</table>
 
 #### 2.6.1.2. Interface Layer
 
-Por completar.
+**REST - Controllers:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Controller</td><td>ProfilesController</td><td>Expone operaciones para crear, consultar y actualizar el perfil y sus configuraciones.</td><td>Extraer la identidad del JWT, validar que el usuario acceda únicamente a su perfil y delegar la operación a los servicios de aplicación.</td><td>Endpoints `POST /api/v1/profiles`, `GET /api/v1/profiles/{profileId}`, `GET /api/v1/profiles/by-user/{userId}` y `PUT /api/v1/profiles/{profileId}`.</td></tr>
+  <tr><td>Controller</td><td>ProfilesController - Preferences</td><td>Expone la actualización de preferencias regionales y visuales.</td><td>Recibir los cambios realizados en la pantalla de configuración móvil.</td><td>Endpoint `PUT /api/v1/profiles/{profileId}/preferences`.</td></tr>
+  <tr><td>Controller</td><td>ProfilesController - Notification Settings</td><td>Expone la configuración de alertas del usuario.</td><td>Registrar la decisión de activar o desactivar notificaciones push operativas.</td><td>Endpoint `PUT /api/v1/profiles/{profileId}/notification-settings`.</td></tr>
+</table>
+
+**REST - Resources y Transform (assemblers):**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Resource</td><td>CreateProfileResource / ProfileResource</td><td>DTOs de entrada y salida con datos personales, rol, plan, preferencias y notificaciones.</td><td>Definir el contrato público de Profile sin exponer directamente el agregado de dominio.</td><td>Transformados por `CreateProfileCommandFromResourceAssembler` y `ProfileResourceFromEntityAssembler`.</td></tr>
+  <tr><td>Resource</td><td>UpdateProfileResource</td><td>DTO con `firstName`, `lastName`, `phone` y `avatarUrl`.</td><td>Transportar cambios realizados desde el formulario móvil, incluida la fotografía capturada o seleccionada en el dispositivo.</td><td>Convertido a `UpdateProfileCommand`.</td></tr>
+  <tr><td>Resource</td><td>UpdatePreferencesResource</td><td>DTO con `language`, `timezone`, `theme` y `currency`.</td><td>Validar valores soportados antes de ejecutar el caso de uso.</td><td>Convertido a `UpdatePreferencesCommand`.</td></tr>
+  <tr><td>Resource</td><td>UpdateNotificationSettingsResource</td><td>DTO con el indicador `stockAlerts`.</td><td>Representar la preferencia de recepción de alertas push.</td><td>Convertido a `UpdateNotificationSettingsCommand`.</td></tr>
+</table>
+
+**Events - Adaptadores de entrada:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Event Handler</td><td>UserSignedUpEventHandler</td><td>Recibe el evento de alta publicado por IAM.</td><td>Traducirlo a `CreateProfileCommand` e impedir perfiles duplicados.</td><td>Invoca `ProfileCommandService`.</td></tr>
+  <tr><td>Event Handler</td><td>SubscriptionPlanChangedEventHandler</td><td>Recibe cambios de plan publicados por Subscription.</td><td>Traducirlos a `UpdateProfilePlanCommand`.</td><td>Invoca `ProfileCommandService`.</td></tr>
+</table>
 
 #### 2.6.1.3. Application Layer
 
-Por completar.
+**Internal - Command Services:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Service Contract</td><td>ProfileCommandService</td><td>Declara los casos de uso de escritura mediante métodos `handle`.</td><td>Atender `CreateProfileCommand`, `UpdateProfileCommand`, `UpdatePreferencesCommand`, `UpdateNotificationSettingsCommand` y `UpdateProfilePlanCommand`.</td><td>Consumido por `ProfilesController` y los event handlers.</td></tr>
+  <tr><td>Service Implementation</td><td>ProfileCommandServiceImpl</td><td>Implementación de los casos de uso de escritura.</td><td>Comprobar existencia y propiedad del perfil, invocar reglas del agregado y persistir el resultado de manera transaccional.</td><td>Usa `ProfileRepository` y registra los cambios del agregado `Profile`.</td></tr>
+</table>
+
+**Internal - Query Services:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Service Contract</td><td>ProfileQueryService</td><td>Declara las consultas disponibles para Profile.</td><td>Atender `GetProfileByIdQuery` y `GetProfileByUserIdQuery`.</td><td>Consumido por `ProfilesController`.</td></tr>
+  <tr><td>Service Implementation</td><td>ProfileQueryServiceImpl</td><td>Implementación de lectura del perfil.</td><td>Recuperar el agregado sin modificar su estado y devolver ausencia controlada cuando no existe.</td><td>Usa `ProfileRepository`.</td></tr>
+</table>
+
+La capa de aplicación coordina el flujo, pero no contiene reglas de presentación móvil ni detalles de PostgreSQL. De esta manera, las mismas operaciones pueden ser consumidas por Android, iOS u otros clientes sin alterar el modelo de dominio.
 
 #### 2.6.1.4. Infrastructure Layer
 
-Por completar.
+**Persistence:**
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
+  </tr>
+  <tr><td>Repository Adapter</td><td>ProfileRepositoryImpl</td><td>Implementación del puerto de dominio.</td><td>Convertir entre el agregado `Profile` y su representación persistente.</td><td>Implementa `ProfileRepository`; utiliza `ProfilePersistenceRepository` y `ProfilePersistenceAssembler`.</td></tr>
+  <tr><td>Spring Data Repository</td><td>ProfilePersistenceRepository</td><td>Repositorio JPA para `ProfilePersistenceEntity`.</td><td>Ejecutar `findByUserId` y `existsByUserId`, además de las operaciones CRUD.</td><td>Trabaja sobre la tabla `profiles` en PostgreSQL.</td></tr>
+  <tr><td>Persistence Entity</td><td>ProfilePersistenceEntity</td><td>Mapeo ORM del perfil; hereda `id`, `createdAt` y `updatedAt`.</td><td>Persistir datos personales y los objetos de valor embebidos sin filtrar anotaciones JPA hacia el dominio.</td><td>Compone `PreferencesEmbeddable` y `NotificationSettingsEmbeddable`.</td></tr>
+  <tr><td>Embeddable</td><td>PreferencesEmbeddable</td><td>Mapea idioma, zona horaria, tema y moneda como columnas de `profiles`.</td><td>Mantener el esquema en 3FN sin crear una tabla para un objeto sin identidad propia.</td><td>Convertido desde/hacia `Preferences`.</td></tr>
+  <tr><td>Embeddable</td><td>NotificationSettingsEmbeddable</td><td>Mapea `notify_stock_alerts`.</td><td>Persistir la preferencia de notificaciones push.</td><td>Convertido desde/hacia `NotificationSettings`.</td></tr>
+  <tr><td>Assembler</td><td>ProfilePersistenceAssembler</td><td>Transformador entre modelo de dominio y modelo JPA.</td><td>Reconstruir el agregado con `restoreState` y evitar que el dominio dependa de infraestructura.</td><td>Usado por `ProfileRepositoryImpl`.</td></tr>
+</table>
+
+**Reglas de infraestructura y seguridad:**
+- Monolito modular Spring Boot con PostgreSQL compartida y límites lógicos por Bounded Context.
+- `user_id` es único y funciona como referencia lógica a la identidad administrada por IAM; las credenciales y el hash de contraseña nunca se almacenan en `profiles`.
+- Los endpoints requieren JWT válido y comprueban que el perfil solicitado corresponda al usuario autenticado.
+- `avatar_url` almacena únicamente la ubicación segura de la fotografía; la imagen seleccionada o capturada por el móvil se valida y sube mediante el servicio de archivos configurado.
+- Las preferencias se sincronizan en el backend para conservar idioma, tema, moneda y notificaciones al cambiar de dispositivo.
 
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/profile-component.png" alt="Diagrama de componentes del Bounded Context Profile" width="800"/>
+</p>
+
+**Figura 2.6.1.1:** Diagrama de componentes de Profile. Presenta la API REST consumida por la aplicación móvil, los servicios de comandos y consultas, los adaptadores para eventos de IAM y Subscription, el repositorio y la persistencia en PostgreSQL. Fuente: adaptado de `structurizr-104049-ProfileComponent` del proyecto original.
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
-Por completar.
+El diseño a nivel de código muestra cómo las abstracciones del dominio se mantienen independientes de los controllers, los handlers de integración y la persistencia JPA. Las dependencias apuntan hacia los contratos internos: Interface e Infrastructure dependen de Application y Domain, mientras que el agregado no conoce la tecnología del cliente móvil ni la base de datos.
 
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/profile-class-diagram.svg" alt="Diagrama de clases del dominio Profile" width="800"/>
+</p>
+
+**Figura 2.6.1.2:** Diagrama de clases de Profile con el agregado `Profile`, los value objects `Preferences` y `NotificationSettings`, commands, queries, servicios de aplicación, event handlers, controller y adaptadores de persistencia. Fuente: adaptado de `CLASS DIAGRAM — Perfil y Configuración BC` del proyecto original.
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
 
-Por completar.
+<p align="center">
+  <img src="images/capitulo2/profile-database-diagram.png" alt="Diagrama de base de datos del Bounded Context Profile" width="800"/>
+</p>
+
+**Figura 2.6.1.3:** Diagrama de base de datos (vista general del modelo con énfasis en Profile). Fuente: `Entreprenly_database_diagram` del proyecto original.
+
+**Diccionario de datos — Profile:**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Tabla</th><th>Campo</th><th>Key</th><th>Descripción</th>
+  </tr>
+  <tr>
+    <td rowspan="11" style="vertical-align:middle; text-align:center;"><code>profiles</code></td>
+    <td><code>id</code></td><td style="vertical-align:middle; text-align:center;">PK</td><td>Identificador autoincremental del perfil.</td>
+  </tr>
+  <tr><td><code>created_at</code>, <code>updated_at</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Marcas de auditoría heredadas.</td></tr>
+  <tr><td><code>user_id</code></td><td style="vertical-align:middle; text-align:center;">UNIQUE, IDX</td><td>Referencia lógica única al usuario administrado por IAM.</td></tr>
+  <tr><td><code>first_name</code>, <code>last_name</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Nombres y apellidos mostrados en el perfil.</td></tr>
+  <tr><td><code>phone</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Número de contacto del comerciante.</td></tr>
+  <tr><td><code>avatar_url</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Ubicación de la fotografía seleccionada o capturada desde el dispositivo móvil.</td></tr>
+  <tr><td><code>role</code>, <code>plan</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Rol informativo y plan sincronizado desde Subscription.</td></tr>
+  <tr><td><code>preference_language</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Idioma preferido de la interfaz móvil.</td></tr>
+  <tr><td><code>preference_timezone</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Zona horaria utilizada para fechas, ventas y alertas.</td></tr>
+  <tr><td><code>preference_theme</code>, <code>preference_currency</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Tema visual y moneda preferida.</td></tr>
+  <tr><td><code>notify_stock_alerts</code></td><td style="vertical-align:middle; text-align:center;">—</td><td>Indica si el usuario acepta notificaciones push de stock.</td></tr>
+</table>
+
+**Relaciones:** cada registro de `profiles` corresponde a un único usuario de IAM mediante `user_id`. En el modelo lógico existe una relación uno a uno; en la implementación del Bounded Context se trata como referencia lógica única para evitar dependencia ORM y FK física entre contextos. `Preferences` y `NotificationSettings` se almacenan como columnas embebidas porque no poseen identidad ni ciclo de vida independiente.
 
 ### 2.6.2. Bounded Context: Inventory
 
