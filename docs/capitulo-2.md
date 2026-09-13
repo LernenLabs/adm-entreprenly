@@ -272,23 +272,195 @@ Por completar.
 
 ## 2.3. Needfinding
 
-Por completar.
-
 ### 2.3.1. User Personas
 
-Por completar.
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+<p align="center">
+  <img src="images/capitulo2/user_persona_Don_Lucho.png" alt="user_persona_valentina" width="500"/>
+</p>
+
+**Segmento 2: Clientes Finales**
+<p align="center">
+  <img src="images/capitulo2/user_persona_Andrea_Torres.png" alt="user_persona_andrea" width="500"/>
+</p>
+
 
 ### 2.3.2. User Task Matrix
 
-Por completar.
+
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Tarea</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Verificar el stock disponible de productos en el local</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Registrar las ventas del día (efectivo y digital)</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Cuadrar la caja al cierre del turno</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Separar ingresos en efectivo de pagos por Yape/Plin/POS</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Atender pedidos de clientes por WhatsApp</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Reponer productos cuando detecta quiebre de stock</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Verificar que el peso despachado coincida con lo cobrado</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Delegar la atención de WhatsApp a un familiar o empleado</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Revisar movimientos de Yape o Plin desde el celular</td>
+      <td>Often</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Realizar conteo manual de inventario</td>
+      <td>Sometimes</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Coordinar pedidos con proveedores</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Detectar pérdidas o mermas en productos</td>
+      <td>Rarely</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+**Segmento 2: Clientes Finales**
+
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Tarea</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Buscar productos disponibles en negocios cercanos</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Consultar por WhatsApp si un producto está disponible</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Realizar el pago de una compra de forma digital (Yape/Tarjeta)</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Verificar que el producto recibido coincida con lo pedido</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Esperar confirmación de pago o recibo tras una compra</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Evaluar si confiar en un negocio local para comprar en línea</td>
+      <td>Sometimes</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Comparar precios entre negocios locales</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Ir presencialmente al mercado o minimarket</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Revisar el estado de su pedido tras confirmar la compra</td>
+      <td>Often</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Reclamar o solicitar devolución por producto agotado o incorrecto</td>
+      <td>Rarely</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+**Análisis del User Task Matrix**
+Las tareas con mayor frecuencia e importancia para el segmento de comerciantes son la verificación de stock, el registro de ventas y el cuadre de caja, las tres calificadas como Always y High. Esto confirma que su jornada gira en torno al control operativo del negocio y que cualquier herramienta que automatice o simplifique estas tareas tendrá una adopción directa e inmediata. La atención de pedidos por WhatsApp y la separación de medios de pago, calificadas como Often y High, representan tareas críticas que hoy realizan de forma manual y con alta probabilidad de error.
+
+Para el segmento de clientes finales, las tareas de mayor frecuencia e importancia son el pago digital y la espera de confirmación, ambas calificadas como Always y High, junto con la consulta de disponibilidad por WhatsApp y la verificación del pedido recibido, calificadas como Often y High. Esto indica que su experiencia de compra está completamente mediada por el canal digital y que la confianza en el proceso depende directamente de recibir respuestas rápidas y confirmaciones automáticas.
+
+La principal coincidencia entre ambos segmentos es que los dos otorgan alta importancia a la verificación del stock real: el segmento de comerciantes desde el lado operativo del negocio y el segmento de clientes finales desde el lado del consumidor que no quiere pagar por algo que no existe. La principal diferencia radica en la frecuencia del ontacto presencial: el segmento de comerciantes opera físicamente en el local todos los días, mientras que el segmento de clientes finales busca reducir o eliminar esa necesidad. Esta divergencia refuerza el valor de Entreprenly como puente entre la operación física del comerciante y la experiencia digital del cliente.
 
 ### 2.3.3. User Journey Mapping
 
-Por completar.
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+<p align="center">
+  <img src="images/capitulo2/journey_mapin_segmento1.png" alt="user_persona_valentina" width="500"/>
+</p>
+
+**Segmento 2: Clientes Finales**
+<p align="center">
+  <img src="images/capitulo2/journey_mapin_segmento2.png" alt="user_persona_andrea" width="500"/>
+</p>
 
 ### 2.3.4. Empathy Mapping
 
-Por completar.
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+<p align="center">
+  <img src="images/capitulo2/emp_comerciantes.png" alt="user_persona_valentina" width="500"/>
+</p>
+
+**Segmento 2: Clientes Finales**
+<p align="center">
+  <img src="images/capitulo2/emp_clientes.png" alt="user_persona_andrea" width="500"/>
+</p>
+
 
 ### 2.3.5. Big Picture EventStorming
 
