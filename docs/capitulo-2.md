@@ -4928,7 +4928,9 @@ Por completar.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-Por completar.
+<p align="center">
+<img src="images/capitulo2/structurizr-104049-EntreprenlySystemContext.png" width="500"/>
+</p>
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
