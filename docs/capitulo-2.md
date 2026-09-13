@@ -264,11 +264,519 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ### 2.2.2. Registro de entrevistas
 
-Por completar.
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
+-   Primera entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/capitulo2/abuelito.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> Hercilio Carrasco Herrera
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Masculino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 62
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 8:17 - 15:03     </td>
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        Herilio es un comerciante con cuatro décadas de trayectoria que actualmente utiliza Excel para su control de productos, aunque admite tener dificultades con el descuadre de stock (errores manuales al comprar o registrar). Su mayor "punto de dolor" es el desorden financiero: mezcla el dinero de las ventas con los pagos a proveedores y no logra cuadrar el efectivo con los vouchers de tarjetas y billeteras digitales como Yape o Plin.
+        Valida con entusiasmo la implementación de balanzas inteligentes para inventario automático y un chatbot con IA que gestione los pedidos de WhatsApp, funciones que actualmente delega en su hijo. Considera que un sistema que automatice el arqueo de caja y permita ventas 24/7 sin errores de stock sería una solución "bacán" que le ahorraría tiempo, dinero y reduciría la carga operativa de su personal.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Segunda entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/capitulo2/abuelita.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> María Encarnación Velázquez
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Femenino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 60
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+         <strong>Duración:</strong> 0:00 - 8:17 
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        María gestiona su negocio basándose principalmente en la memoria y la inspección visual diaria. Admite que este método genera errores, como enviar pedidos equivocados o duplicados a los clientes, lo que deriva en pérdidas económicas (ej. kilos de fruta regalados para no quedar mal con el cliente). Existe una falta de consenso administrativo con su esposo: mientras ella busca un cierre de caja formal, él prefiere la inmediatez de usar el dinero de Yape/Tarjeta directamente para nuevas compras sin registrar.
+        Muestra una apertura total hacia la tecnología para "hacer descansar al cerebro". Valida que una balanza inteligente le permitiría cobrar hasta los céntimos exactos (evitando el redondeo a favor del cliente que merman su ganancia). Además, ve en el chatbot y la impresión automática de vouchers una solución para no "perder tiempo pensando" y evitar errores de despacho, asegurando que su volumen de ventas subiría al ofrecer una atención mucho más rápida.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Tercera entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/capitulo2/luis.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> Luis Vargas
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Masculino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 54
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 15:03 - 19:34
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+       Luis es un comerciante de 54 años que confía plenamente en su memoria para el control de inventarios. Al trabajar con fruta selecta, asegura que no tiene pérdidas económicas por calidad, aunque reconoce que actualmente no puede saber con exactitud si el stock físico coincide con lo que debería haber. Aunque no siente dificultad para revisar sus movimientos en Yape o Plin, admite que el proceso es manual.
+        Valida que un sistema de inventario por peso le ahorraría mucho tiempo, evitando el conteo unidad por unidad. Además, ve con buenos ojos la automatización de pedidos por WhatsApp, señalando que una impresión automática de comprobantes haría el despacho "mucho más rápido". Finalmente, coincide en que un sistema que funcione 24/7 mediante un bot aumentaría significativamente su volumen de ventas al eliminar la fricción de la atención manual.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+**Segmento 2: Clientes Finales**
+
+
+-   Primera entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/capitulo2/sofia_lopez.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistada:</strong> María López
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Femenino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 23
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 19:34 - 24:17
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> San Martín de Porres
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        María es una joven de 23 años que prefiere métodos de pago digitales como Yape y Plin. Su principal molestia al comprar en minimarkets locales es la lentitud en la respuesta y la incertidumbre sobre el stock real, habiendo tenido experiencias negativas donde pagó por productos agotados. Esta falta de transparencia ha quebrado su confianza en varios negocios locales.
+        Muestra un alto interés en soluciones tecnológicas: validaría con entusiasmo un sistema que use sensores de peso reales para confirmar el stock desde su celular y valora críticamente la recepción inmediata de comprobantes de pago virtuales. Afirma que dejaría de ir presencialmente a los mercados si pudiera comprar de forma segura y rápida (en tres clics) vía WhatsApp, siempre que el sistema le brinde confirmaciones automáticas e inmediatas.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Segunda entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/capitulo2/curay.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> Sebastián Curay
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Masculino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 19
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 24:18 -29:46
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> San Martín de Porres, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        Sebastián es un estudiante de 19 años que prioriza la rapidez y los pagos digitales (Tarjeta y Yape/Plin) por encima del efectivo. Su mayor frustración es la incertidumbre del stock y la demora en la atención vía WhatsApp, habiendo experimentado varias veces el pagar por productos que finalmente estaban agotados, lo que ha erosionado su confianza en los negocios locales.
+        Debido a su carga académica, valora enormemente la posibilidad de realizar compras en "tres clics" para ahorrar tiempo. No cuenta con herramientas en casa para validar el peso de lo que recibe, por lo que un sistema con sensores de peso reales que valide el stock digitalmente le brindaría la seguridad que actualmente le falta. Además, considera indispensable recibir una confirmación automática e inmediata tras el pago para mitigar la sensación de riesgo al pagar por adelantado.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Tercera entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/capitulo2/cat.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistada:</strong> Rosmery Villa
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Femenino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 21
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+         <strong>Duración:</strong> 29:46 -35:55
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> an Martín de Porres, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        Rosmery es una joven de 21 años que utiliza casi exclusivamente billeteras digitales (Yape) y tarjetas, evitando el uso de efectivo. Identifica la demora en la respuesta y la falta de stock actualizado como los principales motivos para abandonar una compra. Ha tenido experiencias negativas pagando por productos que luego resultan estar agotados, lo que genera una pérdida total de confianza en el negocio.
+        Se define como alguien que no sabe "escoger productos" en el mercado físico, por lo que prefiere una solución digital de "tres clics" que pueda usar incluso mientras viaja en el bus. Valida con entusiasmo la implementación de sensores de peso reales en los estantes, ya que desconfía de las balanzas tradicionales de los mercados. Aunque no le da importancia al comprobante físico, exige una confirmación automática del sistema al pagar por adelantado para evitar la sensación de inseguridad e insatisfacción.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+
 
 ### 2.2.3. Análisis de entrevistas
 
-Por completar.
+Se realizaron 6 entrevistas semiestructuradas distribuidas en dos segmentos objetivos: 3 comerciantes dueños de minimarkets o puestos de mercado, y 3 clientes finales que realizan compras en negocios locales. El propósito fue identificar patrones comunes en sus experiencias, frustraciones y expectativas en torno a la gestión de inventario, medios de pago y atención digital. A partir de los resúmenes obtenidos, se extrajeron características objetivas y subjetivas de cada perfil, las cuales se presentan con respaldo estadístico expresado en porcentajes sobre el total de entrevistados por segmento.
+
+#### Segmento objetivo #1: Comerciantes (Dueños de Minimarkets/Mercados)
+
+**Hallazgos**
+- El 100% de los comerciantes reportó enfrentar descuadres entre el stock físico y el registrado, ya sea por errores manuales al anotar entradas, por no contar con sistema alguno, o por no poder verificar con exactitud las unidades disponibles.
+- El 100% identificó el desorden en el cierre de caja como un problema recurrente, manifestado principalmente en la dificultad de separar y conciliar los ingresos en efectivo con los pagos por Yape, Plin o terminal POS.
+- El 67% mezcla el dinero de ventas con gastos operativos o compras a proveedores sin un registro formal, lo que genera pérdida de trazabilidad financiera al cierre del día.
+- El 67% atiende pedidos por WhatsApp de forma manual, delegando esta tarea en familiares o atendiendo entre cliente y cliente, lo que genera errores y demoras.
+- El 100% validó positivamente el uso de una balanza inteligente para automatizar el control de inventario, siendo el 67% entusiasta sin condiciones y el 33% restante favorable bajo la condición de que el sistema sea simple de configurar.
+- El 33% utiliza Excel como herramienta de control; el 67% restante depende de la memoria o la inspección visual diaria, sin ningún registro sistemático.
+
+**Problemas operativos identificados**
+
+<p align="center">
+  <img src="images/capitulo2/graf_problemasOperativos.png" alt="graf_problemasOperativos" width="500"/>
+</p>
+
+El descuadre de stock y el desorden en caja concentran el mayor porcentaje con un 100% cada uno, lo que los posiciona como los problemas más críticos y compartidos por la totalidad del segmento. La mezcla de medios de pago sin registro y la atención manual de WhatsApp, presentes en el 67% de los casos, complementan un panorama donde la falta de control operativo afecta tanto el inventario como la conciliación financiera y la atención al cliente.
+**Método de control de inventario actual**
+
+
+<p align="center">
+  <img src="images/capitulo2/graf_metodoControl.png" alt="graf_metodoControl" width="500"/>
+</p>
+
+El 67% del segmento no cuenta con ninguna herramienta de registro estructurada y depende de la memoria o la revisión visual para controlar su inventario. Solo el 33% utiliza Excel, aunque con limitaciones reconocidas. Este dato indica que Entreprenly no compite con sistemas digitales existentes en estos perfiles, sino que se posiciona como la primera solución formal de gestión, lo que reduce la resistencia al cambio y facilita la adopción desde cero.
+
+
+**Aceptación de balanza inteligente para inventario**
+
+<p align="center">
+  <img src="images/capitulo2/graf_aceptacionBalanza.png" alt="graf_aceptacionBalanza" width="500"/>
+</p>
+
+El 100% del segmento aceptó positivamente la propuesta de inventario automatizado por peso. El 67% lo hizo sin reservas, mientras que el 33% restante condicionó su aceptación a que el sistema sea sencillo de configurar y operar. La ausencia total de rechazo valida directamente una de las funcionalidades centrales de Entreprenly y confirma que el segmento percibe valor real en reemplazar el conteo manual por una solución basada en sensores.
+
+
+**Interés en automatización de pedidos por WhatsApp**
+
+<p align="center">
+  <img src="images/capitulo2/graf_interesAutomatizacion.png" alt="graf_interes_automatizacion" width="500"/>
+</p>
+
+La totalidad del segmento mostró interés en automatizar la atención de pedidos por WhatsApp. El 67% lo valoró como una prioridad que reduciría la carga operativa del personal, mientras que el 33% restante lo consideró una mejora útil para agilizar el despacho. La unanimidad en este punto confirma que el canal conversacional es percibido como una solución real a un problema cotidiano, y no como una funcionalidad opcional o de baja relevancia para el negocio.
+
+**Conclusiones**
+Los comerciantes entrevistados operan con herramientas insuficientes o inexistentes para el control de su negocio. La dependencia de la memoria, la mezcla de fondos y la gestión manual de WhatsApp generan pérdidas económicas y decisiones tardías. La totalidad del segmento validó positivamente las funcionalidades centrales de Entreprenly, lo que confirma que existe una necesidad real y una disposición clara hacia la digitalización, siempre que la solución sea práctica y fácil de adoptar desde el primer día.
+
+
+#### Segmento objetivo #2: Clientes finales
+
+**Hallazgos**
+- El 100% ha tenido al menos una experiencia negativa en la que pagó por un producto agotado, lo que generó pérdida de confianza en el negocio.
+- El 100% afirmó que un sistema con validación de stock por sensor de peso les brindaría mayor seguridad al comprar desde su celular.
+- El 100% señaló la demora en la respuesta por WhatsApp como una de sus principales frustraciones.
+- El 67% prefiere billeteras digitales como medio de pago principal; el 33% combina tarjeta con billetera digital. Ninguno prioriza el efectivo.
+- El 67% dejaría de ir presencialmente al mercado si pudiera comprar de forma rápida y segura por WhatsApp.
+- El 33% restante lo haría bajo la condición de recibir confirmaciones automáticas confiables.
+- El 67% considera indispensable recibir confirmación automática del sistema al pagar por adelantado.
+
+**Medio de pago preferido**
+
+<p align="center">
+  <img src="images/capitulo2/graf_metodoPreferido.png" alt="graf_metodoPreferido" width="500"/>
+</p>
+
+El gráfico evidencia una clara preferencia por los medios de pago digitales: el 67% de los entrevistados utiliza billeteras digitales como Yape o Plin como medio principal, mientras que el 33% restante combina tarjeta con billetera digital. Ningún entrevistado prioriza el efectivo, lo que confirma que la conciliación de pagos electrónicos es una necesidad central para este segmento y valida el enfoque de Entreprenly en la confirmación automática de cobros digitales.
+
+
+**Principales frustraciones al comprar en minimarkets locales**
+
+<p align="center">
+  <img src="images/capitulo2/graf_principalesFrustaciones.png" alt="Principales frustraciones al comprar en minimarkets locales" width="500"/>
+</p>
+
+Las principales frustraciones se concentran en la incertidumbre del stock y la demora en la atención: el 100% del segmento ha pagado alguna vez por un producto que resultó estar agotado y el 100% señaló la lentitud en la respuesta por WhatsApp como una de sus mayores molestias. Estas experiencias negativas erosionan la confianza en el negocio local y orientan el diseño de Entreprenly hacia la validación de stock en tiempo real y la confirmación inmediata de pedidos.
+
+**Confianza ante stock validado por sensor de peso**
+
+<p align="center">
+  <img src="images/capitulo2/graf_seguridadSensor.png" alt="graf_seguridadSensor" width="500"/>
+</p>
+
+El 100% del segmento afirmó que un sistema con validación de stock mediante sensor de peso les brindaría mayor seguridad al comprar desde su celular. La unanimidad confirma que la desconfianza hacia el stock informado es una barrera real de compra y que la validación física del inventario por peso es percibida como un factor decisivo de confianza, respaldando directamente una de las funcionalidades centrales de Entreprenly.
+
+
+**Disposición a reemplazar la compra presencial por canal digital**
+<p align="center">
+  <img src="images/capitulo2/graf_compraDigital.png" alt="graf_compraDigital" width="500"/>
+</p>
+
+El 67% del segmento afirmó que dejaría de ir presencialmente al mercado si pudiera realizar compras de forma ágil y segura por WhatsApp. El 33% restante estaría dispuesto a hacerlo bajo la condición de recibir confirmaciones automáticas confiables, condición que Entreprenly está diseñada para cumplir. La ausencia total de rechazo evidencia que el canal conversacional tiene un potencial real de desplazar la visita presencial para compras de rutina en este perfil de consumidor.
+
+**Conclusiones**
+Los clientes finales entrevistados representan un perfil digital, exigente y con experiencias previas de frustración en el comercio local. Su principal barrera no es la tecnología, sino la falta de confianza en el stock disponible, en el proceso de pago y en la respuesta oportuna del negocio. Entreprenly responde directamente a estas tres barreras mediante la validación de stock por sensor, la confirmación automática de cobros y el chatbot de WhatsApp. Esto posiciona a la plataforma no solo como una herramienta de eficiencia operativa para el comerciante, sino también como un mecanismo de fidelización del consumidor final.
 
 ## 2.3. Needfinding
 
