@@ -4903,7 +4903,16 @@ Este diagrama muestra la integración y comunicación entre los diferentes Bound
 
 #### 2.5.1.1. Candidate Context Discovery
 
-Por completar.
+En esta sección se aplica la técnica de Candidate Context Discovery para identificar y separar los posibles Bounded Contexts del sistema. Se utilizó la técnica *look-for-pivotal-events* para analizar los eventos que marcan un cambio de estado relevante dentro del modelo de negocio de Entreprenly. Al identificar eventos pivote fundamentales como **UserSignedUp**, **ProductCreated**, **StockDecremented**, **WhatsAppOrderConfirmed**, **SaleCompleted** y **SubscriptionActivated**, se detectó que cada uno implicaba responsabilidades, límites transaccionales y reglas de negocio distintas, lo que llevó a definir los siguientes Bounded Contexts:
+
+| Bounded Context | Descripción | Eventos clave |
+|---|---|---|
+| **IAM** | Maneja la autenticación, registro y autorización de los comerciantes mediante credenciales seguras (hashing con BCrypt) y emisión de tokens JWT. | `UserSignedUp`, `UserAuthenticated`, `PasswordResetRequested`, `PasswordChanged` |
+| **Profile** | Administra la información del perfil del comerciante, datos de contacto y preferencias operativas (moneda, idioma, zona horaria, tema visual y notificaciones push). | `ProfileCreated`, `ProfileUpdated`, `ProfilePictureUploaded`, `PreferencesConfigured` |
+| **Subscription** | Gestiona los planes de suscripción (Free, Pro), el procesamiento de pagos mediante pasarela y el ciclo de vida (activación, renovación o cancelación) del servicio. | `SubscriptionPlanSelected`, `PaymentProcessed`, `SubscriptionActivated`, `SubscriptionCancelled` |
+| **Inventory** | Controla el catálogo de productos (por unidad y por peso), gestión de lotes con fechas de vencimiento, balance de existencias y generación de alertas de stock. | `ProductCreated`, `ProductUpdated`, `BatchRegistered`, `StockDecremented`, `LowStockAlertTriggered` |
+| **WhatsApp Sales** | Canal conversacional automatizado que atiende a los clientes finales vía WhatsApp, consultando disponibilidad de productos, registrando pedidos y confirmando compras. | `CustomerMessageReceived`, `ProductAvailabilityQueried`, `WhatsAppOrderCreated`, `WhatsAppOrderConfirmed` |
+| **Sales** | Administra el registro de ventas presenciales en el punto de venta móvil, procesando ítems por unidad y peso, emisión de comprobantes y validación de pagos (Yape, Plin y efectivo). | `SaleInitiated`, `ItemAddedToSale`, `PaymentReceived`, `SaleCompleted` |
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
