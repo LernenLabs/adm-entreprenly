@@ -4849,7 +4849,9 @@ A continuación se presenta el Product Backlog de Entreprenly, conformado por la
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
-Por completar.
+En esta sección se presenta el diseño estratégico del dominio de Entreprenly, cuyo propósito es delimitar las principales capacidades del negocio, identificar los Bounded Contexts y establecer las relaciones necesarias para que colaboren sin perder autonomía. Este análisis permite organizar el sistema alrededor del lenguaje y los procesos propios del negocio, evitando que las responsabilidades de perfil, inventario, ventas, suscripciones y atención mediante chatbot se mezclen dentro de un único modelo.
+
+El proceso parte de EventStorming para reconocer eventos, actores, comandos y flujos relevantes; continúa con Candidate Context Discovery y Domain Message Flows Modeling para definir los límites y mensajes intercambiados; y se consolida mediante Bounded Context Canvases y Context Mapping. Finalmente, las decisiones obtenidas se representan con diagramas de arquitectura en los niveles de contexto, contenedores y despliegue. Estos artefactos proporcionan la visión general que sirve como base para el diseño táctico desarrollado en la sección 2.6.
 
 ### 2.5.1. EventStorming
 
