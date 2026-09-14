@@ -19,7 +19,7 @@ try {
         'docs/conclusiones.md' `
         'docs/bibliografia.md' `
         'docs/anexos.md' `
-        --from=markdown-yaml_metadata_block `
+        --from=markdown-yaml_metadata_block-markdown_in_html_blocks `
         --lua-filter=config/pdf-only.lua `
         --to=plain) -join "`n"
 }

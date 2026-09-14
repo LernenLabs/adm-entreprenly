@@ -106,9 +106,17 @@ u202120836 & Gonza Morales, Anderson
 
 # Registro de Versiones del Informe
 
-| Versión | Fecha | Autor | Descripción de modificación |
-| :---: | :---: | :---: | --- |
-| AV1 | Por completar. | Todos los integrantes | Por completar. |
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Versión</th><th>Fecha</th><th>Autor</th><th>Descripción de modificación</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">AV1</td>
+    <td style="vertical-align:middle; text-align:center;">Setiembre 2026</td>
+    <td style="vertical-align:middle; text-align:center;">Todos los integrantes</td>
+    <td>Versión AV1: 2.1 Competidores, 2.2 Entrevistas y 2.6.2 Bounded Context Inventory (Domain, Application, Interface e Infrastructure Layers con diagramas de componentes, clases y base de datos y diccionario BC4).</td>
+  </tr>
+</table>
 
 # Project Report Collaboration Insights
 
@@ -136,6 +144,7 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
 # Contenido
 
 - [Student Outcome](#student-outcome)
+- [Objetivos SMART](#objetivos-smart)
 
 ### [Capítulo I: Presentación](docs/capitulo-1.md)
 
@@ -246,5 +255,91 @@ En esta sección se detallan las actividades realizadas en el trabajo final y el
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | --- | --- | --- |
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Por completar.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Por completar.<br><br>**Palma De Los Santos, Elynor Mikela**<br>*AV1:* Por completar.<br><br>**Laura Acosta, Victor Jhosef**<br>*AV1:* Por completar.<br><br>**Villon Amez, Enrique Manuel**<br>*AV1:* Por completar.<br><br>**Gonza Morales, Anderson**<br>*AV1:* Por completar. | Por completar. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Actualizó la presentación de la startup, los perfiles del equipo y los segmentos objetivo para el nuevo curso; adaptó la especificación de requisitos al dashboard móvil mediante User Stories, Impact Mapping y Product Backlog; desarrolló el diseño táctico del Bounded Context Profile e integró y revisó los capítulos I y II. | Las actividades permitieron actualizar el conocimiento generado en el proyecto anterior y adaptarlo al contexto de una solución móvil. El equipo integró conceptos de Lean UX, investigación de usuarios, especificación de requisitos, arquitectura de software y Domain-Driven Design para producir un informe coherente con las necesidades actuales de Entreprenly. |
+|  | **Palma De Los Santos, Elynor Mikela**<br>*AV1:* Reformuló el Solution Profile, los antecedentes y la problemática de Entreprenly, y desarrolló el proceso Lean UX mediante Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas orientados al producto móvil. |  |
+|  | **Laura Acosta, Victor Jhosef**<br>*AV1:* Actualizó el análisis competitivo, las estrategias frente a competidores y el diseño de entrevistas para los segmentos objetivo; además, documentó el Bounded Context Inventory en sus capas Domain, Application, Interface e Infrastructure, junto con sus diagramas y modelo de persistencia. |  |
+|  | **Villon Amez, Enrique Manuel**<br>*AV1:* Consolidó el registro y análisis de las entrevistas y actualizó los artefactos de Needfinding: User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping, relacionando los hallazgos con las necesidades de comerciantes y clientes finales. |  |
+|  | **Gonza Morales, Anderson**<br>*AV1:* Desarrolló el Big Picture EventStorming y el Ubiquitous Language; aplicó Strategic-Level Domain-Driven Design mediante Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases, Context Mapping y los diagramas de arquitectura de software. |  |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>*AV1:* Contrastó el informe anterior con los requisitos del nuevo curso, investigó la adaptación de funcionalidades y criterios de aceptación a dispositivos móviles y aplicó lo aprendido en Impact Mapping, Product Backlog y el modelado táctico de Profile. La integración final le permitió reforzar la revisión cruzada y la consistencia entre requisitos y arquitectura. | El equipo evidenció aprendizaje permanente al reutilizar críticamente los avances previos, consultar técnicas específicas, contrastarlas con el nuevo alcance móvil y mejorar los artefactos mediante revisiones colaborativas. Esta práctica permitió incorporar conocimientos nuevos sin perder la trazabilidad del producto ni repetir de forma automática el trabajo del ciclo anterior. |
+|  | **Palma De Los Santos, Elynor Mikela**<br>*AV1:* Revisó y ajustó continuamente los artefactos de Lean UX a partir del problema actual, los segmentos objetivo y la retroalimentación del equipo, reconociendo que los supuestos e hipótesis deben actualizarse cuando cambia el contexto de uso del producto. |  |
+|  | **Laura Acosta, Victor Jhosef**<br>*AV1:* Comparó soluciones vigentes del mercado y actualizó las preguntas de entrevista para obtener evidencia relevante; asimismo, profundizó en DDD táctico y Clean Architecture al separar productos por unidad y peso, alertas, persistencia y contratos de integración de Inventory. |  |
+|  | **Villon Amez, Enrique Manuel**<br>*AV1:* Fortaleció el análisis cualitativo al transformar entrevistas en personas, tareas, recorridos y mapas de empatía, revisando iterativamente cada artefacto para evitar que las decisiones del producto se basaran únicamente en suposiciones. |  |
+|  | **Gonza Morales, Anderson**<br>*AV1:* Profundizó en EventStorming, lenguaje ubicuo, Context Mapping y el modelo C4 para representar procesos, responsabilidades e interacciones entre contextos, aplicando estas técnicas de manera progresiva durante la elaboración de la arquitectura de Entreprenly. |  |
+
+<!-- pdf:only
+\clearpage
+-->
+
+# Objetivos SMART
+
+En esta sección, cada integrante de Lernen Labs establece un plan de desarrollo profesional compuesto por dos objetivos SMART para el periodo posterior a su graduación. Cada objetivo especifica el resultado esperado, los indicadores que permitirán comprobar su cumplimiento, las acciones que lo hacen alcanzable, su relevancia profesional y un plazo definido.
+
+## Chavez Carrasco, Lionel Abraham
+
+### Objetivo SMART 1 — Especialización en desarrollo móvil y experiencia de usuario
+
+Durante los primeros **12 meses posteriores a mi graduación**, completaré dos programas avanzados de al menos 40 horas cada uno sobre desarrollo de aplicaciones móviles y UX/UI. Aplicaré los conocimientos adquiridos en dos aplicaciones funcionales publicadas en mi portafolio y repositorio profesional, y validaré cada producto con un mínimo de 10 usuarios, buscando alcanzar una valoración promedio igual o superior a 4 de 5.
+
+**Plan de acción:** dedicar seis horas semanales al estudio y desarrollo; completar el primer programa y prototipo durante el primer semestre; y finalizar el segundo programa, ambas aplicaciones y sus pruebas con usuarios antes de concluir el mes 12.
+
+### Objetivo SMART 2 — Liderazgo de un producto digital
+
+Dentro de los **tres años posteriores a mi graduación**, asumiré el liderazgo técnico o funcional de un equipo de al menos cuatro integrantes y dirigiré el lanzamiento de un producto digital que complete como mínimo tres iteraciones. El producto deberá cumplir al menos el 80 % de los criterios de aceptación planificados y obtener una satisfacción promedio de usuarios igual o superior a 4 de 5.
+
+**Plan de acción:** fortalecer mis competencias en gestión ágil y liderazgo mediante un programa especializado durante el primer año, asumir progresivamente responsabilidades de coordinación y registrar los resultados de cada iteración mediante métricas de cumplimiento y retroalimentación de usuarios.
+
+## Palma De Los Santos, Elynor Mikela
+
+### Objetivo SMART 1 — Formación en Product Discovery y UX Research
+
+Durante los primeros **12 meses posteriores a mi graduación**, completaré dos cursos especializados de al menos 30 horas cada uno sobre Product Discovery, Lean UX o investigación de usuarios. Elaboraré tres casos de estudio para mi portafolio, cada uno sustentado con entrevistas o pruebas realizadas con un mínimo de cinco usuarios del segmento correspondiente.
+
+**Plan de acción:** reservar cinco horas semanales para capacitación y práctica; desarrollar un caso de estudio por cuatrimestre; y solicitar retroalimentación de profesionales o docentes antes de publicar cada resultado en mi portafolio.
+
+### Objetivo SMART 2 — Consolidación como Business Analyst o Product Owner
+
+Dentro de los **tres años posteriores a mi graduación**, asumiré formalmente funciones de Business Analyst o Product Owner y lideraré al menos dos ciclos completos de descubrimiento y definición de producto. Cada ciclo deberá producir una problemática validada, un backlog priorizado y una propuesta evaluada favorablemente por al menos el 80 % de los stakeholders participantes.
+
+**Plan de acción:** participar durante el primer año en actividades de levantamiento de requisitos y análisis de usuarios, obtener una certificación relacionada con gestión de productos antes del segundo año y solicitar responsabilidades de priorización y facilitación en proyectos posteriores.
+
+## Laura Acosta, Victor Jhosef
+
+### Objetivo SMART 1 — Especialización en backend y bases de datos
+
+Durante los primeros **12 meses posteriores a mi graduación**, completaré una certificación o programa especializado en desarrollo backend, arquitectura cloud o bases de datos. Como evidencia, implementaré y desplegaré una API para una aplicación móvil con documentación técnica, integración continua y una cobertura mínima del 80 % en pruebas automatizadas.
+
+**Plan de acción:** dedicar seis horas semanales a la capacitación; diseñar el modelo de datos y los contratos de la API durante el primer trimestre; implementar y probar los servicios en los siguientes seis meses; y publicar la solución documentada antes del mes 12.
+
+### Objetivo SMART 2 — Diseño y optimización de servicios en producción
+
+Dentro de los **tres años posteriores a mi graduación**, participaré como responsable técnico en el diseño u optimización de al menos dos servicios backend utilizados en producción. En cada intervención documentaré una mejora medible, como reducir en al menos 25 % el tiempo promedio de respuesta, aumentar la cobertura de pruebas hasta un mínimo de 80 % o disminuir en 30 % la cantidad de errores recurrentes.
+
+**Plan de acción:** registrar métricas de línea base antes de cada mejora, proponer decisiones respaldadas por pruebas de rendimiento y revisiones de código, y documentar los resultados obtenidos como parte de mi portafolio profesional.
+
+## Villon Amez, Enrique Manuel
+
+### Objetivo SMART 1 — Profundización en ingeniería frontend móvil
+
+Durante los primeros **12 meses posteriores a mi graduación**, completaré una especialización avanzada en React Native, arquitectura frontend o accesibilidad digital y aplicaré lo aprendido en dos funcionalidades móviles desplegadas en un entorno real. Cada funcionalidad deberá superar una revisión de código y alcanzar al menos el 90 % de conformidad en una evaluación automatizada de accesibilidad y calidad definida por el equipo.
+
+**Plan de acción:** dedicar cinco horas semanales al programa de especialización, seleccionar una necesidad concreta de producto por semestre, incorporar pruebas automatizadas y accesibilidad desde el inicio, y documentar las decisiones técnicas y resultados de ambas implementaciones.
+
+### Objetivo SMART 2 — Evolución hacia un rol de liderazgo frontend
+
+Dentro de los **tres años posteriores a mi graduación**, alcanzaré un rol de Senior Frontend Developer o Tech Lead y lideraré al menos dos entregas de producto de principio a fin. Además, acompañaré técnicamente a un mínimo de tres desarrolladores mediante sesiones mensuales de mentoría y revisiones de código, manteniendo por debajo del 5 % los defectos críticos detectados después de cada entrega liderada.
+
+**Plan de acción:** asumir gradualmente responsabilidades de arquitectura y coordinación, registrar las sesiones de mentoría y acuerdos de revisión, y utilizar métricas de defectos y cumplimiento de entrega para evaluar y mejorar mi desempeño como líder técnico.
+
+## Gonza Morales, Anderson
+
+### Objetivo SMART 1 — Especialización en arquitectura y gestión de requisitos
+
+Durante los primeros **12 meses posteriores a mi graduación**, completaré al menos 60 horas de formación especializada en arquitectura de software, Domain-Driven Design o gestión de requisitos. Elaboraré dos casos de estudio que incluyan modelos C4, decisiones arquitectónicas y trazabilidad de requisitos, y conseguiré que cada uno sea revisado por al menos dos profesionales del área.
+
+**Plan de acción:** dedicar cinco horas semanales a la formación; desarrollar el primer caso durante los primeros seis meses y el segundo durante el siguiente semestre; y aplicar la retroalimentación recibida antes de incorporarlos a mi portafolio profesional.
+
+### Objetivo SMART 2 — Liderazgo de proyectos de software
+
+Dentro de los **tres años posteriores a mi graduación**, lideraré un equipo de al menos cinco integrantes durante tres entregas consecutivas de un proyecto de software. Buscaré alcanzar como mínimo el 90 % de los compromisos planificados en cada entrega y una valoración promedio de stakeholders igual o superior a 4 de 5 respecto a la comunicación, organización y cumplimiento del equipo.
+
+**Plan de acción:** fortalecer mis competencias de liderazgo y gestión ágil durante el primer año, asumir responsabilidades de seguimiento y facilitación en proyectos profesionales, y utilizar indicadores de cumplimiento, retrospectivas y encuestas de satisfacción para mejorar después de cada entrega.
