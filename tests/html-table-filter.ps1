@@ -19,8 +19,19 @@ $fixture = @'
       <td><strong>Integrante:</strong></td>
       <td>Lionel<br>Chavez</td>
     </tr>
+    <tr>
+      <td><strong>Enlace:</strong></td>
+      <td>https://example.com/una/ruta/muy/extensa/que/debe/poder/dividirse</td>
+    </tr>
   </table>
   </div>
+
+<table>
+  <tr><th>Order</th><th>User Story Id</th><th>Title</th><th>Description</th><th>Story Points</th></tr>
+  <tr><td>1</td><td>US-01</td><td>Historia móvil</td><td>Descripción extensa que debe ajustarse al ancho disponible.</td><td>3</td></tr>
+</table>
+
+<img src="diagram.png" alt="Diagrama" width="800">
 '@
 
 $json = ($fixture | & pandoc `
@@ -38,6 +49,18 @@ if ($json -notmatch '"t":"Table"') {
 
 if ($json -match '<table') {
     throw 'La conversion dejo etiquetas de tabla HTML sin procesar.'
+}
+
+if ($json -match '"ColWidthDefault"') {
+    throw 'La tabla conserva anchos automaticos que pueden exceder los margenes del PDF.'
+}
+
+if ($json -notmatch '"width","100%"') {
+    throw 'El filtro no limito una imagen HTML ancha al espacio disponible.'
+}
+
+if ($json -notmatch '"t":"Link"') {
+    throw 'El filtro no convirtio el URL HTML extenso en un enlace divisible.'
 }
 
 $plain = ($fixture | & pandoc `

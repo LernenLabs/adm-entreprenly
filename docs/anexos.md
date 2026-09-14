@@ -6,19 +6,19 @@ En esta sección se reúnen los enlaces y artefactos complementarios utilizados 
 
 Repositorio utilizado por Lernen Labs para la elaboración colaborativa del informe y el registro de contribuciones del AV1:
 
-🔗 https://github.com/LernenLabs/adm-entreprenly
+Enlace: https://github.com/LernenLabs/adm-entreprenly
 
 ## Anexo B — Registro de entrevistas de needfinding
 
 Grabación de las entrevistas realizadas a los segmentos objetivo de comerciantes y clientes finales, reutilizadas y revisadas para el contexto móvil de Entreprenly:
 
-🔗 https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
+Enlace: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRAdAfXThRK4dopwDyqkN16uI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gqzS76
 
 ## Anexo C — Impact Mapping
 
 Mapa de impacto elaborado en UXPressia para relacionar el objetivo de negocio, los segmentos Comerciante y Cliente final, los impactos esperados, los entregables móviles y las User Stories:
 
-🔗 https://uxpressia.com/w/ZwzpS/i/Is5FJ?impactView=impact-map&tagId=noTag
+Enlace: https://uxpressia.com/w/ZwzpS/i/Is5FJ?impactView=impact-map&tagId=noTag
 
 La versión exportada empleada en el informe está disponible en [Impact_Mapping_Mobile.png](images/capitulo2/Impact_Mapping_Mobile.png).
 

@@ -38,7 +38,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Chavez Carrasco, Lionel Abraham</td>
-      <td align="center" valign="middle" rowspan="3">
+      <td align="center" valign="middle" rowspan="4">
         <img src="./images/capitulo1/foto_lionel.png" alt="Lionel Abraham" width="250">
       </td>
     </tr>
@@ -52,7 +52,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
-      <td colspan="2">
+      <td>
         Soy Lionel Abraham Chavez Carrasco, estudiante de Ingeniería de Software con experiencia en desarrollo de videojuegos 2D en Unity y en aplicaciones. Me caracterizo por ser responsable, creativo y adaptable, con interés en la innovación tecnológica, el diseño de interfaces (UX/UI) y la gestión ágil de proyectos. Me motiva aplicar mis conocimientos en proyectos que integren tecnología y creatividad, aportando valor real a los usuarios y fortaleciendo mis competencias como futuro ingeniero de software.
       </td>
     </tr>
@@ -63,7 +63,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Palma De Los Santos, Elynor Mikela</td>
-      <td align="center" valign="middle" rowspan="3">
+      <td align="center" valign="middle" rowspan="4">
         <img src="./images/capitulo1/foto_elynor.png" alt="Elynor Mikela" width="250">
       </td>
     </tr>
@@ -77,7 +77,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
-      <td colspan="2">
+      <td>
          Me considero una persona responsable, con buena predisposición y siempre dispuesta a colaborar en equipo. Procuro mantener una actitud proactiva y aprender de forma continua para mejorar mis habilidades y aportar de manera significativa a cada proyecto.
       </td>
     </tr>
@@ -88,7 +88,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Laura Acosta, Victor Jhosef</td>
-      <td align="center" valign="middle" rowspan="3">
+      <td align="center" valign="middle" rowspan="4">
         <img src="./images/capitulo1/foto_victor.jpg" alt="Victor Laura" width="250">
       </td>
     </tr>
@@ -102,7 +102,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
-      <td colspan="2">
+      <td>
         Estudiante de Ingeniería de Software, con conocimientos en C++, C# y Java, y experiencia en Visual Studio Code y Visual Studio. Cuento con habilidades en diseño de bases de datos, elaborando modelos conceptuales y físicos. Me caracterizo por estar en constante aprendizaje y disposición para trabajar en equipo.
       </td>
     </tr>
@@ -113,7 +113,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Villon Amez, Enrique Manuel</td>
-      <td align="center" valign="middle" rowspan="3">
+      <td align="center" valign="middle" rowspan="4">
          <img src="./images/capitulo1/foto_enrique.jpeg" alt="Enrique viLLÓN" width="250">
       </td>
     </tr>
@@ -127,7 +127,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
-      <td colspan="2">
+      <td>
         Estudiante de Ingeniería de software y Frontend Developer en Auna clínicas. Cuento con profundas habilidades de desarollo en javascript, typescript, react, react native, angular y lineamientos frontend para el desarolo de interfaces dinámicas. Me caracterizo por habilidades de liderazgo y trabajo en equipo, perseverancia.
       </td>
     </tr>
@@ -138,7 +138,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     <tr>
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Gonza Morales, Anderson</td>
-      <td align="center" valign="middle" rowspan="3">
+      <td align="center" valign="middle" rowspan="4">
         <img src="./images/capitulo1/foto_Anderson.jpg" alt="Anderson Gonza" width="250">
       </td>
     </tr>
@@ -152,7 +152,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
     </tr>
     <tr>
       <td align="center" valign="middle"><strong>Perfil</strong></td>
-      <td colspan="2">
+      <td>
         Estudiante de la carrera de Ingeniería de Software. Destaca por su capacidad de liderazgo y organizacion en equipos de trabajo. Tiene habilidades en coordinacion de tareas, comunicacion efectiva, analisis de requerimientos y seguimiento de actividades orientadas a cumplir objetivos del proyecto.
       </td>
     </tr>
