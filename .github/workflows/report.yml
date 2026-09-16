@@ -47,7 +47,7 @@ jobs:
           rm pandoc.deb
           pandoc --version | head -1
 
-      - name: Install XeLaTeX and Carlito
+      - name: Install XeLaTeX, Carlito and librsvg
         shell: bash
         run: |
           sudo apt-get update -qq
@@ -57,7 +57,9 @@ jobs:
             texlive-latex-extra \
             texlive-lang-spanish \
             lmodern \
-            fonts-crosextra-carlito
+            fonts-crosextra-carlito \
+            librsvg2-bin
+          rsvg-convert --version
           fc-cache -f
           fc-match Carlito
 

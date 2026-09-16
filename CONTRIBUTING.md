@@ -30,7 +30,7 @@ Para el primer avance:
 El archivo se guarda con este patrón:
 
 ```text
-dist/upc-pre-202620-1acc0238-13975-entreprenly-report-<entrega>.pdf
+dist/upc-pre-202620-1acc0238-13975-LernenLabs-report-<entrega>.pdf
 ```
 
 AV1 incluye `README.md`, los capítulos I y II, conclusiones, bibliografía y
@@ -48,8 +48,16 @@ videos y el glosario.
 - No agregues otra plantilla de carátula: la carátula oficial vive en
   `README.md` y el generador la reutiliza para el PDF.
 
+## Política de commits
+
 Los mensajes de commit deben estar en inglés y seguir Conventional Commits, por
 ejemplo `docs: complete startup profile` o `feat: add AV1 PDF generator`.
+
+La autoría del informe es del equipo. Ningún commit, pull request o etiqueta
+debe atribuir el trabajo a una herramienta de IA: no incluyas líneas como
+`Co-Authored-By: Claude ...` ni `Generated with Claude Code`, aunque la
+herramienta las proponga. Si un commit ya salió con esa línea, reescribe el
+mensaje y actualiza la rama con `git push --force-with-lease`.
 
 ## Automatización
 

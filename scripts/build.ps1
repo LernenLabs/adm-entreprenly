@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 $Period = '202620'
 $CourseCode = '1acc0238'
 $Nrc = '13975'
-$Startup = 'entreprenly'
+$Startup = 'LernenLabs'
 $Deliveries = @('av1', 'tb1', 'av2', 'tb2')
 
 $ClosingFiles = @(
@@ -106,6 +106,13 @@ try {
             Write-Host ("ERROR: {0} no esta instalado. Ejecuta .\scripts\dependencies.ps1" -f $tool) -ForegroundColor Red
             exit 1
         }
+    }
+
+    # Los SVG del capitulo II necesitan rsvg-convert; sin el, el error de LaTeX
+    # que aparece mas abajo ("_svg-tex.pdf is missing") no dice que falta.
+    if ($null -eq (Get-Command rsvg-convert -ErrorAction SilentlyContinue)) {
+        Write-Host 'AVISO: falta rsvg-convert, los diagramas SVG haran fallar la compilacion.' -ForegroundColor Yellow
+        Write-Host 'Ejecuta .\scripts\dependencies.ps1 para ver como instalarlo.' -ForegroundColor Yellow
     }
 
     $mainFont = Get-PreferredFont

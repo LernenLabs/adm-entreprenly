@@ -41,6 +41,30 @@
 \usepackage{array}
 \usepackage{xurl}
 
+% Tablas con cuadricula completa. El filtro config/pdf-only.lua las escribe como
+% longtable, por eso aqui se cargan los paquetes que necesita: longtable para
+% que se partan entre paginas, multirow para las celdas combinadas y colortbl
+% para el sombreado del encabezado.
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{etoolbox}
+
+% Sin este parche una longtable que sigue a un encabezado de cuarto nivel se
+% imprime antes que el propio encabezado.
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+
+% Ancho util de cada tabla: lo que queda de \linewidth despues de descontar
+% los separadores y las lineas verticales. El filtro reparte fracciones de esta
+% longitud entre las columnas.
+\newlength{\pdftblwidth}
+
+% Las lineas de la cuadricula, algo mas finas que el trazo por defecto.
+\setlength{\arrayrulewidth}{0.4pt}
+\renewcommand{\arraystretch}{1.25}
+
 % Los cinco niveles de encabezado de APA 7.
 % Los numeros (1.1, 2.3.4) se escriben a mano en los .md, por eso no hay etiqueta.
 \usepackage{titlesec}
@@ -82,6 +106,19 @@
     \setlength{\cslhangindent}{0.5in}%
     \setlength{\csllabelwidth}{0pt}%
   \fi}
+
+% Pandoc pide cada imagen con height=\textheight, de modo que una figura alta se
+% quedaba con la pagina entera y dejaba sola en la anterior la linea que la
+% presenta. Al limitar la clave height de graphicx a 0.75 del alto del texto, el
+% rotulo y la figura caben juntos y las imagenes pequenas no cambian.
+\newlength{\pdfimageheight}
+\makeatletter
+\let\pdforiginalheightkey\KV@Gin@height
+\define@key{Gin}{height}{%
+  \setlength{\pdfimageheight}{#1}%
+  \ifdim\pdfimageheight>0.75\textheight\setlength{\pdfimageheight}{0.75\textheight}\fi
+  \pdforiginalheightkey{\the\pdfimageheight}}
+\makeatother
 
 % Bloques de codigo que se parten en vez de salirse del margen.
 \usepackage{fvextra}
