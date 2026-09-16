@@ -62,6 +62,22 @@ if ($null -ne (Get-Command initexmf -ErrorAction SilentlyContinue)) {
     & initexmf --set-config-value '[MPM]AutoInstall=1'
 }
 
+# Los diagramas en SVG del capitulo II se convierten a PDF con rsvg-convert.
+# Sin el, XeLaTeX falla con "File `<nombre>_svg-tex.pdf' is missing".
+if ($null -eq (Get-Command rsvg-convert -ErrorAction SilentlyContinue)) {
+    Write-Host '[FALTA] rsvg-convert (diagramas SVG)' -ForegroundColor Yellow
+    if ($onWindows) {
+        Write-Host 'Instalalo desde una consola de PowerShell como administrador:'
+        Write-Host '  choco install rsvg-convert -y'
+    }
+    else {
+        Write-Host 'Instalalo con: sudo apt-get install -y librsvg2-bin'
+    }
+}
+else {
+    Write-Host '[OK] rsvg-convert' -ForegroundColor Green
+}
+
 $font = Get-InstalledFont
 if ($null -eq $font) {
     Write-Host 'No se encontro Aptos, Calibri ni Carlito.' -ForegroundColor Yellow

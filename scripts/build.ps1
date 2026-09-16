@@ -108,6 +108,13 @@ try {
         }
     }
 
+    # Los SVG del capitulo II necesitan rsvg-convert; sin el, el error de LaTeX
+    # que aparece mas abajo ("_svg-tex.pdf is missing") no dice que falta.
+    if ($null -eq (Get-Command rsvg-convert -ErrorAction SilentlyContinue)) {
+        Write-Host 'AVISO: falta rsvg-convert, los diagramas SVG haran fallar la compilacion.' -ForegroundColor Yellow
+        Write-Host 'Ejecuta .\scripts\dependencies.ps1 para ver como instalarlo.' -ForegroundColor Yellow
+    }
+
     $mainFont = Get-PreferredFont
     if ($null -eq $mainFont) {
         Write-Host 'ERROR: no se encontro Aptos, Calibri ni Carlito.' -ForegroundColor Red
