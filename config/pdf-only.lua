@@ -664,15 +664,28 @@ end
 
 -- Ademas se centran las figuras, como pide el align="center" del documento
 -- original. De paso se quita la sangria de primera linea, que empujaba las
--- imagenes anchas medio centimetro fuera del margen derecho.
+-- imagenes anchas medio centimetro fuera del margen derecho. Se centra con
+-- \hfill dentro del propio parrafo y no con un entorno center, que dentro de
+-- una figura con minipages dejaba grupos sin cerrar.
+local function center_image_block(block)
+  local content = { pandoc.RawInline('latex', '\\noindent\\hfill{}') }
+
+  for _, inline in ipairs(block.content) do
+    content[#content + 1] = inline
+  end
+
+  content[#content + 1] = pandoc.RawInline('latex', '\\hfill\\mbox{}')
+  block.content = content
+
+  return block
+end
+
 local function center_images_and_keep_labels(blocks)
   local out = {}
 
   for index, block in ipairs(blocks) do
     if is_image_block(block) then
-      out[#out + 1] = pandoc.RawBlock('latex', '\\begin{center}')
-      out[#out + 1] = block
-      out[#out + 1] = pandoc.RawBlock('latex', '\\end{center}')
+      out[#out + 1] = center_image_block(block)
     else
       out[#out + 1] = block
     end
