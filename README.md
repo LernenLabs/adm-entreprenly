@@ -144,13 +144,13 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
   <img src="docs/images/readme/contribuciones_av1_p1.png" alt="Gráfico de commits por semana del repositorio durante el AV1" width="800"/>
 </p>
 
-**Figura 1:** Commits semanales del repositorio `adm-entreprenly` entre el 13 de junio y el 12 de setiembre de 2026, con la concentración de trabajo en las semanas previas a la entrega del AV1. Fuente: GitHub Insights.
+**Figura AV1.1:** Commits semanales del repositorio `adm-entreprenly` entre el 13 de junio y el 12 de setiembre de 2026, con la concentración de trabajo en las semanas previas a la entrega del AV1. Fuente: GitHub Insights.
 
 <p align="center">
   <img src="docs/images/readme/contribuciones_av1_p2.png" alt="Commits por integrante del equipo durante el AV1" width="800"/>
 </p>
 
-**Figura 2:** Commits por integrante durante el AV1: LioTG (26), Ander-U (11), Zatrynox (8), elynorpalma (6) y enriquevillon25 (5), con las líneas añadidas y eliminadas por cada uno. Fuente: GitHub Insights.
+**Figura AV1.2:** Commits por integrante durante el AV1: LioTG (26), Ander-U (11), Zatrynox (8), elynorpalma (6) y enriquevillon25 (5), con las líneas añadidas y eliminadas por cada uno. Fuente: GitHub Insights.
 
 <!-- pdf:omit-start -->
 # Contenido
