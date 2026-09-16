@@ -634,8 +634,9 @@ local function flatten_nested_link(link)
 end
 
 -- Los rotulos del tipo "Segmento 2: Clientes Finales" quedaban al pie de una
--- pagina y su figura pasaba a la siguiente. \nopagebreak entre ambos obliga a
--- que viajen juntos.
+-- pagina y su figura pasaba a la siguiente, y los pies "Figura N: ..." caian en
+-- la pagina de despues de su imagen. \nopagebreak entre ambos obliga a que
+-- viajen juntos.
 local function is_image_block(block)
   if block.t ~= 'Para' and block.t ~= 'Plain' then
     return false
@@ -653,13 +654,23 @@ local function is_image_block(block)
   return image
 end
 
-local function is_label_block(block)
+local function is_text_block(block, limit)
   if (block.t ~= 'Para' and block.t ~= 'Plain') or is_image_block(block) then
     return false
   end
 
   local length = #pandoc.utils.stringify(block)
-  return length > 0 and length <= 120
+  return length > 0 and length <= limit
+end
+
+-- Un rotulo es la linea corta que presenta la figura; un pie es el parrafo que
+-- la explica despues, que puede ocupar varias lineas.
+local function is_label_block(block)
+  return is_text_block(block, 120)
+end
+
+local function is_caption_block(block)
+  return is_text_block(block, 400)
 end
 
 -- Ademas se centran las figuras, como pide el align="center" del documento
@@ -684,13 +695,17 @@ local function center_images_and_keep_labels(blocks)
   local out = {}
 
   for index, block in ipairs(blocks) do
-    if is_image_block(block) then
-      out[#out + 1] = center_image_block(block)
-    else
-      out[#out + 1] = block
-    end
+    -- Se decide antes de centrar: centrar mete RawInline en el parrafo y a
+    -- partir de ahi ya no parece un bloque de imagen.
+    local figure = is_image_block(block)
+    local next_block = blocks[index + 1]
+    local before_figure = next_block and not figure and is_label_block(block)
+      and is_image_block(next_block)
+    local before_caption = next_block and figure and is_caption_block(next_block)
 
-    if is_label_block(block) and blocks[index + 1] and is_image_block(blocks[index + 1]) then
+    out[#out + 1] = figure and center_image_block(block) or block
+
+    if before_figure or before_caption then
       out[#out + 1] = pandoc.RawBlock('latex', '\\nopagebreak')
     end
   end
