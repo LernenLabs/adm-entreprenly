@@ -30,7 +30,7 @@ Para el primer avance:
 El archivo se guarda con este patrón:
 
 ```text
-dist/upc-pre-202620-1acc0238-13975-entreprenly-report-<entrega>.pdf
+dist/upc-pre-202620-1acc0238-13975-LernenLabs-report-<entrega>.pdf
 ```
 
 AV1 incluye `README.md`, los capítulos I y II, conclusiones, bibliografía y

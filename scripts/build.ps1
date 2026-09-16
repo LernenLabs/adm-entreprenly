@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 $Period = '202620'
 $CourseCode = '1acc0238'
 $Nrc = '13975'
-$Startup = 'entreprenly'
+$Startup = 'LernenLabs'
 $Deliveries = @('av1', 'tb1', 'av2', 'tb2')
 
 $ClosingFiles = @(

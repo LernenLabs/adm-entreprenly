@@ -4,7 +4,7 @@ param()
 $ErrorActionPreference = 'Stop'
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $buildScript = Join-Path $repositoryRoot 'scripts/build.ps1'
-$expectedPdf = Join-Path $repositoryRoot 'dist/upc-pre-202620-1acc0238-13975-entreprenly-report-av1.pdf'
+$expectedPdf = Join-Path $repositoryRoot 'dist/upc-pre-202620-1acc0238-13975-LernenLabs-report-av1.pdf'
 
 if (-not (Test-Path -LiteralPath $buildScript -PathType Leaf)) {
     throw "No se encontro el generador esperado: $buildScript"
