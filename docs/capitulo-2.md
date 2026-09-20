@@ -4717,6 +4717,263 @@ A continuación se detalla cada User Story con su épica relacionada, descripci�
   </tbody>
 </table>
 
+### Spike Stories
+
+Además de las User Stories, el equipo definió cinco **Spike Stories**: trabajos de investigación, análisis o prueba de viabilidad técnica que deben resolverse antes de implementar una funcionalidad. No generan directamente un incremento de producto entregable ni suman story points al Product Backlog —el total se mantiene en 245—, pero reducen la incertidumbre que impide estimar con confianza las historias que dependen de ellos.
+
+**Contexto**
+
+Entreprenly se compone de una aplicación móvil construida con Flutter para Android e iOS, una Landing Page estática desplegada en hosting de la nube, y un backend en Spring Boot con Java que expone servicios REST organizados por bounded context bajo Clean Architecture y separación CQRS, con persistencia en PostgreSQL mediante JPA y autenticación basada en JWT. El canal conversacional se resuelve con un puente de WhatsApp desplegado como contenedor Node independiente del backend principal, y el control de inventario por peso se apoya en una balanza inteligente (IoT) que el backend expone a la aplicación móvil mediante el endpoint `/api/v1/iot-scale`. Sobre esta arquitectura, cinco decisiones quedaron abiertas al cerrar el Product Backlog: cómo leer el peso de la balanza, cómo sostener la sesión de WhatsApp, qué pasarela de pago usar para la suscripción, con qué librería escanear códigos QR y cómo entregar las notificaciones push. Cada una de ellas se abordó como un spike con su propio *timebox*.
+
+**Definition of Done (aplicable a los cinco spikes)**
+
+- El código del *proof of concept* está registrado en una rama del repositorio.
+- El informe de hallazgos se comparte y se revisa en una reunión de equipo o sesión de refinamiento del backlog.
+- Los hallazgos se utilizan para crear o refinar las historias de implementación asociadas.
+- El spike se completa dentro de su *timebox* y del sprint en curso.
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Spike Story</strong></td>
+      <td>SP-01</td>
+      <td><strong>Historias que desbloquea</strong></td>
+      <td>US-30, US-48</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Investigar la lectura de peso desde la balanza inteligente (IoT) en la aplicación móvil de Entreprenly</td>
+    </tr>
+    <tr>
+      <td><strong>Contexto</strong></td>
+      <td colspan="3">La venta de productos al granel depende de que la aplicación Flutter obtenga el peso real del producto. El backend Spring Boot expone la lectura del dispositivo mediante el endpoint "/api/v1/iot-scale", pero el equipo desconoce la latencia real en el punto de venta y el comportamiento esperado cuando la balanza no está disponible, lo que impide estimar la US-30.</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como equipo de desarrollo, queremos investigar y prototipar la lectura de peso desde la balanza inteligente hacia la aplicación móvil, para entender la latencia, el comportamiento ante fallos del dispositivo y el esfuerzo requerido antes de implementar la venta por peso.</td>
+    </tr>
+    <tr>
+      <td><strong>Timebox</strong></td>
+      <td colspan="3">2 días</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>1. Revisión del contrato del endpoint de la balanza</strong><br>
+      Dado que el equipo necesita conocer cómo se expone la lectura del dispositivo, cuando el desarrollador revisa la documentación de la balanza y la respuesta del endpoint "/api/v1/iot-scale", entonces documenta en el informe compartido el formato de la lectura, la unidad de medida y el campo que indica el estado de conexión.<br><br>
+      <strong>2. Medición de la latencia de lectura</strong><br>
+      Dado un dispositivo de gama media conectado a la misma red del negocio, cuando el desarrollador registra treinta lecturas consecutivas, entonces documenta la latencia promedio y la máxima, e indica si se cumple el umbral objetivo de un segundo.<br><br>
+      <strong>3. Comportamiento ante balanza no disponible</strong><br>
+      Dado que el endpoint responde <code>connected: false</code>, cuando el desarrollador ejecuta el flujo de venta por peso, entonces documenta que la aplicación habilita el ingreso manual del peso sin bloquear la venta ni perder el ticket en curso.<br><br>
+      <strong>4. Prototipo de la lectura</strong><br>
+      Dado que el equipo necesita validar la viabilidad técnica, cuando el desarrollador construye un proof of concept del diálogo "Registrar Peso" conectado al endpoint, entonces el prototipo es funcional, queda registrado en una rama del repositorio y se referencia en el informe.<br><br>
+      <strong>5. Estimación del esfuerzo</strong><br>
+      Dado que el equipo necesita estimar la US-30, cuando el desarrollador desglosa la integración en tareas —consulta de la lectura, confirmación automática, respaldo manual y validación de stock—, entonces entrega una estimación en story points para la historia completa.<br><br>
+      <strong>6. Documentación y cierre</strong><br>
+      Dado que el spike está completo, cuando el desarrollador consolida los hallazgos en el informe compartido, entonces el informe incluye ventajas, desventajas, enfoque recomendado y bloqueadores, y se revisa en la sesión de refinamiento del backlog.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Estado y hallazgo</strong></td>
+      <td colspan="3"><strong>Pendiente.</strong> Programado para el inicio del siguiente sprint. Su resultado definirá la estimación final de la US-30 y el comportamiento de respaldo cuando la balanza no responde.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Spike Story</strong></td>
+      <td>SP-02</td>
+      <td><strong>Historias que desbloquea</strong></td>
+      <td>US-37, US-38, US-39</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Investigar el puente de conexión con WhatsApp Business para el canal conversacional</td>
+    </tr>
+    <tr>
+      <td><strong>Contexto</strong></td>
+      <td colspan="3">El contexto Chatbot atiende a los clientes finales por WhatsApp a través de un puente desplegado como contenedor Node, separado del backend Spring Boot. La vinculación de la cuenta del comerciante se realiza mediante un código QR y la sesión queda registrada en la tabla "whatsapp_sessions". El equipo desconoce cuánto sobrevive esa sesión ante reinicios y cómo debe reflejarse su estado en la aplicación móvil, lo que impide estimar las historias del módulo de chatbot.</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como equipo de desarrollo, queremos investigar y prototipar la vinculación y la recepción de mensajes de WhatsApp Business desde un contenedor Node independiente, para entender la estabilidad de la sesión, los riesgos de seguridad y el esfuerzo requerido antes de implementar el canal conversacional.</td>
+    </tr>
+    <tr>
+      <td><strong>Timebox</strong></td>
+      <td colspan="3">3 días</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>1. Revisión de la documentación y de la librería del puente</strong><br>
+      Dado que el equipo necesita entender las capacidades del canal, cuando el desarrollador revisa la documentación de WhatsApp Business y de la librería utilizada en el puente Node, entonces documenta en el informe compartido el flujo de vinculación, los eventos de mensaje disponibles y sus límites de uso.<br><br>
+      <strong>2. Vinculación mediante código QR</strong><br>
+      Dado un comerciante sin cuenta vinculada, cuando el desarrollador ejecuta el flujo de vinculación por código QR desde la aplicación móvil, entonces documenta el tiempo que toma la vinculación y los estados intermedios que debe mostrar la interfaz.<br><br>
+      <strong>3. Persistencia de la sesión ante reinicios</strong><br>
+      Dado un contenedor con una sesión ya vinculada, cuando el desarrollador reinicia el contenedor, entonces documenta si la sesión se restablece sin volver a escanear el código y cuál es el mecanismo de reconexión automática.<br><br>
+      <strong>4. Implicaciones de seguridad y de datos</strong><br>
+      Dado que el canal transporta datos de clientes finales, cuando el desarrollador analiza el almacenamiento de la sesión y el tránsito de los mensajes hacia el contexto Chatbot, entonces documenta los riesgos identificados y las medidas de mitigación aplicables.<br><br>
+      <strong>5. Prototipo del canal</strong><br>
+      Dado que el equipo necesita validar la viabilidad técnica, cuando el desarrollador construye un proof of concept que vincula una cuenta de prueba y entrega los mensajes entrantes al backend, entonces el prototipo es funcional, queda registrado en una rama del repositorio y se referencia en el informe.<br><br>
+      <strong>6. Estimación del esfuerzo</strong><br>
+      Dado que el equipo necesita estimar las historias del chatbot, cuando el desarrollador desglosa la integración en tareas —vinculación, consulta de estado, recepción y envío de mensajes—, entonces entrega una estimación en story points para las US-37, US-38 y US-39.<br><br>
+      <strong>7. Documentación y cierre</strong><br>
+      Dado que el spike está completo, cuando el desarrollador consolida los hallazgos en el informe compartido, entonces el informe incluye ventajas, desventajas, enfoque recomendado y bloqueadores, y se revisa en la sesión de refinamiento del backlog.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Estado y hallazgo</strong></td>
+      <td colspan="3"><strong>Pendiente.</strong> Se ejecutará antes de comprometer las historias del módulo de chatbot. El riesgo principal por resolver es la reconexión automática de la sesión tras el reinicio del contenedor y cómo se refleja ese estado en la consulta de la US-38.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Spike Story</strong></td>
+      <td>SP-03</td>
+      <td><strong>Historias que desbloquea</strong></td>
+      <td>US-18, US-25, US-96</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Investigar la integración de una pasarela de pago para el cobro de la suscripción</td>
+    </tr>
+    <tr>
+      <td><strong>Contexto</strong></td>
+      <td colspan="3">El contexto Subscription debe cobrar el Plan Control y registrar los métodos de pago del comerciante. El modelo de datos previsto conserva únicamente la marca de la tarjeta, los últimos cuatro dígitos y el identificador de transacción devuelto por el proveedor, de modo que Entreprenly no almacene datos sensibles. El equipo aún no ha seleccionado la pasarela ni conoce sus comisiones, lo que impide estimar el procesamiento del cobro.</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como equipo de desarrollo, queremos investigar y prototipar la integración de una pasarela de pago con el backend Spring Boot y la aplicación Flutter, para entender el esquema de tokenización, las implicaciones de cumplimiento, los costos y el esfuerzo requerido antes de implementar el cobro de la suscripción.</td>
+    </tr>
+    <tr>
+      <td><strong>Timebox</strong></td>
+      <td colspan="3">2 días</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>1. Revisión de proveedores disponibles</strong><br>
+      Dado que el equipo necesita elegir una pasarela para el mercado peruano, cuando el desarrollador revisa la documentación de las alternativas candidatas, entonces documenta en el informe compartido el flujo de cobro de cada una y cuál se ajusta mejor a una suscripción recurrente.<br><br>
+      <strong>2. Evaluación de la tokenización</strong><br>
+      Dado que Entreprenly no debe almacenar datos sensibles del medio de pago, cuando el desarrollador evalúa el esquema de tokenización del proveedor, entonces documenta qué campos quedan bajo custodia de la pasarela y cuáles se persisten en las tablas "billing_payment_methods" y "subscription_payments".<br><br>
+      <strong>3. Compatibilidad con el backend</strong><br>
+      Dado el backend Spring Boot con JPA, cuando el desarrollador evalúa la librería oficial del proveedor y el manejo de notificaciones de cobro, entonces documenta los requisitos de integración: endpoints REST necesarios, recepción de webhooks y actualización del estado de la suscripción.<br><br>
+      <strong>4. Cumplimiento y protección de datos</strong><br>
+      Dado que el cobro involucra datos de pago del comerciante, cuando el desarrollador revisa las características de cumplimiento del proveedor, entonces documenta las consideraciones de PCI-DSS y de protección de datos personales, junto con los pasos adicionales que deba asumir el equipo.<br><br>
+      <strong>5. Dependencias y costos</strong><br>
+      Dado que el modelo de negocio depende del margen de la suscripción, cuando el desarrollador investiga las configuraciones requeridas y el esquema de comisiones, entonces lista las dependencias técnicas y los costos por transacción en el informe.<br><br>
+      <strong>6. Prototipo del cobro</strong><br>
+      Dado que el equipo necesita validar la viabilidad técnica, cuando el desarrollador procesa un cobro de prueba en ambiente sandbox desde la aplicación móvil hacia el backend, entonces el prototipo es funcional, queda registrado en una rama del repositorio y se referencia en el informe.<br><br>
+      <strong>7. Estimación y cierre</strong><br>
+      Dado que el spike está completo, cuando el desarrollador desglosa la integración en tareas y consolida los hallazgos, entonces entrega una estimación en story points para las US-18, US-25 y US-96, y el informe se revisa en la sesión de refinamiento del backlog.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Estado y hallazgo</strong></td>
+      <td colspan="3"><strong>Pendiente.</strong> Se ejecutará antes de comprometer el cobro del Plan Control. Quedan por definir la comparación de comisiones entre proveedores y el manejo de reintentos ante un cobro rechazado.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Spike Story</strong></td>
+      <td>SP-04</td>
+      <td><strong>Historias que desbloquea</strong></td>
+      <td>US-10</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Investigar el escaneo de códigos QR en la aplicación móvil para el registro de productos y lotes</td>
+    </tr>
+    <tr>
+      <td><strong>Contexto</strong></td>
+      <td colspan="3">Los formularios de productos y lotes permiten completar el campo de código mediante el escaneo de un código QR, en lugar de digitarlo. El segmento objetivo opera mayoritariamente con dispositivos de gama media-baja y en puestos de mercado con iluminación irregular, condiciones bajo las cuales el equipo no ha validado ninguna librería de escaneo.</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como equipo de desarrollo, queremos investigar y prototipar el escaneo de códigos QR en la aplicación Flutter, para elegir una librería confiable en dispositivos de gama media-baja y estimar el esfuerzo antes de implementar el registro por escaneo.</td>
+    </tr>
+    <tr>
+      <td><strong>Timebox</strong></td>
+      <td colspan="3">1 día</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>1. Comparación de librerías</strong><br>
+      Dado que el equipo necesita elegir una librería de escaneo, cuando el desarrollador compara las alternativas disponibles para Flutter, entonces documenta en el informe compartido el mantenimiento de cada una, su compatibilidad con Android e iOS y su tamaño en el paquete final.<br><br>
+      <strong>2. Prueba en dispositivos de gama media-baja</strong><br>
+      Dado un dispositivo representativo del segmento objetivo, cuando el desarrollador escanea códigos en condiciones de iluminación normal y baja, entonces documenta la tasa de lecturas correctas y el tiempo promedio de reconocimiento.<br><br>
+      <strong>3. Manejo del permiso de cámara</strong><br>
+      Dado que el escaneo requiere acceso a la cámara, cuando el desarrollador ejecuta el flujo por primera vez y tras denegar el permiso, entonces documenta el comportamiento esperado de la aplicación en ambos casos.<br><br>
+      <strong>4. Prototipo del escaneo</strong><br>
+      Dado que el equipo necesita validar la viabilidad técnica, cuando el desarrollador integra el escaneo en los formularios de producto y de lote, entonces el prototipo completa automáticamente el campo de código, queda registrado en una rama del repositorio y se referencia en el informe.<br><br>
+      <strong>5. Estimación y cierre</strong><br>
+      Dado que el spike está completo, cuando el desarrollador consolida los hallazgos y desglosa las tareas de integración, entonces entrega una estimación en story points para la US-10 y el informe se revisa en la sesión de refinamiento del backlog.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Estado y hallazgo</strong></td>
+      <td colspan="3"><strong>Pendiente.</strong> Se ejecutará junto con el desarrollo del módulo de inventario, dado que el escaneo completa el código en los formularios de producto y de lote de la US-10.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Spike Story</strong></td>
+      <td>SP-05</td>
+      <td><strong>Historias que desbloquea</strong></td>
+      <td>US-14, US-68</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Investigar la entrega de notificaciones push para las alertas de inventario</td>
+    </tr>
+    <tr>
+      <td><strong>Contexto</strong></td>
+      <td colspan="3">El contexto Inventory genera alertas de stock bajo y de caducidad de lote que deben llegar al comerciante aunque no tenga la aplicación abierta. El perfil del usuario guarda la preferencia "notify_stock_alerts", que debe respetarse al momento del envío. El equipo no ha validado el comportamiento de la entrega con la aplicación en segundo plano ni los límites del servicio de mensajería.</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como equipo de desarrollo, queremos investigar y prototipar el envío de notificaciones push desde el backend hacia la aplicación móvil, para entender la fiabilidad de la entrega en segundo plano, el respeto de las preferencias del perfil y el esfuerzo requerido antes de implementar las alertas de inventario.</td>
+    </tr>
+    <tr>
+      <td><strong>Timebox</strong></td>
+      <td colspan="3">2 días</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>1. Revisión del servicio de mensajería</strong><br>
+      Dado que el equipo necesita elegir el mecanismo de envío, cuando el desarrollador revisa la documentación de Firebase Cloud Messaging y su integración con Flutter y Spring Boot, entonces documenta en el informe compartido el flujo de registro del dispositivo, el envío desde el backend y los límites del servicio.<br><br>
+      <strong>2. Entrega con la aplicación en segundo plano</strong><br>
+      Dado un dispositivo con la aplicación cerrada o en segundo plano, cuando el backend emite una alerta de stock bajo, entonces el desarrollador documenta si la notificación se entrega, en cuánto tiempo y qué ocurre sin conexión a internet.<br><br>
+      <strong>3. Respeto de las preferencias del perfil</strong><br>
+      Dado un usuario que desactivó las alertas de stock en su perfil, cuando el backend intenta enviar la notificación, entonces el desarrollador documenta que el envío se omite conforme al valor de "notify_stock_alerts".<br><br>
+      <strong>4. Dependencias y costos</strong><br>
+      Dado que el servicio es externo, cuando el desarrollador investiga las configuraciones requeridas y su modelo de precios, entonces lista las dependencias técnicas y los costos previstos según el volumen estimado de alertas.<br><br>
+      <strong>5. Prototipo del envío</strong><br>
+      Dado que el equipo necesita validar la viabilidad técnica, cuando el desarrollador envía una notificación de prueba desde el backend hacia un dispositivo real, entonces el prototipo es funcional, queda registrado en una rama del repositorio y se referencia en el informe.<br><br>
+      <strong>6. Estimación y cierre</strong><br>
+      Dado que el spike está completo, cuando el desarrollador consolida los hallazgos y desglosa las tareas de integración, entonces entrega una estimación en story points para las US-14 y US-68, y el informe se revisa en la sesión de refinamiento del backlog.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Estado y hallazgo</strong></td>
+      <td colspan="3"><strong>Pendiente.</strong> Se ejecutará una vez cerrada la integración del contexto Inventory, dado que la generación de las alertas depende de los eventos de stock bajo y de caducidad de lote.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### 2.4.2. Impact Mapping
 
 El Impact Mapping permite relacionar el objetivo de negocio de Entreprenly con los actores que influyen en su cumplimiento, los cambios de comportamiento esperados, los entregables de la solución y las User Stories que los sustentan. El mapa fue elaborado en [UXPressia](https://uxpressia.com/w/ZwzpS/i/Is5FJ?impactView=impact-map&tagId=noTag) y se orienta al uso de Entreprenly como una plataforma móvil para la gestión de pequeños comercios.
