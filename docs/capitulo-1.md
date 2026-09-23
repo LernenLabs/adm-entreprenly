@@ -243,15 +243,11 @@ Presentamos los **Problem Statement**, **Assumptions**, **Hypothesis Statements*
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-**Entreprenly** se plantea como una aplicación móvil de Smart Retail dirigida a bodegas, minimarkets y puestos de mercado que necesitan sincronizar su operación diaria con un registro digital confiable, desde el celular del comerciante. La app permitirá que el comerciante configure sus productos con datos clave como peso unitario, precio, categoría, medio de venta y ubicación dentro del negocio. A partir de ello, el sistema podrá interpretar la lectura de las balanzas inteligentes y calcular el stock real disponible sin depender únicamente del conteo manual.
+Los pequeños comercios minoristas, como bodegas, minimarkets y puestos de mercado, gestionan a diario productos, ventas y pedidos mientras atienden a sus clientes. En muchos casos, combinan registros manuales con herramientas digitales que no comparten la misma información.
 
-Durante la operación del negocio, Entreprenly integrará, a través de la app móvil, la telemetría enviada por sensores de peso, los eventos de venta generados en el módulo POS y los pedidos recibidos por WhatsApp. Esta información se procesará en tiempo real para validar que cada salida de producto coincida con el movimiento físico detectado en estantería. Cuando exista una diferencia entre lo que el sistema registró como vendido y lo que la balanza reporte, se enviará una notificación push inmediata de descuadre para que el comerciante pueda intervenir antes de que el error escale.
+Esta forma de trabajo puede producir diferencias entre el stock físico y el registrado, ventas o pagos sin conciliar, pérdidas que no se identifican a tiempo y poca coordinación entre la atención presencial y los pedidos por canales conversacionales. Como resultado, el comerciante dispone de información incompleta para decidir cuándo reponer, cómo atender un pedido o cómo cerrar la caja.
 
-Además, la solución contempla un modelo de conciliación financiera dual. Por un lado, la **Caja Efectivo** será registrada digitalmente desde la app para apoyar el arqueo manual al cierre del turno. Por otro lado, la **Caja Electrónica** dependerá de la confirmación de un terminal POS físico para cerrar la venta y emitir el comprobante. De esta manera, Entreprenly evitará registrar como completada una venta electrónica que todavía no haya sido aprobada por el medio de pago, reduciendo el riesgo de inconsistencias entre la app y el reporte del terminal.
-
-Hemos identificado que muchos negocios minoristas pequeños enfrentan problemas recurrentes: diferencias entre stock físico y stock registrado, ventas no conciliadas con pagos electrónicos, escasa visibilidad sobre mermas o retiros no registrados y falta de coordinación entre el canal presencial y el canal conversacional. Estos problemas generan pérdidas económicas, decisiones tardías y desconfianza en las herramientas digitales.
-
-**¿Cómo puede Entreprenly, a través de una aplicación móvil, ayudar a los pequeños comercios minoristas a mantener su stock físico y digital permanentemente sincronizado, y al mismo tiempo asegurar una conciliación financiera exacta entre ventas presenciales y electrónicas, sin añadir complejidad operativa al negocio?**
+¿Cómo podríamos ayudar a los pequeños comercios minoristas a coordinar mejor su inventario, sus ventas y sus pedidos para reducir errores y pérdidas operativas, considerando las condiciones reales de su trabajo?
 
 #### 1.2.2.2. Lean UX Assumptions
 

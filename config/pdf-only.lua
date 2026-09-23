@@ -82,7 +82,7 @@ local function table_widths(table)
   if heading:match('criterio') and heading:match('acciones realizadas') then
     return { 0.20, 0.55, 0.25 }
   elseif heading:match('user story id') and heading:match('story points') then
-    return { 0.06, 0.12, 0.20, 0.52, 0.10 }
+    return { 0.14, 0.16, 0.31, 0.24, 0.15 }
   elseif heading:match('tarea') and heading:match('frecuencia') and heading:match('importancia') then
     return { 0.60, 0.20, 0.20 }
   elseif count == 3 and content:match('nombre') and content:match('carrera') and content:match('perfil') then
@@ -192,10 +192,10 @@ end
 -- se escriben a mano como longtable con \hline y reglas verticales.
 
 local ALIGNMENT_COMMANDS = {
-  AlignLeft = '\\raggedright',
-  AlignRight = '\\raggedleft',
+  AlignLeft = '\\centering',
+  AlignRight = '\\centering',
   AlignCenter = '\\centering',
-  AlignDefault = '\\raggedright'
+  AlignDefault = '\\centering'
 }
 
 local CELL_OPTIONS = pandoc.WriterOptions({ wrap_text = 'none' })
@@ -350,7 +350,11 @@ local function render_row(tbl, grid, rows, index, widths, environment)
       span = entry.colspan
       alignment = entry.cell.alignment
       content = cell_latex(entry.cell.contents)
-      if header and content ~= '' then
+      local label = pandoc.utils.stringify(entry.cell.contents):lower():gsub('^%s+', ''):gsub('%s+$', '')
+      local emphasis_label = label == 'title'
+        or label == 'description'
+        or label == 'acceptance criteria'
+      if (header or emphasis_label) and content ~= '' then
         content = '{\\bfseries ' .. content .. '}'
       end
       -- \multirow centra el contenido en el bloque de filas, pero si la tabla se
