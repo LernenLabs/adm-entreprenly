@@ -248,6 +248,7 @@ Los pequeños comercios minoristas, como bodegas, minimarkets y puestos de merca
 Esta forma de trabajo puede producir diferencias entre el stock físico y el registrado, ventas o pagos sin conciliar, pérdidas que no se identifican a tiempo y poca coordinación entre la atención presencial y los pedidos por canales conversacionales. Como resultado, el comerciante dispone de información incompleta para decidir cuándo reponer, cómo atender un pedido o cómo cerrar la caja.
 
 ¿Cómo podríamos ayudar a los pequeños comercios minoristas a coordinar mejor su inventario, sus ventas y sus pedidos para reducir errores y pérdidas operativas, considerando las condiciones reales de su trabajo?
+
 #### 1.2.2.2. Lean UX Assumptions
 
 **Assumptions**

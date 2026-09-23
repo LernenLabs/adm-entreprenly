@@ -1096,9 +1096,9 @@ Con los eventos ya ordenados, el equipo identificó y colocó los Actores (perso
 
   <img src="./images/capitulo2/chatbot_whatsApp.svg" alt="perfil_configuracion" width="800">
 
-  <img src="./images/capitulo2/generación_autenticación_cuenta.svg" alt="chatbot" width="800">
+  <img src="./images/capitulo2/generacion_autenticacion_cuenta.svg" alt="chatbot" width="800">
 
-  <img src="./images/capitulo2/gestión_proceso_suscripción.svg" alt="inicion_sesion" width="800">
+  <img src="./images/capitulo2/gestion_proceso_suscripcion.svg" alt="inicion_sesion" width="800">
 </div>
 
 Como resultado de la sesión, el equipo consolidó una visión compartida del dominio operativo de Entreprenly, identificando siete flujos principales: inicio de sesión, proceso de suscripción, configuración de suscripción, venta presencial, gestión de inventario, chatbot de pedidos por WhatsApp y gestión de perfil y configuración. Esta base sirvió como punto de partida para la definición del Ubiquitous Language y el posterior Design-Level Event Storming.
@@ -1209,6 +1209,13 @@ En esta sección se especifican las épicas y las User Stories que definen el al
 ### Épicas
 
 <table width="100%" style="width:100%; table-layout:fixed;">
+  <colgroup>
+    <col style="width:10%">
+    <col style="width:14%">
+    <col style="width:35%">
+    <col style="width:27%">
+    <col style="width:14%">
+  </colgroup>
   <tbody>
     <tr>
       <td width="18%" style="width:18%;"><strong>EPIC - 01</strong></td>
@@ -4731,7 +4738,7 @@ El modelo separa las raíces de agregado, sus valores y las proyecciones de lect
 ##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
 <p align="center">
-  <img src="images/capitulo2/CLASS DIAGRAM — Gestión y Proceso de Suscripción.svg" alt="Diagrama de clases del Bounded Context Subscription" width="1000"/>
+  <img src="images/capitulo2/class_diagram_gestion_proceso_suscripcion.svg" alt="Diagrama de clases del Bounded Context Subscription" width="1000"/>
 </p>
 
 **Figura 2.6.4.2:** Agregados y objetos de valor del dominio. La solicitud de cancelación y su ejecución utilizan fechas diferentes. Payment.appliedAt identifica la aplicación de cada cobro, mientras Subscription.version protege la actualización concurrente del periodo. Los textos y etiquetas del panel pertenecen a los recursos de interfaz y no se almacenan como reglas de BillingSetup.
