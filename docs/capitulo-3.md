@@ -295,7 +295,6 @@ Los flujos principales de navegación en la aplicación son los siguientes:
 | Comerciante gestiona su suscripción          | Más → Suscripción → Elegir plan → Facturación → Pagar y activar                                      |
  
 
-
 ### 3.1.3. Landing Page UI Design
 
 Por completar.
@@ -318,7 +317,165 @@ Por completar.
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
-Por completar.
+
+Los Wireflow Diagrams de la aplicación móvil presentan de forma integrada las pantallas de la app junto con las rutas de navegación que el usuario sigue para alcanzar un objetivo específico. Cada Wireflow define un **User Goal** concreto, detalla las pantallas involucradas, las decisiones del usuario y las respuestas del sistema.
+
+El equipo elaboró previamente los Task Flows correspondientes para cada User Goal, los cuales sirvieron como base para identificar las rutas típicas y los puntos de decisión críticos. Los flujos consideran: navegación por **Bottom Tab Bar** (Inicio, Inventario, Vender, Pedidos, Más); **Bottom Sheets** para formularios cortos; gestos nativos (swipe, pull-to-refresh, long press); **notificaciones push con deep links**; y capacidades del dispositivo como la **cámara** (escaneo QR) y el **reconocimiento de voz**. Se consideran las User Personas definidas en el capítulo 2 (Don Lucho — comerciante, y Andrea Torres — cliente final).
+
+---
+
+**Wireflow 1 – User Goal: Registrarse e iniciar sesión en Entreprenly**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 1- Registro e inicio de sesión.png" alt="Wireflow1 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho descarga Entreprenly desde la tienda de aplicaciones y necesita crear una cuenta para empezar a gestionar su negocio desde su celular.
+
+**Splash Screen → Bienvenida:** Al abrir la app por primera vez, se muestra el splash con el logo y luego la pantalla de bienvenida con los botones "Crear cuenta" e "Iniciar sesión".
+
+**Registro (US-52):** Don Lucho presiona "Crear cuenta" → pantalla completa de registro (stack navigation, con botón "Atrás" nativo). Ingresa email y contraseña; el teclado se adapta al tipo de campo (teclado de email con "@"). Si los datos son válidos (Scenario 1): el sistema crea la cuenta, asigna el Plan Free y muestra la pantalla "Revisa tu correo". Si el email ya existe (Scenario 2): mensaje de error inline bajo el campo. Si la contraseña no cumple requisitos (Scenario 3): checklist de requisitos en rojo/verde debajo del campo, actualizado en tiempo real.
+
+**Verificación de email (US-53):** Don Lucho abre el enlace del correo **desde el mismo celular** → el App Link (`entreprenly://verify?token=...`) abre directamente la app. Si el token es válido: la cuenta se activa y se navega al tab "Inicio". Si expiró: pantalla de error con el botón "Reenviar email".
+
+**Login (US-54, US-55):** En visitas posteriores, si la sesión sigue activa (token persistido de forma segura), la app abre directo en "Inicio". Si no: Don Lucho ingresa credenciales. Correctas (Scenario 1) → "Inicio". Incorrectas (Scenario 2) → mensaje genérico. 5 intentos fallidos (Scenario 3) → bloqueo y notificación por email. Alternativa: "Continuar con Google" abre el selector nativo de cuentas del sistema operativo (US-55). Tras el primer login, la app ofrece activar el desbloqueo con huella/Face ID para los siguientes accesos.
+
+**Recuperar contraseña (US-56):** Desde el login, Don Lucho toca "¿Olvidaste tu contraseña?" → ingresa su correo y presiona "Enviar enlace" → la pantalla confirma el envío (enlace válido por 30 minutos). Al abrir el enlace desde el celular, la app muestra "Nueva contraseña" con la validación de requisitos en tiempo real; al guardar, regresa al login.
+
+---
+
+**Wireflow 2 – User Goal: Registrar y gestionar el inventario de productos**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 2- Registro y gestionar el inventario.png" alt="Wireflow2 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho necesita agregar los productos de su bodega al sistema desde su celular, mientras está en el almacén o detrás del mostrador.
+
+**Tab "Inventario" → pestaña "Productos":** Don Lucho toca el tab "Inventario". La pantalla muestra dos pestañas superiores (Productos | Lotes) y la lista de productos en formato de tarjetas verticales (una columna). En el primer acceso se muestra un estado vacío con ilustración y el botón "Agregar tu primer producto".
+
+**Agregar producto (US-01):** Don Lucho presiona el botón flotante "+" → se abre un **Bottom Sheet** expandible con el formulario (nombre, tipo de medida Unidad/Peso, precio, stock inicial). Presiona "Guardar". Datos válidos: el sheet se cierra, aparece un Snackbar "Producto registrado" y la tarjeta se agrega al inicio de la lista. Campos obligatorios vacíos: campos resaltados en rojo y el botón "Guardar" permanece deshabilitado.
+
+**Buscar producto (US-12):** Don Lucho escribe en la barra de búsqueda superior o toca el ícono de micrófono para **dictar** el nombre del producto. La lista se filtra en tiempo real. Los **chips de categoría** horizontales permiten filtrar sin abrir un panel adicional. Como alternativa, toca el ícono de **escáner QR** → se abre la cámara → al leer el código del producto, la app navega directo a su detalle.
+
+**Ver detalles (US-10):** Al tocar una tarjeta se navega a la pantalla de detalle del producto con su información completa e historial de lotes asociados.
+
+**Editar producto (US-05):** Desde el detalle, Don Lucho toca "Editar" (o hace **long press** sobre la tarjeta en la lista) → Bottom Sheet con datos pre-cargados → "Guardar" → Snackbar de confirmación. **Eliminar:** swipe hacia la izquierda sobre la tarjeta → botón rojo "Eliminar" → diálogo de confirmación nativo.
+
+**Producto agotado (US-07):** Cuando el stock de un producto llega a 0, su detalle muestra el banner "Producto agotado", el badge "Agotado" en sus lotes y el botón "Crear lote" para reponerlo. El chatbot deja de ofrecerlo a los clientes.
+
+---
+
+**Wireflow 3 – User Goal: Gestionar lotes y recibir alertas de vencimiento**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 3- Gestionar lotes y recibir alertas de vencimiento.png" alt="Wireflow3 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho necesita registrar lotes de productos perecederos y ser notificado, incluso con la app cerrada, cuando alguno esté por vencer.
+
+**Entrada por notificación push (US-11):** El sistema envía una notificación push: "3 lotes vencen en los próximos 3 días". Don Lucho la toca → el deep link `entreprenly://inventario/lotes?filtro=por-vencer` abre la pestaña "Lotes" ya filtrada.
+
+**Tab "Inventario" → pestaña "Lotes":** Si existen lotes próximos a vencer (US-11, Scenario 1): banner amarillo en la parte superior y badge numérico en el tab "Inventario". Si hay lotes vencidos (Scenario 2): banner rojo. Sin condiciones críticas (US-09, Scenario 2): solo los contadores resumen. Pull-to-refresh actualiza los estados.
+
+**Crear lote (US-23):** Don Lucho toca "+" → Bottom Sheet con: selector de producto (búsqueda con autocompletado o escaneo QR), número de lote, fecha de ingreso y fecha de vencimiento (**date picker nativo** del sistema), cantidad/peso inicial. Al confirmar: el lote aparece en la lista con badge "Activo". Sin producto seleccionado: el selector se resalta en rojo y el sheet permanece abierto.
+
+**Ver detalle de lote (US-06, US-08):** Al tocar un lote se navega a su pantalla de detalle. Si tiene stock bajo, está agotado o por vencer (US-08, Scenario 1): tarjeta de alerta con ícono y descripción. Estado normal (Scenario 2): solo los datos.
+
+**Editar (US-02) y Eliminar lote (US-04):** Desde el detalle del lote, "Editar" abre el Bottom Sheet "Editar lote" con los datos pre-cargados (el producto queda bloqueado y se pueden cambiar la cantidad y las fechas). "Eliminar" abre un diálogo de confirmación que indica cuántas unidades se descontarán del inventario, para evitar eliminaciones accidentales.
+
+---
+
+**Wireflow 4 – User Goal: Registrar una venta presencial**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 4- Registrar una venta presencial.png" alt="Wireflow4 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho atiende a un cliente en el mostrador y necesita registrar la venta con una sola mano, rápido y sin interrumpir la atención.
+
+**Tab central "Vender":** Don Lucho toca el botón central elevado "Vender". La pantalla POS muestra arriba el buscador y abajo una **barra de ticket colapsada** fija (cantidad de ítems + total + "Cobrar"), al alcance del pulgar.
+
+**Buscar y agregar producto (US-24):** Don Lucho busca por texto, voz o escaneo QR; también puede tocar un producto de la grilla de "Más vendidos". Producto tipo **Peso** (US-26): Bottom Sheet "Registrar peso"; si la balanza IoT está conectada por Bluetooth/red, el peso se captura automáticamente (Scenario 1); si no, ingreso manual con teclado numérico (Scenario 2). Producto tipo **Unidad** (US-25): Bottom Sheet con stepper (– / +) y teclado numérico. Si se supera el stock disponible: mensaje "Stock insuficiente. Disponible: X" y el botón "Agregar" se deshabilita (US-25 Scenario 2, US-26 Scenario 3). Al agregar, vibración háptica breve como feedback.
+
+**Gestionar el ticket (US-27):** Don Lucho desliza hacia arriba la barra de ticket → se expande a pantalla completa con el detalle de ítems y subtotales. Para eliminar un ítem: swipe a la izquierda (Scenario 2); el total se recalcula al instante.
+
+**Método de pago (US-28):** Al presionar "Cobrar", se muestra la pantalla de pago con botones grandes: "Efectivo" y "Tarjeta / Yape / Plin". Si intenta finalizar sin selección (Scenario 2): mensaje "Por favor, seleccione un método de pago". Si elige Efectivo, aparece un campo opcional "Monto recibido" que calcula el vuelto.
+
+**Finalizar venta (US-29, US-30, US-31):** "Finalizar venta" → pantalla de éxito con check animado, monto y opciones "Compartir boleta" (hoja de compartir nativa: WhatsApp, PDF) y "Nueva venta". Al tocar "Nueva venta", el ticket se limpia y la pantalla Vender muestra el **Resumen de caja en vivo** (US-30, US-31): total del día, monto en efectivo, monto digital y número de ventas. El mismo resumen se refleja en el tab "Inicio".
+
+---
+
+**Wireflow 5 – User Goal: Configurar el chatbot de WhatsApp Business y atender pedidos**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 5- Vincular el chatbot de WhatsApp Business y atender pedidos.png" alt="Wireflow5 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho necesita conectar su WhatsApp Business al sistema y atender desde el celular los pedidos que genera el bot.
+
+**Tab "Pedidos" → sin cuenta vinculada (US-32, Scenario 1):** Como la app y WhatsApp Business suelen estar en el **mismo celular**, se muestra la pantalla de vinculación con dos opciones: (a) **"Vincular este número"** mediante código de emparejamiento de 8 dígitos que Don Lucho ingresa en WhatsApp > Dispositivos vinculados, con temporizador de expiración; o (b) mostrar el QR para escanearlo desde otro dispositivo. Si la vinculación es exitosa (Scenario 2): la pantalla cambia a "Conectado" con el número vinculado y la bandeja de conversaciones. Si el código expira (Scenario 3): mensaje "El código expiró" y se genera uno nuevo.
+
+**Estado de conexión (US-33):** Un indicador de estado (punto verde "Activo" / gris "Desconectado") se muestra en la cabecera del tab "Pedidos". Si la sesión expiró (Scenario 2): banner "Desconectado" con el botón "Volver a vincular", y además una notificación push para que el comerciante se entere aunque no abra la app.
+
+**Gestionar conversaciones (US-34, US-35):** La bandeja lista los chats ordenados por el más reciente, con badge de no leídos. Al tocar una conversación se navega a la pantalla de chat (patrón familiar de WhatsApp). Para responder manualmente: escribe y presiona "Enviar"; si el campo está vacío, el botón permanece deshabilitado (US-35, Scenario 2).
+
+**Atender pedido desde push (US-41 a US-43):** Llega la notificación "Nuevo comprobante de pago — Pedido #124". Al tocarla, el deep link `entreprenly://pedidos/124` abre el detalle del pedido con el comprobante en miniatura (se amplía con pinch-to-zoom). Botones fijos inferiores: "Rechazar" y "Aprobar pago". Al aprobar, el sistema descuenta el stock, registra la venta en caja y el pedido pasa a **"Completado"** (US-43, US-44, US-45), con el número de venta, la boleta enviada al cliente y la trazabilidad completa. Al rechazar con motivo, el pedido vuelve a "Esperando pago" (US-48, Scenario 1).
+
+**Respuestas automáticas del bot (US-37, US-46):** Dentro de cada chat, Don Lucho puede ver cómo el bot atendió al cliente. Si el producto pedido no existe, el bot sugiere alternativas disponibles (US-37). Si la cantidad supera el stock, el bot informa las unidades disponibles y ofrece ajustar el pedido; al aceptar, el pedido se actualiza (US-46).
+
+---
+
+**Wireflow 6 – User Goal: Activar o gestionar la suscripción al Plan Control**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 6- Activar y gestionar la suscripción al Plan Control.png" alt="Wireflow6 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho, con Plan Free, decide contratar el Plan Control para usar el chatbot y la balanza IoT.
+
+**Entrada contextual (paywall):** Además del acceso por tab "Más" → "Suscripción", en mobile existe una entrada contextual: si Don Lucho toca una función premium (ej. tab "Pedidos" o "Conectar balanza") con Plan Free, se abre un Bottom Sheet "Función del Plan Control" con el botón "Ver planes".
+
+**Selección de plan (US-13):** La pantalla de planes muestra las tarjetas apiladas verticalmente (Free / Control) con el plan actual marcado. Don Lucho toca "Elegir plan" en Plan Control (Scenario 1): la tarjeta queda con borde naranja y se habilita el botón fijo inferior "Continuar". Sin selección (Scenario 2): mensaje "Selecciona un plan para continuar".
+
+**Proceso de suscripción (US-14, US-15, US-16):** Formulario de facturación en pasos cortos (indicador de progreso 1/3, 2/3, 3/3) para no saturar la pantalla. Se ofrece autocompletado de datos y escaneo de tarjeta con la cámara. Resumen previo → "Pagar y activar". Cobro aprobado (US-17, Scenario 1): pantalla de éxito y regreso a "Suscripción" con estado "Activa". Cobro rechazado (US-16, Scenario 2): mensaje con el motivo sin perder los datos ingresados.
+
+**Gestión de suscripción activa (US-18 a US-22):** Desde "Más" → "Suscripción", Don Lucho puede renovar (US-20) o cancelar (US-21, con diálogo de confirmación). Si cancela: estado "Cancelación programada" y acceso activo hasta el vencimiento. 3 días antes del vencimiento, notificación push recordatoria. Al vencer, la cuenta vuelve automáticamente al Plan Free (US-22). Desde "Suscripción", la opción "Historial de pagos" muestra los cobros realizados con su estado y permite descargar cada comprobante o el historial completo en PDF (US-73).
+
+---
+
+**Wireflow 7 – User Goal: Resolver dudas y reportar problemas desde el Centro de ayuda**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 7 - Centro de ayuda y soporte.png" alt="Wireflow7 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho tiene una duda sobre cómo validar un pago de Yape y, más tarde, encuentra un error que quiere reportar.
+
+**Tab "Más" → "Ayuda" (US-74):** El Centro de ayuda muestra un buscador, accesos por categoría (Chatbot, Inventario, Ventas, Planes) y las preguntas frecuentes en acordeones que se expanden sin salir de la pantalla.
+
+**Buscar y consultar artículos (US-75, US-76):** Don Lucho escribe "yape" en el buscador y la lista se filtra en tiempo real. Al tocar un resultado se abre el artículo con los pasos numerados, avisos importantes y la pregunta "¿Te sirvió este artículo?".
+
+**Reportar un problema (US-77, US-78):** Desde el Centro de ayuda toca "Reportar un problema" → formulario con tipo de problema, pantalla donde ocurrió, descripción y captura opcional. Si intenta enviar sin descripción, el campo se resalta en rojo y el botón queda deshabilitado. Al enviar, la app muestra la confirmación con el número de reporte (SR-1042) y el plazo de respuesta, y permite volver a Ayuda.
+
+---
+
+**Wireflow 8 – User Goal: Gestionar mi cuenta**
+
+<p align="center">
+    <img src="docs/images/capitulo3/Wireflow 8 - Gestionar mi cuenta.png" alt="Wireflow8 Mobile" width="800"/>
+</p>
+
+**Descripción del flujo:** Don Lucho necesita actualizar sus datos personales, su foto y sus preferencias, y cambiar sus credenciales desde el celular.
+
+**Tab "Más" → "Mi cuenta" (US-58):** La pantalla muestra la foto, el nombre, el negocio, la biografía, el correo, el teléfono y el plan actual, junto con los accesos a cada configuración.
+
+**Editar perfil y foto (US-59, US-60):** "Editar perfil" abre el formulario con nombre, apellido, nombre del negocio y biografía (con contador de caracteres). Al tocar "Cambiar foto" se abre un Bottom Sheet con las opciones "Tomar foto", "Elegir de la galería" y "Eliminar foto".
+
+**Cambiar correo y contraseña (US-61, US-62):** Para cambiar el correo se pide el nuevo correo y la contraseña actual; el cambio se aplica cuando Don Lucho confirma el enlace enviado al nuevo correo. Para cambiar la contraseña se pide la actual y la nueva dos veces, con la validación de requisitos en tiempo real.
+
+**Preferencias y notificaciones (US-63, US-64):** En "Preferencias" se eligen el idioma, la zona horaria, el tema (Claro, Oscuro o Sistema) y la moneda. En "Notificaciones" se activan o desactivan con interruptores las alertas push de pedidos del chatbot, comprobantes de pago, lotes por vencer, stock bajo, recordatorio de suscripción y resumen diario de ventas.
+
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
