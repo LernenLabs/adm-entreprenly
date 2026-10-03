@@ -303,11 +303,53 @@ Por completar.
 
 ## 4.3. Validation Interviews
 
-Por completar.
+Las entrevistas de validación recogen la experiencia de los dos segmentos objetivo: los comerciantes durante la gestión del negocio desde la aplicación móvil y los clientes finales durante la compra por WhatsApp. Su propósito es identificar dificultades de comprensión, navegación y ejecución de tareas, y relacionar los hallazgos con las necesidades identificadas en el capítulo II. Las preguntas se presentan por segmento en la sección 4.3.1; las respuestas y evidencias se registran en la sección 4.3.2 y sustentan la evaluación de la sección 4.3.3.
 
 ### 4.3.1. Diseño de Entrevistas
 
-Por completar.
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
+1. Después de explorar Entreprenly, ¿qué tareas de su negocio considera que podría realizar con la aplicación?
+
+2. ¿Cómo fue su experiencia al moverse entre Inicio, Inventario, Ventas, Pedidos y Mi perfil?
+
+3. ¿Qué textos, botones o símbolos le resultaron confusos durante el recorrido?
+
+4. ¿Qué dificultades encontró al registrar un producto por unidad o por peso y buscarlo en el inventario?
+
+5. ¿Qué información del resumen de lotes le ayuda a reconocer productos sin stock o próximos a vencer?
+
+6. ¿Cómo comprobó que los productos, las cantidades, el total y el medio de pago de una venta quedaron registrados correctamente?
+
+7. ¿Cómo reconoció si su cuenta de WhatsApp estaba vinculada y si una respuesta al cliente había sido enviada?
+
+8. ¿Qué información necesitaría ver en un pedido para decidir si aprueba o rechaza su comprobante de pago?
+
+9. ¿Qué dudas le surgieron al comparar los planes y revisar los pasos para contratar o renovar una suscripción?
+
+10. ¿Cómo fue su experiencia al actualizar su perfil y configurar las preferencias y notificaciones de la aplicación?
+
+**Segmento 2: Clientes Finales**
+
+1. Después de recorrer la compra por WhatsApp, ¿cómo explicaría los pasos para realizar un pedido en Entreprenly?
+
+2. ¿Cómo interpretó la información sobre los productos, sus precios y las cantidades disponibles durante la conversación?
+
+3. ¿Qué dificultades encontró al consultar por un producto y entender la respuesta del chatbot?
+
+4. ¿Cómo fue su experiencia al indicar la cantidad de un producto vendido por unidad o por peso?
+
+5. ¿Qué información del resumen del pedido le permitió comprobar que los productos, las cantidades y el total correspondían a su compra?
+
+6. Al recibir un aviso de producto agotado o cantidad insuficiente, ¿qué entendió que podía hacer para continuar con su pedido?
+
+7. ¿Qué dudas le surgieron al revisar las instrucciones para pagar su pedido?
+
+8. ¿Cómo comprobó que el comprobante de pago que envió por WhatsApp había sido recibido?
+
+9. ¿Cómo interpretó los mensajes de aprobación o rechazo del pago y el estado en que quedó su pedido?
+
+10. ¿Qué cambiaría del recorrido de compra por WhatsApp para utilizarlo en sus próximas compras?
 
 ### 4.3.2. Registro de Entrevistas
 
