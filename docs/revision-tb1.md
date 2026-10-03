@@ -24,14 +24,15 @@ Fecha de corte: **3 de octubre de 2026**. Este registro acompaña la revisión d
 | PDF TB1 | La versión generada anteriormente no incluye el cierre confirmado ni el desglose de 103 Work-items ni la unificación de Student Outcome. La compilación de una versión actualizada queda pendiente por indicación de Lionel |
 | Referencia anterior | Lineamientos y estructura adaptados de daop-entreprenly al equipo y producto móvil actuales |
 
+Se integraron los cinco commits disponibles en `origin/develop`, incluidos Information Architecture, Mobile Applications Wireflow Diagrams, Mobile Applications User Flow Diagrams y sus imágenes. La integración conservó esos aportes y los cambios locales de estilo y planificación, sin conflictos de Git.
+
 Las evidencias disponibles de código de Profile y navegación se registran para revisión. Los avances de los demás contextos requieren confirmación de sus responsables. IAM, la landing y el backend reutilizados se identifican como antecedentes del incremento.
 
 ## Información pendiente de consolidación
 
 - Refinamiento de las horas propuestas y estados de los Work-items por responsable.
-- 3.1.2. Information Architecture y sus subapartados.
 - 3.1.3. Landing Page UI Design y sus subapartados.
-- 3.1.4. Mobile Applications UX/UI Design y sus subapartados, con capturas y enlaces de los artefactos.
+- Introducción de 3.1.4. Mobile Applications UX/UI Design, 3.1.4.1. Wireframes, 3.1.4.3. Mock-ups y 3.1.4.5. Prototyping, con capturas y enlaces de los artefactos.
 - 4.1. Software Configuration Management y sus subapartados.
 - 4.2.1.4 a 4.2.1.9: evidencias de desarrollo, pruebas, ejecución, servicios, despliegue y colaboración.
 - URL pública y evidencia del despliegue de la Landing Page; evidencia del alcance backend desplegado y del cálculo del 70 % exigido.
