@@ -32,7 +32,36 @@ Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-
 
 ### 4.1.2. Source Code Management
 
-Por completar.
+La gestión del código fuente es una parte importante del proceso de desarrollo colaborativo de software, ya que permite un control eficiente de los cambios y versiones del código fuente. En esta sección se describe el sistema de control de versiones implementado por **Lernen Labs**, utilizando GitHub como plataforma de alojamiento de repositorios. Además se detallan las convenciones de trabajo, como el modelo GitFlow y versionado semántico (Conventional Commits).
+
+<br>
+
+**URL de los Repositorios**: 
+
+* Organización: https://github.com/LernenLabs
+* Reporte: https://github.com/LernenLabs/adm-entreprenly
+* Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
+* Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
+* Backend: https://github.com/LernenLabs/adm-entreprenly-backend
+
+**Estructura de Ramas**: 
+
+Para mantener un flujo organizado en el desarrollo, se ha implementado el modelo GitFlow a través de las siguientes ramas:
+
+* main: Rama principal (main) que contiene las versiones estables del proyecto. Todas las demás ramas derivan de esta.
+* develop: Rama de desarrollo (develop) que contiene las características en desarrollo y se fusiona con la Main Branch al final de cada sprint.
+* feat/nombre-de-la-funcionalidad: Ramas de características (feature) que se crean para desarrollar nuevas funcionalidades y se fusionan con la Develop Branch al finalizar.
+
+**Estándar de Mensajes de Commit**
+
+Para asegurar un historial de cambios legible y facilitar la automatización, se utiliza la especificacion de Conventional Commits para todos los mensajes de commit. La estructura utilizada es [tipo]:[descripción breve], empleando los siguientes prefijos:
+
+- feat: Incorporación de una nueva funcionalidad.
+- fix: Corrección de un error o bug.
+- docs: Modificaciones exclusivamente en la documentación.
+- style: Cambios de formato o estética que no afectan la lógica del código.
+- refactor: Reestructuración de código que no añade funciones ni corrige errores.
+- test: Adición o actualización de pruebas
 
 ### 4.1.3. Source Code Style Guide & Conventions
 
