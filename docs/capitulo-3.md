@@ -327,7 +327,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 1 – User Goal: Registrarse e iniciar sesión en Entreprenly**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 1- Registro e inicio de sesión.png" alt="Wireflow1 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 1- Registro e inicio de sesión.png" alt="Wireflow1 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho descarga Entreprenly desde la tienda de aplicaciones y necesita crear una cuenta para empezar a gestionar su negocio desde su celular.
@@ -347,7 +347,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 2 – User Goal: Registrar y gestionar el inventario de productos**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 2- Registro y gestionar el inventario.png" alt="Wireflow2 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 2- Registro y gestionar el inventario.png" alt="Wireflow2 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho necesita agregar los productos de su bodega al sistema desde su celular, mientras está en el almacén o detrás del mostrador.
@@ -369,7 +369,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 3 – User Goal: Gestionar lotes y recibir alertas de vencimiento**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 3- Gestionar lotes y recibir alertas de vencimiento.png" alt="Wireflow3 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 3- Gestionar lotes y recibir alertas de vencimiento.png" alt="Wireflow3 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho necesita registrar lotes de productos perecederos y ser notificado, incluso con la app cerrada, cuando alguno esté por vencer.
@@ -389,7 +389,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 4 – User Goal: Registrar una venta presencial**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 4- Registrar una venta presencial.png" alt="Wireflow4 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 4- Registrar una venta presencial.png" alt="Wireflow4 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho atiende a un cliente en el mostrador y necesita registrar la venta con una sola mano, rápido y sin interrumpir la atención.
@@ -409,7 +409,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 5 – User Goal: Configurar el chatbot de WhatsApp Business y atender pedidos**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 5- Vincular el chatbot de WhatsApp Business y atender pedidos.png" alt="Wireflow5 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 5- Vincular el chatbot de WhatsApp Business y atender pedidos.png" alt="Wireflow5 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho necesita conectar su WhatsApp Business al sistema y atender desde el celular los pedidos que genera el bot.
@@ -429,7 +429,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 6 – User Goal: Activar o gestionar la suscripción al Plan Control**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 6- Activar y gestionar la suscripción al Plan Control.png" alt="Wireflow6 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 6- Activar y gestionar la suscripción al Plan Control.png" alt="Wireflow6 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho, con Plan Free, decide contratar el Plan Control para usar el chatbot y la balanza IoT.
@@ -447,7 +447,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 7 – User Goal: Resolver dudas y reportar problemas desde el Centro de ayuda**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 7 - Centro de ayuda y soporte.png" alt="Wireflow7 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 7 - Centro de ayuda y soporte.png" alt="Wireflow7 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho tiene una duda sobre cómo validar un pago de Yape y, más tarde, encuentra un error que quiere reportar.
@@ -463,7 +463,7 @@ El equipo elaboró previamente los Task Flows correspondientes para cada User Go
 **Wireflow 8 – User Goal: Gestionar mi cuenta**
 
 <p align="center">
-    <img src="docs/images/capitulo3/Wireflow 8 - Gestionar mi cuenta.png" alt="Wireflow8 Mobile" width="800"/>
+    <img src="images/capitulo3/Wireflow 8 - Gestionar mi cuenta.png" alt="Wireflow8 Mobile" width="800"/>
 </p>
 
 **Descripción del flujo:** Don Lucho necesita actualizar sus datos personales, su foto y sus preferencias, y cambiar sus credenciales desde el celular.
