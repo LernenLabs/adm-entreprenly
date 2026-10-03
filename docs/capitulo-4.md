@@ -483,7 +483,20 @@ Evidencias del Sprint 1 para Inventory BC. El diseño (wireframes, mockups y wir
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-Por completar.
+Para garantizar la calidad técnica, estabilidad y correcto funcionamiento de las funcionalidades desarrolladas durante el Sprint 1, el equipo de Lernen Labs implementó un conjunto de pruebas automatizadas en los distintos componentes de la solución **Entreprenly**. El enfoque adoptado combina pruebas unitarias y pruebas de integración para validar la lógica de negocio, las reglas de dominio y los contratos de comunicación entre capas.
+
+Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
+
+- **Backend (Spring Boot & Java):**
+  - **JUnit 5 (Jupiter):** Framework principal para la definición, estructuración y ejecución del ciclo de vida de las pruebas unitarias y de integración.
+  - **Mockito:** Librería para la creación de objetos simulados (*mocks* y *spies*), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
+  - **Spring Boot Test & MockMvc:** Utilizados para pruebas de integración sobre los controladores REST de los Bounded Contexts, verificando códigos de estado HTTP, serialización JSON y manejo global de excepciones.
+  - **AssertJ:** Librería de aserciones fluidas para mejorar la legibilidad y expresividad de las comprobaciones de estado y comportamiento.
+
+- **Frontend Móvil (Android & Kotlin):**
+  - **JUnit:** Ejecución de pruebas unitarias sobre la lógica de presentación, validadores de entrada y ViewModels en entorno JVM local.
+  - **MockK / Mockito-Kotlin:** Simulación de dependencias en repositorios de datos móviles y clientes HTTP Retrofit.
+  - **AndroidX Test:** Infraestructura de pruebas para componentes del ciclo de vida y navegación móvil en la plataforma Android.
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
