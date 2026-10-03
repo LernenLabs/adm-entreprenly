@@ -762,319 +762,287 @@ En esta sección el equipo evalúa las pantallas de la aplicación móvil de Ent
 | Fig. 22 | Preferencias | `Fig-22-preferencias.png` |
 
 #### 4.3.3.1. Heurísticas de usabilidad
+Evaluación basada en las 10 heurísticas de Nielsen.
 
-En esta subsección se evalúa la experiencia de uso de la app móvil tomando como referencia las heurísticas de Nielsen.
+##### Visibilidad del estado del sistema — 5/5
 
-##### Visibilidad del estado del sistema — Puntaje: 5/5
+El Inicio, los lotes y los pedidos muestran su estado con etiquetas de color, y la app avisa cuando no hay conexión.
 
-La app informa en todo momento lo que está pasando. El Inicio muestra las ventas del día, el estado del chatbot y los pedidos por validar. Los lotes por vencer se marcan con avisos y etiquetas de colores, y cada pedido muestra su estado y una línea de tiempo con todo lo que ocurrió. Cuando no hay internet, la app lo indica y marca lo que falta sincronizar.
+<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-06-detalle-de-lote-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250">
 
-<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="300"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="300">
 
-**Evidencia observada:** Fig. 1 (resumen del día y estado del chatbot), Fig. 4 (aviso de lotes por vencer), Fig. 11 (estado y trazabilidad del pedido), Fig. 19 (aviso de sin conexión).
+**Evidencia:** Fig. 1, Fig. 4, Fig. 6, Fig. 11, Fig. 19.
 
-**Mejora sugerida:** Mostrar la hora de la última actualización en el Inicio, para que el comerciante sepa si los datos están al día.
+**Mejora:** Mostrar la hora de la última actualización en el Inicio.
 
+##### Relación entre el sistema y el mundo real — 5/5
 
-##### Relación entre el sistema y el mundo real — Puntaje: 5/5
 
-La app usa palabras que el comerciante ya conoce: "Vender", "Cobrar", "Caja", "Boleta", "Yape / Plin", "Lote" y "Vence en 2 días". Los montos se muestran en soles y los productos se venden por unidad o por kilo, como en una bodega real.
+Usa palabras del comerciante: "Vender", "Caja", "Boleta", "Yape / Plin", "Vence en 2 días".
 
-<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="300"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="300">
+<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250">
 
-**Evidencia observada:** Fig. 9 (efectivo, vuelto y Yape/Plin), Fig. 4 ("Vence en 2 días"), Fig. 10 (boleta B001).
+**Evidencia:** Fig. 9, Fig. 4, Fig. 10.
 
-**Mejora sugerida:** Permitir que el comerciante cambie el nombre de las categorías de productos para usar las que ya maneja en su negocio.
+**Mejora:** Mostrar el precio por kilo junto al total en los productos por peso.
 
+##### Libertad y control por parte del usuario — 4/5
 
-##### Libertad y control por parte del usuario — Puntaje: 4/5
+Los formularios se pueden cerrar y eliminar un producto pide confirmación, pero el panel de rechazo de pago no tiene "Cancelar".
 
-Los paneles y formularios tienen botón para cerrar o cancelar, todas las pantallas internas tienen la flecha para regresar y las acciones importantes, como eliminar o aprobar un pago, piden confirmación.
+<img src="images/capitulo4/Fig-03-agregar-producto-errores.png" width="250"> <img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="250"> <img src="images/capitulo4/Fig-12-rechazar-pago.png" width="250">
 
-<img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="300">
+**Evidencia:** Fig. 3, Fig. 21, Fig. 12. 
 
-**Evidencia observada:** Fig. 3 (botón para cerrar el formulario), Fig. 12 (cancelar el rechazo), Fig. 21 (confirmación antes de eliminar).
+**Mejora:** Agregar "Cancelar" al panel de rechazo y "Deshacer" tras eliminar.
 
-**Mejora sugerida:** Después de eliminar un producto, mostrar la opción "Deshacer" por unos segundos, ya que en el celular es fácil tocar algo por error.
+##### Consistencia y estándares — 5/5
 
+Todas las pantallas usan la misma cabecera, barra inferior, botones y colores de estado.
 
+<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250">
 
-##### Consistencia y estándares — Puntaje: 5/5
+**Evidencia:** Fig. 2, Fig. 4, Fig. 16. 
 
-Todas las pantallas comparten la misma cabecera naranja, la barra inferior de cinco pestañas, los botones principales naranjas y las etiquetas de estado con los mismos colores (verde, amarillo y rojo). Los formularios cortos siempre se abren desde abajo.
+**Mejora:** Usar el mismo texto ("Guardar") en los botones de confirmación.
 
-<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="300"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="300">
+##### Prevención de errores — 5/5
 
-**Evidencia observada:** Fig. 2 y Fig. 4 (misma estructura de lista), Fig. 3 y Fig. 12 (formularios desde abajo), Fig. 1 y Fig. 16 (misma barra inferior).
+Se bloquea guardar con campos vacíos, elegir fechas pasadas, vender sin stock y avanzar sin elegir plan.
 
-**Mejora sugerida:** Usar el mismo texto en los botones de confirmación; en algunas pantallas dice "Guardar" y en otras "Agregar" para la misma acción.
+<img src="images/capitulo4/Fig-03-agregar-producto-errores.png" width="250"> <img src="images/capitulo4/Fig-05-selector-de-fecha.png" width="250"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="250"> <img src="images/capitulo4/Fig-14-planes-sin-seleccion.png" width="250">
 
+**Evidencia:** Fig. 3, Fig. 5, Fig. 8, Fig. 14. 
 
+**Mejora:** Avisar si la fecha de vencimiento de un lote es muy cercana.
 
-##### Prevención de errores — Puntaje: 5/5
+##### Reconocer antes que recordar — 5/5
 
-La app evita errores antes de que ocurran. El botón "Guardar" se deshabilita si faltan datos, el calendario no deja elegir fechas pasadas, no se puede agregar al ticket más de lo que hay en stock y no se puede finalizar una venta sin método de pago.
+El comerciante elige productos de listas, filtros o QR en vez de recordar nombres o códigos.
 
-<img src="images/capitulo4/Fig-05-selector-de-fecha.png" width="300"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="300">
+<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250">
 
-**Evidencia observada:** Fig. 3 (campos obligatorios), Fig. 5 (fechas pasadas deshabilitadas), Fig. 8 (stock insuficiente), Fig. 14 (plan no seleccionado).
+**Evidencia:** Fig. 2, Fig. 7. 
 
-**Mejora sugerida:** Avisar cuando el comerciante intenta registrar un lote cuya fecha de vencimiento es muy cercana (por ejemplo, menos de 3 días).
+**Mejora:** Mostrar los últimos productos vendidos al abrir el buscador.
 
+##### Flexibilidad y eficiencia en el uso — 4/5
 
-##### Reconocer antes que recordar — Puntaje: 5/5
+Se puede buscar por texto, voz o QR, vincular WhatsApp por código o QR y usar accesos directos.
 
-El comerciante no necesita recordar nombres ni códigos: puede tocar un producto en "Más vendidos", escanear su código QR o elegirlo de una lista con iniciales y precio. Los filtros rápidos muestran las opciones disponibles sin tener que escribirlas.
+<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="300">
+**Evidencia:** Fig. 1, Fig. 2, Fig. 20. 
 
-**Evidencia observada:** Fig. 2 (filtros por categoría y búsqueda por voz o QR), Fig. 7 (datos del producto visibles al registrar el peso).
+**Mejora:** Permitir aprobar varios pedidos a la vez.
 
-**Mejora sugerida:** Mostrar los últimos productos vendidos al abrir el buscador.
+##### Diseño estético y minimalista — 4/5
 
+Las pantallas son limpias, pero el detalle del pedido junta demasiada información.
 
+<img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250">
 
-##### Flexibilidad y eficiencia en el uso — Puntaje: 4/5
+**Evidencia:** Fig. 10, Fig. 11. 
 
-Hay varias formas de llegar a lo mismo: buscar por texto, por voz o por código QR; entrar a un pedido desde la notificación o desde la lista; y usar los accesos directos del Inicio. Los comerciantes con experiencia pueden ir directo al botón central "Vender".
+**Mejora:** Mostrar la trazabilidad del pedido plegada por defecto.
 
-<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="300">
+##### Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de los errores — 5/5
 
-**Evidencia observada:** Fig. 1 (accesos directos), Fig. 2 (búsqueda por voz y QR), Fig. 11 (entrada al pedido desde la notificación).
+Los errores dicen qué pasó y qué hacer, por ejemplo "Balanza no disponible, ingresa el peso manualmente".
 
-**Mejora sugerida:** Permitir aprobar varios pedidos a la vez cuando hay muchos comprobantes pendientes.
+<img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="250"> <img src="images/capitulo4/Fig-13-pedido-bloqueado.png" width="250"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="250">
 
+**Evidencia:** Fig. 7, Fig. 8, Fig. 13, Fig. 15.
 
-##### Diseño estético y minimalista — Puntaje: 4/5
+**Mejora:** Enlazar los errores de pago con su artículo de ayuda.
 
-Las pantallas muestran solo lo necesario para cada tarea, con buen espacio entre elementos y botones grandes para el pulgar. En el detalle del pedido, sin embargo, se juntan el comprobante, los productos y la trazabilidad, y la pantalla se siente cargada.
+##### Ayuda y documentación — 4/5
 
-<img src="images/capitulo4/Fig-10-venta-registrada.png" width="300"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="300">
+Hay un centro de ayuda con buscador y artículos paso a paso, pero solo se llega desde "Más".
 
-**Evidencia observada:** Fig. 10 (pantalla de éxito limpia), Fig. 11 (detalle de pedido con mucha información).
+<img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="250">
 
-**Mejora sugerida:** Mostrar la trazabilidad del pedido plegada por defecto, con la opción de desplegarla.
+**Evidencia:** Fig. 16, Fig. 17. 
 
-
-
-##### Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de los errores — Puntaje: 5/5
-
-Los mensajes de error dicen qué pasó y cómo resolverlo: "Stock insuficiente. Disponible: 24 unidades", "Balanza no disponible, ingresa el peso manualmente" o "Pago rechazado: fondos insuficientes. Tus datos se conservaron". En el caso del pedido bloqueado, la app explica el motivo y qué puede hacer el comerciante.
-
-<img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="300"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="300">
-
-**Evidencia observada:** Fig. 7 (balanza no disponible), Fig. 8 (stock disponible), Fig. 13 (pedido bloqueado), Fig. 15 (cobro rechazado).
-
-**Mejora sugerida:** Agregar en los errores de pago un acceso directo al artículo de ayuda relacionado.
-
-
-
-##### Ayuda y documentación — Puntaje: 4/5
-
-El Centro de ayuda tiene buscador, categorías, preguntas frecuentes y artículos paso a paso, además de un formulario para reportar problemas. Sin embargo, solo se llega a él desde la pestaña "Más".
-
-<img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="300"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="300">
-
-**Evidencia observada:** Fig. 16 (centro de ayuda), Fig. 17 (artículo con pasos numerados).
-
-**Mejora sugerida:** Agregar un ícono de ayuda en las pantallas más complejas, como la vinculación de WhatsApp, que lleve al artículo correspondiente.
-
-
+**Mejora:** Agregar un ícono de ayuda en la vinculación de WhatsApp.
 
 #### 4.3.3.2. Arquitectura de información
 
-En esta subsección se evalúa si la organización de la información en la app permite encontrar, entender y usar el contenido con facilidad.
+Evaluación de qué tan fácil es encontrar, entender y usar la información.
 
-##### Is it findable? — Puntaje: 5/5
+##### Is it findable? — 5/5
 
-Las cinco secciones principales están siempre visibles en la barra inferior, y las alertas del Inicio llevan directo al módulo que corresponde.
+Las cinco secciones están siempre en la barra inferior e Inventario tiene buscador.
 
-<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="300">
+<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250">
 
-**Evidencia observada:** Fig. 1 (barra inferior y accesos directos), Fig. 2 (buscador en Inventario).
+**Evidencia:** Fig. 1, Fig. 2. 
 
-**Mejora sugerida:** Agregar un buscador general en el Inicio.
+**Mejora:** Agregar un buscador general en el Inicio.
 
+##### Is it accessible? — 4/5
 
+Botones grandes y estados con texto además de color, aunque algunos textos son pequeños.
 
-##### Is it accessible? — Puntaje: 4/5
+<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-22-preferencias.png" width="250">
 
-Los botones principales son grandes y fáciles de tocar, y los estados no dependen solo del color, porque siempre van acompañados de un texto. Algunos textos secundarios y etiquetas son pequeños para usuarios mayores.
+**Evidencia:** Fig. 9, Fig. 4, Fig. 22. 
 
-<img src="images/capitulo4/Fig-22-preferencias.png" width="300">
+**Mejora:** Agregar una opción para agrandar la letra.
 
-**Evidencia observada:** Fig. 9 (botones grandes), Fig. 4 (etiquetas con texto y color), Fig. 22 (opción de tema).
+##### Is it clear? — 5/5
 
-**Mejora sugerida:** Agregar en Preferencias una opción para agrandar el tamaño de letra.
+Cada pantalla tiene un título y una acción principal; los montos se ven grandes.
 
+<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250">
 
+**Evidencia:** Fig. 9, Fig. 10. 
 
-##### Is it clear? — Puntaje: 5/5
+**Mejora:** Ninguna relevante.
 
-Cada pantalla tiene un título claro y una sola acción principal destacada. Los montos y cantidades importantes se muestran en tamaño grande.
+##### Is it communicative? — 5/5
 
-<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="300">
+Cada acción muestra un mensaje breve y los avisos usan colores según su importancia.
 
-**Evidencia observada:** Fig. 9 (total a cobrar destacado), Fig. 10 (monto de la venta).
+<img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250">
 
-**Mejora sugerida:** Ninguna relevante.
+**Evidencia:** Fig. 4, Fig. 19. 
 
+**Mejora:** Agregar una vibración corta al confirmar una venta.
 
+##### Is it usable? — 4/5
 
-##### Is it communicative? — Puntaje: 5/5
+Las tareas frecuentes toman pocos pasos, pero vincular WhatsApp requiere pasos fuera de la app.
 
-La app comunica cada resultado con mensajes breves, como "Producto registrado correctamente" o "Pago aprobado, comprobante enviado al cliente", y con avisos de color según la importancia.
+<img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-<img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="300">
+**Evidencia:** Fig. 7, Fig. 20. 
 
-**Evidencia observada:** Fig. 4 (aviso de vencimiento), Fig. 19 (aviso de sin conexión).
+**Mejora:** Agregar imágenes de cada paso de la vinculación.
 
-**Mejora sugerida:** Agregar una vibración corta al confirmar una venta.
+##### Is it credible? — 4/5
 
+Muestra boletas numeradas, trazabilidad de pedidos y el detalle del cobro.
 
+<img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="250">
 
-##### Is it usable? — Puntaje: 4/5
+**Evidencia:** Fig. 11, Fig. 10, Fig. 15. 
 
-Las tareas frecuentes se completan en pocos pasos y las acciones principales están al alcance del pulgar. La vinculación de WhatsApp requiere varios pasos fuera de la app que pueden confundir a usuarios con poca experiencia.
+**Mejora:** Agregar una nota de pago seguro en el paso de la tarjeta.
 
-<img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="300">
+##### Is it controllable? — 4/5
 
-**Evidencia observada:** Fig. 7 (venta en pocos pasos), Fig. 20 (vinculación con instrucciones).
+El comerciante confirma las acciones importantes y elige qué notificaciones recibir.
 
-**Mejora sugerida:** Acompañar la vinculación con un video corto o imágenes de cada paso dentro de WhatsApp.
+<img src="images/capitulo4/Fig-18-notificaciones.png" width="250"> <img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="250">
 
+**Evidencia:** Fig. 18, Fig. 21. 
 
-##### Is it credible? — Puntaje: 4/5
+**Mejora:** Agregar "Deshacer" después de eliminar.
 
-La app muestra información verificable: números de boleta, trazabilidad de los pedidos y el detalle del cobro antes de pagar la suscripción. En el pago con tarjeta no se muestra ningún sello de seguridad.
+##### Is it valuable? — 5/5
 
-<img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="300">
+Permite controlar stock, vencimientos, caja y pedidos de WhatsApp desde el celular.
 
-**Evidencia observada:** Fig. 11 (trazabilidad), Fig. 10 (número de boleta), Fig. 15 (resumen del cobro).
+<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250">
 
-**Mejora sugerida:** Agregar una nota de pago seguro en el paso de la tarjeta.
+**Evidencia:** Fig. 1, Fig. 4, Fig. 11. 
 
+**Mejora:** Mostrar en el Inicio los lotes que vencen esta semana.
 
-##### Is it controllable? — Puntaje: 4/5
+##### Is it learnable? — 4/5
 
-El comerciante puede cancelar, regresar y confirmar cada acción importante, y decide qué notificaciones recibir.
+Las pantallas repiten los mismos patrones y hay artículos de ayuda paso a paso.
 
-<img src="images/capitulo4/Fig-18-notificaciones.png" width="300">
+<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="250">
 
-**Evidencia observada:** Fig. 18 (control de notificaciones), Fig. 21 (confirmación antes de eliminar).
+**Evidencia:** Fig. 2, Fig. 4, Fig. 17. 
 
-**Mejora sugerida:** Agregar la opción "Deshacer" después de eliminar.
+**Mejora:** Mostrar una guía corta la primera vez que se entra a cada módulo.
 
+##### Is it delightful? — 4/5
 
+La interfaz es ordenada y las pantallas de éxito dan sensación de logro.
 
-##### Is it valuable? — Puntaje: 5/5
+<img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250">
 
-La app resuelve problemas reales del comerciante desde el celular: controlar el stock y los vencimientos, cobrar y cuadrar la caja, y atender los pedidos de WhatsApp sin tener que estar frente a una computadora.
+**Evidencia:** Fig. 10, Fig. 1. 
 
-<img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="300">
-
-**Evidencia observada:** Fig. 1 (resumen del negocio), Fig. 4 (vencimientos), Fig. 11 (validación de pagos).
-
-**Mejora sugerida:** Mostrar en el Inicio cuánto dinero se evitó perder gracias a las alertas de vencimiento.
-
-
-
-##### Is it learnable? — Puntaje: 4/5
-
-Las pantallas repiten los mismos patrones, lo que facilita aprender a usarlas. Algunos gestos, como deslizar para eliminar, no son evidentes la primera vez.
-
-<img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="300">
-
-**Evidencia observada:** Fig. 2 y Fig. 4 (patrones repetidos), Fig. 17 (artículos paso a paso).
-
-**Mejora sugerida:** Mostrar una guía corta la primera vez que el usuario entra a cada módulo.
-
-
-
-##### Is it delightful? — Puntaje: 4/5
-
-La app se ve limpia y ordenada, y las pantallas de éxito con ícono de confirmación dan sensación de logro.
-
-<img src="images/capitulo4/Fig-10-venta-registrada.png" width="300">
-
-**Evidencia observada:** Fig. 10 (venta registrada), Fig. 1 (Inicio).
-
-**Mejora sugerida:** Agregar pequeñas animaciones al registrar una venta o aprobar un pago.
-
-
+**Mejora:** Agregar pequeñas animaciones al registrar una venta.
 
 #### 4.3.3.3. Inclusive design
 
-En esta subsección se evalúa si la app considera distintos contextos de uso, niveles de experiencia digital y necesidades de accesibilidad.
+Evaluación de los 7 principios de diseño inclusivo.
 
-##### Principio 1: Proporciona experiencias comparables — Puntaje: 5/5
+##### Principio 1: Proporciona experiencias comparables — 5/5
 
-Las tareas principales se pueden hacer de varias formas: escribiendo, dictando por voz o escaneando un código, y el peso se puede capturar con la balanza o ingresar a mano.
+Se puede buscar por texto, voz o QR, y registrar el peso con balanza o a mano.
 
-**Evidencia observada:** Fig. 2 (texto, voz y QR), Fig. 7 (peso manual).
+<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250">
 
-**Mejora sugerida:** Agregar etiquetas de accesibilidad en todos los íconos para lectores de pantalla.
+**Evidencia:** Fig. 2, Fig. 7. 
 
+**Mejora:** Agregar etiquetas de accesibilidad a los íconos.
 
+##### Principio 2: Considera la situación del usuario — 5/5
 
-##### Principio 2: Considera la situación del usuario — Puntaje: 5/5
+Se usa con una mano, funciona sin internet y avisa con la app cerrada.
 
-La app está pensada para usarse con una mano mientras se atiende en el mostrador, funciona sin internet y avisa por notificación aunque esté cerrada.
+<img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia observada:** Fig. 7 (botones al alcance del pulgar), Fig. 19 (modo sin conexión), Fig. 4 (alertas de vencimiento).
+**Evidencia:** Fig. 7, Fig. 19, Fig. 4. 
 
-**Mejora sugerida:** Agregar un modo de alto contraste para usar la app con mucha luz.
+**Mejora:** Agregar un modo de alto contraste.
 
+##### Principio 3: Sé consistente — 5/5
 
+Colores, botones y formularios funcionan igual en todos los módulos.
 
-##### Principio 3: Sé consistente — Puntaje: 5/5
+<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250">
 
-Los colores, botones, etiquetas y formularios funcionan igual en todos los módulos.
+**Evidencia:** Fig. 2, Fig. 4, Fig. 11, Fig. 16.
 
-**Evidencia observada:** Fig. 2, Fig. 4, Fig. 11 y Fig. 16.
+**Mejora:** Unificar el texto de los botones de confirmación.
 
-**Mejora sugerida:** Unificar el texto de los botones de confirmación.
+##### Principio 4: Deja al usuario mandar — 4/5
 
+El comerciante elige tema, notificaciones y el motivo al rechazar un pago.
 
-##### Principio 4: Deja al usuario mandar — Puntaje: 4/5
+<img src="images/capitulo4/Fig-18-notificaciones.png" width="250"> <img src="images/capitulo4/Fig-22-preferencias.png" width="250"> <img src="images/capitulo4/Fig-12-rechazar-pago.png" width="250">
 
-El comerciante elige el idioma, el tema, la moneda y qué notificaciones recibir, y puede aprobar o rechazar cada pedido.
+**Evidencia:** Fig. 18, Fig. 22, Fig. 12. 
 
-**Evidencia observada:** Fig. 18 (notificaciones), Fig. 22 (preferencias), Fig. 12 (rechazo con motivo).
+**Mejora:** Agregar "Cancelar" al panel de rechazo.
 
-**Mejora sugerida:** Permitir que el comerciante cambie el tiempo de espera de pago antes de que el pedido se cancele.
+##### Principio 5: Ofrece opciones — 5/5
 
+Varias formas de cobrar (efectivo, tarjeta, Yape, Plin) y de vincular WhatsApp.
 
+<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-##### Principio 5: Ofrece opciones — Puntaje: 5/5
+**Evidencia:** Fig. 9, Fig. 20. 
 
-Hay varias formas de cobrar (efectivo, tarjeta, Yape o Plin), varias formas de buscar productos y dos formas de vincular WhatsApp (código o QR).
+**Mejora:** Permitir mostrar la boleta en pantalla para clientes sin WhatsApp.
 
-**Evidencia observada:** Fig. 9 (métodos de pago), Fig. 20 (código o QR).
+##### Principio 6: Prioriza el contenido — 5/5
 
-**Mejora sugerida:** Agregar la opción de compartir la boleta por SMS para clientes sin WhatsApp.
+Lo más importante va primero: el total a cobrar y los lotes por vencer.
 
+<img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
+**Evidencia:** Fig. 9, Fig. 4. 
 
-##### Principio 6: Prioriza el contenido — Puntaje: 5/5
+**Mejora:** Ninguna relevante.
 
-Cada pantalla muestra primero lo más importante: el total a cobrar, el estado del pedido o los lotes por vencer.
+##### Principio 7: Agrega valor — 5/5
 
-**Evidencia observada:** Fig. 9 (total destacado), Fig. 4 (lotes por vencer primero).
+Aprovecha la cámara, el micrófono y las notificaciones del celular.
 
-**Mejora sugerida:** Ninguna relevante.
+<img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
+**Evidencia:** Fig. 2, Fig. 4. 
 
-
-##### Principio 7: Agrega valor — Puntaje: 5/5
-
-La app aprovecha funciones propias del celular, como la cámara, el micrófono y las notificaciones, para hacer más rápido el trabajo del comerciante.
-
-**Evidencia observada:** Fig. 2 (escaneo QR y voz), Fig. 4 (alertas).
-
-**Mejora sugerida:** Usar la cámara para fotografiar comprobantes de pago en efectivo y guardarlos en la venta.
-
-
+**Mejora:** Usar la cámara para fotografiar comprobantes en efectivo.
 
 #### Resumen de puntajes
 
@@ -1084,4 +1052,4 @@ La app aprovecha funciones propias del celular, como la cámara, el micrófono y
 | Arquitectura de información | 10 | 4.4 / 5 |
 | Inclusive design | 7 | 4.9 / 5 |
 
-En general, la app móvil obtiene buenos resultados en visibilidad del estado, prevención de errores y uso en el contexto real del comerciante. Las principales oportunidades de mejora son agregar la opción de deshacer acciones, simplificar el detalle del pedido, agrandar el tamaño de letra para usuarios mayores y explicar mejor los gestos y la vinculación de WhatsApp.
+En general, la app móvil obtiene buenos resultados en visibilidad del estado, prevención de errores y uso en el contexto real del comerciante. Las principales oportunidades de mejora son agregar "Cancelar" y "Deshacer", simplificar el detalle del pedido, agrandar la letra y guiar mejor la vinculación de WhatsApp.
