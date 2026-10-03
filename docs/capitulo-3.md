@@ -426,9 +426,21 @@ Landing reutilizada y desplegada en `https://lernenlabs.github.io/adm-entreprenl
 
 Wireframes en escala de grises que validan jerarquía, orden y ubicación de CTAs antes del color. Misma correspondencia 1 a 1 con las secciones de 3.1.3: Header, Hero, Problema, Features, How it works, Beneficios, Confianza, Comparativa, Planes, FAQ, Next step y Footer. La validación se verifica contra la landing desplegada.
 
+<p align="center">
+  <img src="images/capitulo3/landing-wireframe.png" alt="Landing wireframe" width="800"/>
+</p>
+
+**Figura 3.3:** Wireframe de la landing con las secciones Hero, Problema, Features, How it works, Beneficios, Comparativa, Planes, FAQ y Footer.
+
 #### 3.1.3.2. Landing Page Mock-up
 
 Mock-ups con identidad final aplicados sobre los wireframes: naranja de marca en CTAs y activos, tipografía y espaciado del sistema, tarjetas de planes Free y Control con precios y límites, y estados de navegación. Referencia visual: landing desplegada en `https://lernenlabs.github.io/adm-entreprenly-landing/`.
+
+<p align="center">
+  <img src="images/capitulo3/landing-mockup.png" alt="Landing mock-up" width="800"/>
+</p>
+
+**Figura 3.4:** Mock-up de la landing con identidad final y tarjetas de planes Free S/ 0 y Control S/ 89.
 
 ### 3.1.4. Mobile Applications UX/UI Design
 

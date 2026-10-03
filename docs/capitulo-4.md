@@ -403,6 +403,24 @@ Documentación OpenAPI verificada del backend en avance:
 - El avance incluye contextos `inventory` (productos y lotes por unidad/peso con alertas) y base para `iam, sales, subscription, profile, chatbot`.
 - Abrir Swagger en nube antes de la demo por el retardo del primer arranque en plan gratuito.
 
+<p align="center">
+  <img src="images/capitulo4/services-swagger-home.png" alt="Swagger home" width="800"/>
+</p>
+
+**Figura 4.1:** Swagger UI con grupos de endpoints, incluyendo Inventory.
+
+<p align="center">
+  <img src="images/capitulo4/services-inventory-endpoint.png" alt="Endpoints Inventory" width="800"/>
+</p>
+
+**Figura 4.2:** Endpoints Inventory Lots y Unit Lots con operaciones GET, POST, PUT y DELETE.
+
+<p align="center">
+  <img src="images/capitulo4/services-openapi-json.png" alt="OpenAPI JSON" width="800"/>
+</p>
+
+**Figura 4.3:** OpenAPI JSON con versión 3.1.0, servidores local y desplegado, y tags de Inventory.
+
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
 Despliegues reutilizados y verificados:
@@ -410,6 +428,24 @@ Despliegues reutilizados y verificados:
 - Backend: `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html` responde con la documentación de servicios.
 - Landing: `https://lernenlabs.github.io/adm-entreprenly-landing/` responde con el recorrido Hero, Problema, Features, How it works, Beneficios, Comparativa, Planes, FAQ y Footer.
 - Flujo: servicio Docker en Render con variables de 4.1.4; abrir primero Swagger en nube y luego validar endpoints de Inventory del Sprint 1.
+
+<p align="center">
+  <img src="images/capitulo4/deploy-render-dashboard.png" alt="Dashboard Render" width="800"/>
+</p>
+
+**Figura 4.4:** Dashboard del servicio en Render como evidencia de despliegue.
+
+<p align="center">
+  <img src="images/capitulo4/deploy-swagger-render.png" alt="Swagger en Render" width="800"/>
+</p>
+
+**Figura 4.5:** Swagger respondiendo en la URL de Render como prueba de despliegue funcionando.
+
+<p align="center">
+  <img src="images/capitulo4/deploy-landing.png" alt="Landing desplegada" width="800"/>
+</p>
+
+**Figura 4.6:** Landing desplegada con Hero y overview operativo.
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
