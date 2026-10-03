@@ -2,13 +2,14 @@
 
 Fecha de corte: **3 de octubre de 2026**. Este registro acompaña la revisión del informe; no forma parte del PDF académico.
 
-## Apartados de Lionel integrados
+## Actualizaciones integradas
 
 - 3.1. Product Design, 3.1.1. Style Guidelines y 3.1.1.1. General Style Guidelines.
 - Introducción del capítulo IV, 4.2. Landing Page & Mobile Application Implementation y 4.2.1. Sprint 1.
 - 4.2.1.1. Sprint Planning 1, 4.2.1.2. Aspect Leaders and Collaborators y 4.2.1.3. Sprint Backlog 1.
-- Registro de Versiones del Informe y Student Outcome acumulativo, con los aportes de Lionel integrados por criterio en la tabla general.
+- Registro de Versiones del Informe con autoría de todos los integrantes y descripción resumida del TB1; Student Outcome acumulativo con los aportes de los cinco integrantes y las conclusiones de AV1 y TB1 identificadas en ambos criterios.
 - Actualización de Project Report Collaboration Insights, índice, conclusiones, bibliografía y anexos.
+- 4.3. Validation Interviews y 4.3.1. Diseño de Entrevistas: 10 preguntas para comerciantes sobre la aplicación móvil y 10 para clientes finales sobre la compra por WhatsApp.
 
 ## Consistencia documental revisada
 
@@ -21,7 +22,7 @@ Fecha de corte: **3 de octubre de 2026**. Este registro acompaña la revisión d
 | Reunión de planificación | Google Meet, 28/09/2026, 10:00 p. m., America/Lima |
 | Periodo y cierre del sprint | Del 28/09 al 04/10/2026; cierre el domingo 04/10 a las 10:00 p. m., America/Lima |
 | Enlaces locales e índice | Sin rutas ausentes ni referencias internas de encabezados inválidas en la revisión |
-| PDF TB1 | La versión generada anteriormente no incluye el cierre confirmado ni el desglose de 103 Work-items ni la unificación de Student Outcome. La compilación de una versión actualizada queda pendiente por indicación de Lionel |
+| PDF TB1 | La versión generada anteriormente no incluye las últimas actualizaciones documentales: cierre confirmado, desglose de Work-items, Student Outcome unificado y diseño de entrevistas. La compilación de una versión actualizada queda pendiente por indicación de Lionel |
 | Referencia anterior | Lineamientos y estructura adaptados de daop-entreprenly al equipo y producto móvil actuales |
 
 Se integraron los cinco commits disponibles en `origin/develop`, incluidos Information Architecture, Mobile Applications Wireflow Diagrams, Mobile Applications User Flow Diagrams y sus imágenes. La integración conservó esos aportes y los cambios locales de estilo y planificación, sin conflictos de Git.
@@ -36,8 +37,7 @@ Las evidencias disponibles de código de Profile y navegación se registran para
 - 4.1. Software Configuration Management y sus subapartados.
 - 4.2.1.4 a 4.2.1.9: evidencias de desarrollo, pruebas, ejecución, servicios, despliegue y colaboración.
 - URL pública y evidencia del despliegue de la Landing Page; evidencia del alcance backend desplegado y del cálculo del 70 % exigido.
-- 4.3. Validation Interviews y sus subapartados, con entrevistas y evaluaciones realizadas.
-- Student Outcome TB1 de los demás integrantes, sustentado en sus aportes.
+- 4.3.2. Registro de Entrevistas y 4.3.3. Evaluaciones según heurísticas, con respuestas y evidencias de las sesiones realizadas.
 - Videos About the Product, About the Team y App Validation, cuando corresponda a los requisitos de la entrega.
 
 La revisión de integración confirma la consistencia de los apartados incorporados. La entrega completa del TB1 requiere consolidar estos contenidos y evidencias del equipo.
