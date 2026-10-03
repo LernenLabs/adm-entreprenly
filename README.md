@@ -44,7 +44,7 @@ u202120836&emsp;Gonza Morales, Anderson
 
 #### Período 202620
 
-#### Setiembre 2026
+#### Octubre 2026
 
 ---
 
@@ -99,7 +99,7 @@ u202120836 & Gonza Morales, Anderson
 \vfill
 \textbf{Período 202620}\par
 \vspace{0.20cm}
-\textbf{Setiembre 2026}\par
+\textbf{Octubre 2026}\par
 \end{titlepage}
 \onehalfspacing
 -->
@@ -116,11 +116,17 @@ u202120836 & Gonza Morales, Anderson
     <td style="vertical-align:middle; text-align:center;">Todos los integrantes</td>
     <td>Versión AV1: 2.1 Competidores, 2.2 Entrevistas y 2.6.2 Bounded Context Inventory (Domain, Application, Interface e Infrastructure Layers con diagramas de componentes, clases y base de datos y diccionario BC4).</td>
   </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">TB1 — avance</td>
+    <td style="vertical-align:middle; text-align:center;">03 / 10 / 2026</td>
+    <td style="vertical-align:middle; text-align:center;">Chavez Carrasco, Lionel Abraham</td>
+    <td style="text-align:center;">Documentación de 3.1 Product Design, 3.1.1 Style Guidelines y 3.1.1.1 General Style Guidelines para Android; introducción del capítulo IV y 4.2; Sprint Planning 1, Aspect Leaders and Collaborators y Sprint Backlog 1 con las 33 HUs y 82 story points acordados, desglosadas en 103 Work-items por responsable; cierre del sprint el 4 de octubre de 2026 a las 10:00 p. m. Actualización de la asignación del Product Backlog, Collaboration Insights, Student Outcome, índice, conclusiones, bibliografía y anexos; integración y revisión documental del avance TB1.</td>
+  </tr>
 </table>
 
 # Project Report Collaboration Insights
 
-En esta sección se presenta la evidencia de colaboración del equipo Lernen Labs durante el desarrollo del AV1. La elaboración del informe se llevó a cabo de forma distribuida a través del repositorio **adm-entreprenly** bajo la organización https://github.com/LernenLabs, donde todos los miembros del equipo participaron activamente mediante commits y revisiones a lo largo del desarrollo de esta entrega.
+En esta sección se presenta la colaboración del equipo Lernen Labs durante el AV1 y la preparación del TB1. El informe se elabora de forma distribuida en el repositorio **adm-entreprenly**, bajo la organización https://github.com/LernenLabs. Los avances se identifican por entrega para conservar la trazabilidad de las contribuciones y de las revisiones del documento.
 
 ## Repositorio del Informe
 
@@ -151,6 +157,24 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
 </p>
 
 **Figura AV1.2:** Commits por integrante durante el AV1: LioTG (26), Ander-U (11), Zatrynox (8), elynorpalma (6) y enriquevillon25 (5), con las líneas añadidas y eliminadas por cada uno. Fuente: GitHub Insights.
+
+### **TB1**
+
+La preparación del TB1 se organiza a partir de la reunión de planificación realizada por Google Meet el **28 de septiembre de 2026 a las 10:00 p. m.** Cada integrante lidera su Bounded Context y participa en las revisiones comunes de Figma, la aplicación Android y los servicios reutilizados. Lionel coordina el Sprint 1 y la integración del informe, además de los lineamientos de estilo, el Registro de Versiones y Student Outcome.
+
+#### Distribución de responsabilidades por integrante (TB1)
+
+| Integrante | Responsabilidad en el Sprint 1 | Consolidación de aportes |
+| :---: | :---: | :---: |
+| Chavez Carrasco, Lionel Abraham | Profile y navegación: US-62, US-63, US-67, US-68, US-81 y US-75 | Diseño de Profile en Figma, código de Profile integrado en el frontend, apartados de planificación y estilo, trazabilidad del backlog y revisión del informe |
+| Palma De Los Santos, Elynor Mikela | Chatbot: US-37, US-38, US-39, US-40 y US-46 | Referencia inicial del diseño móvil y aportes del contexto que se consolidan en las evidencias del Sprint Review |
+| Laura Acosta, Victor Jhosef | Inventory: US-01, US-05, US-07, US-08, US-03, US-06, US-11 y US-13 | Pantallas, servicios y evidencias de Inventory según las responsabilidades acordadas |
+| Villon Amez, Enrique Manuel | Subscription: US-15, US-16, US-17, US-18, US-20, US-21 y US-22 | Pantallas, servicios y evidencias de Subscription según las responsabilidades acordadas |
+| Gonza Morales, Anderson | Sales: US-28, US-29, US-31, US-32, US-33, US-36 y US-97 | Pantallas, servicios y evidencias de Sales según las responsabilidades acordadas |
+
+El alcance y sus tareas se documentan en [Sprint Backlog 1](docs/capitulo-4.md#4213-sprint-backlog-1). El diseño compartido está disponible en la página [Mobile de Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1820-2380). La implementación se distribuye en los repositorios [frontend Android](https://github.com/LernenLabs/adm-entreprenly-frontend), [backend](https://github.com/LernenLabs/adm-entreprenly-backend) y [Landing Page](https://github.com/LernenLabs/adm-entreprenly-landing).
+
+En el corte del 3 de octubre, la integración de Profile queda registrada en el historial del frontend, incluida la [contribución de pantallas y navegación](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/9e25a06). La evidencia de colaboración durante la ejecución del sprint se consolida en la sección 4.2.1.9 con los aportes verificables de cada integrante. Las figuras AV1.1 y AV1.2 corresponden a la entrega anterior; las métricas y capturas del TB1 se incorporan con su propio periodo.
 
 <!-- pdf:omit-start -->
 
@@ -252,6 +276,52 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
 
 ---
 
+### [Capítulo III: Solution UI/UX Design](docs/capitulo-3.md)
+
+- [3.1. Product Design](docs/capitulo-3.md#31-product-design)
+  - [3.1.1. Style Guidelines](docs/capitulo-3.md#311-style-guidelines)
+    - [3.1.1.1. General Style Guidelines](docs/capitulo-3.md#3111-general-style-guidelines)
+  - [3.1.2. Information Architecture](docs/capitulo-3.md#312-information-architecture)
+    - [3.1.2.1. Organization Systems](docs/capitulo-3.md#3121-organization-systems)
+    - [3.1.2.2. Labelling Systems](docs/capitulo-3.md#3122-labelling-systems)
+    - [3.1.2.3. SEO Tags and Meta Tags](docs/capitulo-3.md#3123-seo-tags-and-meta-tags)
+    - [3.1.2.4. Searching Systems](docs/capitulo-3.md#3124-searching-systems)
+    - [3.1.2.5. Navigation Systems](docs/capitulo-3.md#3125-navigation-systems)
+  - [3.1.3. Landing Page UI Design](docs/capitulo-3.md#313-landing-page-ui-design)
+    - [3.1.3.1. Landing Page Wireframe](docs/capitulo-3.md#3131-landing-page-wireframe)
+    - [3.1.3.2. Landing Page Mock-up](docs/capitulo-3.md#3132-landing-page-mock-up)
+  - [3.1.4. Mobile Applications UX/UI Design](docs/capitulo-3.md#314-mobile-applications-uxui-design)
+    - [3.1.4.1. Mobile Applications Wireframes](docs/capitulo-3.md#3141-mobile-applications-wireframes)
+    - [3.1.4.2. Mobile Applications Wireflow Diagrams](docs/capitulo-3.md#3142-mobile-applications-wireflow-diagrams)
+    - [3.1.4.3. Mobile Applications Mock-ups](docs/capitulo-3.md#3143-mobile-applications-mock-ups)
+    - [3.1.4.4. Mobile Applications User Flow Diagrams](docs/capitulo-3.md#3144-mobile-applications-user-flow-diagrams)
+    - [3.1.4.5. Mobile Applications Prototyping](docs/capitulo-3.md#3145-mobile-applications-prototyping)
+
+### [Capítulo IV: Product Implementation & Validation](docs/capitulo-4.md)
+
+- [4.1. Software Configuration Management](docs/capitulo-4.md#41-software-configuration-management)
+  - [4.1.1. Software Development Environment Configuration](docs/capitulo-4.md#411-software-development-environment-configuration)
+  - [4.1.2. Source Code Management](docs/capitulo-4.md#412-source-code-management)
+  - [4.1.3. Source Code Style Guide & Conventions](docs/capitulo-4.md#413-source-code-style-guide--conventions)
+  - [4.1.4. Software Deployment Configuration](docs/capitulo-4.md#414-software-deployment-configuration)
+- [4.2. Landing Page & Mobile Application Implementation](docs/capitulo-4.md#42-landing-page--mobile-application-implementation)
+  - [4.2.1. Sprint 1](docs/capitulo-4.md#421-sprint-1)
+    - [4.2.1.1. Sprint Planning 1](docs/capitulo-4.md#4211-sprint-planning-1)
+    - [4.2.1.2. Aspect Leaders and Collaborators](docs/capitulo-4.md#4212-aspect-leaders-and-collaborators)
+    - [4.2.1.3. Sprint Backlog 1](docs/capitulo-4.md#4213-sprint-backlog-1)
+    - [4.2.1.4. Development Evidence for Sprint Review](docs/capitulo-4.md#4214-development-evidence-for-sprint-review)
+    - [4.2.1.5. Testing Suite Evidence for Sprint Review](docs/capitulo-4.md#4215-testing-suite-evidence-for-sprint-review)
+    - [4.2.1.6. Execution Evidence for Sprint Review](docs/capitulo-4.md#4216-execution-evidence-for-sprint-review)
+    - [4.2.1.7. Services Documentation Evidence for Sprint Review](docs/capitulo-4.md#4217-services-documentation-evidence-for-sprint-review)
+    - [4.2.1.8. Software Deployment Evidence for Sprint Review](docs/capitulo-4.md#4218-software-deployment-evidence-for-sprint-review)
+    - [4.2.1.9. Team Collaboration Insights during Sprint](docs/capitulo-4.md#4219-team-collaboration-insights-during-sprint)
+- [4.3. Validation Interviews](docs/capitulo-4.md#43-validation-interviews)
+  - [4.3.1. Diseño de Entrevistas](docs/capitulo-4.md#431-diseño-de-entrevistas)
+  - [4.3.2. Registro de Entrevistas](docs/capitulo-4.md#432-registro-de-entrevistas)
+  - [4.3.3. Evaluaciones según heurísticas](docs/capitulo-4.md#433-evaluaciones-según-heurísticas)
+
+---
+
 - [Conclusiones y recomendaciones](docs/conclusiones.md)
 - [Bibliografía](docs/bibliografia.md)
 - [Anexos](docs/anexos.md)
@@ -264,20 +334,20 @@ Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron 
 
 # Student Outcome
 
-En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 7 (ABET – EAC), el cual se define como la capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas. La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
+En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 7 (ABET – EAC), definido como la capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas. La información se organiza en una tabla acumulativa por criterio e integrante, con los aportes de cada etapa dentro de sus acciones realizadas y las conclusiones generales del equipo.
 
-| Criterio específico                                                                                                                     | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                     | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>_AV1:_ Actualizó la presentación de la startup, los perfiles del equipo y los segmentos objetivo para el nuevo curso; adaptó la especificación de requisitos al dashboard móvil mediante User Stories, Impact Mapping y Product Backlog; desarrolló el diseño táctico del Bounded Context Profile e integró y revisó los capítulos I y II.                                       | Las actividades permitieron actualizar el conocimiento generado en el proyecto anterior y adaptarlo al contexto de una solución móvil. El equipo integró conceptos de Lean UX, investigación de usuarios, especificación de requisitos, arquitectura de software y Domain-Driven Design para producir un informe coherente con las necesidades actuales de Entreprenly.                      |
-|                                                                                                                                         | **Palma De Los Santos, Elynor Mikela**<br>_AV1:_ Reformuló el Solution Profile, los antecedentes y la problemática de Entreprenly, y desarrolló el proceso Lean UX mediante Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas orientados al producto móvil.                                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                                                                                                                         | **Laura Acosta, Victor Jhosef**<br>_AV1:_ Actualizó el análisis competitivo, las estrategias frente a competidores y el diseño de entrevistas para los segmentos objetivo; además, documentó el Bounded Context Inventory en sus capas Domain, Application, Interface e Infrastructure, junto con sus diagramas y modelo de persistencia.                                                                               |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                                                                                                                         | **Villon Amez, Enrique Manuel**<br>_AV1:_ Consolidó el registro y análisis de las entrevistas y actualizó los artefactos de Needfinding: User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping, relacionando los hallazgos con las necesidades de comerciantes y clientes finales.                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                                                                                                                         | **Gonza Morales, Anderson**<br>_AV1:_ Desarrolló el Big Picture EventStorming y el Ubiquitous Language; aplicó Strategic-Level Domain-Driven Design mediante Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases, Context Mapping y los diagramas de arquitectura de software.                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                              |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.  | **Chavez Carrasco, Lionel Abraham**<br>_AV1:_ Contrastó el informe anterior con los requisitos del nuevo curso, investigó la adaptación de funcionalidades y criterios de aceptación a dispositivos móviles y aplicó lo aprendido en Impact Mapping, Product Backlog y el modelado táctico de Profile. La integración final le permitió reforzar la revisión cruzada y la consistencia entre requisitos y arquitectura. | El equipo evidenció aprendizaje permanente al reutilizar críticamente los avances previos, consultar técnicas específicas, contrastarlas con el nuevo alcance móvil y mejorar los artefactos mediante revisiones colaborativas. Esta práctica permitió incorporar conocimientos nuevos sin perder la trazabilidad del producto ni repetir de forma automática el trabajo del ciclo anterior. |
-|                                                                                                                                         | **Palma De Los Santos, Elynor Mikela**<br>_AV1:_ Revisó y ajustó continuamente los artefactos de Lean UX a partir del problema actual, los segmentos objetivo y la retroalimentación del equipo, reconociendo que los supuestos e hipótesis deben actualizarse cuando cambia el contexto de uso del producto.                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                                                                                                                         | **Laura Acosta, Victor Jhosef**<br>_AV1:_ Comparó soluciones vigentes del mercado y actualizó las preguntas de entrevista para obtener evidencia relevante; asimismo, profundizó en DDD táctico y Clean Architecture al separar productos por unidad y peso, alertas, persistencia y contratos de integración de Inventory.                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                                                                                                                         | **Villon Amez, Enrique Manuel**<br>_AV1:_ Fortaleció el análisis cualitativo al transformar entrevistas en personas, tareas, recorridos y mapas de empatía, revisando iterativamente cada artefacto para evitar que las decisiones del producto se basaran únicamente en suposiciones.                                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                                                                                                                         | **Gonza Morales, Anderson**<br>_AV1:_ Profundizó en EventStorming, lenguaje ubicuo, Context Mapping y el modelo C4 para representar procesos, responsabilidades e interacciones entre contextos, aplicando estas técnicas de manera progresiva durante la elaboración de la arquitectura de Entreprenly.                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                              |
+| Criterio específico | Acciones realizadas | Conclusiones |
+| :---: | :---: | :---: |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>_AV1:_ Actualizó la presentación de la startup, los perfiles del equipo y los segmentos objetivo para el nuevo curso; adaptó la especificación de requisitos al dashboard móvil mediante User Stories, Impact Mapping y Product Backlog; desarrolló el diseño táctico del Bounded Context Profile e integró y revisó los capítulos I y II.<br><br>_TB1:_ Adaptó los lineamientos de estilo de `daop-entreprenly` al producto móvil, relacionando marca, tipografía, interacción táctil y componentes compartidos. Desarrolló los wireframes, mock-ups, wireflows y user flows de Profile en Figma, separando los recorridos por HU y corrigiendo su representación. Documentó el Sprint Planning del 28 de septiembre, el liderazgo por BC y las 33 HUs seleccionadas, desglosadas en 103 Work-items por responsable. Actualizó el Product Backlog, el Registro de Versiones y los enlaces de integración del informe. | Las actividades permitieron actualizar el conocimiento del proyecto anterior y aplicarlo a una aplicación Android nativa. El equipo integró Lean UX, investigación de usuarios, requisitos y Domain-Driven Design para definir una solución coherente con las necesidades de Entreprenly. Los lineamientos de estilo, los recorridos de Profile en Figma y la planificación del Sprint 1 relacionan requisitos, diseño y trabajo por contexto. La integración de las pantallas de Profile y la navegación proporciona una base para su revisión funcional. |
+|  | **Palma De Los Santos, Elynor Mikela**<br>_AV1:_ Reformuló el Solution Profile, los antecedentes y la problemática de Entreprenly, y desarrolló el proceso Lean UX mediante Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas orientados al producto móvil. |  |
+|  | **Laura Acosta, Victor Jhosef**<br>_AV1:_ Actualizó el análisis competitivo, las estrategias frente a competidores y el diseño de entrevistas para los segmentos objetivo; además, documentó el Bounded Context Inventory en sus capas Domain, Application, Interface e Infrastructure, junto con sus diagramas y modelo de persistencia. |  |
+|  | **Villon Amez, Enrique Manuel**<br>_AV1:_ Consolidó el registro y análisis de las entrevistas y actualizó los artefactos de Needfinding: User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping, relacionando los hallazgos con las necesidades de comerciantes y clientes finales. |  |
+|  | **Gonza Morales, Anderson**<br>_AV1:_ Desarrolló el Big Picture EventStorming y el Ubiquitous Language; aplicó Strategic-Level Domain-Driven Design mediante Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases, Context Mapping y los diagramas de arquitectura de software. |  |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Chavez Carrasco, Lionel Abraham**<br>_AV1:_ Contrastó el informe anterior con los requisitos del nuevo curso, investigó la adaptación de funcionalidades y criterios de aceptación a dispositivos móviles y aplicó lo aprendido en Impact Mapping, Product Backlog y el modelado táctico de Profile. La integración final le permitió reforzar la revisión cruzada y la consistencia entre requisitos y arquitectura.<br><br>_TB1:_ Contrastó los lineamientos del informe anterior con el diseño Mobile de Figma y la estructura Kotlin/Jetpack Compose del frontend. Incorporó criterios de accesibilidad y revisión de estados de interacción, y refinó los diagramas a partir de la retroalimentación sobre separación, colores y escala. Diferenció el alcance planificado, el código disponible y las evidencias necesarias para aceptar las HUs, evitando confundir la reutilización de IAM con velocidad nueva del sprint. | El equipo evidenció aprendizaje permanente al consultar referencias, contrastar los avances previos con el alcance móvil y mejorar los artefactos mediante revisiones colaborativas. La adaptación a Android y las correcciones de los diagramas de Profile mostraron la necesidad de ajustar las decisiones al cambiar de plataforma. La retroalimentación y la revisión cruzada permitieron detectar inconsistencias y distinguir el alcance planificado, el código disponible y las evidencias necesarias para aceptar las HUs. |
+|  | **Palma De Los Santos, Elynor Mikela**<br>_AV1:_ Revisó y ajustó continuamente los artefactos de Lean UX a partir del problema actual, los segmentos objetivo y la retroalimentación del equipo, reconociendo que los supuestos e hipótesis deben actualizarse cuando cambia el contexto de uso del producto. |  |
+|  | **Laura Acosta, Victor Jhosef**<br>_AV1:_ Comparó soluciones vigentes del mercado y actualizó las preguntas de entrevista para obtener evidencia relevante; asimismo, profundizó en DDD táctico y Clean Architecture al separar productos por unidad y peso, alertas, persistencia y contratos de integración de Inventory. |  |
+|  | **Villon Amez, Enrique Manuel**<br>_AV1:_ Fortaleció el análisis cualitativo al transformar entrevistas en personas, tareas, recorridos y mapas de empatía, revisando iterativamente cada artefacto para evitar que las decisiones del producto se basaran únicamente en suposiciones. |  |
+|  | **Gonza Morales, Anderson**<br>_AV1:_ Profundizó en EventStorming, lenguaje ubicuo, Context Mapping y el modelo C4 para representar procesos, responsabilidades e interacciones entre contextos, aplicando estas técnicas de manera progresiva durante la elaboración de la arquitectura de Entreprenly. |  |
 
 <!-- pdf:only
 \clearpage
