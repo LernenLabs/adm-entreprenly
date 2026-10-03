@@ -32,11 +32,150 @@ Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-
 
 ### 4.1.2. Source Code Management
 
-Por completar.
+La gestión del código fuente es una parte importante del proceso de desarrollo colaborativo de software, ya que permite un control eficiente de los cambios y versiones del código fuente. En esta sección se describe el sistema de control de versiones implementado por **Lernen Labs**, utilizando GitHub como plataforma de alojamiento de repositorios. Además se detallan las convenciones de trabajo, como el modelo GitFlow y versionado semántico (Conventional Commits).
+
+<br>
+
+**URL de los Repositorios**: 
+
+* Organización: https://github.com/LernenLabs
+* Reporte: https://github.com/LernenLabs/adm-entreprenly
+* Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
+* Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
+* Backend: https://github.com/LernenLabs/adm-entreprenly-backend
+
+**Estructura de Ramas**: 
+
+Para mantener un flujo organizado en el desarrollo, se ha implementado el modelo GitFlow a través de las siguientes ramas:
+
+* main: Rama principal (main) que contiene las versiones estables del proyecto. Todas las demás ramas derivan de esta.
+* develop: Rama de desarrollo (develop) que contiene las características en desarrollo y se fusiona con la Main Branch al final de cada sprint.
+* feat/nombre-de-la-funcionalidad: Ramas de características (feature) que se crean para desarrollar nuevas funcionalidades y se fusionan con la Develop Branch al finalizar.
+
+**Estándar de Mensajes de Commit**
+
+Para asegurar un historial de cambios legible y facilitar la automatización, se utiliza la especificacion de Conventional Commits para todos los mensajes de commit. La estructura utilizada es [tipo]:[descripción breve], empleando los siguientes prefijos:
+
+- feat: Incorporación de una nueva funcionalidad.
+- fix: Corrección de un error o bug.
+- docs: Modificaciones exclusivamente en la documentación.
+- style: Cambios de formato o estética que no afectan la lógica del código.
+- refactor: Reestructuración de código que no añade funciones ni corrige errores.
+- test: Adición o actualización de pruebas
 
 ### 4.1.3. Source Code Style Guide & Conventions
 
-Por completar.
+Se establecen las guías de estilo y convenciones de codificación adoptadas por el equipo de Lernen Labs para el desarrollo de los productos digitales que conforman la solución **Entreprenly**. El objetivo es garantizar que el código fuente sea legible, mantenible y coherente entre todos los miembros del equipo, independientemente del componente o capa de la arquitectura en la que se trabaje. Como regla general, **toda nomenclatura de elementos en el código fuente se redacta en inglés**, incluyendo nombres de variables, clases, métodos, componentes, atributos y comentarios técnicos.
+
+Las referencias adoptadas para cada lenguaje y tecnología utilizada en la solución se detallan a continuación.
+
+#### HTML
+
+Para el desarrollo del Landing Page de Entreprenly, el equipo adopta como referencia principal la **HTML Style Guide and Coding Conventions** de W3Schools y la **Google HTML/CSS Style Guide**.
+
+Las convenciones aplicadas son las siguientes:
+
+- Se utiliza **HTML5** como estándar de marcado, declarando siempre el `DOCTYPE` al inicio del documento: `<!DOCTYPE html>`.
+- Los nombres de los elementos y atributos se escriben en **minúsculas** (`<section>`, `<article>`, `class="hero-section"`).
+- Los atributos se encierran siempre entre **comillas dobles**: `<img src="logo.png" alt="Entreprenly logo">`.
+- Se incluyen los atributos `lang` en la etiqueta `<html>` para indicar el idioma de la página: `<html lang="es">`.
+- Todas las imágenes incluyen el atributo `alt` con una descripción significativa, como parte del enfoque de accesibilidad (a11y) del proyecto.
+- Se utiliza **indentación de 2 espacios** para mantener la legibilidad del árbol de elementos.
+- Los elementos de bloque se escriben en líneas separadas; los elementos en línea pueden mantenerse en una misma línea si el resultado es conciso.
+- Se evita el uso de estilos en línea (`style=""`); todo el estilo visual se delega a las clases utilitarias de **Tailwind CSS** y a la hoja de estilos generada.
+- Los comentarios se utilizan para delimitar secciones principales del documento: `<!-- Hero Section -->`.
+
+#### CSS
+
+Para el estilo visual del Landing Page de Entreprenly, el equipo utiliza **Tailwind CSS v4** bajo un enfoque _utility-first_. La hoja de estilos final `styles.css` se genera a partir de `src/input.css` mediante la CLI de Tailwind (`tailwindcss --minify`), por lo que no se escribe CSS a mano salvo casos puntuales.
+
+Las convenciones aplicadas son las siguientes:
+
+- El estilo se compone directamente en el marcado mediante **clases utilitarias** de Tailwind (`flex`, `px-4`, `text-center`, `md:grid-cols-3`), evitando hojas de estilo manuales extensas.
+- Las **variantes responsive** (`sm:`, `md:`, `lg:`) se utilizan para aplicar los principios de Responsive Web Design bajo un enfoque mobile-first.
+- Cuando se requiere una clase propia, su nombre se escribe en **kebab-case** y se evita el uso de selectores de ID para estilos.
+- Los **tokens de diseño** (colores, tipografías y espaciados) se centralizan en la configuración de Tailwind y en variables CSS dentro de `src/input.css`, manteniendo la consistencia con el Design System.
+- Las unidades relativas (`rem`, `em`) se prefieren sobre `px` para valores de tipografía y espaciado, garantizando escalabilidad y accesibilidad.
+- Se evita el uso de `!important`; las especificidades se gestionan mediante el orden natural de las utilidades de Tailwind.
+
+#### JavaScript
+
+El Landing Page de Entreprenly utiliza JavaScript para comportamientos de interacción básicos. El equipo adopta las convenciones establecidas en la **Google HTML/CSS Style Guide** para los aspectos de scripting complementarios al marcado.
+
+Las convenciones aplicadas son las siguientes:
+
+- Se utiliza `const` para valores que no cambian y `let` para valores que pueden reasignarse; se evita el uso de `var`.
+- Los nombres de variables y funciones se escriben en **camelCase**: `getUserData`, `handleButtonClick`.
+- Las funciones se declaran como **arrow functions** cuando no requieren su propio contexto `this`: `const fetchData = () => { ... }`.
+- Los strings se definen usando **template literals** cuando se requiere interpolación: `` `Hello, ${userName}` ``.
+- El código se organiza en funciones con una única responsabilidad, evitando bloques de lógica demasiado extensos.
+- Se incluyen comentarios descriptivos en funciones no triviales, explicando el propósito y no el mecanismo.
+
+#### TypeScript
+
+Para el desarrollo del Frontend Web Application de Entreprenly con Angular, el equipo adopta la **Google TypeScript Style Guide** como referencia principal.
+
+Las convenciones aplicadas son las siguientes:
+
+- Los nombres de **clases, interfaces y enumeraciones** se escriben en **PascalCase**: `UserProfile`, `AuthService`, `PaymentStatus`.
+- Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchUserData()`.
+- Los nombres de **constantes globales** se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
+- Los nombres de **archivos** de Angular siguen la convención **kebab-case** con sufijo descriptivo según su rol: `product-item.component.ts`, `inventory-api.service.ts`, `sale.entity.ts`, `payment-method.enum.ts` y `app.routes.ts`.
+- Se declaran **tipos explícitos** para todos los parámetros de funciones y valores de retorno; se evita el uso de `any`.
+- Se utilizan **interfaces** para describir la forma de los objetos del dominio: `interface Entrepreneur { id: number; name: string; }`.
+- Se prefiere el uso de **Observables** de RxJS sobre Promises para el manejo de operaciones asíncronas, coherente con el modelo reactivo de Angular.
+- Se habilita el modo estricto de TypeScript (`"strict": true`) en el `tsconfig.json` del proyecto.
+- Las importaciones se organizan en bloques separados: primero módulos de Angular, luego librerías de terceros y finalmente módulos internos del proyecto.
+
+#### Angular Framework
+
+Además de las convenciones de TypeScript, el equipo adopta la **Angular Coding Style Guide** oficial para la organización y estructura de los componentes, servicios y módulos de la aplicación.
+
+Las convenciones aplicadas son las siguientes:
+
+- Cada componente, servicio o módulo reside en **su propio archivo**, siguiendo el principio de una clase por archivo.
+- Los nombres de **componentes** siguen el patrón `[Feature]Component`: `DashboardComponent`, `ProjectCardComponent`.
+- Los nombres de **servicios** siguen el patrón `[Feature]Service`: `AuthService`, `ProjectService`.
+- Los **selectores** de los componentes se escriben en **kebab-case** con el prefijo único del proyecto (`app-`, configurado en `angular.json`): `app-conversation-list`, `app-message-bubble`, `app-qr-connection-card`.
+- La aplicación utiliza **componentes standalone** (sin `NgModule`); el enrutamiento se organiza por bounded context mediante archivos de rutas lazy-loaded (`*.routes.ts`) registrados en `app.routes.ts` y `app.config.ts`.
+- Los métodos del ciclo de vida de Angular (`ngOnInit`, `ngOnDestroy`) se implementan a través de sus interfaces correspondientes (`OnInit`, `OnDestroy`).
+
+#### Java y Spring Boot
+
+Para el desarrollo de los RESTful Web Services de Entreprenly, el equipo adopta la **Google Java Style Guide** y las convenciones de **Spring Boot Features** como referencias principales.
+
+Las convenciones aplicadas son las siguientes:
+
+- Los nombres de **clases** se escriben en **PascalCase**: `ProjectController`, `UserRepository`, `AuthenticationService`.
+- Los nombres de **métodos y variables** se escriben en **camelCase**: `findProjectById()`, `currentUser`.
+- Los nombres de **constantes** se escriben en **UPPER_SNAKE_CASE**: `DEFAULT_PAGE_SIZE`.
+- Los nombres de **paquetes** se escriben en **minúsculas** y se organizan por bounded context, siguiendo la estructura: `online.entreprenly.platform.[boundedcontext].[layer]`. Los bounded contexts implementados son `iam`, `profile`, `inventory`, `sales`, `subscription`, `chatbot` y `shared`. Por ejemplo: `online.entreprenly.platform.iam.interfaces.rest`, `online.entreprenly.platform.chatbot.domain.model.aggregates`.
+- La arquitectura interna de cada bounded context sigue el patrón de capas: `interfaces` (controllers), `application` (services, command handlers), `domain` (entities, value objects, repositories interfaces) e `infrastructure` (JPA repositories, external adapters).
+- Los **endpoints** de los controladores REST se nombran en **kebab-case** y en plural para recursos: `/api/v1/projects`, `/api/v1/users`.
+- Los **métodos HTTP** se emplean de acuerdo con su semántica RESTful: `GET` para consultas, `POST` para creación, `PUT` para actualización completa, `PATCH` para actualización parcial y `DELETE` para eliminación.
+- Se utilizan **anotaciones estándar** de Spring Boot: `@RestController`, `@Service`, `@Repository`, `@Entity`, `@Value`, entre otras.
+- Se aplica **indentación de 4 espacios** de acuerdo con la Google Java Style Guide.
+- Los **comentarios Javadoc** se incluyen en todas las clases públicas y en los métodos cuya lógica no sea autoexplicativa.
+
+#### Gherkin (Acceptance Criteria)
+
+Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo III), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas del Backend se implementan con **JUnit** sobre los servicios y agregados de cada bounded context.
+
+Las convenciones aplicadas son las siguientes:
+
+- Cada escenario se redacta en **español**, en **tiempo presente y tercera persona**.
+- La estructura `Dado – Cuando – Entonces` se respeta estrictamente: `Dado` define el contexto inicial, `Cuando` describe la acción del usuario o del sistema y `Entonces` especifica el resultado esperado.
+- Se utiliza `y` para añadir condiciones adicionales dentro de un mismo bloque, evitando repetir la palabra clave principal.
+- Los nombres de los escenarios son descriptivos y comunican el comportamiento esperado sin referirse a detalles de implementación.
+- Se evita la lógica condicional dentro de un mismo escenario; cada escenario cubre un único camino de ejecución (happy path o unhappy path).
+
+**Ejemplo de criterio de aceptación de una User Story:**
+
+```gherkin
+Dado que el comerciante está en el formulario de productos en "/dashboard/inventory/products"
+Cuando ingresa nombre, descripción, precio por unidad, stock inicial, categoría y tipo "unitario" y presiona "Guardar"
+Entonces el producto se registra en el inventario y aparece en el listado con tipo "Unit Product"
+```
 
 ### 4.1.4. Software Deployment Configuration
 
@@ -344,7 +483,20 @@ Evidencias del Sprint 1 para Inventory BC. El diseño (wireframes, mockups y wir
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-Por completar.
+Para garantizar la calidad técnica, estabilidad y correcto funcionamiento de las funcionalidades desarrolladas durante el Sprint 1, el equipo de Lernen Labs implementó un conjunto de pruebas automatizadas en los distintos componentes de la solución **Entreprenly**. El enfoque adoptado combina pruebas unitarias y pruebas de integración para validar la lógica de negocio, las reglas de dominio y los contratos de comunicación entre capas.
+
+Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
+
+- **Backend (Spring Boot & Java):**
+  - **JUnit 5 (Jupiter):** Framework principal para la definición, estructuración y ejecución del ciclo de vida de las pruebas unitarias y de integración.
+  - **Mockito:** Librería para la creación de objetos simulados (*mocks* y *spies*), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
+  - **Spring Boot Test & MockMvc:** Utilizados para pruebas de integración sobre los controladores REST de los Bounded Contexts, verificando códigos de estado HTTP, serialización JSON y manejo global de excepciones.
+  - **AssertJ:** Librería de aserciones fluidas para mejorar la legibilidad y expresividad de las comprobaciones de estado y comportamiento.
+
+- **Frontend Móvil (Android & Kotlin):**
+  - **JUnit:** Ejecución de pruebas unitarias sobre la lógica de presentación, validadores de entrada y ViewModels en entorno JVM local.
+  - **MockK / Mockito-Kotlin:** Simulación de dependencias en repositorios de datos móviles y clientes HTTP Retrofit.
+  - **AndroidX Test:** Infraestructura de pruebas para componentes del ciclo de vida y navegación móvil en la plataforma Android.
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
@@ -420,7 +572,11 @@ Despliegues reutilizados y verificados:
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
-Por completar.
+Durante el Sprint 1, el equipo de **Lernen Labs** coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia `develop` tras revisión colaborativa.
+
+A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
+
 
 ## 4.3. Validation Interviews
 
