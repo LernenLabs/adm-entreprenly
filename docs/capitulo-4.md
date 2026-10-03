@@ -481,6 +481,35 @@ Evidencias del Sprint 1 para Inventory BC. El diseño (wireframes, mockups y wir
   </tr>
 </table>
 
+Evidencias del Sprint 1 para Sales BC. El diseño móvil se encuentra en especificación para el siguiente incremento; aquí se registra el mapeo de cada historia a los contratos y endpoints de backend desplegados y verificados en Render:
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Historia</th><th>Pantallas y flujos (ver 3.1.4)</th><th>Evidencia de avance</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-28 Buscar productos por medida</td><td>Buscador con autocompletado y selección de flujo según tipo (Unit / Weight).</td><td>Integración con catálogo de inventario y definición de payload de venta.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-29 Registrar cantidad en ticket</td><td>Diálogo Registrar Cantidad con teclado numérico y validación de stock disponible.</td><td>Verificación de stock y cálculo de subtotales en estructura de ítems de venta.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-31 Desglose y cálculo del ticket</td><td>Desglose de ítems, cantidades, subtotales, botón de eliminación y cálculo reactivo del total.</td><td>Modelo de datos de transacción con cálculo de totales en backend.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-32 Seleccionar método de pago</td><td>Selector entre Efectivo y canal Digital (Yape / Plin / Tarjeta) con validación obligatoria.</td><td>Atributo de canal de pago registrado en el esquema de persistencia de ventas.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-33 Finalizar venta y comprobante</td><td>Acción Finalizar Venta, emisión de comprobante y diálogo de confirmación de transacción.</td><td>Endpoint <code>POST /api/v1/sales</code> desplegado y verificado en Swagger.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-36 Monitorear Resumen de Caja</td><td>Panel de ventas con tarjetas de Efectivo, canal Digital y Total acumulado del día.</td><td>Cálculo y persistencia de totales por canal asociados a transacciones del día.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-97 Consultar historial de ventas</td><td>Listado cronológico de transacciones del día con selector de fecha y estado de carga.</td><td>Endpoints <code>GET /api/v1/sales</code> y <code>GET /api/v1/sales/{saleId}</code> desplegados y verificados.</td>
+  </tr>
+</table>
+
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
 Para garantizar la calidad técnica, estabilidad y correcto funcionamiento de las funcionalidades desarrolladas durante el Sprint 1, el equipo de Lernen Labs implementó un conjunto de pruebas automatizadas en los distintos componentes de la solución **Entreprenly**. El enfoque adoptado combina pruebas unitarias y pruebas de integración para validar la lógica de negocio, las reglas de dominio y los contratos de comunicación entre capas.
@@ -500,10 +529,15 @@ Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
-- US-01 y US-05: agregar con obligatorios y editar precargado con guardado y toast.
-- US-07 y US-08: detalle con alerta y búsqueda con 2 resultados o estado vacío para agregar.
-- US-03 y US-06: crear lote sin fechas pasadas y detalle con cantidades y fechas.
-- US-11 y US-13: agotado con aviso y retiro de oferta más dashboard con contadores y banners.
+- **Inventory BC:**
+  - US-01 y US-05: agregar con obligatorios y editar precargado con guardado y toast.
+  - US-07 y US-08: detalle con alerta y búsqueda con 2 resultados o estado vacío para agregar.
+  - US-03 y US-06: crear lote sin fechas pasadas y detalle con cantidades y fechas.
+  - US-11 y US-13: agotado con aviso y retiro de oferta más dashboard con contadores y banners.
+- **Sales BC:**
+  - US-28, US-29 y US-31: validación de estructura de ítems, cantidades y cálculo de subtotales.
+  - US-32 y US-33: registro de transacción de venta exitosa mediante `POST /api/v1/sales` con método de pago seleccionado.
+  - US-36 y US-97: consulta de listado de ventas del día e inspección de detalle por identificador mediante `GET /api/v1/sales`.
 
 Ver diseño en 3.1.4; servicios en 4.2.1.7 y despliegue en 4.2.1.8.
 
@@ -520,7 +554,8 @@ Documentación OpenAPI verificada del backend en avance:
     <th>Grupo</th><th>Endpoints</th>
   </tr>
   <tr><td style="vertical-align:middle; text-align:center;">Inventory</td><td><code>GET/POST /api/v1/inventory/unit-products</code>, <code>weight-products</code>, <code>unit-lots</code>, <code>lots</code>, <code>stock-alerts</code>.</td></tr>
-  <tr><td style="vertical-align:middle; text-align:center;">Transversales</td><td>Auth, ventas, suscripción, perfil y chatbot según avance del backend.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Sales</td><td><code>GET /api/v1/sales</code> (List sales), <code>POST /api/v1/sales</code> (Register a sale), <code>GET /api/v1/sales/{saleId}</code> (Get sale by ID).</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Transversales</td><td>Auth, suscripción, perfil y chatbot según avance del backend.</td></tr>
 </table>
 
 - El avance incluye contextos `inventory` (productos y lotes por unidad/peso con alertas) y base para `iam, sales, subscription, profile, chatbot`.
@@ -539,10 +574,16 @@ Documentación OpenAPI verificada del backend en avance:
 **Figura 4.2:** Endpoints Inventory Lots y Unit Lots con operaciones GET, POST, PUT y DELETE.
 
 <p align="center">
+  <img src="images/capitulo4/services-sales-endpoints.png" alt="Endpoints Sales" width="800"/>
+</p>
+
+**Figura 4.3:** Endpoints Sales en Swagger UI con operaciones GET y POST para listar, registrar y consultar ventas.
+
+<p align="center">
   <img src="images/capitulo4/services-openapi-json.png" alt="OpenAPI JSON" width="800"/>
 </p>
 
-**Figura 4.3:** OpenAPI JSON con versión 3.1.0, servidores local y desplegado, y tags de Inventory.
+**Figura 4.4:** OpenAPI JSON con versión 3.1.0, servidores local y desplegado, y tags de Inventory.
 
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
@@ -556,19 +597,19 @@ Despliegues reutilizados y verificados:
   <img src="images/capitulo4/deploy-render-dashboard.png" alt="Dashboard Render" width="800"/>
 </p>
 
-**Figura 4.4:** Dashboard del servicio en Render como evidencia de despliegue.
+**Figura 4.5:** Dashboard del servicio en Render como evidencia de despliegue.
 
 <p align="center">
   <img src="images/capitulo4/deploy-swagger-render.png" alt="Swagger en Render" width="800"/>
 </p>
 
-**Figura 4.5:** Swagger respondiendo en la URL de Render como prueba de despliegue funcionando.
+**Figura 4.6:** Swagger respondiendo en la URL de Render como prueba de despliegue funcionando.
 
 <p align="center">
   <img src="images/capitulo4/deploy-landing.png" alt="Landing desplegada" width="800"/>
 </p>
 
-**Figura 4.6:** Landing desplegada con Hero y overview operativo.
+**Figura 4.7:** Landing desplegada con Hero y overview operativo.
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
