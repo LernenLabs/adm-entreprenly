@@ -2,12 +2,12 @@
 
 Fecha de corte: **3 de octubre de 2026**. Este registro acompaña la revisión del informe; no forma parte del PDF académico.
 
-## Apartados de Lionel integrados
+## Actualizaciones integradas
 
 - 3.1. Product Design, 3.1.1. Style Guidelines y 3.1.1.1. General Style Guidelines.
 - Introducción del capítulo IV, 4.2. Landing Page & Mobile Application Implementation y 4.2.1. Sprint 1.
 - 4.2.1.1. Sprint Planning 1, 4.2.1.2. Aspect Leaders and Collaborators y 4.2.1.3. Sprint Backlog 1.
-- Registro de Versiones del Informe y Student Outcome acumulativo, con los aportes de Lionel integrados por criterio en la tabla general.
+- Registro de Versiones del Informe con autoría de todos los integrantes y descripción resumida del TB1; Student Outcome acumulativo con los aportes de los cinco integrantes y las conclusiones de AV1 y TB1 identificadas en ambos criterios.
 - Actualización de Project Report Collaboration Insights, índice, conclusiones, bibliografía y anexos.
 - 4.3. Validation Interviews y 4.3.1. Diseño de Entrevistas: 10 preguntas para comerciantes sobre la aplicación móvil y 10 para clientes finales sobre la compra por WhatsApp.
 
@@ -38,7 +38,6 @@ Las evidencias disponibles de código de Profile y navegación se registran para
 - 4.2.1.4 a 4.2.1.9: evidencias de desarrollo, pruebas, ejecución, servicios, despliegue y colaboración.
 - URL pública y evidencia del despliegue de la Landing Page; evidencia del alcance backend desplegado y del cálculo del 70 % exigido.
 - 4.3.2. Registro de Entrevistas y 4.3.3. Evaluaciones según heurísticas, con respuestas y evidencias de las sesiones realizadas.
-- Student Outcome TB1 de los demás integrantes, sustentado en sus aportes.
 - Videos About the Product, About the Team y App Validation, cuando corresponda a los requisitos de la entrega.
 
 La revisión de integración confirma la consistencia de los apartados incorporados. La entrega completa del TB1 requiere consolidar estos contenidos y evidencias del equipo.
