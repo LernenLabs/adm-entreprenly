@@ -7,7 +7,7 @@ Fecha de corte: **3 de octubre de 2026**. Este registro acompaña la revisión d
 - 3.1. Product Design, 3.1.1. Style Guidelines y 3.1.1.1. General Style Guidelines.
 - Introducción del capítulo IV, 4.2. Landing Page & Mobile Application Implementation y 4.2.1. Sprint 1.
 - 4.2.1.1. Sprint Planning 1, 4.2.1.2. Aspect Leaders and Collaborators y 4.2.1.3. Sprint Backlog 1.
-- Registro de Versiones del Informe con autoría de todos los integrantes y distribución completa del TB1; Student Outcome acumulativo con los aportes de los cinco integrantes en ambos criterios.
+- Registro de Versiones del Informe con autoría de todos los integrantes y descripción resumida del TB1; Student Outcome acumulativo con los aportes de los cinco integrantes y las conclusiones de AV1 y TB1 identificadas en ambos criterios.
 - Actualización de Project Report Collaboration Insights, índice, conclusiones, bibliografía y anexos.
 - 4.3. Validation Interviews y 4.3.1. Diseño de Entrevistas: 10 preguntas para comerciantes sobre la aplicación móvil y 10 para clientes finales sobre la compra por WhatsApp.
 
