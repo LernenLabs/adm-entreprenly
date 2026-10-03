@@ -12,7 +12,23 @@ Por completar.
 
 ### 4.1.1. Software Development Environment Configuration
 
-Por completar.
+Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-backend` (Spring Boot, DDD + CQRS por contextos `iam, inventory, sales, subscription, profile, chatbot, shared`).
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Herramienta</th><th>Versión</th><th>Uso</th>
+  </tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Java JDK</td><td style="vertical-align:middle; text-align:center;">26</td><td>Lenguaje del backend.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Spring Boot</td><td style="vertical-align:middle; text-align:center;">4.0.6</td><td>WebMVC, JPA, Security, Validation.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">PostgreSQL</td><td style="vertical-align:middle; text-align:center;">15+</td><td>Local en desarrollo; Cloud SQL en producción.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Maven Wrapper</td><td style="vertical-align:middle; text-align:center;">—</td><td>Compilación con `./mvnw spring-boot:run` y `./mvnw clean package`.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">JWT + BCrypt</td><td style="vertical-align:middle; text-align:center;">jjwt 0.12.6</td><td>Autenticación por token.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">SpringDoc OpenAPI</td><td style="vertical-align:middle; text-align:center;">3.0.3</td><td>Swagger UI.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Docker</td><td style="vertical-align:middle; text-align:center;">—</td><td>Imagen `entreprenly-platform` en puerto `8092`.</td></tr>
+</table>
+
+- Crear base local `daop-entreprenly` antes del primer arranque; las tablas se crean al iniciar.
+- Configuración por `.env.example` → `.env` o variables de entorno. API base `/api/v1`, Swagger local `http://localhost:8092/swagger-ui.html`.
 
 ### 4.1.2. Source Code Management
 
@@ -24,7 +40,22 @@ Por completar.
 
 ### 4.1.4. Software Deployment Configuration
 
-Por completar.
+Despliegue del backend con Docker por perfiles `default/cloud/prod`.
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Variable</th><th>Valor</th>
+  </tr>
+  <tr><td style="vertical-align:middle; text-align:center;">SPRING_PROFILES_ACTIVE</td><td><code>cloud</code> en Render, <code>prod</code> en Cloud Run.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">DATABASE_HOST / PORT / NAME / USER / PASSWORD</td><td>Pooler Supabase en Render (<code>5432/postgres</code>); Cloud SQL por socket en producción.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">JWT_SECRET</td><td>Secreto largo aleatorio.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">PUBLIC_API_URL</td><td>URL pública del servicio para Swagger.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">CLOUD_SQL_CONNECTION_NAME</td><td>Solo Cloud Run (<code>project:region:instance</code>) con rol <code>roles/cloudsql.client</code>.</td></tr>
+</table>
+
+- Opción A Render + Supabase: servicio Docker desde el repositorio con las variables anteriores; despliegue verificado en `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
+- Opción B Cloud Run + Cloud SQL: trigger que construye el `Dockerfile` y publica nueva revisión en cada push a `main`.
+- El plan gratuito de Render se suspende tras ~15 minutos sin tráfico; la primera petición posterior puede tardar alrededor de un minuto.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
@@ -279,7 +310,37 @@ El estado **To Review** de Profile y navegación se sustenta en la integración 
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
-Por completar.
+Evidencias del Sprint 1 para Inventory BC. El diseño (wireframes, mockups y wireflows) ya está documentado en 3.1.4; aquí solo se mapea cada historia a pantallas, flujos y servicios.
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Historia</th><th>Pantallas y flujos (ver 3.1.4)</th><th>Evidencia de avance</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-01 Agregar productos</td><td>Agregar con validación de obligatorios y toast de registro.</td><td>Endpoints <code>POST /api/v1/inventory/unit-products</code> y <code>weight-products</code>.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-05 Editar productos</td><td>Detalle con precio, stock y lotes asociados hacia editar.</td><td><code>PUT /api/v1/inventory/unit-products/{id}</code> con invariantes de catálogo.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-07 Visualizar detalles de producto</td><td>Detalle con alerta de stock bajo y lotes activo/agotado.</td><td><code>GET /api/v1/inventory/unit-products/{id}</code> con lotes ordenados por vencimiento.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-08 Buscar productos</td><td>Búsqueda en tiempo real y estado sin resultados con opción de agregar.</td><td>Consulta filtrada por propietario y texto.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-03 Agregar lotes</td><td>Crear lote con producto, número, cantidad, ingreso y vencimiento sin fechas pasadas.</td><td><code>POST /api/v1/inventory/unit-lots</code> y <code>weight-lots</code>.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-06 Visualizar detalles de lotes</td><td>Detalle con estado, fechas y cantidades actual/inicial.</td><td><code>GET /api/v1/inventory/lots</code> y por id.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-11 Detectar stock agotado</td><td>Aviso de agotado que retira el producto de la oferta del chatbot.</td><td><code>GET /api/v1/inventory/stock-alerts</code> con severidad crítica.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle; text-align:center;">US-13 Dashboard móvil de lotes</td><td>Contadores Activos, Por vencer y Vencidos con banners amarillo/rojo.</td><td>Panel alimentado por alertas y lotes próximos a vencer.</td>
+  </tr>
+</table>
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
@@ -287,15 +348,39 @@ Por completar.
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
-Por completar.
+- US-01 y US-05: agregar con obligatorios y editar precargado con guardado y toast.
+- US-07 y US-08: detalle con alerta y búsqueda con 2 resultados o estado vacío para agregar.
+- US-03 y US-06: crear lote sin fechas pasadas y detalle con cantidades y fechas.
+- US-11 y US-13: agotado con aviso y retiro de oferta más dashboard con contadores y banners.
+
+Ver diseño en 3.1.4; servicios en 4.2.1.7 y despliegue en 4.2.1.8.
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
-Por completar.
+Documentación OpenAPI verificada del backend en avance:
+
+- Swagger UI: `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
+- OpenAPI JSON: `https://adm-entreprenly-backend.onrender.com/v3/api-docs`.
+- Base local: `http://localhost:8092/swagger-ui.html` con API bajo `/api/v1`.
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Grupo</th><th>Endpoints</th>
+  </tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Inventory</td><td><code>GET/POST /api/v1/inventory/unit-products</code>, <code>weight-products</code>, <code>unit-lots</code>, <code>lots</code>, <code>stock-alerts</code>.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Transversales</td><td>Auth, ventas, suscripción, perfil y chatbot según avance del backend.</td></tr>
+</table>
+
+- El avance incluye contextos `inventory` (productos y lotes por unidad/peso con alertas) y base para `iam, sales, subscription, profile, chatbot`.
+- Abrir Swagger en nube antes de la demo por el retardo del primer arranque en plan gratuito.
 
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
-Por completar.
+Despliegues reutilizados y verificados:
+
+- Backend: `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html` responde con la documentación de servicios.
+- Landing: `https://lernenlabs.github.io/adm-entreprenly-landing/` responde con el recorrido Hero, Problema, Features, How it works, Beneficios, Comparativa, Planes, FAQ y Footer.
+- Flujo: servicio Docker en Render con variables de 4.1.4; abrir primero Swagger en nube y luego validar endpoints de Inventory del Sprint 1.
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 

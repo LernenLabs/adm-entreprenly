@@ -405,15 +405,30 @@ Los flujos principales de navegación en la aplicación son los siguientes:
 
 ### 3.1.3. Landing Page UI Design
 
-Por completar.
+Landing reutilizada y desplegada en `https://lernenlabs.github.io/adm-entreprenly-landing/`. Recorrido comercial para bodegas, minimarkets y puestos de mercado: propuesta de valor, problema, solución en 4 piezas, adopción en 4 pasos, beneficios, confianza, comparativa, planes y FAQ con llamados a registro e inicio de sesión. Soporte ES/EN y modo oscuro. Diseño responsive: la misma landing se adapta a móvil sin duplicar rutas.
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Sección</th><th>Propósito</th>
+  </tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Hero</td><td>Propuesta de valor y CTAs hacia registro y planes.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Problema</td><td>Caos multicanal, control manual y caja desordenada.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Features</td><td>Pedidos WhatsApp, inventario en tiempo real, suscripción y control financiero.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">How it works</td><td>Adopción en 4 pasos: organizar base, conectar canales, suscripción y cobro con control.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Beneficios + Confianza</td><td>Menos errores y merma para el comerciante; stock validado y pagos confirmados para el cliente.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Comparativa + Planes</td><td>Manual vs genéricos vs Entreprenly; Plan Free S/ 0 y Plan Control S/ 89.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">FAQ + Next step + Footer</td><td>Dudas frecuentes, cierre de conversión y accesos de exploración.</td></tr>
+</table>
+
+- Responsive: ≤640 px 4 columnas con hamburger y CTA fijo inferior; 641–1024 px 8 columnas; ≥1025 px 12 columnas. Tablas con scroll horizontal y objetivos táctiles amplios.
 
 #### 3.1.3.1. Landing Page Wireframe
 
-Por completar.
+Wireframes en escala de grises que validan jerarquía, orden y ubicación de CTAs antes del color. Misma correspondencia 1 a 1 con las secciones de 3.1.3: Header, Hero, Problema, Features, How it works, Beneficios, Confianza, Comparativa, Planes, FAQ, Next step y Footer. La validación se verifica contra la landing desplegada.
 
 #### 3.1.3.2. Landing Page Mock-up
 
-Por completar.
+Mock-ups con identidad final aplicados sobre los wireframes: naranja de marca en CTAs y activos, tipografía y espaciado del sistema, tarjetas de planes Free y Control con precios y límites, y estados de navegación. Referencia visual: landing desplegada en `https://lernenlabs.github.io/adm-entreprenly-landing/`.
 
 ### 3.1.4. Mobile Applications UX/UI Design
 
