@@ -572,7 +572,11 @@ Despliegues reutilizados y verificados:
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
-Por completar.
+Durante el Sprint 1, el equipo de **Lernen Labs** coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia `develop` tras revisión colaborativa.
+
+A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
+
 
 ## 4.3. Validation Interviews
 
