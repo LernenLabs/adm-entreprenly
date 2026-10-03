@@ -40,6 +40,14 @@
 
 </div>
 
+## Referencias de diseño y planificación del TB1
+
+- Google. (s. f.). *API defaults: Accessibility in Jetpack Compose*. Android Developers. https://developer.android.com/develop/ui/compose/accessibility/api-defaults
+- Kauflink. (2026). *Entreprenly: Informe del trabajo final de Desarrollo de Aplicaciones Open Source* [Informe de proyecto]. https://github.com/Kauflink/daop-entreprenly
+- Lernen Labs. (2026). *Entreprenly* [Archivo de diseño en Figma, páginas Web y Mobile]. https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly
+- Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide*. https://scrumguides.org/scrum-guide.html
+- World Wide Web Consortium. (s. f.). *How to meet WCAG 2.2: Quick reference*. https://www.w3.org/WAI/WCAG22/quickref/
+
 <!-- pdf:only
 ::: {#refs}
 :::

@@ -2715,7 +2715,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante autenticado, quiero configurar mi idioma, zona horaria, tema visual y moneda para adaptar la plataforma a mis preferencias operativas.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Cambio de idioma exitoso</strong><br>Dado que el comerciante cuenta con los datos y permisos necesarios,<br>Cuando el sistema aplica el cambio mediante el servicio de traducción,<br>Entonces todos los textos traducibles de la contenido se actualizan de forma inmediata sin reiniciar la aplicación.<br><br><strong>Escenario 2: Cambio de zona horaria exitoso</strong><br>Dado que el comerciante selecciona una zona horaria de la lista disponible (p. ej. "America/Lima (UTC-05:00)"),<br>Cuando el sistema persiste la preferencia,<br>Entonces las fechas y horas mostradas en la plataforma se ajustan a la zona horaria seleccionada.<br><br><strong>Escenario 3: Cambio de tema exitoso</strong><br>Dado que el comerciante selecciona el tema "light" u "dark",<br>Cuando el sistema aplica el cambio,<br>Entonces la contenido cambia de tema de forma inmediata y persiste la preferencia para futuras sesiones.<br><br><strong>Escenario 4: Cambio de moneda exitoso</strong><br>Dado que el comerciante cuenta con los datos y permisos necesarios,<br>Cuando el sistema persiste la preferencia,<br>Entonces los montos en el Resumen de Caja y en el ticket de ventas se formatean con el símbolo de la moneda seleccionada.</td></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Cambio de idioma exitoso</strong><br>Dado que el comerciante cuenta con los datos y permisos necesarios,<br>Cuando el sistema aplica el cambio mediante el servicio de traducción,<br>Entonces todos los textos traducibles de la interfaz se actualizan de forma inmediata sin reiniciar la aplicación.<br><br><strong>Escenario 2: Cambio de zona horaria exitoso</strong><br>Dado que el comerciante selecciona una zona horaria de la lista disponible (p. ej. "America/Lima (UTC-05:00)"),<br>Cuando el sistema persiste la preferencia,<br>Entonces las fechas y horas mostradas en la plataforma se ajustan a la zona horaria seleccionada.<br><br><strong>Escenario 3: Cambio de tema exitoso</strong><br>Dado que el comerciante selecciona el tema "light" u "dark",<br>Cuando el sistema aplica el cambio,<br>Entonces la interfaz cambia de tema de forma inmediata y persiste la preferencia para futuras sesiones.<br><br><strong>Escenario 4: Cambio de moneda exitoso</strong><br>Dado que el comerciante cuenta con los datos y permisos necesarios,<br>Cuando el sistema persiste la preferencia,<br>Entonces los montos en el Resumen de Caja y en el ticket de ventas se formatean con el símbolo de la moneda seleccionada.</td></tr>
   </tbody>
 </table>
 
@@ -3362,6 +3362,8 @@ Los impactos del Comerciante se materializan mediante funcionalidades de inventa
 
 A continuación se presenta el Product Backlog de Entreprenly, conformado por las 98 User Stories especificadas para la Landing Page, la aplicación móvil y los servicios que la soportan. Las historias se organizan en cuatro bloques según la superficie o capa principal de entrega: Landing Page; aplicación móvil; backend, sistema e infraestructura; y autenticación, registro y perfil. La estimación conserva la escala de 1, 2, 3 y 5 story points, con un total de **245 story points**.
 
+La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende **33 HUs y 82 story points**. Su asignación se identifica en la columna Sprint y su desglose se presenta en la sección 4.2.1.3. Las HUs de IAM (US-56 a US-61) corresponden a la base previa disponible para la integración; la reutilización de la Landing Page y el backend se describe en 4.2. La planificación de las HUs restantes se mantiene pendiente de refinamiento.
+
 <table width="100%" style="width:100%; table-layout:fixed;">
   <thead>
     <tr><th># Orden</th><th>User Story Id</th><th>Título</th><th>Story Points<br>(1 / 2 / 3 / 5 / 8)</th><th>Sprint</th></tr>
@@ -3374,63 +3376,63 @@ A continuación se presenta el Product Backlog de Entreprenly, conformado por la
     <tr><td>5</td><td>US-87</td><td>Consultar las preguntas frecuentes</td><td>1</td><td>Por definir</td></tr>
     <tr><td>6</td><td>US-88</td><td>Acceder a la aplicación móvil desde la landing page</td><td>1</td><td>Por definir</td></tr>
     <tr><td>7</td><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>3</td><td>1</td></tr>
     <tr><td>9</td><td>US-02</td><td>Editar lotes</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>10</td><td>US-03</td><td>Agregar lotes</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>10</td><td>US-03</td><td>Agregar lotes</td><td>2</td><td>1</td></tr>
     <tr><td>11</td><td>US-04</td><td>Eliminar lotes</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>12</td><td>US-05</td><td>Editar productos</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>13</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>14</td><td>US-07</td><td>Visualizar detalles de producto</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>15</td><td>US-08</td><td>Buscar productos</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>12</td><td>US-05</td><td>Editar productos</td><td>2</td><td>1</td></tr>
+    <tr><td>13</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>2</td><td>1</td></tr>
+    <tr><td>14</td><td>US-07</td><td>Visualizar detalles de producto</td><td>2</td><td>1</td></tr>
+    <tr><td>15</td><td>US-08</td><td>Buscar productos</td><td>3</td><td>1</td></tr>
     <tr><td>16</td><td>US-95</td><td>Buscar lotes</td><td>2</td><td>Por definir</td></tr>
     <tr><td>17</td><td>US-09</td><td>Crear lotes</td><td>3</td><td>Por definir</td></tr>
     <tr><td>18</td><td>US-10</td><td>Escanear código QR en inventario</td><td>3</td><td>Por definir</td></tr>
     <tr><td>19</td><td>US-90</td><td>Eliminar productos</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>20</td><td>US-11</td><td>Detectar stock agotado</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>20</td><td>US-11</td><td>Detectar stock agotado</td><td>3</td><td>1</td></tr>
     <tr><td>21</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>22</td><td>US-13</td><td>Visualizar dashboard móvil de lotes</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>22</td><td>US-13</td><td>Visualizar dashboard móvil de lotes</td><td>3</td><td>1</td></tr>
     <tr><td>23</td><td>US-14</td><td>Recibir notificación de caducidad de lote</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>24</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>25</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>26</td><td>US-17</td><td>Registrar datos de facturación</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>27</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>5</td><td>Por definir</td></tr>
+    <tr><td>24</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>2</td><td>1</td></tr>
+    <tr><td>25</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>2</td><td>1</td></tr>
+    <tr><td>26</td><td>US-17</td><td>Registrar datos de facturación</td><td>3</td><td>1</td></tr>
+    <tr><td>27</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>5</td><td>1</td></tr>
     <tr><td>28</td><td>US-19</td><td>Activar suscripción</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>29</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>30</td><td>US-21</td><td>Consultar estado de suscripción</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>31</td><td>US-22</td><td>Renovar suscripción</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>29</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>2</td><td>1</td></tr>
+    <tr><td>30</td><td>US-21</td><td>Consultar estado de suscripción</td><td>1</td><td>1</td></tr>
+    <tr><td>31</td><td>US-22</td><td>Renovar suscripción</td><td>3</td><td>1</td></tr>
     <tr><td>32</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>2</td><td>Por definir</td></tr>
     <tr><td>33</td><td>US-24</td><td>Cancelar suscripción</td><td>3</td><td>Por definir</td></tr>
     <tr><td>34</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>3</td><td>Por definir</td></tr>
     <tr><td>35</td><td>US-96</td><td>Gestionar métodos de pago de suscripción</td><td>2</td><td>Por definir</td></tr>
     <tr><td>36</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>2</td><td>Por definir</td></tr>
     <tr><td>37</td><td>US-27</td><td>Descargar historial de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>38</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>39</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>38</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>3</td><td>1</td></tr>
+    <tr><td>39</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>2</td><td>1</td></tr>
     <tr><td>40</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>41</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>42</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>43</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>41</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>3</td><td>1</td></tr>
+    <tr><td>42</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>2</td><td>1</td></tr>
+    <tr><td>43</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>3</td><td>1</td></tr>
     <tr><td>44</td><td>US-34</td><td>Cancelar venta en curso</td><td>1</td><td>Por definir</td></tr>
     <tr><td>45</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>46</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>47</td><td>US-97</td><td>Consultar el historial de ventas del día</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>46</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>2</td><td>1</td></tr>
+    <tr><td>47</td><td>US-97</td><td>Consultar el historial de ventas del día</td><td>2</td><td>1</td></tr>
     <tr><td>48</td><td>US-98</td><td>Consultar el detalle de una venta registrada</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>49</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business desde el dispositivo móvil</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>50</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>51</td><td>US-39</td><td>Visualizar conversaciones de clientes en la aplicación móvil</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>52</td><td>US-40</td><td>Responder mensajes de clientes desde la aplicación móvil</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>49</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business desde el dispositivo móvil</td><td>5</td><td>1</td></tr>
+    <tr><td>50</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>2</td><td>1</td></tr>
+    <tr><td>51</td><td>US-39</td><td>Visualizar conversaciones de clientes en la aplicación móvil</td><td>3</td><td>1</td></tr>
+    <tr><td>52</td><td>US-40</td><td>Responder mensajes de clientes desde la aplicación móvil</td><td>3</td><td>1</td></tr>
     <tr><td>53</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>2</td><td>Por definir</td></tr>
     <tr><td>54</td><td>US-71</td><td>Visualizar estado del chatbot en la pantalla de Inicio</td><td>2</td><td>Por definir</td></tr>
     <tr><td>55</td><td>US-72</td><td>Visualizar alertas de inventario en la pantalla de Inicio</td><td>2</td><td>Por definir</td></tr>
     <tr><td>56</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en la pantalla de Inicio</td><td>1</td><td>Por definir</td></tr>
     <tr><td>57</td><td>US-74</td><td>Visualizar pedidos recientes en la pantalla de Inicio</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>58</td><td>US-75</td><td>Acceder a módulos desde accesos directos de la pantalla de Inicio</td><td>1</td><td>Por definir</td></tr>
+    <tr><td>58</td><td>US-75</td><td>Acceder a módulos desde accesos directos de la pantalla de Inicio</td><td>1</td><td>1</td></tr>
     <tr><td>59</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>2</td><td>Por definir</td></tr>
     <tr><td>60</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>2</td><td>Por definir</td></tr>
     <tr><td>61</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>2</td><td>Por definir</td></tr>
     <tr><td>62</td><td>US-79</td><td>Reportar un problema</td><td>3</td><td>Por definir</td></tr>
     <tr><td>63</td><td>US-80</td><td>Confirmar envío del reporte</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>64</td><td>US-81</td><td>Navegar entre módulos desde el menú de navegación móvil</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>64</td><td>US-81</td><td>Navegar entre módulos desde el menú de navegación móvil</td><td>2</td><td>1</td></tr>
     <tr><td>65</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>2</td><td>Por definir</td></tr>
     <tr><td>66</td><td>US-83</td><td>Gestionar destinos de navegación no disponibles</td><td>1</td><td>Por definir</td></tr>
     <tr><td>67</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>3</td><td>Por definir</td></tr>
@@ -3438,7 +3440,7 @@ A continuación se presenta el Product Backlog de Entreprenly, conformado por la
     <tr><td>69</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>3</td><td>Por definir</td></tr>
     <tr><td>70</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>2</td><td>Por definir</td></tr>
     <tr><td>71</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>72</td><td>US-46</td><td>Validar comprobante de pago desde la aplicación móvil</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>72</td><td>US-46</td><td>Validar comprobante de pago desde la aplicación móvil</td><td>3</td><td>1</td></tr>
     <tr><td>73</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>2</td><td>Por definir</td></tr>
     <tr><td>74</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>3</td><td>Por definir</td></tr>
     <tr><td>75</td><td>US-49</td><td>Registrar venta en el sistema</td><td>2</td><td>Por definir</td></tr>
@@ -3457,13 +3459,13 @@ A continuación se presenta el Product Backlog de Entreprenly, conformado por la
     <tr><td>88</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>5</td><td>Por definir</td></tr>
     <tr><td>89</td><td>US-60</td><td>Recuperar contraseña</td><td>3</td><td>Por definir</td></tr>
     <tr><td>90</td><td>US-61</td><td>Cerrar sesión</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>91</td><td>US-62</td><td>Visualizar perfil actual</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>92</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>91</td><td>US-62</td><td>Visualizar perfil actual</td><td>1</td><td>1</td></tr>
+    <tr><td>92</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>2</td><td>1</td></tr>
     <tr><td>93</td><td>US-64</td><td>Subir foto de perfil</td><td>3</td><td>Por definir</td></tr>
     <tr><td>94</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>3</td><td>Por definir</td></tr>
     <tr><td>95</td><td>US-66</td><td>Cambiar contraseña</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>96</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>97</td><td>US-68</td><td>Configurar notificaciones</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>96</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>3</td><td>1</td></tr>
+    <tr><td>97</td><td>US-68</td><td>Configurar notificaciones</td><td>2</td><td>1</td></tr>
     <tr><td>98</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>2</td><td>Por definir</td></tr>
   </tbody>
 </table>
