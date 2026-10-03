@@ -1,6 +1,6 @@
 # Anexos
 
-En esta sección se reúnen los enlaces y artefactos complementarios utilizados durante la elaboración del AV1 de **Entreprenly**, con el propósito de facilitar su ubicación, revisión y trazabilidad. Los anexos corresponden únicamente al alcance desarrollado en esta entrega del curso Aplicaciones para Dispositivos Móviles.
+En esta sección se reúnen los enlaces y artefactos complementarios del AV1 y de la preparación del TB1 de **Entreprenly**, con el propósito de facilitar su ubicación, revisión y trazabilidad en el curso Aplicaciones para Dispositivos Móviles. Los anexos conservan las referencias del AV1 e incorporan los proyectos y artefactos utilizados en el Sprint 1.
 
 ## Anexo A — Repositorio del Project Report
 
@@ -45,3 +45,27 @@ Principales diagramas utilizados para representar la identificación, interacci�
 - [Big Picture EventStorming](images/capitulo2/paso4.svg).
 - [Unión de Bounded Contexts](images/capitulo2/Entreprenly%20Open%20Source%20-%20BC%20union.jpg).
 - [Software Architecture Context Level Diagram](images/capitulo2/structurizr-104049-EntreprenlySystemContext.png).
+
+## Anexo G — Diseño móvil en Figma
+
+Archivo compartido del producto: [Entreprenly — página Mobile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1820-2380).
+
+La página Mobile reúne la referencia inicial del equipo y los diseños por contexto. Para Profile se incluyen las HUs US-62 a US-69; la selección del Sprint 1 comprende US-62, US-63, US-67 y US-68.
+
+- [Mock-ups de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1851-2423).
+- [Wireframes de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1851-2424).
+- [Wireflow Diagrams de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-9972).
+- [User Flow Diagrams de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-9974).
+- [Prototipo de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-6042).
+
+## Anexo H — Repositorios de implementación
+
+- [Aplicación Android: adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend).
+- [Backend: adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend).
+- [Landing Page: adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing).
+
+Estos repositorios constituyen la referencia de código del curso actual. La aplicación utiliza Kotlin y Jetpack Compose; la landing y el backend se adaptan de los proyectos existentes. La documentación del backend registra [Render como URL del servicio](https://adm-entreprenly-backend.onrender.com) y [Swagger UI como referencia de sus contratos](https://adm-entreprenly-backend.onrender.com/swagger-ui.html).
+
+## Anexo I — Referencia del proyecto anterior
+
+Informe utilizado como antecedente de marca, diseño y estructura documental: [daop-entreprenly](https://github.com/Kauflink/daop-entreprenly). Sus fechas, integrantes y resultados de sprints corresponden al curso anterior; la planificación y las responsabilidades actuales se documentan en el capítulo IV del presente informe.

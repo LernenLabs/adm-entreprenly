@@ -81,6 +81,8 @@ local function table_widths(table)
 
   if heading:match('criterio') and heading:match('acciones realizadas') then
     return { 0.20, 0.55, 0.25 }
+  elseif count == 8 and heading:match('work%-item') and heading:match('assigned to') then
+    return { 0.07, 0.17, 0.07, 0.16, 0.21, 0.12, 0.12, 0.08 }
   elseif heading:match('user story id') and heading:match('story points') then
     return { 0.14, 0.16, 0.31, 0.24, 0.15 }
   elseif heading:match('tarea') and heading:match('frecuencia') and heading:match('importancia') then
