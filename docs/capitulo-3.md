@@ -116,6 +116,21 @@ Los controles táctiles de Android disponen de un área de interacción mínima 
 
 En Profile, las solicitudes de cámara, galería y notificaciones explican su finalidad en el momento de uso. Cuando se deniega un permiso, se conserva la información anterior y se ofrece una alternativa o acceso a Ajustes. Los mensajes de validación indican cómo corregir el dato y evitan exponer información sensible.
 
+**Tono de comunicación y lenguaje**
+
+El tono de Entreprenly se define con las cuatro dimensiones de voz de marca. Su objetivo es que el comerciante entienda cada mensaje a la primera, incluso mientras atiende su negocio.
+
+| Dimensión | Posición de Entreprenly | Aplicación |
+| :---: | :---: | :---: |
+| Divertido / Serio | Más serio que divertido | Los mensajes tratan dinero, stock y pagos; se evitan bromas que resten claridad a una venta o a un rechazo de pago |
+| Formal / Casual | Equilibrado, cercano al casual | Se usa un lenguaje cotidiano y directo («Registra tu venta», «Tu pedido fue aprobado»), sin tecnicismos |
+| Respetuoso / Irreverente | Respetuoso | Los errores explican qué ocurrió y cómo continuar, sin culpar al usuario |
+| Entusiasta / Sereno | Sereno, con entusiasmo moderado | Las confirmaciones reconocen el logro de forma breve; las alertas informan sin alarmar |
+
+**Design System de referencia**
+
+Los componentes se basan en **Material Design 3**, el sistema de diseño de Google adoptado por Jetpack Compose. El equipo adapta sus tokens de color, tipografía y forma a la identidad de Entreprenly: el naranja de marca reemplaza el color primario por defecto y Reddit Sans sustituye la tipografía base. Se conservan los principios de jerarquía, consistencia, retroalimentación inmediata y accesibilidad que orientan las decisiones de esta sección.
+
 **Temas y aplicación de los lineamientos**
 
 Los temas claro y oscuro mantienen la misma jerarquía y significado de las acciones. Sus superficies, textos y bordes se definen por función, evitando invertir colores de forma automática. El cambio de tema y de idioma conserva el estado de la tarea y la preferencia del comerciante, de acuerdo con US-67.

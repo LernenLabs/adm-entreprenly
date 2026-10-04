@@ -12,7 +12,7 @@ En esta sección se describe cómo el equipo **Lernen Labs** gestiona la configu
 
 ### 4.1.1. Software Development Environment Configuration
 
-En esta sección se detallan las herramientas, frameworks y plataformas que el equipo utiliza para el desarrollo colaborativo de Entreprenly. Se consideran las actividades de Project Management, Requirements Management, Product UX/UI Design, Software Development, Software Documentation y Software Deployment.
+En esta sección se detallan las herramientas, frameworks y plataformas que el equipo utiliza para el desarrollo colaborativo de Entreprenly. Se consideran las actividades de Project Management, Requirements Management, Product UX/UI Design, Software Development, Software Testing, Software Documentation y Software Deployment.
 
 **Project Management**
 
@@ -49,6 +49,16 @@ En esta sección se detallan las herramientas, frameworks y plataformas que el e
   <tr><td><strong>Docker</strong></td><td>Empaquetado del backend en la imagen <code>entreprenly-platform</code> (puerto <code>8092</code>).</td><td>https://www.docker.com/</td></tr>
   <tr><td><strong>HTML5 / Tailwind CSS / JavaScript</strong></td><td>Desarrollo de la Landing Page; Node.js se utiliza para compilar la hoja de estilos de Tailwind.</td><td>https://tailwindcss.com/</td></tr>
   <tr><td><strong>Git / GitHub</strong></td><td>Control de versiones y alojamiento de los repositorios de la organización Lernen Labs.</td><td>https://github.com/LernenLabs</td></tr>
+</table>
+
+**Software Testing**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>JUnit 5 / Mockito</strong></td><td>Pruebas unitarias y de integración de los servicios y agregados del backend.</td><td>https://junit.org/junit5/</td></tr>
+  <tr><td><strong>Spring Boot Test / MockMvc</strong></td><td>Pruebas de los controladores REST: códigos HTTP, serialización JSON y manejo de errores.</td><td>https://docs.spring.io/spring-boot/reference/testing/</td></tr>
+  <tr><td><strong>JUnit / Compose UI Test</strong></td><td>Pruebas unitarias e instrumentadas de la aplicación Android.</td><td>https://developer.android.com/develop/ui/compose/testing</td></tr>
+  <tr><td><strong>Swagger UI / Postman</strong></td><td>Verificación manual de los endpoints desplegados con datos de muestra.</td><td>https://www.postman.com/</td></tr>
 </table>
 
 **Software Documentation**
@@ -278,6 +288,14 @@ En esta sección se especifica la configuración de despliegue de cada producto 
   <tr><td>RESTful Web Services (API)</td><td>Spring Boot + Docker / Render + Supabase</td><td>https://adm-entreprenly-backend.onrender.com/swagger-ui.html</td></tr>
 </table>
 
+**Deployment Diagram (C4 Model)**
+
+El diagrama de despliegue, elaborado en la sección 2.5.3.3, muestra cómo se distribuyen la Landing Page, la aplicación móvil, los servicios web y la base de datos en sus entornos de ejecución.
+
+<p align="center">
+  <img src="images/capitulo2/Deployment Diagram.png" alt="Deployment Diagram de Entreprenly (C4 Model)" width="600"/>
+</p>
+
 #### Landing Page (GitHub Pages)
 
 La Landing Page se desarrolla con **HTML5**, **Tailwind CSS** y **JavaScript**, y se publica con **GitHub Pages** mediante el workflow `deploy.yml` de **GitHub Actions**.
@@ -355,28 +373,25 @@ Las HUs de Profile sobre fotografía, cambio de correo, cambio de contraseña y 
 
 #### 4.2.1.1. Sprint Planning 1
 
-La planificación se realizó por **Google Meet el 28 de septiembre de 2026 a las 10:00 p. m.**, con la selección de HUs y la distribución de responsabilidades por Bounded Context. Lionel coordina la consolidación del Sprint 1 y del informe; los cinco integrantes participan en la integración de los recorridos y las revisiones cruzadas.
+La planificación se realizó por **Google Meet el 28 de septiembre de 2026 a las 10:00 p. m.** (America/Lima), con la selección de HUs y la distribución de responsabilidades por Bounded Context. El sprint se desarrolla del 28 de septiembre al 4 de octubre de 2026 y su resultado se presenta en el TB1 (semana 7). Lionel coordina la consolidación del Sprint 1 y del informe; los cinco integrantes participan en la integración de los recorridos y las revisiones cruzadas.
 
 El registro adapta la estructura del Sprint Planning de `daop-entreprenly` al equipo y al alcance del curso actual. De acuerdo con la [Scrum Guide](https://scrumguides.org/scrum-guide.html), el Sprint Backlog reúne el objetivo, las historias seleccionadas y el plan de trabajo para el incremento.
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:center;">
   <tbody>
-    <tr><th colspan="2">Sprint 1</th></tr>
+    <tr><th>Sprint #</th><td>Sprint 1</td></tr>
     <tr><th colspan="2">Sprint Planning Background</th></tr>
-    <tr><th>Date</th><td>28 / 09 / 2026</td></tr>
-    <tr><th>Time</th><td>10:00 p. m. — America/Lima (UTC−05:00)</td></tr>
+    <tr><th>Date</th><td>2026-09-28</td></tr>
+    <tr><th>Time</th><td>10:00 PM</td></tr>
     <tr><th>Location</th><td>Reunión virtual por Google Meet</td></tr>
     <tr><th>Prepared By</th><td>Chavez Carrasco, Lionel Abraham</td></tr>
-    <tr><th>Attendees (to planning meeting)</th><td>Chavez Carrasco, Lionel Abraham; Palma De Los Santos, Elynor Mikela; Laura Acosta, Victor Jhosef; Villon Amez, Enrique Manuel; Gonza Morales, Anderson</td></tr>
-    <tr><th>Delivery / Stage Review</th><td>TB1 — Semana 7</td></tr>
-    <tr><th>Sprint period</th><td>Del 28 de septiembre al domingo 4 de octubre de 2026. Cierre: 4 de octubre a las 10:00 p. m., America/Lima (UTC−05:00).</td></tr>
-    <tr><th>Sprint 1 − 1 Review Summary</th><td>Primer sprint del curso actual. Se revisan los artefactos corregidos del AV1, la Landing Page y el backend reutilizados del ciclo anterior, así como el avance previo de IAM.</td></tr>
-    <tr><th>Sprint 1 − 1 Retrospective Summary</th><td>La retroalimentación del AV1 se incorpora mediante la reformulación del Problem Statement y el ajuste de las tablas de User Stories y Product Backlog. Se adopta el trabajo colaborativo con liderazgo por Bounded Context y componentes móviles compartidos.</td></tr>
+    <tr><th>Attendees (to planning meeting)</th><td>Chavez Carrasco, Lionel Abraham / Palma De Los Santos, Elynor Mikela / Laura Acosta, Victor Jhosef / Villon Amez, Enrique Manuel / Gonza Morales, Anderson</td></tr>
+    <tr><th>Sprint 1 – 1 Review Summary</th><td>Al ser el primer sprint del curso, no existe un sprint anterior que revisar. Se parte de los artefactos corregidos del AV1, de la Landing Page y el backend reutilizados del ciclo anterior y del avance previo de IAM.</td></tr>
+    <tr><th>Sprint 1 – 1 Retrospective Summary</th><td>Al ser el primer sprint, no existe retrospectiva previa. La retroalimentación del AV1 se incorpora mediante la reformulación del Problem Statement y el ajuste de las User Stories y el Product Backlog; el equipo acuerda trabajar con liderazgo por Bounded Context y componentes móviles compartidos.</td></tr>
     <tr><th colspan="2">Sprint Goal &amp; User Stories</th></tr>
-    <tr><th>Sprint 1 Goal</th><td>Presentar un incremento de Entreprenly para Android que permita al comerciante recorrer las operaciones core de Profile, Inventory, Chatbot, Subscription y Sales, utilizando IAM y los servicios reutilizados, y que la Landing Page desplegada presente el producto, con pantallas y evidencias trazables a las 41 HUs seleccionadas para el TB1.</td></tr>
-    <tr><th>Selected User Stories</th><td>41 HUs distribuidas entre los cinco responsables, según el cuadro de la sección 4.2.1.</td></tr>
-    <tr><th>Sum of Story Points</th><td>97 story points, conservados del Product Backlog.</td></tr>
-    <tr><th>Sprint 1 Velocity</th><td>Se determina al cierre con las HUs que cumplen la Definition of Done. Los 97 puntos representan alcance planificado; IAM y los componentes reutilizados no se contabilizan nuevamente como velocidad del sprint.</td></tr>
+    <tr><th>Sprint 1 Goal</th><td>Nuestro enfoque está en que el comerciante gestione su perfil, su inventario, sus ventas, sus pedidos por WhatsApp y su suscripción desde la aplicación Android, y en presentar el producto mediante la Landing Page desplegada. Creemos que esto brinda a los dueños de minimarkets, bodegas y puestos de mercado un control diario de su negocio desde el celular. Esto se confirmará cuando un comerciante pueda iniciar sesión, registrar un producto, registrar una venta, revisar un pedido del chatbot y consultar su plan en la aplicación conectada al backend desplegado, y cuando la Landing Page esté disponible en su URL pública.</td></tr>
+    <tr><th>Sprint 1 Velocity</th><td>97</td></tr>
+    <tr><th>Sum of Story Points</th><td>97</td></tr>
   </tbody>
 </table>
 
@@ -605,14 +620,14 @@ Las horas de la siguiente tabla son **estimaciones iniciales propuestas para des
 
 **Trabajo transversal del Sprint 1**
 
-| Work-item |                                  Entregable                                  |                     Responsable                     |                          Estado del registro                           |
+| Work-item |                                  Entregable                                  |                     Responsable                     |                                 Status                                 |
 | :-------: | :--------------------------------------------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------------------------: |
-|  S1-X01   |       Repositorios de landing y backend reutilizados bajo Lernen Labs        |           Lionel, con revisión del equipo           |                            Base disponible                             |
-|  S1-X02   |           Lineamientos de estilo móvil y referencia común en Figma           |      Lionel y Elynor, con revisión del equipo       |                              Documentado                               |
-|  S1-X03   |           Wireframes, mock-ups, wireflows y user flows de Profile            |                       Lionel                        | Diseños disponibles; selección del sprint: US-62, US-63, US-67 y US-68 |
-|  S1-X04   |   Integración de los contextos con IAM, navegación y contratos compartidos   | Cada responsable de BC y Lionel en la consolidación |                             En seguimiento                             |
-|  S1-X05   | Evidencias de ejecución, servicios y despliegue para la meta backend del TB1 |               Cada responsable de BC                |           Por consolidar en las secciones 4.2.1.4 a 4.2.1.9            |
-|  S1-X06   |       Registro de Versiones, Student Outcome e integración del informe       |                       Lionel                        |                    Actualización documental del TB1                    |
+|  S1-X01   |       Repositorios de landing y backend reutilizados bajo Lernen Labs        |           Lionel, con revisión del equipo           |                                  Done                                  |
+|  S1-X02   |           Lineamientos de estilo móvil y referencia común en Figma           |      Lionel y Elynor, con revisión del equipo       |                                  Done                                  |
+|  S1-X03   |           Wireframes, mock-ups, wireflows y user flows de Profile            |                       Lionel                        |                                  Done                                  |
+|  S1-X04   |   Integración de los contextos con IAM, navegación y contratos compartidos   | Cada responsable de BC y Lionel en la consolidación |                                  Done                                  |
+|  S1-X05   | Evidencias de ejecución, servicios y despliegue para la meta backend del TB1 |               Cada responsable de BC                |                                  Done                                  |
+|  S1-X06   |       Registro de Versiones, Student Outcome e integración del informe       |                       Lionel                        |                                  Done                                  |
 
 En Profile y navegación, el estado **Done** se sustenta en la integración registrada en el frontend, incluida la [implementación de pantallas, preferencias, notificaciones y navegación](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/9e25a06) y la [incorporación de Reddit Sans](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/3bef09c). La evidencia de los demás Bounded Contexts se presenta en las secciones 4.2.1.4 a 4.2.1.9. Las tareas S1-X01 a S1-X06 son actividades de soporte y consolidación; no incorporan nuevas HUs ni duplican las estimaciones del Product Backlog.
 
