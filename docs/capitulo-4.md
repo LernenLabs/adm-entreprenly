@@ -36,21 +36,21 @@ La gestión del código fuente es una parte importante del proceso de desarrollo
 
 <br>
 
-**URL de los Repositorios**: 
+**URL de los Repositorios**:
 
-* Organización: https://github.com/LernenLabs
-* Reporte: https://github.com/LernenLabs/adm-entreprenly
-* Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
-* Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
-* Backend: https://github.com/LernenLabs/adm-entreprenly-backend
+- Organización: https://github.com/LernenLabs
+- Reporte: https://github.com/LernenLabs/adm-entreprenly
+- Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
+- Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
+- Backend: https://github.com/LernenLabs/adm-entreprenly-backend
 
-**Estructura de Ramas**: 
+**Estructura de Ramas**:
 
 Para mantener un flujo organizado en el desarrollo, se ha implementado el modelo GitFlow a través de las siguientes ramas:
 
-* main: Rama principal (main) que contiene las versiones estables del proyecto. Todas las demás ramas derivan de esta.
-* develop: Rama de desarrollo (develop) que contiene las características en desarrollo y se fusiona con la Main Branch al final de cada sprint.
-* feat/nombre-de-la-funcionalidad: Ramas de características (feature) que se crean para desarrollar nuevas funcionalidades y se fusionan con la Develop Branch al finalizar.
+- main: Rama principal (main) que contiene las versiones estables del proyecto. Todas las demás ramas derivan de esta.
+- develop: Rama de desarrollo (develop) que contiene las características en desarrollo y se fusiona con la Main Branch al final de cada sprint.
+- feat/nombre-de-la-funcionalidad: Ramas de características (feature) que se crean para desarrollar nuevas funcionalidades y se fusionan con la Develop Branch al finalizar.
 
 **Estándar de Mensajes de Commit**
 
@@ -200,11 +200,11 @@ Despliegue del backend con Docker por perfiles `default/cloud/prod`.
 
 La implementación se organiza en tres proyectos de Lernen Labs. La Landing Page presenta Entreprenly y sus planes; la aplicación Android permite al comerciante operar desde su dispositivo; y el backend expone los servicios REST de IAM, Profile, Inventory, Sales, Chatbot y Subscription.
 
-| Proyecto | Repositorio | Base de implementación |
-| :---: | :---: | :---: |
-| Landing Page | [adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing) | HTML, JavaScript y Tailwind CSS; reutilización de la landing existente y revisión del contenido y los accesos al producto móvil |
-| Aplicación Android | [adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend) | Kotlin y Jetpack Compose; navegación y organización por Bounded Context |
-| Backend | [adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend) | Java y Spring Boot; servicios REST, JWT y persistencia PostgreSQL |
+|      Proyecto      |                                    Repositorio                                     |                                                     Base de implementación                                                      |
+| :----------------: | :--------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
+|    Landing Page    |  [adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing)  | HTML, JavaScript y Tailwind CSS; reutilización de la landing existente y revisión del contenido y los accesos al producto móvil |
+| Aplicación Android | [adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend) |                             Kotlin y Jetpack Compose; navegación y organización por Bounded Context                             |
+|      Backend       |  [adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend)  |                                Java y Spring Boot; servicios REST, JWT y persistencia PostgreSQL                                |
 
 El backend se adapta a partir de `daop-entreprenly-web-services` y la landing a partir de `landing-entreprenly`. El frontend móvil se desarrolla como aplicación nativa, tomando las interfaces de la página **Mobile** de Figma como referencia de interacción y estilo. Los repositorios actuales conservan su propia trazabilidad de cambios y colaboración.
 
@@ -220,14 +220,14 @@ IAM se considera un avance previo disponible para la integración. El backend fo
 
 El objetivo del sprint es que el comerciante acceda con su cuenta y utilice los recorridos core de la aplicación Android para consultar y actualizar su perfil, gestionar productos y lotes, atender conversaciones y pagos, administrar su suscripción y registrar ventas. La revisión del TB1 incluye la continuidad entre estas pantallas y los servicios desplegados que las soportan.
 
-| Responsable | Aspecto principal | HUs seleccionadas | Story points |
-| :---: | :---: | :---: | :---: |
-| Chavez Carrasco, Lionel Abraham | Landing Page, Profile y navegación compartida | US-53, US-84, US-85, US-86, US-87, US-88, US-89, US-94, US-62, US-63, US-67, US-68, US-81, US-75 | 26 |
-| Laura Acosta, Victor Jhosef | Inventory | US-01, US-05, US-07, US-08, US-03, US-06, US-11, US-13 | 20 |
-| Palma De Los Santos, Elynor Mikela | Chatbot | US-37, US-38, US-39, US-40, US-46 | 16 |
-| Villon Amez, Enrique Manuel | Subscription | US-15, US-16, US-17, US-18, US-20, US-21, US-22 | 18 |
-| Gonza Morales, Anderson | Sales | US-28, US-29, US-31, US-32, US-33, US-36, US-97 | 17 |
-| **Total** | **Seis aspectos de trabajo** | **41 User Stories** | **97** |
+|            Responsable             |               Aspecto principal               |                                        HUs seleccionadas                                         | Story points |
+| :--------------------------------: | :-------------------------------------------: | :----------------------------------------------------------------------------------------------: | :----------: |
+|  Chavez Carrasco, Lionel Abraham   | Landing Page, Profile y navegación compartida | US-53, US-84, US-85, US-86, US-87, US-88, US-89, US-94, US-62, US-63, US-67, US-68, US-81, US-75 |      26      |
+|    Laura Acosta, Victor Jhosef     |                   Inventory                   |                      US-01, US-05, US-07, US-08, US-03, US-06, US-11, US-13                      |      20      |
+| Palma De Los Santos, Elynor Mikela |                    Chatbot                    |                                US-37, US-38, US-39, US-40, US-46                                 |      16      |
+|    Villon Amez, Enrique Manuel     |                 Subscription                  |                         US-15, US-16, US-17, US-18, US-20, US-21, US-22                          |      18      |
+|      Gonza Morales, Anderson       |                     Sales                     |                         US-28, US-29, US-31, US-32, US-33, US-36, US-97                          |      17      |
+|             **Total**              |         **Seis aspectos de trabajo**          |                                       **41 User Stories**                                        |    **97**    |
 
 Las HUs de Profile sobre fotografía, cambio de correo, cambio de contraseña y verificación del teléfono (US-64, US-65, US-66 y US-69) mantienen sus diseños como insumo para siguientes iteraciones. No forman parte de la selección del Sprint 1.
 
@@ -279,13 +279,13 @@ Una pantalla diseñada, un componente reutilizado o una HU con código disponibl
 
 El equipo mantiene un responsable principal por Bounded Context y la colaboración de los demás integrantes. **L** identifica el liderazgo sobre el aspecto y **C**, la colaboración en dependencias, componentes comunes y revisión. El liderazgo por contexto organiza el trabajo y la integración permite presentar un solo incremento del producto.
 
-| Team Member (Last Name, First Name) | GitHub Username | Aspect Leader (L) | Collaboration (C) |
-| :---: | :---: | :---: | :---: |
-| Chavez Carrasco, Lionel Abraham | LioTG | Profile, US-75 y US-81; coordinación del Sprint 1, Style Guidelines, Registro de Versiones, Student Outcome e integración del informe | Sesión de IAM, navegación y revisión cruzada de los contextos |
-| Palma De Los Santos, Elynor Mikela | elynorpalma | Chatbot y referencia inicial del diseño móvil en Figma | Coherencia del diseño compartido y coordinación de conversaciones y pedidos con Inventory y Sales |
-| Laura Acosta, Victor Jhosef | Zatrynox | Inventory | Disponibilidad de productos y lotes para Sales y Chatbot; coherencia de alertas y datos de inventario |
-| Villon Amez, Enrique Manuel | enriquevillon25 | Subscription | Estado del plan y coordinación con Profile y los servicios de cobro |
-| Gonza Morales, Anderson | Ander-U | Sales | Disponibilidad de inventario, preferencias de presentación y continuidad con pedidos y pagos |
+| Team Member (Last Name, First Name) | GitHub Username |                                                           Aspect Leader (L)                                                           |                                           Collaboration (C)                                           |
+| :---------------------------------: | :-------------: | :-----------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+|   Chavez Carrasco, Lionel Abraham   |      LioTG      | Profile, US-75 y US-81; coordinación del Sprint 1, Style Guidelines, Registro de Versiones, Student Outcome e integración del informe |                     Sesión de IAM, navegación y revisión cruzada de los contextos                     |
+| Palma De Los Santos, Elynor Mikela  |   elynorpalma   |                                        Chatbot y referencia inicial del diseño móvil en Figma                                         |   Coherencia del diseño compartido y coordinación de conversaciones y pedidos con Inventory y Sales   |
+|     Laura Acosta, Victor Jhosef     |    Zatrynox     |                                                               Inventory                                                               | Disponibilidad de productos y lotes para Sales y Chatbot; coherencia de alertas y datos de inventario |
+|     Villon Amez, Enrique Manuel     | enriquevillon25 |                                                             Subscription                                                              |                  Estado del plan y coordinación con Profile y los servicios de cobro                  |
+|       Gonza Morales, Anderson       |     Ander-U     |                                                                 Sales                                                                 |     Disponibilidad de inventario, preferencias de presentación y continuidad con pedidos y pagos      |
 
 Las tareas transversales de diseño, integración y revisión requieren participación de los cinco integrantes. Cada responsable mantiene la trazabilidad entre las HUs asignadas, sus pantallas, las operaciones de los servicios y las evidencias que aporta al Sprint Review. Lionel consolida los avances y revisa la consistencia del informe.
 
@@ -458,30 +458,29 @@ Las horas de la siguiente tabla son **estimaciones iniciales propuestas para des
 
 **Distribución de Work-items por responsable**
 
-| Responsable | Bounded Context / aspecto | HUs | Work-items | Horas propuestas |
-| :---: | :---: | :---: | :---: | :---: |
-| Lionel Chavez | Landing Page, Profile y navegación | 14 | 44 | 57 |
-| Victor Laura | Inventory | 8 | 24 | 40 |
-| Elynor Palma | Chatbot | 5 | 17 | 30 |
-| Enrique Villon | Subscription | 7 | 21 | 35 |
-| Anderson Gonza | Sales | 7 | 21 | 34 |
-| **Total** | **Seis aspectos** | **41** | **127** | **196** |
+|  Responsable   |     Bounded Context / aspecto      |  HUs   | Work-items | Horas propuestas |
+| :------------: | :--------------------------------: | :----: | :--------: | :--------------: |
+| Lionel Chavez  | Landing Page, Profile y navegación |   14   |     44     |        57        |
+|  Victor Laura  |             Inventory              |   8    |     24     |        40        |
+|  Elynor Palma  |              Chatbot               |   5    |     17     |        30        |
+| Enrique Villon |            Subscription            |   7    |     21     |        35        |
+| Anderson Gonza |               Sales                |   7    |     21     |        34        |
+|   **Total**    |         **Seis aspectos**          | **41** |  **127**   |     **196**      |
 
 **Trabajo transversal del Sprint 1**
 
-| Work-item | Entregable | Responsable | Estado del registro |
-| :---: | :---: | :---: | :---: |
-| S1-X01 | Repositorios de landing y backend reutilizados bajo Lernen Labs | Lionel, con revisión del equipo | Base disponible |
-| S1-X02 | Lineamientos de estilo móvil y referencia común en Figma | Lionel y Elynor, con revisión del equipo | Documentado |
-| S1-X03 | Wireframes, mock-ups, wireflows y user flows de Profile | Lionel | Diseños disponibles; selección del sprint: US-62, US-63, US-67 y US-68 |
-| S1-X04 | Integración de los contextos con IAM, navegación y contratos compartidos | Cada responsable de BC y Lionel en la consolidación | En seguimiento |
-| S1-X05 | Evidencias de ejecución, servicios y despliegue para la meta backend del TB1 | Cada responsable de BC | Por consolidar en las secciones 4.2.1.4 a 4.2.1.9 |
-| S1-X06 | Registro de Versiones, Student Outcome e integración del informe | Lionel | Actualización documental del TB1 |
+| Work-item |                                  Entregable                                  |                     Responsable                     |                          Estado del registro                           |
+| :-------: | :--------------------------------------------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------------------------: |
+|  S1-X01   |       Repositorios de landing y backend reutilizados bajo Lernen Labs        |           Lionel, con revisión del equipo           |                            Base disponible                             |
+|  S1-X02   |           Lineamientos de estilo móvil y referencia común en Figma           |      Lionel y Elynor, con revisión del equipo       |                              Documentado                               |
+|  S1-X03   |           Wireframes, mock-ups, wireflows y user flows de Profile            |                       Lionel                        | Diseños disponibles; selección del sprint: US-62, US-63, US-67 y US-68 |
+|  S1-X04   |   Integración de los contextos con IAM, navegación y contratos compartidos   | Cada responsable de BC y Lionel en la consolidación |                             En seguimiento                             |
+|  S1-X05   | Evidencias de ejecución, servicios y despliegue para la meta backend del TB1 |               Cada responsable de BC                |           Por consolidar en las secciones 4.2.1.4 a 4.2.1.9            |
+|  S1-X06   |       Registro de Versiones, Student Outcome e integración del informe       |                       Lionel                        |                    Actualización documental del TB1                    |
 
 En Profile y navegación, el estado **Done** se sustenta en la integración registrada en el frontend, incluida la [implementación de pantallas, preferencias, notificaciones y navegación](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/9e25a06) y la [incorporación de Reddit Sans](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/3bef09c). La evidencia de los demás Bounded Contexts se presenta en las secciones 4.2.1.4 a 4.2.1.9. Las tareas S1-X01 a S1-X06 son actividades de soporte y consolidación; no incorporan nuevas HUs ni duplican las estimaciones del Product Backlog.
 
 **Trazabilidad de Profile:** los diseños se consultan en el [archivo de Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1) (ver Anexo G), donde los wireflows y los user flows se encuentran separados por HU. La implementación de US-67 se revisa con cada preferencia y US-68 con la configuración de avisos y el permiso del sistema.
-
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
@@ -554,7 +553,7 @@ Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
 
 - **Backend (Spring Boot & Java):**
   - **JUnit 5 (Jupiter):** Framework principal para la definición, estructuración y ejecución del ciclo de vida de las pruebas unitarias y de integración.
-  - **Mockito:** Librería para la creación de objetos simulados (*mocks* y *spies*), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
+  - **Mockito:** Librería para la creación de objetos simulados (_mocks_ y _spies_), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
   - **Spring Boot Test & MockMvc:** Utilizados para pruebas de integración sobre los controladores REST de los Bounded Contexts, verificando códigos de estado HTTP, serialización JSON y manejo global de excepciones.
   - **AssertJ:** Librería de aserciones fluidas para mejorar la legibilidad y expresividad de las comprobaciones de estado y comportamiento.
 
@@ -653,8 +652,6 @@ Durante el Sprint 1, el equipo de **Lernen Labs** coordinó el desarrollo de Ent
 
 A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
 
-
-
 ## 4.3. Validation Interviews
 
 Las entrevistas de validación recogen la experiencia de los dos segmentos objetivo: los comerciantes durante la gestión del negocio desde la aplicación móvil y los clientes finales durante la compra por WhatsApp. Su propósito es identificar dificultades de comprensión, navegación y ejecución de tareas, y relacionar los hallazgos con las necesidades identificadas en el capítulo II. Las preguntas se presentan por segmento en la sección 4.3.1; las respuestas y evidencias se registran en la sección 4.3.2 y sustentan la evaluación de la sección 4.3.3.
@@ -707,7 +704,6 @@ Las entrevistas de validación recogen la experiencia de los dos segmentos objet
 
 ### 4.3.2. Registro de Entrevistas
 
-
 A continuación se registran las entrevistas de validación realizadas por segmento. Para cada entrevista se indica el nombre del participante, su edad, su distrito, una captura del video, el enlace a la grabación (con el minuto donde empieza la entrevista y su duración) y un resumen de sus principales comentarios sobre las tareas realizadas. Se realizaron dos entrevistas al Segmento 1 (comerciantes) y una al Segmento 2 (clientes finales).
 
 **Segmento 1: Comerciantes**
@@ -718,7 +714,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
   <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">Entrevista de Validación – App Móvil</div>
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo4/val_movil_comerciante_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo4/validation1-segment1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Hercilio Carrasco Herrera</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 59</td></tr>
@@ -726,15 +722,13 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 00:24</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 09:41</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBP-W_XUfEoRYZCVwRaLNJCATXks06Sh8_yPnRqqPLV7lI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iSmzhu">Ver grabación</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBP-W_XUfEoRYZCVwRaLNJCATXks06Sh8_yPnRqqPLV7lI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iSmzhu">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN: cómo le fue en cada una de las 5 tareas, dónde se trabó, qué le gustó, qué sugirió y su puntaje del 1 al 5 de probabilidad de uso.]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">Hercilio recorrió la aplicación sin mayores dificultades y reconoció rápidamente las secciones de Inicio, Inventario, Ventas y Pedidos. Registró un producto por unidad y otro por peso; en este último dudó un momento sobre la unidad de medida, pero lo completó sin ayuda. Lo que más valoró fueron las alertas de lotes sin stock o próximos a vencer, porque hoy revisa esas fechas a mano y a veces se le pasan. También le gustó el chatbot de WhatsApp, ya que sus clientes podrían hacer pedidos sin que él tenga que responder cada mensaje. Al registrar una venta comprobó el total y el medio de pago en el resumen final. Sugirió que los botones y textos sean un poco más grandes para leerlos con facilidad. Calificó con 5 de 5 la probabilidad de usar la aplicación en su negocio.</td></tr>
   </table>
 </div>
 </div>
-
-
 
 - Segunda entrevista:
 
@@ -742,7 +736,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
   <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">Entrevista de Validación – App Móvil</div>
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo4/val_movil_comerciante_2.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo4/validation2-segment1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> María Encarnación Velasquez</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 62</td></tr>
@@ -753,11 +747,10 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBDnN2F2sR4Q45gqWIVxSh_AV_5Vca7N9NzFYjrPBQJ32o?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=V9OAOc">Ver grabación</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">María exploró la aplicación con interés y comentó que la navegación entre secciones le pareció ordenada y fácil de seguir. Registró productos y realizó una venta sin problemas, y destacó que el resumen le permite revisar las cantidades y el total antes de confirmar. Le gustaron especialmente las alertas de stock y vencimiento, así como el chatbot de WhatsApp para recibir pedidos y comprobantes de pago en un solo lugar. En la revisión de pedidos entendió cómo aprobar o rechazar un comprobante, aunque pidió que la imagen del comprobante se vea más grande. Como sugerencia principal, mencionó que sería útil emitir facturas además de boletas, ya que algunos de sus clientes son negocios que se las solicitan. Calificó con 5 de 5 la probabilidad de usar la aplicación en su negocio.</td></tr>
   </table>
 </div>
 </div>
-
 
 **Segmento 2: Clientes finales**
 
@@ -783,7 +776,6 @@ A continuación se registran las entrevistas de validación realizadas por segme
 </div>
 </div>
 
-
 - Segunda entrevista:
 
 <div align="center">
@@ -808,37 +800,37 @@ A continuación se registran las entrevistas de validación realizadas por segme
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-
 En esta sección el equipo evalúa las pantallas de la aplicación móvil de Entreprenly en tres grupos: heurísticas de usabilidad de Nielsen, arquitectura de información e inclusive design. Cada criterio tiene un puntaje del 1 al 5, la evidencia observada (referenciada por figura) y una mejora sugerida.
 
 #### Catálogo de figuras
 
-| Fig. | Pantalla | Archivo |
-|---|---|---|
-| Fig. 1 | Inicio (Dashboard) | `Fig-01-panel-de-inicio.png` |
-| Fig. 2 | Lista de productos | `Fig-02-lista-de-productos.png` |
-| Fig. 3 | Agregar producto con errores de validación | `Fig-03-agregar-producto-errores.png` |
-| Fig. 4 | Lotes con aviso de vencimiento | `Fig-04-lotes-con-alerta.png` |
-| Fig. 5 | Selector de fecha de vencimiento | `Fig-05-selector-de-fecha.png` |
-| Fig. 6 | Detalle de lote con alerta | `Fig-06-detalle-de-lote-alerta.png` |
-| Fig. 7 | Venta con peso ingresado a mano | `Fig-07-venta-peso-manual.png` |
-| Fig. 8 | Venta con stock insuficiente | `Fig-08-venta-stock-insuficiente.png` |
-| Fig. 9 | Método de pago | `Fig-09-metodo-de-pago.png` |
-| Fig. 10 | Venta registrada | `Fig-10-venta-registrada.png` |
-| Fig. 11 | Detalle de pedido del chatbot | `Fig-11-detalle-de-pedido.png` |
-| Fig. 12 | Rechazar pago con motivo | `Fig-12-rechazar-pago.png` |
-| Fig. 13 | Pedido bloqueado | `Fig-13-pedido-bloqueado.png` |
-| Fig. 14 | Planes sin selección | `Fig-14-planes-sin-seleccion.png` |
-| Fig. 15 | Cobro de suscripción rechazado | `Fig-15-cobro-rechazado.png` |
-| Fig. 16 | Centro de ayuda | `Fig-16-centro-de-ayuda.png` |
-| Fig. 17 | Artículo de ayuda | `Fig-17-articulo-de-ayuda.png` |
-| Fig. 18 | Configuración de notificaciones | `Fig-18-notificaciones.png` |
-| Fig. 19 | Inventario sin conexión | `Fig-19-inventario-sin-conexion.png` |
-| Fig. 20 | Vincular WhatsApp con código | `Fig-20-vincular-whatsapp.png` |
-| Fig. 21 | Confirmar eliminación de producto | `Fig-21-confirmar-eliminacion.png` |
-| Fig. 22 | Preferencias | `Fig-22-preferencias.png` |
+| Fig.    | Pantalla                                   | Archivo                               |
+| ------- | ------------------------------------------ | ------------------------------------- |
+| Fig. 1  | Inicio (Dashboard)                         | `Fig-01-panel-de-inicio.png`          |
+| Fig. 2  | Lista de productos                         | `Fig-02-lista-de-productos.png`       |
+| Fig. 3  | Agregar producto con errores de validación | `Fig-03-agregar-producto-errores.png` |
+| Fig. 4  | Lotes con aviso de vencimiento             | `Fig-04-lotes-con-alerta.png`         |
+| Fig. 5  | Selector de fecha de vencimiento           | `Fig-05-selector-de-fecha.png`        |
+| Fig. 6  | Detalle de lote con alerta                 | `Fig-06-detalle-de-lote-alerta.png`   |
+| Fig. 7  | Venta con peso ingresado a mano            | `Fig-07-venta-peso-manual.png`        |
+| Fig. 8  | Venta con stock insuficiente               | `Fig-08-venta-stock-insuficiente.png` |
+| Fig. 9  | Método de pago                             | `Fig-09-metodo-de-pago.png`           |
+| Fig. 10 | Venta registrada                           | `Fig-10-venta-registrada.png`         |
+| Fig. 11 | Detalle de pedido del chatbot              | `Fig-11-detalle-de-pedido.png`        |
+| Fig. 12 | Rechazar pago con motivo                   | `Fig-12-rechazar-pago.png`            |
+| Fig. 13 | Pedido bloqueado                           | `Fig-13-pedido-bloqueado.png`         |
+| Fig. 14 | Planes sin selección                       | `Fig-14-planes-sin-seleccion.png`     |
+| Fig. 15 | Cobro de suscripción rechazado             | `Fig-15-cobro-rechazado.png`          |
+| Fig. 16 | Centro de ayuda                            | `Fig-16-centro-de-ayuda.png`          |
+| Fig. 17 | Artículo de ayuda                          | `Fig-17-articulo-de-ayuda.png`        |
+| Fig. 18 | Configuración de notificaciones            | `Fig-18-notificaciones.png`           |
+| Fig. 19 | Inventario sin conexión                    | `Fig-19-inventario-sin-conexion.png`  |
+| Fig. 20 | Vincular WhatsApp con código               | `Fig-20-vincular-whatsapp.png`        |
+| Fig. 21 | Confirmar eliminación de producto          | `Fig-21-confirmar-eliminacion.png`    |
+| Fig. 22 | Preferencias                               | `Fig-22-preferencias.png`             |
 
 #### 4.3.3.1. Heurísticas de usabilidad
+
 Evaluación basada en las 10 heurísticas de Nielsen.
 
 ##### Visibilidad del estado del sistema — 5/5
@@ -847,13 +839,11 @@ El Inicio, los lotes y los pedidos muestran su estado con etiquetas de color, y 
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-06-detalle-de-lote-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250">
 
-
 **Evidencia:** Fig. 1, Fig. 4, Fig. 6, Fig. 11, Fig. 19.
 
 **Mejora:** Mostrar la hora de la última actualización en el Inicio.
 
 ##### Relación entre el sistema y el mundo real — 5/5
-
 
 Usa palabras del comerciante: "Vender", "Caja", "Boleta", "Yape / Plin", "Vence en 2 días".
 
@@ -869,7 +859,7 @@ Los formularios se pueden cerrar y eliminar un producto pide confirmación, pero
 
 <img src="images/capitulo4/Fig-03-agregar-producto-errores.png" width="250"> <img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="250"> <img src="images/capitulo4/Fig-12-rechazar-pago.png" width="250">
 
-**Evidencia:** Fig. 3, Fig. 21, Fig. 12. 
+**Evidencia:** Fig. 3, Fig. 21, Fig. 12.
 
 **Mejora:** Agregar "Cancelar" al panel de rechazo y "Deshacer" tras eliminar.
 
@@ -879,7 +869,7 @@ Todas las pantallas usan la misma cabecera, barra inferior, botones y colores de
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 4, Fig. 16. 
+**Evidencia:** Fig. 2, Fig. 4, Fig. 16.
 
 **Mejora:** Usar el mismo texto ("Guardar") en los botones de confirmación.
 
@@ -889,7 +879,7 @@ Se bloquea guardar con campos vacíos, elegir fechas pasadas, vender sin stock y
 
 <img src="images/capitulo4/Fig-03-agregar-producto-errores.png" width="250"> <img src="images/capitulo4/Fig-05-selector-de-fecha.png" width="250"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="250"> <img src="images/capitulo4/Fig-14-planes-sin-seleccion.png" width="250">
 
-**Evidencia:** Fig. 3, Fig. 5, Fig. 8, Fig. 14. 
+**Evidencia:** Fig. 3, Fig. 5, Fig. 8, Fig. 14.
 
 **Mejora:** Avisar si la fecha de vencimiento de un lote es muy cercana.
 
@@ -899,7 +889,7 @@ El comerciante elige productos de listas, filtros o QR en vez de recordar nombre
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 7. 
+**Evidencia:** Fig. 2, Fig. 7.
 
 **Mejora:** Mostrar los últimos productos vendidos al abrir el buscador.
 
@@ -909,7 +899,7 @@ Se puede buscar por texto, voz o QR, vincular WhatsApp por código o QR y usar a
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-**Evidencia:** Fig. 1, Fig. 2, Fig. 20. 
+**Evidencia:** Fig. 1, Fig. 2, Fig. 20.
 
 **Mejora:** Permitir aprobar varios pedidos a la vez.
 
@@ -919,7 +909,7 @@ Las pantallas son limpias, pero el detalle del pedido junta demasiada informaci�
 
 <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250">
 
-**Evidencia:** Fig. 10, Fig. 11. 
+**Evidencia:** Fig. 10, Fig. 11.
 
 **Mejora:** Mostrar la trazabilidad del pedido plegada por defecto.
 
@@ -939,7 +929,7 @@ Hay un centro de ayuda con buscador y artículos paso a paso, pero solo se llega
 
 <img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="250">
 
-**Evidencia:** Fig. 16, Fig. 17. 
+**Evidencia:** Fig. 16, Fig. 17.
 
 **Mejora:** Agregar un ícono de ayuda en la vinculación de WhatsApp.
 
@@ -953,7 +943,7 @@ Las cinco secciones están siempre en la barra inferior e Inventario tiene busca
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250">
 
-**Evidencia:** Fig. 1, Fig. 2. 
+**Evidencia:** Fig. 1, Fig. 2.
 
 **Mejora:** Agregar un buscador general en el Inicio.
 
@@ -963,7 +953,7 @@ Botones grandes y estados con texto además de color, aunque algunos textos son 
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-22-preferencias.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 4, Fig. 22. 
+**Evidencia:** Fig. 9, Fig. 4, Fig. 22.
 
 **Mejora:** Agregar una opción para agrandar la letra.
 
@@ -973,7 +963,7 @@ Cada pantalla tiene un título y una acción principal; los montos se ven grande
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 10. 
+**Evidencia:** Fig. 9, Fig. 10.
 
 **Mejora:** Ninguna relevante.
 
@@ -983,7 +973,7 @@ Cada acción muestra un mensaje breve y los avisos usan colores según su import
 
 <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250">
 
-**Evidencia:** Fig. 4, Fig. 19. 
+**Evidencia:** Fig. 4, Fig. 19.
 
 **Mejora:** Agregar una vibración corta al confirmar una venta.
 
@@ -993,7 +983,7 @@ Las tareas frecuentes toman pocos pasos, pero vincular WhatsApp requiere pasos f
 
 <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-**Evidencia:** Fig. 7, Fig. 20. 
+**Evidencia:** Fig. 7, Fig. 20.
 
 **Mejora:** Agregar imágenes de cada paso de la vinculación.
 
@@ -1003,7 +993,7 @@ Muestra boletas numeradas, trazabilidad de pedidos y el detalle del cobro.
 
 <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="250">
 
-**Evidencia:** Fig. 11, Fig. 10, Fig. 15. 
+**Evidencia:** Fig. 11, Fig. 10, Fig. 15.
 
 **Mejora:** Agregar una nota de pago seguro en el paso de la tarjeta.
 
@@ -1013,7 +1003,7 @@ El comerciante confirma las acciones importantes y elige qué notificaciones rec
 
 <img src="images/capitulo4/Fig-18-notificaciones.png" width="250"> <img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="250">
 
-**Evidencia:** Fig. 18, Fig. 21. 
+**Evidencia:** Fig. 18, Fig. 21.
 
 **Mejora:** Agregar "Deshacer" después de eliminar.
 
@@ -1023,7 +1013,7 @@ Permite controlar stock, vencimientos, caja y pedidos de WhatsApp desde el celul
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250">
 
-**Evidencia:** Fig. 1, Fig. 4, Fig. 11. 
+**Evidencia:** Fig. 1, Fig. 4, Fig. 11.
 
 **Mejora:** Mostrar en el Inicio los lotes que vencen esta semana.
 
@@ -1033,7 +1023,7 @@ Las pantallas repiten los mismos patrones y hay artículos de ayuda paso a paso.
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 4, Fig. 17. 
+**Evidencia:** Fig. 2, Fig. 4, Fig. 17.
 
 **Mejora:** Mostrar una guía corta la primera vez que se entra a cada módulo.
 
@@ -1043,7 +1033,7 @@ La interfaz es ordenada y las pantallas de éxito dan sensación de logro.
 
 <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250">
 
-**Evidencia:** Fig. 10, Fig. 1. 
+**Evidencia:** Fig. 10, Fig. 1.
 
 **Mejora:** Agregar pequeñas animaciones al registrar una venta.
 
@@ -1057,7 +1047,7 @@ Se puede buscar por texto, voz o QR, y registrar el peso con balanza o a mano.
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 7. 
+**Evidencia:** Fig. 2, Fig. 7.
 
 **Mejora:** Agregar etiquetas de accesibilidad a los íconos.
 
@@ -1067,7 +1057,7 @@ Se usa con una mano, funciona sin internet y avisa con la app cerrada.
 
 <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia:** Fig. 7, Fig. 19, Fig. 4. 
+**Evidencia:** Fig. 7, Fig. 19, Fig. 4.
 
 **Mejora:** Agregar un modo de alto contraste.
 
@@ -1087,7 +1077,7 @@ El comerciante elige tema, notificaciones y el motivo al rechazar un pago.
 
 <img src="images/capitulo4/Fig-18-notificaciones.png" width="250"> <img src="images/capitulo4/Fig-22-preferencias.png" width="250"> <img src="images/capitulo4/Fig-12-rechazar-pago.png" width="250">
 
-**Evidencia:** Fig. 18, Fig. 22, Fig. 12. 
+**Evidencia:** Fig. 18, Fig. 22, Fig. 12.
 
 **Mejora:** Agregar "Cancelar" al panel de rechazo.
 
@@ -1097,7 +1087,7 @@ Varias formas de cobrar (efectivo, tarjeta, Yape, Plin) y de vincular WhatsApp.
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 20. 
+**Evidencia:** Fig. 9, Fig. 20.
 
 **Mejora:** Permitir mostrar la boleta en pantalla para clientes sin WhatsApp.
 
@@ -1107,7 +1097,7 @@ Lo más importante va primero: el total a cobrar y los lotes por vencer.
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 4. 
+**Evidencia:** Fig. 9, Fig. 4.
 
 **Mejora:** Ninguna relevante.
 
@@ -1117,16 +1107,16 @@ Aprovecha la cámara, el micrófono y las notificaciones del celular.
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 4. 
+**Evidencia:** Fig. 2, Fig. 4.
 
 **Mejora:** Usar la cámara para fotografiar comprobantes en efectivo.
 
 #### Resumen de puntajes
 
-| Grupo | Criterios evaluados | Promedio |
-|---|---|---|
-| Heurísticas de usabilidad | 10 | 4.6 / 5 |
-| Arquitectura de información | 10 | 4.4 / 5 |
-| Inclusive design | 7 | 4.9 / 5 |
+| Grupo                       | Criterios evaluados | Promedio |
+| --------------------------- | ------------------- | -------- |
+| Heurísticas de usabilidad   | 10                  | 4.6 / 5  |
+| Arquitectura de información | 10                  | 4.4 / 5  |
+| Inclusive design            | 7                   | 4.9 / 5  |
 
 En general, la app móvil obtiene buenos resultados en visibilidad del estado, prevención de errores y uso en el contexto real del comerciante. Las principales oportunidades de mejora son agregar "Cancelar" y "Deshacer", simplificar el detalle del pedido, agrandar la letra y guiar mejor la vinculación de WhatsApp.
