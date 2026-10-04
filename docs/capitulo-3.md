@@ -6,7 +6,7 @@ Este capítulo presenta el diseño de la experiencia de usuario de Entreprenly p
 
 El diseño del producto parte de los segmentos objetivo, los hallazgos de Needfinding y las User Stories del capítulo II. Su propósito es que el comerciante consulte información y complete operaciones desde su teléfono durante la atención del negocio, con una jerarquía clara y recorridos breves. La adaptación móvil considera navegación inferior, formularios de una columna, controles táctiles, desplazamiento vertical y permisos del sistema para las funciones que los requieren.
 
-Los artefactos se elaboran colaborativamente en el archivo [Entreprenly de Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1820-2380), cuya página **Mobile** reúne el diseño de la aplicación y cuya página **Web** conserva las referencias de la solución anterior. El diseño móvil inicial desarrollado por Elynor sirve de referencia compartida. Cada integrante desarrolla los recorridos de su Bounded Context y revisa su coherencia con los componentes comunes y los criterios de aceptación.
+Los artefactos se elaboran colaborativamente en el archivo [Entreprenly de Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1), cuya página **Mobile** reúne el diseño de la aplicación y cuya página **Web** conserva las referencias de la solución anterior. El diseño móvil inicial desarrollado por Elynor sirve de referencia compartida. Cada integrante desarrolla los recorridos de su Bounded Context y revisa su coherencia con los componentes comunes y los criterios de aceptación.
 
 | Superficie del producto | Propósito | Criterio de diseño |
 | :---: | :---: | :---: |

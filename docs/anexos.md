@@ -46,17 +46,13 @@ Principales diagramas utilizados para representar la identificación, interacci�
 - [Unión de Bounded Contexts](images/capitulo2/Entreprenly%20Open%20Source%20-%20BC%20union.jpg).
 - [Software Architecture Context Level Diagram](images/capitulo2/structurizr-104049-EntreprenlySystemContext.png).
 
-## Anexo G — Diseño móvil en Figma
+## Anexo G — Diseño en Figma
 
-Archivo compartido del producto: [Entreprenly — página Mobile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1820-2380).
+Archivo compartido del producto: [Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1).
 
-La página Mobile reúne la referencia inicial del equipo y los diseños por contexto. Para Profile se incluyen las HUs US-62 a US-69; la selección del Sprint 1 comprende US-62, US-63, US-67 y US-68.
+Enlace: https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1
 
-- [Mock-ups de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1851-2423).
-- [Wireframes de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1851-2424).
-- [Wireflow Diagrams de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-9972).
-- [User Flow Diagrams de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-9974).
-- [Prototipo de Profile](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-6042).
+El archivo reúne en un mismo enlace los artefactos de diseño del equipo: la referencia inicial, los wireframes, mock-ups, wireflows, user flows y el prototipo de la aplicación móvil por Bounded Context, así como las referencias de la Landing Page. Para Profile se incluyen las HUs US-62 a US-69; la selección del Sprint 1 comprende US-62, US-63, US-67 y US-68.
 
 ## Anexo H — Repositorios de implementación
 
