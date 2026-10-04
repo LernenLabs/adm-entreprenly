@@ -466,7 +466,7 @@ Los wireframes de Entreprenly representan la estructura esquemática de cada pan
 
 La paleta monocromática utilizada en esta fase emplea Blanco puro (#FFFFFF) como superficie base, Gris claro (#EEEEEE) para fondos de sección y tarjetas, Gris medio (#CCCCCC) para bordes, divisores y estados inactivos, y Gris carbón (#212121) para tipografía, íconos y elementos de mayor peso visual. Esta distribución cromática permite identificar con claridad la jerarquía de contenido y la diferenciación entre zonas interactivas y zonas informativas.
 
-La estructura global de la aplicación se organiza en torno a tres zonas funcionales persistentes en todas las pantallas: el Sidebar de navegación fijo a la izquierda (220 px de ancho) con acceso a los módulos principales, el encabezado sticky en la parte superior con información del usuario activo, y el área de contenido principal que ocupa el espacio restante y se adapta a cada módulo.
+La estructura global de la aplicación se organiza en torno a tres zonas funcionales persistentes en todas las pantallas: el bottom de navegación fijo en la parte de abajo con acceso a los módulos principales, el encabezado sticky en la parte superior con información del estado de la aplicación, y el área de contenido principal que ocupa el espacio restante y se adapta a cada módulo.
 
 Wireframes Registro e inicio de sesión
 
