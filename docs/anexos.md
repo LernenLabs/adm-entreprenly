@@ -60,9 +60,11 @@ La página Mobile reúne la referencia inicial del equipo y los diseños por con
 
 ## Anexo H — Repositorios de implementación
 
-- [Aplicación Android: adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend).
-- [Backend: adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend).
-- [Landing Page: adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing).
+URL del Repositorio de Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
+
+URL del Repositorio del Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
+
+URL del Repositorio del Backend: https://github.com/LernenLabs/adm-entreprenly-backend
 
 Estos repositorios constituyen la referencia de código del curso actual. La aplicación utiliza Kotlin y Jetpack Compose; la landing y el backend se adaptan de los proyectos existentes. La documentación del backend registra [Render como URL del servicio](https://adm-entreprenly-backend.onrender.com) y [Swagger UI como referencia de sus contratos](https://adm-entreprenly-backend.onrender.com/swagger-ui.html).
 
