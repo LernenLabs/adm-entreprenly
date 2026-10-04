@@ -480,7 +480,7 @@ Las horas de la siguiente tabla son **estimaciones iniciales propuestas para des
 
 En Profile y navegación, el estado **Done** se sustenta en la integración registrada en el frontend, incluida la [implementación de pantallas, preferencias, notificaciones y navegación](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/9e25a06) y la [incorporación de Reddit Sans](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/3bef09c). La evidencia de los demás Bounded Contexts se presenta en las secciones 4.2.1.4 a 4.2.1.9. Las tareas S1-X01 a S1-X06 son actividades de soporte y consolidación; no incorporan nuevas HUs ni duplican las estimaciones del Product Backlog.
 
-**Trazabilidad de Profile:** los diseños se consultan en la página [Mobile de Entreprenly](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1820-2380). Los [wireflows](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-9972) y los [user flows](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=1859-9974) se encuentran separados por HU. La implementación de US-67 se revisa con cada preferencia y US-68 con la configuración de avisos y el permiso del sistema.
+**Trazabilidad de Profile:** los diseños se consultan en el [archivo de Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1) (ver Anexo G), donde los wireflows y los user flows se encuentran separados por HU. La implementación de US-67 se revisa con cada preferencia y US-68 con la configuración de avisos y el permiso del sistema.
 
 
 #### 4.2.1.4. Development Evidence for Sprint Review
