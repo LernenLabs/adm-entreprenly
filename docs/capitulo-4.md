@@ -444,9 +444,9 @@ Las horas de la siguiente tabla son **estimaciones iniciales propuestas para des
 <tr><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>S1-T40.1</td><td>Botón Empezar gratis</td><td>Llamado a la acción principal del Hero orientado a la descarga de la aplicación.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
 <tr><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>S1-T40.2</td><td>Enlace según el dispositivo</td><td>Enlace de descarga compatible con el sistema operativo y apertura del registro si la aplicación está instalada.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
 <tr><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>S1-T40.3</td><td>Revisión del llamado a la acción</td><td>Evidencias de la descarga sugerida y de la apertura del registro en la aplicación.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
-<tr><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>S1-T41.1</td><td>Build de producción</td><td>Generación de los artefactos optimizados de la landing page sin errores.</td><td>2</td><td>Lionel Chavez</td><td>Done</td></tr>
-<tr><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>S1-T41.2</td><td>Despliegue en Firebase Hosting</td><td>Publicación del build en Firebase Hosting y verificación de la URL pública.</td><td>3</td><td>Lionel Chavez</td><td>Done</td></tr>
-<tr><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>S1-T41.3</td><td>Revisión del despliegue</td><td>Evidencias de la URL publicada y del procedimiento de reversión ante un despliegue fallido.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
+<tr><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>S1-T41.1</td><td>Build de producción</td><td>Generación de los artefactos optimizados de la landing page sin errores.</td><td>2</td><td>Lionel Chavez</td><td>Done</td></tr>
+<tr><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>S1-T41.2</td><td>Despliegue en GitHub Pages</td><td>Publicación del build en GitHub Pages y verificación de la URL pública.</td><td>3</td><td>Lionel Chavez</td><td>Done</td></tr>
+<tr><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>S1-T41.3</td><td>Revisión del despliegue</td><td>Evidencias de la URL publicada y del procedimiento de reversión ante un despliegue fallido.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
   </tbody>
 </table>
 
