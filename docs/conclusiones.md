@@ -7,7 +7,7 @@
 ## Avance del TB1
 
 - La adaptación de Entreprenly a Android conserva la identidad del producto y establece una referencia compartida de estilo para los contextos. La navegación táctil, los formularios de una columna y el tratamiento de permisos del dispositivo orientan el diseño hacia las condiciones de uso del comerciante.
-- La selección de 33 HUs y 82 story points distribuye el Sprint 1 entre Profile y navegación, Inventory, Chatbot, Subscription y Sales. La trazabilidad entre Product Backlog, responsables y Work-items permite revisar el avance respecto del alcance acordado.
+- La selección de 41 HUs y 97 story points distribuye el Sprint 1 entre la Landing Page, Profile y navegación, Inventory, Chatbot, Subscription y Sales. La trazabilidad entre Product Backlog, responsables y Work-items permite revisar el avance respecto del alcance acordado.
 - La reutilización de la Landing Page, el backend y el avance previo de IAM proporciona una base para la implementación móvil. El cumplimiento del objetivo del TB1, incluido el alcance desplegado del backend, se determina con las evidencias de ejecución, servicios y despliegue del Sprint Review.
 - La elaboración y corrección de los diagramas de Profile fortalece la distinción entre estructura de pantallas, acciones de navegación y decisiones del usuario. La separación por HU facilita relacionar cada recorrido con los criterios de aceptación.
 

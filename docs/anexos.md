@@ -69,3 +69,11 @@ Estos repositorios constituyen la referencia de código del curso actual. La apl
 ## Anexo I — Referencia del proyecto anterior
 
 Informe utilizado como antecedente de marca, diseño y estructura documental: [daop-entreprenly](https://github.com/Kauflink/daop-entreprenly). Sus fechas, integrantes y resultados de sprints corresponden al curso anterior; la planificación y las responsabilidades actuales se documentan en el capítulo IV del presente informe.
+
+## Anexo J — Product Backlog y Sprint Backlog en Miro
+
+Tablero utilizado por Lernen Labs para gestionar el Product Backlog y el seguimiento de los sprints:
+
+Enlace: https://miro.com/app/board/uXjVEel-fbI=/
+
+El tablero contiene el Product Backlog descrito en la sección 2.4.3, el Sprint Backlog 1 y la tabla de Work-items del Sprint 1 vinculada a cada HU, descritos en la sección 4.2.1.3.
