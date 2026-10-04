@@ -8,11 +8,67 @@ El criterio del TB1 exige una Landing Page desplegada, un backend desplegado con
 
 ## 4.1. Software Configuration Management
 
-Por completar.
+En esta sección se describe cómo el equipo **Lernen Labs** gestiona la configuración de los productos de Entreprenly. Se presentan las herramientas del entorno de trabajo (4.1.1), la organización de los repositorios y el flujo de ramas (4.1.2), las convenciones de código por lenguaje (4.1.3) y la configuración de despliegue de la Landing Page, la aplicación Android y los servicios web (4.1.4).
 
 ### 4.1.1. Software Development Environment Configuration
 
-Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-backend` (Spring Boot, DDD + CQRS por contextos `iam, inventory, sales, subscription, profile, chatbot, shared`).
+En esta sección se detallan las herramientas, frameworks y plataformas que el equipo utiliza para el desarrollo colaborativo de Entreprenly. Se consideran las actividades de Project Management, Requirements Management, Product UX/UI Design, Software Development, Software Documentation y Software Deployment.
+
+**Project Management**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Miro</strong></td><td>Gestión del Product Backlog y del Sprint Backlog. El tablero organiza las HUs y sus Work-items con los estados <em>To Do</em>, <em>In Process</em>, <em>To Review</em> y <em>Done</em>.</td><td>https://miro.com/app/board/uXjVEel-fbI=/</td></tr>
+  <tr><td><strong>Google Meet</strong></td><td>Reuniones de planificación, revisión y coordinación del equipo.</td><td>https://meet.google.com/</td></tr>
+</table>
+
+**Requirements Management**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Miro</strong></td><td>Registro de User Stories, story points, sprint asignado y estado de cada HU, junto con los artefactos de Event Storming del capítulo II.</td><td>https://miro.com/</td></tr>
+  <tr><td><strong>Gherkin</strong></td><td>Redacción de los criterios de aceptación de las User Stories con la estructura <code>Dado – Cuando – Entonces</code>.</td><td>https://cucumber.io/docs/gherkin/</td></tr>
+</table>
+
+**Product UX/UI Design**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Figma</strong></td><td>Diseño de wireframes, mock-ups, prototipos y Style Guidelines. La página <strong>Mobile</strong> reúne las pantallas de la aplicación Android y la página <strong>Web</strong>, las referencias de la Landing Page.</td><td>https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly</td></tr>
+</table>
+
+**Software Development**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Android Studio</strong></td><td>IDE para el desarrollo, la ejecución en emulador y la depuración de la aplicación Android.</td><td>https://developer.android.com/studio</td></tr>
+  <tr><td><strong>Kotlin / Jetpack Compose</strong></td><td>Lenguaje y toolkit de UI declarativa de la aplicación móvil, con Material 3 y Navigation Compose.</td><td>https://developer.android.com/compose</td></tr>
+  <tr><td><strong>Retrofit / OkHttp</strong></td><td>Consumo de los servicios REST del backend desde la aplicación Android.</td><td>https://square.github.io/retrofit/</td></tr>
+  <tr><td><strong>Spring Boot / Java</strong></td><td>Desarrollo de los RESTful Web Services organizados por Bounded Context con DDD y CQRS.</td><td>https://spring.io/projects/spring-boot</td></tr>
+  <tr><td><strong>PostgreSQL</strong></td><td>Base de datos relacional del backend: local en desarrollo y Supabase en el entorno desplegado.</td><td>https://www.postgresql.org/</td></tr>
+  <tr><td><strong>Docker</strong></td><td>Empaquetado del backend en la imagen <code>entreprenly-platform</code> (puerto <code>8092</code>).</td><td>https://www.docker.com/</td></tr>
+  <tr><td><strong>HTML5 / Tailwind CSS / JavaScript</strong></td><td>Desarrollo de la Landing Page; Node.js se utiliza para compilar la hoja de estilos de Tailwind.</td><td>https://tailwindcss.com/</td></tr>
+  <tr><td><strong>Git / GitHub</strong></td><td>Control de versiones y alojamiento de los repositorios de la organización Lernen Labs.</td><td>https://github.com/LernenLabs</td></tr>
+</table>
+
+**Software Documentation**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Swagger / OpenAPI</strong></td><td>Documentación de los endpoints del backend mediante SpringDoc OpenAPI.</td><td>https://adm-entreprenly-backend.onrender.com/swagger-ui.html</td></tr>
+  <tr><td><strong>Markdown</strong></td><td>Redacción del informe del proyecto y de los README de cada repositorio.</td><td>https://www.markdownguide.org/</td></tr>
+</table>
+
+**Software Deployment**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>GitHub Pages / GitHub Actions</strong></td><td>Publicación automática de la Landing Page en cada push a <code>main</code>.</td><td>https://pages.github.com/</td></tr>
+  <tr><td><strong>Render</strong></td><td>Despliegue del backend como servicio Docker.</td><td>https://render.com/</td></tr>
+  <tr><td><strong>Supabase</strong></td><td>Base de datos PostgreSQL del backend desplegado.</td><td>https://supabase.com/</td></tr>
+</table>
+
+**Configuración local del backend**
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
@@ -20,48 +76,81 @@ Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-
   </tr>
   <tr><td style="vertical-align:middle; text-align:center;">Java JDK</td><td style="vertical-align:middle; text-align:center;">26</td><td>Lenguaje del backend.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Spring Boot</td><td style="vertical-align:middle; text-align:center;">4.0.6</td><td>WebMVC, JPA, Security, Validation.</td></tr>
-  <tr><td style="vertical-align:middle; text-align:center;">PostgreSQL</td><td style="vertical-align:middle; text-align:center;">15+</td><td>Local en desarrollo; Cloud SQL en producción.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">PostgreSQL</td><td style="vertical-align:middle; text-align:center;">15+</td><td>Local en desarrollo; Supabase en el entorno desplegado.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Maven Wrapper</td><td style="vertical-align:middle; text-align:center;">—</td><td>Compilación con `./mvnw spring-boot:run` y `./mvnw clean package`.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">JWT + BCrypt</td><td style="vertical-align:middle; text-align:center;">jjwt 0.12.6</td><td>Autenticación por token.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">SpringDoc OpenAPI</td><td style="vertical-align:middle; text-align:center;">3.0.3</td><td>Swagger UI.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Docker</td><td style="vertical-align:middle; text-align:center;">—</td><td>Imagen `entreprenly-platform` en puerto `8092`.</td></tr>
 </table>
 
-- Crear base local `daop-entreprenly` antes del primer arranque; las tablas se crean al iniciar.
+- Crear la base local `daop-entreprenly` antes del primer arranque; las tablas se crean al iniciar.
 - Configuración por `.env.example` → `.env` o variables de entorno. API base `/api/v1`, Swagger local `http://localhost:8092/swagger-ui.html`.
+
+**Configuración de la aplicación Android**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Herramienta</th><th>Versión</th><th>Uso</th>
+  </tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Android Gradle Plugin</td><td style="vertical-align:middle; text-align:center;">9.4.1</td><td>Compilación con `./gradlew assembleDebug`.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Kotlin</td><td style="vertical-align:middle; text-align:center;">2.2.10</td><td>Lenguaje de la aplicación; compatibilidad con Java 11.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Jetpack Compose (BOM)</td><td style="vertical-align:middle; text-align:center;">2026.02.01</td><td>UI declarativa con Material 3.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Navigation Compose</td><td style="vertical-align:middle; text-align:center;">2.9.5</td><td>Navegación entre pantallas por Bounded Context.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Retrofit / OkHttp</td><td style="vertical-align:middle; text-align:center;">3.0.0 / 4.12.0</td><td>Cliente HTTP y registro de peticiones.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">DataStore Preferences</td><td style="vertical-align:middle; text-align:center;">1.1.7</td><td>Persistencia local de la sesión y las preferencias.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Android SDK</td><td style="vertical-align:middle; text-align:center;">min 30 / target 37</td><td>Compatibilidad desde Android 11.</td></tr>
+</table>
 
 ### 4.1.2. Source Code Management
 
-La gestión del código fuente es una parte importante del proceso de desarrollo colaborativo de software, ya que permite un control eficiente de los cambios y versiones del código fuente. En esta sección se describe el sistema de control de versiones implementado por **Lernen Labs**, utilizando GitHub como plataforma de alojamiento de repositorios. Además se detallan las convenciones de trabajo, como el modelo GitFlow y versionado semántico (Conventional Commits).
+Para la gestión del código fuente y el seguimiento de modificaciones, el equipo **Lernen Labs** utiliza GitHub como plataforma principal y Git como sistema de control de versiones distribuido. Cada producto de la solución tiene un repositorio independiente dentro de la organización, y el informe del proyecto se mantiene en un repositorio propio.
 
-<br>
+**Repositorios del Proyecto**
 
-**URL de los Repositorios**:
+| Producto               | URL del Repositorio                                    |
+| :--------------------- | :----------------------------------------------------- |
+| **Organización**       | https://github.com/LernenLabs                          |
+| **Reporte**            | https://github.com/LernenLabs/adm-entreprenly          |
+| **Landing Page**       | https://github.com/LernenLabs/adm-entreprenly-landing  |
+| **Aplicación Android** | https://github.com/LernenLabs/adm-entreprenly-frontend |
+| **Web Services**       | https://github.com/LernenLabs/adm-entreprenly-backend  |
 
-- Organización: https://github.com/LernenLabs
-- Reporte: https://github.com/LernenLabs/adm-entreprenly
-- Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
-- Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
-- Backend: https://github.com/LernenLabs/adm-entreprenly-backend
+**Estrategia de Flujo de Trabajo: GitFlow**
 
-**Estructura de Ramas**:
+El equipo implementa el modelo GitFlow para organizar el desarrollo colaborativo. Este flujo permite trabajar en varios Bounded Contexts en paralelo sin afectar la estabilidad de la rama principal.
 
-Para mantener un flujo organizado en el desarrollo, se ha implementado el modelo GitFlow a través de las siguientes ramas:
+- **main**: rama principal con el código en estado de producción. Cada versión integrada aquí se etiqueta con su número de versión.
+- **develop**: rama base de desarrollo, donde se integran las funcionalidades terminadas antes de pasar a `main` al cierre de cada sprint.
+- **feature**: ramas temporales para desarrollar una funcionalidad o un Bounded Context; se crean desde `develop` y se fusionan nuevamente en ella.
+- **release**: ramas para preparar un lanzamiento, con ajustes menores y correcciones finales.
+- **hotfix**: ramas creadas desde `main` para corregir errores críticos del entorno de producción.
 
-- main: Rama principal (main) que contiene las versiones estables del proyecto. Todas las demás ramas derivan de esta.
-- develop: Rama de desarrollo (develop) que contiene las características en desarrollo y se fusiona con la Main Branch al final de cada sprint.
-- feat/nombre-de-la-funcionalidad: Ramas de características (feature) que se crean para desarrollar nuevas funcionalidades y se fusionan con la Develop Branch al finalizar.
+**Convenciones de Nombres para Ramas**
+
+- **Feature Branches**: `feature/[bounded-context]` o `feature/[descripcion]` (por ejemplo, `feature/inventory`, `feature/chatbot` o `feature/render-deploy-hook`).
+- **Release Branches**: `release/v[Major.Minor.Patch]`.
+- **Hotfix Branches**: `hotfix/[descripcion-error]`.
+
+**Versionamiento Semántico**
+
+El equipo adopta Semantic Versioning 2.0.0 para nombrar los lanzamientos, con el formato MAJOR.MINOR.PATCH:
+
+1. MAJOR: se incrementa con cambios incompatibles en la API.
+2. MINOR: se incrementa al añadir funcionalidad compatible con versiones anteriores.
+3. PATCH: se incrementa con correcciones de errores compatibles con versiones anteriores.
 
 **Estándar de Mensajes de Commit**
 
-Para asegurar un historial de cambios legible y facilitar la automatización, se utiliza la especificacion de Conventional Commits para todos los mensajes de commit. La estructura utilizada es [tipo]:[descripción breve], empleando los siguientes prefijos:
+Para asegurar un historial de cambios legible y facilitar la automatización, se utiliza la especificación de Conventional Commits para todos los mensajes de commit. La estructura utilizada es [tipo]:[descripción breve], empleando los siguientes prefijos:
 
 - feat: Incorporación de una nueva funcionalidad.
 - fix: Corrección de un error o bug.
 - docs: Modificaciones exclusivamente en la documentación.
 - style: Cambios de formato o estética que no afectan la lógica del código.
 - refactor: Reestructuración de código que no añade funciones ni corrige errores.
-- test: Adición o actualización de pruebas
+- test: Adición o actualización de pruebas.
+
+Los repositorios de la aplicación Android y del backend validan este formato con el workflow `commit-policy.yml` de GitHub Actions.
 
 ### 4.1.3. Source Code Style Guide & Conventions
 
@@ -111,34 +200,33 @@ Las convenciones aplicadas son las siguientes:
 - El código se organiza en funciones con una única responsabilidad, evitando bloques de lógica demasiado extensos.
 - Se incluyen comentarios descriptivos en funciones no triviales, explicando el propósito y no el mecanismo.
 
-#### TypeScript
+#### Kotlin
 
-Para el desarrollo del Frontend Web Application de Entreprenly con Angular, el equipo adopta la **Google TypeScript Style Guide** como referencia principal.
-
-Las convenciones aplicadas son las siguientes:
-
-- Los nombres de **clases, interfaces y enumeraciones** se escriben en **PascalCase**: `UserProfile`, `AuthService`, `PaymentStatus`.
-- Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchUserData()`.
-- Los nombres de **constantes globales** se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
-- Los nombres de **archivos** de Angular siguen la convención **kebab-case** con sufijo descriptivo según su rol: `product-item.component.ts`, `inventory-api.service.ts`, `sale.entity.ts`, `payment-method.enum.ts` y `app.routes.ts`.
-- Se declaran **tipos explícitos** para todos los parámetros de funciones y valores de retorno; se evita el uso de `any`.
-- Se utilizan **interfaces** para describir la forma de los objetos del dominio: `interface Entrepreneur { id: number; name: string; }`.
-- Se prefiere el uso de **Observables** de RxJS sobre Promises para el manejo de operaciones asíncronas, coherente con el modelo reactivo de Angular.
-- Se habilita el modo estricto de TypeScript (`"strict": true`) en el `tsconfig.json` del proyecto.
-- Las importaciones se organizan en bloques separados: primero módulos de Angular, luego librerías de terceros y finalmente módulos internos del proyecto.
-
-#### Angular Framework
-
-Además de las convenciones de TypeScript, el equipo adopta la **Angular Coding Style Guide** oficial para la organización y estructura de los componentes, servicios y módulos de la aplicación.
+Para el desarrollo de la aplicación Android de Entreprenly, el equipo adopta las **Kotlin Coding Conventions** oficiales y la **Android Kotlin Style Guide** como referencias principales.
 
 Las convenciones aplicadas son las siguientes:
 
-- Cada componente, servicio o módulo reside en **su propio archivo**, siguiendo el principio de una clase por archivo.
-- Los nombres de **componentes** siguen el patrón `[Feature]Component`: `DashboardComponent`, `ProjectCardComponent`.
-- Los nombres de **servicios** siguen el patrón `[Feature]Service`: `AuthService`, `ProjectService`.
-- Los **selectores** de los componentes se escriben en **kebab-case** con el prefijo único del proyecto (`app-`, configurado en `angular.json`): `app-conversation-list`, `app-message-bubble`, `app-qr-connection-card`.
-- La aplicación utiliza **componentes standalone** (sin `NgModule`); el enrutamiento se organiza por bounded context mediante archivos de rutas lazy-loaded (`*.routes.ts`) registrados en `app.routes.ts` y `app.config.ts`.
-- Los métodos del ciclo de vida de Angular (`ngOnInit`, `ngOnDestroy`) se implementan a través de sus interfaces correspondientes (`OnInit`, `OnDestroy`).
+- Los nombres de **clases, interfaces, objetos y enumeraciones** se escriben en **PascalCase**: `ChatOrder`, `ProductRepository`, `OrderStatus`.
+- Los nombres de **funciones, propiedades y variables** se escriben en **camelCase**: `loadProducts()`, `isLoading`.
+- Las **constantes** (`const val` y valores inmutables de nivel superior) se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
+- Los nombres de **archivos** coinciden con la clase principal que contienen y usan **PascalCase**: `ChatScreen.kt`, `ChatbotViewModels.kt`.
+- Se prefiere `val` sobre `var` y los tipos **no nulos**; los valores opcionales se manejan con `?.`, `?:` y `let`, evitando el operador `!!`.
+- Se utilizan **data classes** para recursos y valores del dominio, y **sealed classes** o enumeraciones para representar estados finitos.
+- Las operaciones asíncronas se implementan con **corrutinas** y `suspend fun`, y su resultado se expone a la UI mediante `StateFlow`.
+- Se aplica **indentación de 4 espacios** y un máximo de 100 caracteres por línea.
+
+#### Jetpack Compose y arquitectura Android
+
+Además de las convenciones de Kotlin, el equipo sigue las **Compose API guidelines** y la arquitectura recomendada por Android para organizar la aplicación.
+
+Las convenciones aplicadas son las siguientes:
+
+- Las funciones **@Composable** que emiten UI se nombran en **PascalCase** como sustantivos: `OrderDetailScreen`, `ProductCard`.
+- Las pantallas siguen el patrón `[Feature]Screen` y sus ViewModels el patrón `[Feature]ViewModel`.
+- Cada Composable recibe un parámetro `modifier: Modifier = Modifier` como primer parámetro opcional, y el estado se eleva al ViewModel (_state hoisting_).
+- Los colores, la tipografía y los espaciados se toman del tema de **Material 3**, en coherencia con las Style Guidelines del capítulo III.
+- Los paquetes se escriben en **minúsculas** y se organizan por bounded context con la estructura `online.entreprenly.entreprenlyapp.[boundedcontext].[layer]`, con las capas `domain`, `application`, `infrastructure` e `interfaces` (`ui/screens`, `ui/components`, `ui/viewmodels`, `ui/navigation`).
+- La navegación de cada contexto se define en su propio archivo `[Feature]Navigation.kt` y se registra en el grafo principal de la aplicación.
 
 #### Java y Spring Boot
 
@@ -159,7 +247,7 @@ Las convenciones aplicadas son las siguientes:
 
 #### Gherkin (Acceptance Criteria)
 
-Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo III), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas del Backend se implementan con **JUnit** sobre los servicios y agregados de cada bounded context.
+Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo III), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas se implementan con **JUnit** sobre los servicios y agregados de cada bounded context del backend y sobre la lógica de la aplicación Android.
 
 Las convenciones aplicadas son las siguientes:
 
@@ -172,14 +260,45 @@ Las convenciones aplicadas son las siguientes:
 **Ejemplo de criterio de aceptación de una User Story:**
 
 ```gherkin
-Dado que el comerciante está en el formulario de productos en "/dashboard/inventory/products"
-Cuando ingresa nombre, descripción, precio por unidad, stock inicial, categoría y tipo "unitario" y presiona "Guardar"
-Entonces el producto se registra en el inventario y aparece en el listado con tipo "Unit Product"
+Dado que el comerciante está en la pantalla "Agregar producto" del módulo Inventario
+Cuando ingresa nombre, precio por unidad, stock inicial, categoría y tipo "Por unidad" y presiona "Guardar"
+Entonces el producto se registra en el inventario y aparece en la lista de productos
 ```
 
 ### 4.1.4. Software Deployment Configuration
 
-Despliegue del backend con Docker por perfiles `default/cloud/prod`.
+En esta sección se especifica la configuración de despliegue de cada producto digital de **Entreprenly**: **Landing Page**, **Aplicación Android** y **RESTful Web Services**. Para cada producto se documenta el camino desde el repositorio de código fuente hasta su publicación; las capturas del despliegue se presentan en la sección 4.2.1.8.
+
+**Productos desplegados y URLs públicas**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Tecnología / Plataforma de despliegue</th><th>URL pública</th></tr>
+  <tr><td>Landing Page</td><td>HTML5 + Tailwind CSS / GitHub Pages</td><td>https://lernenlabs.github.io/adm-entreprenly-landing/</td></tr>
+  <tr><td>Aplicación Android</td><td>Kotlin + Jetpack Compose / APK generado con Gradle</td><td>Instalación en emulador o dispositivo con Android 11 o superior</td></tr>
+  <tr><td>RESTful Web Services (API)</td><td>Spring Boot + Docker / Render + Supabase</td><td>https://adm-entreprenly-backend.onrender.com/swagger-ui.html</td></tr>
+</table>
+
+#### Landing Page (GitHub Pages)
+
+La Landing Page se desarrolla con **HTML5**, **Tailwind CSS** y **JavaScript**, y se publica con **GitHub Pages** mediante el workflow `deploy.yml` de **GitHub Actions**.
+
+1. El workflow se ejecuta en cada push a la rama `main`.
+2. El job `build` instala las dependencias con Node.js 20 y ejecuta `npm run build` para generar la hoja de estilos de Tailwind.
+3. El sitio se empaqueta con `actions/upload-pages-artifact` y el job `deploy` lo publica con `actions/deploy-pages` en el entorno `github-pages`.
+4. La publicación se valida accediendo a https://lernenlabs.github.io/adm-entreprenly-landing/.
+
+#### Aplicación Android
+
+La aplicación se construye con **Gradle** desde Android Studio o desde la línea de comandos.
+
+1. Clonar el repositorio `adm-entreprenly-frontend` y abrirlo en Android Studio.
+2. La URL del backend se define en `app/build.gradle.kts` con el campo `API_BASE_URL`, que apunta a `https://adm-entreprenly-backend.onrender.com/`.
+3. Generar el APK con `./gradlew assembleDebug`.
+4. Instalar el APK en un emulador o dispositivo con Android 11 (API 30) o superior y verificar el inicio de sesión contra el backend desplegado.
+
+#### RESTful Web Services (Render + Supabase)
+
+El backend se despliega con Docker por perfiles `default/cloud/prod`.
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
@@ -192,9 +311,12 @@ Despliegue del backend con Docker por perfiles `default/cloud/prod`.
   <tr><td style="vertical-align:middle; text-align:center;">CLOUD_SQL_CONNECTION_NAME</td><td>Solo Cloud Run (<code>project:region:instance</code>) con rol <code>roles/cloudsql.client</code>.</td></tr>
 </table>
 
-- Opción A Render + Supabase: servicio Docker desde el repositorio con las variables anteriores; despliegue verificado en `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
-- Opción B Cloud Run + Cloud SQL: trigger que construye el `Dockerfile` y publica nueva revisión en cada push a `main`.
-- El plan gratuito de Render se suspende tras ~15 minutos sin tráfico; la primera petición posterior puede tardar alrededor de un minuto.
+1. Crear en Render un servicio web de tipo Docker conectado al repositorio `adm-entreprenly-backend`.
+2. Registrar las variables de entorno anteriores con el perfil `cloud` y las credenciales del pooler de Supabase.
+3. Render construye la imagen a partir del `Dockerfile` y publica el servicio.
+4. Validar el despliegue en `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
+
+Como alternativa, el backend puede desplegarse en **Cloud Run + Cloud SQL** con un trigger que construye el `Dockerfile` y publica una nueva revisión en cada push a `main`. El plan gratuito de Render se suspende tras unos 15 minutos sin tráfico, por lo que la primera petición posterior puede tardar alrededor de un minuto.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
@@ -277,17 +399,31 @@ Una pantalla diseñada, un componente reutilizado o una HU con código disponibl
 
 #### 4.2.1.2. Aspect Leaders and Collaborators
 
-El equipo mantiene un responsable principal por Bounded Context y la colaboración de los demás integrantes. **L** identifica el liderazgo sobre el aspecto y **C**, la colaboración en dependencias, componentes comunes y revisión. El liderazgo por contexto organiza el trabajo y la integración permite presentar un solo incremento del producto.
+En el Sprint 1, el equipo organizó su trabajo en torno a seis aspectos principales: la Landing Page, Profile y la navegación compartida, Inventory, Chatbot, Subscription y Sales. Cada aspecto tiene un líder (**L**) responsable de su avance y de la trazabilidad con sus HUs, y colaboradores (**C**) que apoyan en las dependencias, los componentes comunes y la revisión cruzada. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
 
-| Team Member (Last Name, First Name) | GitHub Username |                                                           Aspect Leader (L)                                                           |                                           Collaboration (C)                                           |
-| :---------------------------------: | :-------------: | :-----------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
-|   Chavez Carrasco, Lionel Abraham   |      LioTG      | Profile, US-75 y US-81; coordinación del Sprint 1, Style Guidelines, Registro de Versiones, Student Outcome e integración del informe |                     Sesión de IAM, navegación y revisión cruzada de los contextos                     |
-| Palma De Los Santos, Elynor Mikela  |   elynorpalma   |                                        Chatbot y referencia inicial del diseño móvil en Figma                                         |   Coherencia del diseño compartido y coordinación de conversaciones y pedidos con Inventory y Sales   |
-|     Laura Acosta, Victor Jhosef     |    Zatrynox     |                                                               Inventory                                                               | Disponibilidad de productos y lotes para Sales y Chatbot; coherencia de alertas y datos de inventario |
-|     Villon Amez, Enrique Manuel     | enriquevillon25 |                                                             Subscription                                                              |                  Estado del plan y coordinación con Profile y los servicios de cobro                  |
-|       Gonza Morales, Anderson       |     Ander-U     |                                                                 Sales                                                                 |     Disponibilidad de inventario, preferencias de presentación y continuidad con pedidos y pagos      |
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse; text-align:center;">
+  <thead>
+    <tr>
+      <th>Team Member (Last Name, First Name)</th>
+      <th>GitHub Username</th>
+      <th>Landing Page<br>Leader (L) / Collaborator (C)</th>
+      <th>Profile y Navegación Compartida<br>Leader (L) / Collaborator (C)</th>
+      <th>Inventory<br>Leader (L) / Collaborator (C)</th>
+      <th>Chatbot<br>Leader (L) / Collaborator (C)</th>
+      <th>Subscription<br>Leader (L) / Collaborator (C)</th>
+      <th>Sales<br>Leader (L) / Collaborator (C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Chavez Carrasco, Lionel Abraham</td><td>LioTG</td><td>L</td><td>L</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+    <tr><td>Palma De Los Santos, Elynor Mikela</td><td>elynorpalma</td><td>C</td><td>C</td><td>C</td><td>L</td><td>C</td><td>C</td></tr>
+    <tr><td>Laura Acosta, Victor Jhosef</td><td>Zatrynox</td><td>C</td><td>C</td><td>L</td><td>C</td><td>C</td><td>C</td></tr>
+    <tr><td>Villon Amez, Enrique Manuel</td><td>enriquevillon25</td><td>C</td><td>C</td><td>C</td><td>C</td><td>L</td><td>C</td></tr>
+    <tr><td>Gonza Morales, Anderson</td><td>Ander-U</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td><td>L</td></tr>
+  </tbody>
+</table>
 
-Las tareas transversales de diseño, integración y revisión requieren participación de los cinco integrantes. Cada responsable mantiene la trazabilidad entre las HUs asignadas, sus pantallas, las operaciones de los servicios y las evidencias que aporta al Sprint Review. Lionel consolida los avances y revisa la consistencia del informe.
+Además de liderar Landing Page y Profile, Lionel coordina el Sprint 1 y consolida el informe (Style Guidelines, Registro de Versiones y Student Outcome). Elynor elaboró la referencia inicial del diseño móvil en Figma. Cada líder mantiene la trazabilidad entre sus HUs, las pantallas, las operaciones de los servicios y las evidencias que aporta al Sprint Review.
 
 #### 4.2.1.3. Sprint Backlog 1
 
