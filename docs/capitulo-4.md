@@ -721,12 +721,12 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <img src="images/capitulo4/val_movil_comerciante_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Hercilio Carrasco Herrera</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 59</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Lionel Chavez Carrasco</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> San Miguel, Lima</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 00:24</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 09:41</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBP-W_XUfEoRYZCVwRaLNJCATXks06Sh8_yPnRqqPLV7lI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iSmzhu">Ver grabación</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN: cómo le fue en cada una de las 5 tareas, dónde se trabó, qué le gustó, qué sugirió y su puntaje del 1 al 5 de probabilidad de uso.]</td></tr>
@@ -745,12 +745,12 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <img src="images/capitulo4/val_movil_comerciante_2.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> María Encarnación Velasquez</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 62</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Lionel Chavez Carrasco</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> San Miguel, Lima</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 01:00</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 12:45</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBDnN2F2sR4Q45gqWIVxSh_AV_5Vca7N9NzFYjrPBQJ32o?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=V9OAOc">Ver grabación</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
