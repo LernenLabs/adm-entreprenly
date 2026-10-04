@@ -3362,20 +3362,28 @@ Los impactos del Comerciante se materializan mediante funcionalidades de inventa
 
 A continuación se presenta el Product Backlog de Entreprenly, conformado por las 98 User Stories especificadas para la Landing Page, la aplicación móvil y los servicios que la soportan. Las historias se organizan en cuatro bloques según la superficie o capa principal de entrega: Landing Page; aplicación móvil; backend, sistema e infraestructura; y autenticación, registro y perfil. La estimación conserva la escala de 1, 2, 3 y 5 story points, con un total de **245 story points**.
 
-La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende **33 HUs y 82 story points**. Su asignación se identifica en la columna Sprint y su desglose se presenta en la sección 4.2.1.3. Las HUs de IAM (US-56 a US-61) corresponden a la base previa disponible para la integración; la reutilización de la Landing Page y el backend se describe en 4.2. La planificación de las HUs restantes se mantiene pendiente de refinamiento.
+La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende **41 HUs y 97 story points**, incluidas las ocho HUs de la Landing Page. Su asignación se identifica en la columna Sprint y su desglose se presenta en la sección 4.2.1.3. Las HUs de IAM (US-56 a US-61) corresponden a la base previa disponible para la integración; la reutilización de la Landing Page y el backend se describe en 4.2. La planificación de las HUs restantes se mantiene pendiente de refinamiento.
+
+El Product Backlog se gestiona en el [tablero de Miro de Entreprenly](https://miro.com/app/board/uXjVEel-fbI=/), donde cada HU registra su orden, story points, sprint asignado y estado (ver Anexo J).
+
+<p align="center">
+  <img src="images/capitulo2/product-backlog-miro.png" alt="Product Backlog en Miro" width="800"/>
+</p>
+
+**Figura 2.4.3.1:** Product Backlog de Entreprenly en el [tablero de Miro](https://miro.com/app/board/uXjVEel-fbI=/), con el orden, los story points, el sprint asignado y el estado de cada HU.
 
 <table width="100%" style="width:100%; table-layout:fixed;">
   <thead>
     <tr><th># Orden</th><th>User Story Id</th><th>Título</th><th>Story Points<br>(1 / 2 / 3 / 5 / 8)</th><th>Sprint</th></tr>
   </thead>
   <tbody>
-    <tr><td>1</td><td>US-53</td><td>Conocer propuesta de valor en landing page</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>2</td><td>US-84</td><td>Visualizar la propuesta de valor</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>3</td><td>US-85</td><td>Explorar las funciones principales</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>4</td><td>US-86</td><td>Revisar los planes de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>5</td><td>US-87</td><td>Consultar las preguntas frecuentes</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>6</td><td>US-88</td><td>Acceder a la aplicación móvil desde la landing page</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>7</td><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>1</td><td>Por definir</td></tr>
+    <tr><td>1</td><td>US-53</td><td>Conocer propuesta de valor en landing page</td><td>3</td><td>1</td></tr>
+    <tr><td>2</td><td>US-84</td><td>Visualizar la propuesta de valor</td><td>2</td><td>1</td></tr>
+    <tr><td>3</td><td>US-85</td><td>Explorar las funciones principales</td><td>2</td><td>1</td></tr>
+    <tr><td>4</td><td>US-86</td><td>Revisar los planes de suscripción</td><td>2</td><td>1</td></tr>
+    <tr><td>5</td><td>US-87</td><td>Consultar las preguntas frecuentes</td><td>1</td><td>1</td></tr>
+    <tr><td>6</td><td>US-88</td><td>Acceder a la aplicación móvil desde la landing page</td><td>1</td><td>1</td></tr>
+    <tr><td>7</td><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>1</td><td>1</td></tr>
     <tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>3</td><td>1</td></tr>
     <tr><td>9</td><td>US-02</td><td>Editar lotes</td><td>2</td><td>Por definir</td></tr>
     <tr><td>10</td><td>US-03</td><td>Agregar lotes</td><td>2</td><td>1</td></tr>
@@ -3452,7 +3460,7 @@ La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende 
     <tr><td>81</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>5</td><td>Por definir</td></tr>
     <tr><td>82</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>5</td><td>Por definir</td></tr>
     <tr><td>83</td><td>US-93</td><td>Persistir datos mediante JPA por bounded context</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>84</td><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>84</td><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>3</td><td>1</td></tr>
     <tr><td>85</td><td>US-56</td><td>Registrar cuenta con email</td><td>3</td><td>Por definir</td></tr>
     <tr><td>86</td><td>US-57</td><td>Verificar email</td><td>3</td><td>Por definir</td></tr>
     <tr><td>87</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>3</td><td>Por definir</td></tr>
