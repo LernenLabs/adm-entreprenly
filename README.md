@@ -140,6 +140,8 @@ En esta sección se presenta la colaboración del equipo Lernen Labs durante el 
 
 **URL del Repositorio del Backend:** https://github.com/LernenLabs/adm-entreprenly-backend
 
+**URL del Repositorio del WhatsApp Bridge:** https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge
+
 ### **AV1**
 
 Durante la elaboración del AV1, los cinco integrantes del equipo contribuyeron en la redacción y revisión del informe, distribuyendo la carga de trabajo por capítulos. Por cada avance se realizaron commits siguiendo el flujo GitFlow, con integraciones periódicas a la rama `develop` y posteriormente a la rama `main` mediante Pull Requests.
@@ -174,13 +176,13 @@ La preparación del TB1 se organiza a partir de la reunión de planificación re
 
 |             Integrante             |                   Responsabilidad en el Sprint 1                   |                                                                   Consolidación de aportes                                                                   |
 | :--------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|  Chavez Carrasco, Lionel Abraham   |  Profile y navegación: US-62, US-63, US-67, US-68, US-81 y US-75   | Diseño de Profile en Figma, código de Profile integrado en el frontend, apartados de planificación y estilo, trazabilidad del backlog y revisión del informe |
+|  Chavez Carrasco, Lionel Abraham   | Landing Page: US-53, US-84 a US-89 y US-94; Profile y navegación: US-62, US-63, US-67, US-68, US-81 y US-75 | Diseño de Profile en Figma, código de Profile integrado en el frontend, apartados de planificación y estilo, trazabilidad del backlog y revisión del informe |
 | Palma De Los Santos, Elynor Mikela |            Chatbot: US-37, US-38, US-39, US-40 y US-46             |                       Referencia inicial del diseño móvil y aportes del contexto que se consolidan en las evidencias del Sprint Review                       |
 |    Laura Acosta, Victor Jhosef     | Inventory: US-01, US-05, US-07, US-08, US-03, US-06, US-11 y US-13 |                                     Pantallas, servicios y evidencias de Inventory según las responsabilidades acordadas                                     |
 |    Villon Amez, Enrique Manuel     |   Subscription: US-15, US-16, US-17, US-18, US-20, US-21 y US-22   |                                   Pantallas, servicios y evidencias de Subscription según las responsabilidades acordadas                                    |
 |      Gonza Morales, Anderson       |      Sales: US-28, US-29, US-31, US-32, US-33, US-36 y US-97       |                                       Pantallas, servicios y evidencias de Sales según las responsabilidades acordadas                                       |
 
-El alcance y sus tareas se documentan en [Sprint Backlog 1](docs/capitulo-4.md#4213-sprint-backlog-1). El diseño compartido está disponible en la página [Mobile de Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1). La implementación se distribuye en los repositorios [frontend Android](https://github.com/LernenLabs/adm-entreprenly-frontend), [backend](https://github.com/LernenLabs/adm-entreprenly-backend) y [Landing Page](https://github.com/LernenLabs/adm-entreprenly-landing).
+El alcance y sus tareas se documentan en [Sprint Backlog 1](docs/capitulo-4.md#4213-sprint-backlog-1). El diseño compartido está disponible en [Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly). La implementación se distribuye en los repositorios [frontend Android](https://github.com/LernenLabs/adm-entreprenly-frontend), [backend](https://github.com/LernenLabs/adm-entreprenly-backend), [Landing Page](https://github.com/LernenLabs/adm-entreprenly-landing) y [WhatsApp Bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge). El bridge integra las sesiones, los mensajes y los comprobantes de WhatsApp con Chatbot BC.
 
 <p align="center">
   <img src="docs/images/readme/contribuciones_tb1_p1.png" alt="Gráfico de commits por semana del repositorio durante el TB1" width="800"/>

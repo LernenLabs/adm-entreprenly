@@ -1,6 +1,6 @@
 # Capítulo IV: Product Implementation & Validation
 
-Este capítulo documenta la implementación y validación de Entreprenly en el curso Aplicaciones para Dispositivos Móviles. Para el hito TB1 se presenta el Sprint 1, orientado a la aplicación Android nativa y a su integración con los servicios de la plataforma. Se reutilizan la Landing Page y el backend del proyecto anterior, conservando sus responsabilidades y revisando su compatibilidad con los requisitos móviles del capítulo II.
+Este capítulo documenta la implementación y validación de Entreprenly en el curso Aplicaciones para Dispositivos Móviles. Para el hito TB1 se presenta el Sprint 1, orientado a la aplicación Android nativa y a su integración con los servicios de la plataforma. Se reutilizan la Landing Page y el backend del proyecto anterior, conservando sus responsabilidades y revisando su compatibilidad con los requisitos móviles del capítulo II. El WhatsApp Bridge conecta las cuentas de los comerciantes con Chatbot BC y permite el intercambio de mensajes y comprobantes con los clientes.
 
 El trabajo combina la configuración de los proyectos, el desarrollo por Bounded Context y la consolidación de evidencias para el Sprint Review. Las decisiones de planificación se presentan en las secciones 4.2.1.1 a 4.2.1.3; las evidencias de desarrollo, pruebas, ejecución, servicios, despliegue y colaboración se organizan en las secciones 4.2.1.4 a 4.2.1.9. Los resultados de las entrevistas de validación y las evaluaciones heurísticas corresponden a la sección 4.3.
 
@@ -48,6 +48,7 @@ En esta sección se detallan las herramientas, frameworks y plataformas que el e
   <tr><td><strong>PostgreSQL</strong></td><td>Base de datos relacional del backend: local en desarrollo y Supabase en el entorno desplegado.</td><td>https://www.postgresql.org/</td></tr>
   <tr><td><strong>Docker</strong></td><td>Empaquetado del backend en la imagen <code>entreprenly-platform</code> (puerto <code>8092</code>).</td><td>https://www.docker.com/</td></tr>
   <tr><td><strong>HTML5 / Tailwind CSS / JavaScript</strong></td><td>Desarrollo de la Landing Page; Node.js se utiliza para compilar la hoja de estilos de Tailwind.</td><td>https://tailwindcss.com/</td></tr>
+  <tr style="text-align:center;"><td><strong>Node.js / Express / whatsapp-web.js</strong></td><td>Ejecución del WhatsApp Bridge, sesiones por comerciante, vinculación mediante QR y comunicación con los webhooks de Chatbot BC.</td><td>https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge</td></tr>
   <tr><td><strong>Git / GitHub</strong></td><td>Control de versiones y alojamiento de los repositorios de la organización Lernen Labs.</td><td>https://github.com/LernenLabs</td></tr>
 </table>
 
@@ -118,12 +119,13 @@ Para la gestión del código fuente y el seguimiento de modificaciones, el equip
 **Repositorios del Proyecto**
 
 | Producto               | URL del Repositorio                                    |
-| :--------------------- | :----------------------------------------------------- |
+| :--------------------: | :----------------------------------------------------: |
 | **Organización**       | https://github.com/LernenLabs                          |
 | **Reporte**            | https://github.com/LernenLabs/adm-entreprenly          |
 | **Landing Page**       | https://github.com/LernenLabs/adm-entreprenly-landing  |
 | **Aplicación Android** | https://github.com/LernenLabs/adm-entreprenly-frontend |
 | **Web Services**       | https://github.com/LernenLabs/adm-entreprenly-backend  |
+| **WhatsApp Bridge**    | https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge |
 
 **Estrategia de Flujo de Trabajo: GitFlow**
 
@@ -176,7 +178,7 @@ Las convenciones aplicadas son las siguientes:
 
 - Se utiliza **HTML5** como estándar de marcado, declarando siempre el `DOCTYPE` al inicio del documento: `<!DOCTYPE html>`.
 - Los nombres de los elementos y atributos se escriben en **minúsculas** (`<section>`, `<article>`, `class="hero-section"`).
-- Los atributos se encierran siempre entre **comillas dobles**: `<img src="logo.png" alt="Entreprenly logo">`.
+- Los atributos se encierran siempre entre **comillas dobles**: `class="hero-section"` y `alt="Entreprenly logo"`.
 - Se incluyen los atributos `lang` en la etiqueta `<html>` para indicar el idioma de la página: `<html lang="es">`.
 - Todas las imágenes incluyen el atributo `alt` con una descripción significativa, como parte del enfoque de accesibilidad (a11y) del proyecto.
 - Se utiliza **indentación de 2 espacios** para mantener la legibilidad del árbol de elementos.
@@ -199,7 +201,7 @@ Las convenciones aplicadas son las siguientes:
 
 #### JavaScript
 
-El Landing Page de Entreprenly utiliza JavaScript para comportamientos de interacción básicos. El equipo adopta las convenciones establecidas en la **Google HTML/CSS Style Guide** para los aspectos de scripting complementarios al marcado.
+La Landing Page utiliza JavaScript para la interacción de presentación; el WhatsApp Bridge utiliza Node.js y Express para la integración con WhatsApp. Ambos componentes aplican las siguientes convenciones de JavaScript.
 
 Las convenciones aplicadas son las siguientes:
 
@@ -209,6 +211,8 @@ Las convenciones aplicadas son las siguientes:
 - Los strings se definen usando **template literals** cuando se requiere interpolación: `` `Hello, ${userName}` ``.
 - El código se organiza en funciones con una única responsabilidad, evitando bloques de lógica demasiado extensos.
 - Se incluyen comentarios descriptivos en funciones no triviales, explicando el propósito y no el mecanismo.
+
+En el bridge, las llamadas al backend utilizan JSON y `async/await`; los eventos de WhatsApp se relacionan con el propietario de la sesión mediante `ownerEmail`. Las URLs y los tokens se configuran por variables de entorno. `.env` y los archivos de autenticación de WhatsApp se excluyen del control de versiones.
 
 #### Kotlin
 
@@ -257,7 +261,7 @@ Las convenciones aplicadas son las siguientes:
 
 #### Gherkin (Acceptance Criteria)
 
-Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo III), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas se implementan con **JUnit** sobre los servicios y agregados de cada bounded context del backend y sobre la lógica de la aplicación Android.
+Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo II), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas se implementan con **JUnit** sobre los servicios y agregados del backend y sobre la lógica de la aplicación Android.
 
 Las convenciones aplicadas son las siguientes:
 
@@ -286,6 +290,7 @@ En esta sección se especifica la configuración de despliegue de cada producto 
   <tr><td>Landing Page</td><td>HTML5 + Tailwind CSS / GitHub Pages</td><td>https://lernenlabs.github.io/adm-entreprenly-landing/</td></tr>
   <tr><td>Aplicación Android</td><td>Kotlin + Jetpack Compose / APK generado con Gradle</td><td>Instalación en emulador o dispositivo con Android 11 o superior</td></tr>
   <tr><td>RESTful Web Services (API)</td><td>Spring Boot + Docker / Render + Supabase</td><td>https://adm-entreprenly-backend.onrender.com/swagger-ui.html</td></tr>
+  <tr style="text-align:center;"><td>WhatsApp Bridge</td><td>Node.js + Chromium / Docker Compose; acceso desde el backend mediante túnel HTTPS</td><td><code>http://localhost:3001</code> en el equipo anfitrión; URL del túnel configurada en el backend</td></tr>
 </table>
 
 **Deployment Diagram (C4 Model)**
@@ -336,19 +341,44 @@ El backend se despliega con Docker por perfiles `default/cloud/prod`.
 
 Como alternativa, el backend puede desplegarse en **Cloud Run + Cloud SQL** con un trigger que construye el `Dockerfile` y publica una nueva revisión en cada push a `main`. El plan gratuito de Render se suspende tras unos 15 minutos sin tráfico, por lo que la primera petición posterior puede tardar alrededor de un minuto.
 
+#### WhatsApp Bridge (Docker + túnel HTTPS)
+
+El repositorio [adm-entreprenly-whatsapp-bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge) incluye un `Dockerfile` basado en Node.js 20 con Chromium y un `docker-compose.yml` que publica el puerto 3001. El volumen `wwebjs_auth` conserva las sesiones al reiniciar el contenedor. La [guía DEPLOY.md](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/blob/main/DEPLOY.md) documenta la conexión con Render.
+
+| Configuración | Componente | Propósito |
+| :---: | :---: | :---: |
+| `BACKEND_URL_AP` | Bridge | URL del backend del curso móvil, con el prefijo `/api/v1`; para el servicio documentado: `https://adm-entreprenly-backend.onrender.com/api/v1`. |
+| `BACKEND_URL_DAOP` | Bridge | URL del backend del curso anterior, cuando se conserva ese entorno. |
+| `DEFAULT_BACKEND=ap` | Bridge | Selección del backend móvil para recibir los mensajes entrantes. El código admite los turnos `ap` y `daop`. |
+| `BRIDGE_TOKEN` / `SWITCH_TOKEN` | Bridge | Token compartido para la integración y clave para cambiar el backend activo. |
+| `PORT` / `WHATSAPP_BROWSER_PATH` | Bridge | Puerto HTTP y ruta de Chromium; Docker configura Chromium en `/usr/bin/chromium`. |
+| `WHATSAPP_BRIDGE_BASE_URL` | Backend | URL HTTPS del túnel hacia el bridge. |
+| `WHATSAPP_BRIDGE_TOKEN` / `WHATSAPP_ENABLED=true` | Backend | Mismo token de integración que el bridge y activación del envío por WhatsApp. |
+
+1. Copiar `.env.example` a `.env` en el repositorio del bridge y configurar el backend móvil y los tokens.
+2. Ejecutar `docker compose up -d --build`. Como alternativa, usar Node.js 20 o superior con `npm install` y `npm start`.
+3. Consultar `http://localhost:3001/health` y abrir el túnel con `cloudflared tunnel --url http://localhost:3001` o `ngrok http 3001`.
+4. Registrar la URL HTTPS resultante en `WHATSAPP_BRIDGE_BASE_URL` del backend de Render. Si cambia la URL del túnel, actualizar esta variable.
+5. Desde la aplicación, solicitar la vinculación y escanear el QR con WhatsApp. El backend consulta al bridge por propietario y recibe las actualizaciones de QR y estado.
+
+Las sesiones se mantienen por comerciante. El equipo anfitrión y el túnel deben permanecer activos durante la demostración; la URL del túnel depende del entorno de ejecución.
+
 ## 4.2. Landing Page & Mobile Application Implementation
 
-La implementación se organiza en tres proyectos de Lernen Labs. La Landing Page presenta Entreprenly y sus planes; la aplicación Android permite al comerciante operar desde su dispositivo; y el backend expone los servicios REST de IAM, Profile, Inventory, Sales, Chatbot y Subscription.
+La implementación se organiza en cuatro componentes de Lernen Labs. La Landing Page presenta Entreprenly y sus planes; la aplicación Android permite al comerciante operar desde su dispositivo; el backend expone los servicios REST de IAM, Profile, Inventory, Sales, Chatbot y Subscription; y el WhatsApp Bridge comunica el canal de WhatsApp con Chatbot BC.
 
 |      Proyecto      |                                    Repositorio                                     |                                                     Base de implementación                                                      |
 | :----------------: | :--------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
 |    Landing Page    |  [adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing)  | HTML, JavaScript y Tailwind CSS; reutilización de la landing existente y revisión del contenido y los accesos al producto móvil |
 | Aplicación Android | [adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend) |                             Kotlin y Jetpack Compose; navegación y organización por Bounded Context                             |
 |      Backend       |  [adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend)  |                                Java y Spring Boot; servicios REST, JWT y persistencia PostgreSQL                                |
+| WhatsApp Bridge | [adm-entreprenly-whatsapp-bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge) | Node.js, Express y whatsapp-web.js; QR, sesiones por comerciante, mensajes y comprobantes |
 
 El backend se adapta a partir de `daop-entreprenly-web-services` y la landing a partir de `landing-entreprenly`. El frontend móvil se desarrolla como aplicación nativa, tomando las interfaces de la página **Mobile** de Figma como referencia de interacción y estilo. Los repositorios actuales conservan su propia trazabilidad de cambios y colaboración.
 
 Cada integrante lidera un contexto y participa en las revisiones comunes. La integración considera la sesión de IAM, la navegación entre módulos, los contratos de la API y los componentes compartidos. Profile gestiona datos y preferencias del usuario; IAM conserva la responsabilidad sobre identidad y credenciales, por lo que sus operaciones se coordinan mediante los contratos entre contextos.
+
+En Chatbot, el cliente escribe por WhatsApp; el bridge remite el mensaje al webhook del backend y entrega la respuesta al mismo chat. Los comprobantes se reciben como imágenes y se asocian al pedido para su revisión en Android. Las respuestas manuales y las notificaciones de validación salen del backend mediante el bridge. Esta integración soporta US-37, US-38, US-39, US-40 y US-46 del Sprint 1.
 
 La documentación del backend registra un despliegue en Render y una base de datos PostgreSQL en Supabase. La URL de referencia del servicio es [adm-entreprenly-backend.onrender.com](https://adm-entreprenly-backend.onrender.com) y su [Swagger UI](https://adm-entreprenly-backend.onrender.com/swagger-ui.html) constituye el punto de consulta de los contratos. La evidencia de disponibilidad y del alcance entregado se incorpora en la sección 4.2.1.8.
 
@@ -667,7 +697,7 @@ Evidencias del Sprint 1 para Inventory BC. El diseño (wireframes, mockups y wir
   </tr>
 </table>
 
-Evidencias del Sprint 1 para Sales BC. El diseño móvil se encuentra en especificación para el siguiente incremento; aquí se registra el mapeo de cada historia a los contratos y endpoints de backend desplegados y verificados en Render:
+Evidencias del Sprint 1 para Sales BC. El diseño móvil se presenta en 3.1.4; el siguiente cuadro relaciona las historias con los contratos del backend documentados para la revisión:
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
@@ -698,20 +728,21 @@ Evidencias del Sprint 1 para Sales BC. El diseño móvil se encuentra en especif
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-Para garantizar la calidad técnica, estabilidad y correcto funcionamiento de las funcionalidades desarrolladas durante el Sprint 1, el equipo de Lernen Labs implementó un conjunto de pruebas automatizadas en los distintos componentes de la solución **Entreprenly**. El enfoque adoptado combina pruebas unitarias y pruebas de integración para validar la lógica de negocio, las reglas de dominio y los contratos de comunicación entre capas.
+La evidencia de la suite se relaciona con los archivos de pruebas existentes en los repositorios [backend](https://github.com/LernenLabs/adm-entreprenly-backend) y [Android](https://github.com/LernenLabs/adm-entreprenly-frontend). El backend utiliza JUnit y AssertJ; Android incluye JUnit y dependencias de Compose UI Test y AndroidX Test.
 
-Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
+| Componente | Archivos de evidencia | Casos incluidos |
+| :---: | :---: | :---: |
+| Backend — Chatbot | `ChatbotConversationServiceImplTest.java` | Mensaje entrante, persistencia de conversación y respuesta, reutilización del chat, productos del catálogo, dirección de entrega y recepción de comprobante |
+| Backend — Chatbot | `ChatMessageCommandServiceImplTest.java`, `ChatOrderCommandServiceImplTest.java`, `ChatOrderTest.java` | Servicios de mensajes, comandos y estados del pedido |
+| Backend — respuestas | `RuleBasedChatbotResponderTest.java`, `RuleBasedProductReplyComposerTest.java` | Respuestas del chatbot y composición de información de productos |
+| Backend — Subscription | `SubscriptionTests.java`, `FakePaymentGatewayTests.java` | Estados de suscripción y aprobación o rechazo mediante la pasarela simulada |
+| Android — Inventory | `InventoryRulesTest.kt` | Stock por unidad y peso, estados y orden de lotes, búsqueda con tildes y validaciones de productos y fechas |
+| Android — Inventory | `InventoryAssemblersTest.kt`, `ProductCommandServiceTest.kt` | Transformación de recursos y comandos de productos |
+| Android — Subscription | `SubscriptionRulesTest.kt`, `SubscriptionRepositoryTest.kt`, `SubscriptionFlowTest.kt` | Facturación, vigencia del plan, validación y enmascaramiento de tarjeta, repositorio y recorrido instrumentado |
 
-- **Backend (Spring Boot & Java):**
-  - **JUnit 5 (Jupiter):** Framework principal para la definición, estructuración y ejecución del ciclo de vida de las pruebas unitarias y de integración.
-  - **Mockito:** Librería para la creación de objetos simulados (_mocks_ y _spies_), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
-  - **Spring Boot Test & MockMvc:** Utilizados para pruebas de integración sobre los controladores REST de los Bounded Contexts, verificando códigos de estado HTTP, serialización JSON y manejo global de excepciones.
-  - **AssertJ:** Librería de aserciones fluidas para mejorar la legibilidad y expresividad de las comprobaciones de estado y comportamiento.
+En backend, los archivos se encuentran bajo `src/test/java/online/entreprenly/platform/`; en Android, bajo `app/src/test/java/online/entreprenly/entreprenlyapp/` y `app/src/androidTest/java/online/entreprenly/entreprenlyapp/`. Las pruebas de Chatbot utilizan repositorios en memoria y un servicio de mensajería que registra los envíos, por lo que no requieren una sesión real de WhatsApp.
 
-- **Frontend Móvil (Android & Kotlin):**
-  - **JUnit:** Ejecución de pruebas unitarias sobre la lógica de presentación, validadores de entrada y ViewModels en entorno JVM local.
-  - **MockK / Mockito-Kotlin:** Simulación de dependencias en repositorios de datos móviles y clientes HTTP Retrofit.
-  - **AndroidX Test:** Infraestructura de pruebas para componentes del ciclo de vida y navegación móvil en la plataforma Android.
+Para reproducir la suite, el backend dispone de `mvn test`; Android, de `./gradlew testDebugUnitTest` y `./gradlew connectedDebugAndroidTest` con dispositivo o emulador. Este registro identifica los casos presentes en el código; no incorpora un resultado de ejecución ni un porcentaje de cobertura. Las entrevistas y capturas de 4.3 documentan la validación de la experiencia de uso.
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
@@ -727,6 +758,10 @@ Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
 
 Ver diseño en 3.1.4; servicios en 4.2.1.7 y despliegue en 4.2.1.8.
 
+Para **Profile**, las capturas de Preferencias y Notificaciones de 3.1.4.3 y 4.3.3 muestran la configuración personal; el código del frontend y la selección US-62, US-63, US-67 y US-68 se relacionan con el backlog del sprint. **Subscription** se representa mediante las pantallas de planes y cobro y las pruebas de reglas y recorrido de 4.2.1.5.
+
+Para **Chatbot y WhatsApp Bridge**, el registro de 4.3.2 contiene dos entrevistas a clientes finales que recorren la consulta de productos, creación del pedido, envío del comprobante y recepción de la confirmación. La entrevista de Sofía identifica expresamente el pago como una simulación. Estas grabaciones constituyen evidencia del recorrido evaluado; los contratos del bridge y del backend se detallan a continuación.
+
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
 Documentación OpenAPI verificada del backend en avance:
@@ -741,6 +776,7 @@ Documentación OpenAPI verificada del backend en avance:
   </tr>
   <tr><td style="vertical-align:middle; text-align:center;">Inventory</td><td><code>GET/POST /api/v1/inventory/unit-products</code>, <code>weight-products</code>, <code>unit-lots</code>, <code>lots</code>, <code>stock-alerts</code>.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Sales</td><td><code>GET /api/v1/sales</code> (List sales), <code>POST /api/v1/sales</code> (Register a sale), <code>GET /api/v1/sales/{saleId}</code> (Get sale by ID).</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Chatbot / WhatsApp Bridge</td><td style="text-align:center;"><code>GET /api/v1/chatbot/whatsapp/bridge/qr</code>, <code>POST /api/v1/chatbot/whatsapp/bridge/qr</code>, <code>POST /api/v1/chatbot/whatsapp/bridge/status</code>, <code>POST /api/v1/chatbot/whatsapp/webhook</code> y <code>POST /api/v1/chatbot/whatsapp/webhook/receipt</code>.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Transversales</td><td>Auth, suscripción, perfil y chatbot según avance del backend.</td></tr>
 </table>
 
@@ -771,12 +807,31 @@ Documentación OpenAPI verificada del backend en avance:
 
 **Figura 4.6:** OpenAPI JSON con versión 3.1.0, servidores local y desplegado, y tags de Inventory.
 
+**Contratos de integración con WhatsApp Bridge**
+
+Los controladores `ChatbotBridgeController` y `ChatbotWebhookController` del backend y el [archivo index.js del bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/blob/main/index.js) definen el intercambio entre componentes.
+
+| Emisor → receptor | Operación | Datos y respuesta |
+| :---: | :---: | :---: |
+| Android → backend | `GET /api/v1/chatbot/whatsapp/bridge/qr` | Sesión autenticada del comerciante; consulta del QR y estado de vinculación |
+| Backend → bridge | `GET /qr?email=…&sellerId=…` | Solicitud de sesión por propietario; respuesta con `qr` y `connected` |
+| Bridge → backend | `POST /api/v1/chatbot/whatsapp/bridge/qr` y `/status` | QR o estado con `ownerEmail`; las operaciones requieren `X-Bridge-Token` y verifican el acceso del propietario a Chatbot |
+| Bridge → backend | `POST /api/v1/chatbot/whatsapp/webhook` | `fromPhone`, `clientName`, `content`, `ownerEmail`; respuesta del bot que el bridge entrega al chat |
+| Bridge → backend | `POST /api/v1/chatbot/whatsapp/webhook/receipt` | `fromPhone`, `ownerEmail`, `image` como data URI; asociación del comprobante al pedido |
+| Backend → bridge | `POST /send` | `email`, `phone`, `content` y `X-Bridge-Token`; respuesta exitosa con `ok`, o error por token, datos o sesión no vinculada |
+| Operador → bridge | `GET /health` | Consulta de disponibilidad y estado de las sesiones |
+
+Los datos del pedido, el stock, la venta y la decisión sobre el pago permanecen en el backend. El bridge conserva la sesión y entrega mensajes. En el flujo entrante, devuelve al cliente la respuesta obtenida del webhook; el backend utiliza `/send` para envíos posteriores, evitando duplicar la respuesta automática.
+
+**Límite de integración identificado:** el backend incluye la desconexión mediante `DELETE /api/v1/chatbot/whatsapp/bridge/session` y una llamada a `POST /disconnect` del bridge. La versión revisada de `index.js` no define esa ruta. El borrado de estado del backend no demuestra el cierre de la sesión real de WhatsApp; esta operación requiere alinear ambos contratos.
+
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
 Despliegues reutilizados y verificados:
 
 - Backend: `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html` responde con la documentación de servicios.
 - Landing: `https://lernenlabs.github.io/adm-entreprenly-landing/` responde con el recorrido Hero, Problema, Features, How it works, Beneficios, Comparativa, Planes, FAQ y Footer.
+- WhatsApp Bridge: el repositorio incluye el despliegue con Docker Compose, Chromium, volumen de sesiones y túnel hacia el backend, descrito en 4.1.4. Su disponibilidad se consulta mediante `/health` en la URL configurada para la demostración.
 - Flujo: servicio Docker en Render con variables de 4.1.4; abrir primero Swagger en nube y luego validar endpoints de Inventory del Sprint 1.
 
 <p align="center">
@@ -797,11 +852,23 @@ Despliegues reutilizados y verificados:
 
 **Figura 4.9:** Landing desplegada con Hero y overview operativo.
 
+Las capturas acreditan los entornos publicados que muestran. El repositorio y la guía del bridge documentan su configuración; esta versión del informe no contiene una captura de su anfitrión ni una URL de túnel fija. El alcance funcional desplegado se contrasta con las HUs de 4.2.1.3 y sus evidencias; la cantidad de repositorios o de endpoints no representa por sí sola el porcentaje de cumplimiento del backend.
+
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
-Durante el Sprint 1, el equipo de **Lernen Labs** coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia `develop` tras revisión colaborativa.
+Durante el Sprint 1, el equipo de **Lernen Labs** coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page, WhatsApp Bridge y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia `develop` tras revisión colaborativa.
 
 A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
+<p align="center">
+  <img src="images/readme/contribuciones_tb1_p1.png" alt="Actividad de commits del informe hasta el TB1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/readme/contribuciones_tb1_p2.png" alt="Contribuciones de los cinco integrantes al informe hasta el TB1" width="800"/>
+</p>
+
+Las capturas corresponden a las evidencias incluidas en Project Report Collaboration Insights. Presentan el historial acumulado del informe hasta el TB1, incluido el trabajo previo del AV1; no se interpretan como commits exclusivos del Sprint 1. La responsabilidad por contexto se identifica en 4.2.1.2 y la trazabilidad de las 41 HUs mediante sus 127 Work-items en 4.2.1.3. La colaboración sobre la integración de WhatsApp se consulta en el [historial del bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/commits/main/).
 
 ## 4.3. Validation Interviews
 
@@ -969,7 +1036,6 @@ En esta sección el equipo evalúa las pantallas de la aplicación móvil de Ent
 | Fig. 10 | Venta registrada                           | `Fig-10-venta-registrada.png`         |
 | Fig. 11 | Detalle de pedido del chatbot              | `Fig-11-detalle-de-pedido.png`        |
 | Fig. 12 | Rechazar pago con motivo                   | `Fig-12-rechazar-pago.png`            |
-| Fig. 13 | Pedido bloqueado                           | `Fig-13-pedido-bloqueado.png`         |
 | Fig. 14 | Planes sin selección                       | `Fig-14-planes-sin-seleccion.png`     |
 | Fig. 15 | Cobro de suscripción rechazado             | `Fig-15-cobro-rechazado.png`          |
 | Fig. 16 | Centro de ayuda                            | `Fig-16-centro-de-ayuda.png`          |
@@ -1068,9 +1134,9 @@ Las pantallas son limpias, pero el detalle del pedido junta demasiada informaci�
 
 Los errores dicen qué pasó y qué hacer, por ejemplo "Balanza no disponible, ingresa el peso manualmente".
 
-<img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="250"> <img src="images/capitulo4/Fig-13-pedido-bloqueado.png" width="250"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="250">
+<img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="250"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="250">
 
-**Evidencia:** Fig. 7, Fig. 8, Fig. 13, Fig. 15.
+**Evidencia:** Fig. 7, Fig. 8, Fig. 15.
 
 **Mejora:** Enlazar los errores de pago con su artículo de ayuda.
 

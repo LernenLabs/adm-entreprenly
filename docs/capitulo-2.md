@@ -1913,12 +1913,12 @@ En esta sección se especifican las épicas y las User Stories que definen el al
 
 ### User Stories
 
-Las épicas agrupan los requisitos identificados y cada User Story incluye usuario, prioridad, épica, título, descripción y criterios de aceptación. Las prioridades todavía no están definidas y se completarán durante el refinamiento del backlog. Los criterios describen resultados comprobables con la estructura Dado–Cuando–Entonces.
+Las épicas agrupan los requisitos identificados y cada User Story incluye usuario, prioridad, épica, título, descripción y criterios de aceptación. Para la revisión del TB1, la prioridad es **Alta** para las HUs seleccionadas en el Sprint 1 y las bases de IAM, autorización, persistencia y despliegue; **Media** para las funciones de los contextos previstas en otros incrementos; y **Baja** para el centro de soporte (US-76 a US-80). Esta clasificación expresa la necesidad de las historias respecto del hito y conserva la selección y las estimaciones del Product Backlog. Los criterios describen resultados comprobables con la estructura Dado–Cuando–Entonces.
 
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-01</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-01</td><td>comerciante</td><td>Alta</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar productos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero agregar productos para gestionar mi inventario de manera eficiente.</td></tr>
@@ -1930,7 +1930,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-02</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-02</td><td>comerciante</td><td>Media</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Editar lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero editar los lotes para actualizar los datos del inventario.</td></tr>
@@ -1942,7 +1942,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-03</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-03</td><td>comerciante</td><td>Alta</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero agregar lotes para gestionar correctamente las cantidades y fechas de vencimiento.</td></tr>
@@ -1954,7 +1954,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-04</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-04</td><td>comerciante</td><td>Media</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Eliminar lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero eliminar lotes para deshacerme de los lotes que no me sirvan.</td></tr>
@@ -1966,7 +1966,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-05</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-05</td><td>comerciante</td><td>Alta</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Editar productos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero editar productos para actualizar los datos en el inventario.</td></tr>
@@ -1978,7 +1978,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-06</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-06</td><td>comerciante</td><td>Alta</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar detalles de lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero visualizar los detalles de los lotes para gestionar mejor el inventario.</td></tr>
@@ -1990,7 +1990,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-07</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-07</td><td>comerciante</td><td>Alta</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar detalles de producto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.</td></tr>
@@ -2002,7 +2002,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-08</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-08</td><td>comerciante</td><td>Alta</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Buscar productos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.</td></tr>
@@ -2014,7 +2014,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-09</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-09</td><td>comerciante</td><td>Media</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Crear lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td></tr>
@@ -2026,7 +2026,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-10</td><td>usuario de inventario</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-10</td><td>usuario de inventario</td><td>Media</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Escanear código QR en inventario</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario de inventario, quiero escanear códigos QR desde los formularios de productos y lotes para completar el código del registro sin ingresarlo manualmente.</td></tr>
@@ -2038,7 +2038,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-11</td><td>comerciante</td><td>Por definir</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
+    <tr><td>US-11</td><td>comerciante</td><td>Alta</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Detectar stock agotado</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero recibir alertas cuando el stock esté bajo o agotado para reponer los productos a tiempo.</td></tr>
@@ -2050,7 +2050,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-12</td><td>comerciante</td><td>Por definir</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
+    <tr><td>US-12</td><td>comerciante</td><td>Media</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Mostrar alertas de estado al visualizar detalles</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td></tr>
@@ -2062,7 +2062,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-13</td><td>comerciante</td><td>Por definir</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
+    <tr><td>US-13</td><td>comerciante</td><td>Alta</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar dashboard móvil de lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero visualizar un dashboard móvil de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td></tr>
@@ -2074,7 +2074,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-14</td><td>comerciante</td><td>Por definir</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
+    <tr><td>US-14</td><td>comerciante</td><td>Media</td><td>EPIC-02 - Alertas y notificaciones móviles de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Recibir notificación de caducidad de lote</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero recibir una notificación push cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su venta o descartarlo.</td></tr>
@@ -2086,7 +2086,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-15</td><td>usuario con Plan Free</td><td>Por definir</td><td>EPIC-03 - Proceso de suscripción</td></tr>
+    <tr><td>US-15</td><td>usuario con Plan Free</td><td>Alta</td><td>EPIC-03 - Proceso de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Seleccionar plan de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td></tr>
@@ -2098,7 +2098,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-16</td><td>usuario con un plan seleccionado</td><td>Por definir</td><td>EPIC-03 - Proceso de suscripción</td></tr>
+    <tr><td>US-16</td><td>usuario con un plan seleccionado</td><td>Alta</td><td>EPIC-03 - Proceso de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Iniciar proceso de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td></tr>
@@ -2110,7 +2110,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-17</td><td>usuario</td><td>Por definir</td><td>EPIC-03 - Proceso de suscripción</td></tr>
+    <tr><td>US-17</td><td>usuario</td><td>Alta</td><td>EPIC-03 - Proceso de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar datos de facturación</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td></tr>
@@ -2122,7 +2122,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-18</td><td>usuario</td><td>Por definir</td><td>EPIC-03 - Proceso de suscripción</td></tr>
+    <tr><td>US-18</td><td>usuario</td><td>Alta</td><td>EPIC-03 - Proceso de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Procesar cobro de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td></tr>
@@ -2134,7 +2134,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-19</td><td>usuario</td><td>Por definir</td><td>EPIC-03 - Proceso de suscripción</td></tr>
+    <tr><td>US-19</td><td>usuario</td><td>Media</td><td>EPIC-03 - Proceso de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Activar suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td></tr>
@@ -2146,7 +2146,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-20</td><td>usuario</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-20</td><td>usuario</td><td>Alta</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar panel de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero abrir la opción "Suscripción" desde la navegación móvil para consultar mi plan actual, su estado, la fecha de renovación, la facturación y las acciones disponibles.</td></tr>
@@ -2158,7 +2158,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-21</td><td>usuario</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-21</td><td>usuario</td><td>Alta</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar estado de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td></tr>
@@ -2170,7 +2170,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-22</td><td>usuario con una suscripción de pago activa o próxima a vencer</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-22</td><td>usuario con una suscripción de pago activa o próxima a vencer</td><td>Alta</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Renovar suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td></tr>
@@ -2182,7 +2182,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-23</td><td>usuario con una suscripción de pago activa</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-23</td><td>usuario con una suscripción de pago activa</td><td>Media</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Solicitar cancelación de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td></tr>
@@ -2194,7 +2194,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-24</td><td>Developer</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-24</td><td>Developer</td><td>Media</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Cancelar suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del usuario al Plan Free.</td></tr>
@@ -2206,7 +2206,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-25</td><td>usuario con acceso al panel "Suscripción"</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-25</td><td>usuario con acceso al panel "Suscripción"</td><td>Media</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar método de pago de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" dentro de la sección "Método de pago y datos fiscales" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td></tr>
@@ -2218,7 +2218,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-26</td><td>usuario con una cuenta registrada</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-26</td><td>usuario con una cuenta registrada</td><td>Media</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Completar datos fiscales de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario con una cuenta registrada, quiero presionar el botón "Completar datos" dentro de "Método de pago y datos fiscales" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td></tr>
@@ -2230,7 +2230,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-27</td><td>usuario</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-27</td><td>usuario</td><td>Media</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Descargar historial de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero presionar el botón "Descargar historial" dentro de "Actividad de la suscripción" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td></tr>
@@ -2242,7 +2242,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-28</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-28</td><td>cajero</td><td>Alta</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Buscar productos en el inventario y validar su tipo de medida</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso, para abrir la interfaz de ingreso correspondiente.</td></tr>
@@ -2254,7 +2254,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-29</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-29</td><td>cajero</td><td>Alta</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar la cantidad de unidades en el Ticket de Venta</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero ingresar el número de unidades de un producto seleccionado, para añadirlo al detalle de la venta.</td></tr>
@@ -2266,7 +2266,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-30</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-30</td><td>cajero</td><td>Media</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Capturar el peso mediante balanza IoT o ingreso manual</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td></tr>
@@ -2278,7 +2278,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-31</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-31</td><td>cajero</td><td>Alta</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Gestionar el desglose y cálculo del Ticket de Venta</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero visualizar el desglose de productos (nombre, cantidad/peso, precio unitario y subtotal) para verificar que la información sea correcta antes de proceder al pago.</td></tr>
@@ -2290,7 +2290,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-32</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-32</td><td>cajero</td><td>Alta</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Seleccionar el método de pago para la transacción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero elegir el medio por el cual está pagando el cliente (Efectivo o Tarjeta/Yape/Plin), para que el ingreso se registre en la categoría contable correcta.</td></tr>
@@ -2302,7 +2302,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-33</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-33</td><td>cajero</td><td>Alta</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Finalizar la venta y emitir el comprobante de pago</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero procesar el pago y finalizar la venta en un solo paso, para registrar la transacción en el sistema y entregar el comprobante al cliente de forma inmediata.</td></tr>
@@ -2314,7 +2314,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-34</td><td>cajero</td><td>Por definir</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
+    <tr><td>US-34</td><td>cajero</td><td>Media</td><td>EPIC-05 - Gestión de Transacciones y Operaciones de Venta</td></tr>
     <tr><th>Title</th><td colspan="3">Cancelar venta en curso</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero cancelar la venta en curso para limpiar el ticket y empezar una nueva transacción sin procesar el cobro.</td></tr>
@@ -2326,7 +2326,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-35</td><td>comerciante</td><td>Por definir</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
+    <tr><td>US-35</td><td>comerciante</td><td>Media</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
     <tr><th>Title</th><td colspan="3">Clasificar automáticamente los ingresos según el medio de pago</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente, para tener visibilidad inmediata de cuánto dinero hay en efectivo y cuánto en digital.</td></tr>
@@ -2338,7 +2338,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-36</td><td>cajero</td><td>Por definir</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
+    <tr><td>US-36</td><td>cajero</td><td>Alta</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
     <tr><th>Title</th><td colspan="3">Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago, para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td></tr>
@@ -2350,7 +2350,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-37</td><td>comerciante</td><td>Por definir</td><td>EPIC-07 - Configurar Chatbot de WhatsApp Business</td></tr>
+    <tr><td>US-37</td><td>comerciante</td><td>Alta</td><td>EPIC-07 - Configurar Chatbot de WhatsApp Business</td></tr>
     <tr><th>Title</th><td colspan="3">Vincular cuenta de WhatsApp Business desde el dispositivo móvil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero vincular mi cuenta de WhatsApp Business desde el celular para activar el chatbot de atención a clientes en Entreprenly.</td></tr>
@@ -2362,7 +2362,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-38</td><td>comerciante</td><td>Por definir</td><td>EPIC-07 - Configurar Chatbot de WhatsApp Business</td></tr>
+    <tr><td>US-38</td><td>comerciante</td><td>Alta</td><td>EPIC-07 - Configurar Chatbot de WhatsApp Business</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar estado de vinculación del chatbot</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td></tr>
@@ -2374,7 +2374,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-39</td><td>comerciante</td><td>Por definir</td><td>EPIC-08 - Gestionar conversaciones desde la aplicación móvil</td></tr>
+    <tr><td>US-39</td><td>comerciante</td><td>Alta</td><td>EPIC-08 - Gestionar conversaciones desde la aplicación móvil</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar conversaciones de clientes en la aplicación móvil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero ver en la aplicación móvil los chats que el bot ha mantenido con mis clientes para conocer todas las conversaciones activas sin abrir WhatsApp.</td></tr>
@@ -2386,7 +2386,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-40</td><td>comerciante</td><td>Por definir</td><td>EPIC-08 - Gestionar conversaciones desde la aplicación móvil</td></tr>
+    <tr><td>US-40</td><td>comerciante</td><td>Alta</td><td>EPIC-08 - Gestionar conversaciones desde la aplicación móvil</td></tr>
     <tr><th>Title</th><td colspan="3">Responder mensajes de clientes desde la aplicación móvil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero enviar mensajes a mis clientes directamente desde la aplicación móvil para gestionar las conversaciones sin abrir WhatsApp.</td></tr>
@@ -2398,7 +2398,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-41</td><td>Cliente final</td><td>Por definir</td><td>EPIC-09 - Procesar Pedidos mediante Bot Automático</td></tr>
+    <tr><td>US-41</td><td>Cliente final</td><td>Media</td><td>EPIC-09 - Procesar Pedidos mediante Bot Automático</td></tr>
     <tr><th>Title</th><td colspan="3">Responder consulta de producto disponible</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente final, quiero recibir la información del producto solicitado cuando está disponible para iniciar un pedido sin intervención del comerciante.</td></tr>
@@ -2410,7 +2410,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-42</td><td>Cliente final</td><td>Por definir</td><td>EPIC-09 - Procesar Pedidos mediante Bot Automático</td></tr>
+    <tr><td>US-42</td><td>Cliente final</td><td>Media</td><td>EPIC-09 - Procesar Pedidos mediante Bot Automático</td></tr>
     <tr><th>Title</th><td colspan="3">Sugerir alternativas ante producto no disponible</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente final, quiero recibir alternativas cuando un producto no está disponible para continuar con mi pedido.</td></tr>
@@ -2422,7 +2422,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-43</td><td>Cliente final</td><td>Por definir</td><td>EPIC-09 - Procesar Pedidos mediante Bot Automático</td></tr>
+    <tr><td>US-43</td><td>Cliente final</td><td>Media</td><td>EPIC-09 - Procesar Pedidos mediante Bot Automático</td></tr>
     <tr><th>Title</th><td colspan="3">Confirmar pedido con el cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente final, quiero revisar y confirmar el resumen de mi pedido antes de pagar para comprobar los productos, las cantidades y la dirección de entrega.</td></tr>
@@ -2434,7 +2434,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-44</td><td>cliente</td><td>Por definir</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
+    <tr><td>US-44</td><td>cliente</td><td>Media</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
     <tr><th>Title</th><td colspan="3">Recibir instrucciones de pago por WhatsApp</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td></tr>
@@ -2446,7 +2446,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-45</td><td>cliente</td><td>Por definir</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
+    <tr><td>US-45</td><td>cliente</td><td>Media</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
     <tr><th>Title</th><td colspan="3">Reportar comprobante de pago digital</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td></tr>
@@ -2458,7 +2458,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-46</td><td>comerciante</td><td>Por definir</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
+    <tr><td>US-46</td><td>comerciante</td><td>Alta</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
     <tr><th>Title</th><td colspan="3">Validar comprobante de pago desde la aplicación móvil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde la aplicación móvil para confirmar que el dinero fue recibido correctamente.</td></tr>
@@ -2470,7 +2470,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-47</td><td>cliente</td><td>Por definir</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
+    <tr><td>US-47</td><td>cliente</td><td>Media</td><td>EPIC-10 - Gestionar Pago Digital P2P</td></tr>
     <tr><th>Title</th><td colspan="3">Notificar resultado de validación al cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado o si debo realizar alguna acción adicional.</td></tr>
@@ -2482,7 +2482,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-48</td><td>Developer</td><td>Por definir</td><td>EPIC-11 - Confirmar Venta y Emitir Comprobante</td></tr>
+    <tr><td>US-48</td><td>Developer</td><td>Media</td><td>EPIC-11 - Confirmar Venta y Emitir Comprobante</td></tr>
     <tr><th>Title</th><td colspan="3">Confirmar pedido y descontar stock</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td></tr>
@@ -2494,7 +2494,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-49</td><td>comerciante</td><td>Por definir</td><td>EPIC-11 - Confirmar Venta y Emitir Comprobante</td></tr>
+    <tr><td>US-49</td><td>comerciante</td><td>Media</td><td>EPIC-11 - Confirmar Venta y Emitir Comprobante</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar venta en el sistema</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td></tr>
@@ -2506,7 +2506,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-50</td><td>cliente</td><td>Por definir</td><td>EPIC-12 - Manejar Flujos Alternativos y Restricciones</td></tr>
+    <tr><td>US-50</td><td>cliente</td><td>Media</td><td>EPIC-12 - Manejar Flujos Alternativos y Restricciones</td></tr>
     <tr><th>Title</th><td colspan="3">Manejar stock insuficiente en pedido</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como cliente, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td></tr>
@@ -2518,7 +2518,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-51</td><td>Developer</td><td>Por definir</td><td>EPIC-12 - Manejar Flujos Alternativos y Restricciones</td></tr>
+    <tr><td>US-51</td><td>Developer</td><td>Media</td><td>EPIC-12 - Manejar Flujos Alternativos y Restricciones</td></tr>
     <tr><th>Title</th><td colspan="3">Cancelar pedido por expiración de tiempo de pago</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td></tr>
@@ -2530,7 +2530,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-52</td><td>comerciante</td><td>Por definir</td><td>EPIC-12 - Manejar Flujos Alternativos y Restricciones</td></tr>
+    <tr><td>US-52</td><td>comerciante</td><td>Media</td><td>EPIC-12 - Manejar Flujos Alternativos y Restricciones</td></tr>
     <tr><th>Title</th><td colspan="3">Rechazar comprobante de pago inválido</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td></tr>
@@ -2542,7 +2542,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-53</td><td>visitante</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-53</td><td>visitante</td><td>Alta</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Conocer propuesta de valor en landing page</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.</td></tr>
@@ -2554,7 +2554,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-54</td><td>Developer</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-54</td><td>Developer</td><td>Media</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Gestionar ciclo de vida de pedidos mediante API</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y la aplicación móvil intercambien información del pedido de forma automática y consistente.</td></tr>
@@ -2566,7 +2566,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-55</td><td>Developer</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-55</td><td>Developer</td><td>Media</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Validar y registrar pagos mediante API</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero un endpoint para aprobar o rechazar pagos desde la aplicación móvil para que el sistema actualice el inventario y notifique al cliente de forma automática.</td></tr>
@@ -2578,7 +2578,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-56</td><td>usuario anónimo</td><td>Por definir</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
+    <tr><td>US-56</td><td>usuario anónimo</td><td>Alta</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar cuenta con email</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td></tr>
@@ -2590,7 +2590,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-57</td><td>usuario registrado</td><td>Por definir</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
+    <tr><td>US-57</td><td>usuario registrado</td><td>Alta</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
     <tr><th>Title</th><td colspan="3">Verificar email</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td></tr>
@@ -2602,7 +2602,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-58</td><td>usuario registrado</td><td>Por definir</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
+    <tr><td>US-58</td><td>usuario registrado</td><td>Alta</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
     <tr><th>Title</th><td colspan="3">Iniciar sesión con credenciales</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario registrado, quiero iniciar sesión con mi email y contraseña desde el celular para acceder al dashboard móvil de Entreprenly.</td></tr>
@@ -2614,7 +2614,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-59</td><td>usuario anónimo</td><td>Por definir</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
+    <tr><td>US-59</td><td>usuario anónimo</td><td>Alta</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
     <tr><th>Title</th><td colspan="3">Iniciar sesión con Google OAuth</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td></tr>
@@ -2626,7 +2626,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-60</td><td>usuario registrado</td><td>Por definir</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
+    <tr><td>US-60</td><td>usuario registrado</td><td>Alta</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
     <tr><th>Title</th><td colspan="3">Recuperar contraseña</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td></tr>
@@ -2638,7 +2638,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-61</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
+    <tr><td>US-61</td><td>usuario autenticado</td><td>Alta</td><td>EPIC-14 - Inicio de sesión y registro</td></tr>
     <tr><th>Title</th><td colspan="3">Cerrar sesión</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td></tr>
@@ -2650,7 +2650,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-62</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-62</td><td>usuario autenticado</td><td>Alta</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar perfil actual</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td></tr>
@@ -2662,7 +2662,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-63</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-63</td><td>usuario autenticado</td><td>Alta</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Actualizar nombre y biografía</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td></tr>
@@ -2674,7 +2674,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-64</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-64</td><td>usuario autenticado</td><td>Media</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Subir foto de perfil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero tomar o elegir una foto desde mi dispositivo móvil para personalizar mi perfil.</td></tr>
@@ -2686,7 +2686,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-65</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-65</td><td>usuario autenticado</td><td>Media</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Cambiar email con re-verificación</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td></tr>
@@ -2698,7 +2698,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-66</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-66</td><td>usuario autenticado</td><td>Media</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Cambiar contraseña</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td></tr>
@@ -2710,7 +2710,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-67</td><td>comerciante autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-67</td><td>comerciante autenticado</td><td>Alta</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Configurar preferencias de idioma, zona horaria, tema y moneda</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante autenticado, quiero configurar mi idioma, zona horaria, tema visual y moneda para adaptar la plataforma a mis preferencias operativas.</td></tr>
@@ -2722,7 +2722,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-68</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-68</td><td>usuario autenticado</td><td>Alta</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Configurar notificaciones</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero configurar mis preferencias de notificaciones push para recibir en mi dispositivo solo los avisos que me sean relevantes.</td></tr>
@@ -2734,7 +2734,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-69</td><td>comerciante autenticado</td><td>Por definir</td><td>EPIC-15 - Perfil y configuración</td></tr>
+    <tr><td>US-69</td><td>comerciante autenticado</td><td>Media</td><td>EPIC-15 - Perfil y configuración</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar y verificar número de teléfono</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante autenticado, quiero registrar y verificar mi número de teléfono en el perfil para tener un canal de contacto adicional vinculado a mi cuenta.</td></tr>
@@ -2746,7 +2746,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-70</td><td>comerciante</td><td>Por definir</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
+    <tr><td>US-70</td><td>comerciante</td><td>Media</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar resumen de ventas del día</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero visualizar un resumen de las ventas del día en el panel de inicio para conocer el rendimiento de mi negocio sin ingresar al módulo de ventas.</td></tr>
@@ -2758,7 +2758,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-71</td><td>comerciante</td><td>Por definir</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
+    <tr><td>US-71</td><td>comerciante</td><td>Media</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar estado del chatbot en la pantalla de Inicio</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo sin ingresar al módulo de chatbot.</td></tr>
@@ -2770,7 +2770,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-72</td><td>comerciante</td><td>Por definir</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
+    <tr><td>US-72</td><td>comerciante</td><td>Media</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar alertas de inventario en la pantalla de Inicio</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero ver las alertas críticas de inventario directamente en el panel de inicio para identificar rápidamente productos agotados o lotes próximos a vencer sin ingresar al módulo de lotes.</td></tr>
@@ -2782,7 +2782,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-73</td><td>comerciante</td><td>Por definir</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
+    <tr><td>US-73</td><td>comerciante</td><td>Media</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar contador de pedidos pendientes en la pantalla de Inicio</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero ver el número de pedidos que están pendientes de atención en el panel de inicio para priorizar mi respuesta sin necesidad de ingresar al módulo de chatbot.</td></tr>
@@ -2794,7 +2794,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-74</td><td>comerciante</td><td>Por definir</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
+    <tr><td>US-74</td><td>comerciante</td><td>Media</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar pedidos recientes en la pantalla de Inicio</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td></tr>
@@ -2806,7 +2806,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-75</td><td>comerciante</td><td>Por definir</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
+    <tr><td>US-75</td><td>comerciante</td><td>Alta</td><td>EPIC-16 - Panel de Inicio (Home)</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a módulos desde accesos directos de la pantalla de Inicio</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero contar con accesos directos a los módulos principales desde la pantalla de Inicio para navegar rápidamente sin abrir el menú de navegación móvil.</td></tr>
@@ -2818,7 +2818,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-76</td><td>comerciante</td><td>Por definir</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
+    <tr><td>US-76</td><td>comerciante</td><td>Baja</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar el centro de soporte</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td></tr>
@@ -2830,7 +2830,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-77</td><td>comerciante</td><td>Por definir</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
+    <tr><td>US-77</td><td>comerciante</td><td>Baja</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
     <tr><th>Title</th><td colspan="3">Buscar artículo de ayuda</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td></tr>
@@ -2842,7 +2842,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-78</td><td>comerciante</td><td>Por definir</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
+    <tr><td>US-78</td><td>comerciante</td><td>Baja</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar artículo de ayuda</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td></tr>
@@ -2854,7 +2854,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-79</td><td>comerciante</td><td>Por definir</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
+    <tr><td>US-79</td><td>comerciante</td><td>Baja</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
     <tr><th>Title</th><td colspan="3">Reportar un problema</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td></tr>
@@ -2866,7 +2866,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-80</td><td>comerciante</td><td>Por definir</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
+    <tr><td>US-80</td><td>comerciante</td><td>Baja</td><td>EPIC-17 - Centro de Soporte y Ayuda</td></tr>
     <tr><th>Title</th><td colspan="3">Confirmar envío del reporte</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td></tr>
@@ -2878,7 +2878,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-81</td><td>usuario autenticado</td><td>Por definir</td><td>EPIC-18 - Experiencia global de la aplicación móvil</td></tr>
+    <tr><td>US-81</td><td>usuario autenticado</td><td>Alta</td><td>EPIC-18 - Experiencia global de la aplicación móvil</td></tr>
     <tr><th>Title</th><td colspan="3">Navegar entre módulos desde el menú de navegación móvil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario autenticado, quiero utilizar el menú de navegación de la aplicación móvil para ingresar rápidamente a Inicio, Productos, Lotes, Ventas, Suscripción, Pedidos, Chatbot y Ayuda.</td></tr>
@@ -2890,7 +2890,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-82</td><td>usuario de la aplicación móvil</td><td>Por definir</td><td>EPIC-18 - Experiencia global de la aplicación móvil</td></tr>
+    <tr><td>US-82</td><td>usuario de la aplicación móvil</td><td>Media</td><td>EPIC-18 - Experiencia global de la aplicación móvil</td></tr>
     <tr><th>Title</th><td colspan="3">Cambiar idioma de la interfaz</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario de la aplicación móvil, quiero alternar entre español e inglés para visualizar los textos de la interfaz en el idioma que prefiera.</td></tr>
@@ -2902,7 +2902,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-83</td><td>usuario de la aplicación móvil</td><td>Por definir</td><td>EPIC-18 - Experiencia global de la aplicación móvil</td></tr>
+    <tr><td>US-83</td><td>usuario de la aplicación móvil</td><td>Media</td><td>EPIC-18 - Experiencia global de la aplicación móvil</td></tr>
     <tr><th>Title</th><td colspan="3">Gestionar destinos de navegación no disponibles</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario de la aplicación móvil, quiero recibir una pantalla informativa cuando intento abrir un destino no disponible para comprender lo ocurrido y regresar a una sección válida.</td></tr>
@@ -2914,7 +2914,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-84</td><td>comerciante que visita la web</td><td>Por definir</td><td>EPIC-19 - Landing Page</td></tr>
+    <tr><td>US-84</td><td>comerciante que visita la web</td><td>Alta</td><td>EPIC-19 - Landing Page</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar la propuesta de valor</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante que visita la web, quiero ver el headline y la propuesta de valor en el Hero para entender rápidamente qué problemas resuelve Entreprenly.</td></tr>
@@ -2926,7 +2926,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-85</td><td>comerciante interesado</td><td>Por definir</td><td>EPIC-19 - Landing Page</td></tr>
+    <tr><td>US-85</td><td>comerciante interesado</td><td>Alta</td><td>EPIC-19 - Landing Page</td></tr>
     <tr><th>Title</th><td colspan="3">Explorar las funciones principales</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante interesado, quiero conocer los pilares técnicos (Inventario, Finanzas, Chatbot, Balanza) para evaluar si las herramientas se ajustan a mis necesidades operativas.</td></tr>
@@ -2938,7 +2938,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-86</td><td>comerciante potencial</td><td>Por definir</td><td>EPIC-19 - Landing Page</td></tr>
+    <tr><td>US-86</td><td>comerciante potencial</td><td>Alta</td><td>EPIC-19 - Landing Page</td></tr>
     <tr><th>Title</th><td colspan="3">Revisar los planes de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante potencial, quiero ver la tabla comparativa de precios y beneficios para seleccionar el plan que mejor se adapte a mi presupuesto (Free o Control).</td></tr>
@@ -2950,7 +2950,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-87</td><td>comerciante con dudas</td><td>Por definir</td><td>EPIC-19 - Landing Page</td></tr>
+    <tr><td>US-87</td><td>comerciante con dudas</td><td>Alta</td><td>EPIC-19 - Landing Page</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar las preguntas frecuentes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante con dudas, quiero leer la sección de FAQ para resolver inquietudes comunes sobre la integración de la balanza IoT o el uso del chatbot sin contactar a soporte.</td></tr>
@@ -2962,7 +2962,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-88</td><td>comerciante registrado</td><td>Por definir</td><td>EPIC-19 - Landing Page</td></tr>
+    <tr><td>US-88</td><td>comerciante registrado</td><td>Alta</td><td>EPIC-19 - Landing Page</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a la aplicación móvil desde la landing page</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante registrado, quiero utilizar el botón de ingreso de la Landing Page para abrir Entreprenly y acceder rápidamente a mi dashboard móvil.</td></tr>
@@ -2974,7 +2974,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-89</td><td>comerciante nuevo</td><td>Por definir</td><td>EPIC-19 - Landing Page</td></tr>
+    <tr><td>US-89</td><td>comerciante nuevo</td><td>Alta</td><td>EPIC-19 - Landing Page</td></tr>
     <tr><th>Title</th><td colspan="3">Descargar la aplicación mediante el botón de acción principal</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante nuevo, quiero utilizar el botón "Empezar gratis" del Hero para descargar Entreprenly e iniciar mi registro desde el celular.</td></tr>
@@ -2986,7 +2986,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-90</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-90</td><td>comerciante</td><td>Media</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Eliminar productos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero eliminar productos para deshacerme de los productos que no me sirvan.</td></tr>
@@ -2998,7 +2998,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-91</td><td>Developer</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-91</td><td>Developer</td><td>Alta</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Autenticar y autorizar usuarios mediante JWT</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero proteger los endpoints de la API mediante autenticación basada en JWT para que solo los usuarios autenticados accedan a los recursos del comerciante.</td></tr>
@@ -3010,7 +3010,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-92</td><td>Developer</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-92</td><td>Developer</td><td>Alta</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Containerizar y desplegar la API mediante Docker y CI/CD</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero empaquetar el backend en una imagen Docker y automatizar su construcción y despliegue mediante un pipeline de CI/CD para garantizar entregas reproducibles y consistentes.</td></tr>
@@ -3022,7 +3022,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-93</td><td>Developer</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-93</td><td>Developer</td><td>Alta</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Persistir datos mediante JPA por bounded context</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Developer, quiero mapear las entidades de dominio a la base de datos mediante JPA respetando los límites de cada bounded context para mantener la integridad y separación de los datos.</td></tr>
@@ -3034,7 +3034,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-94</td><td>equipo de desarrollo</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
+    <tr><td>US-94</td><td>equipo de desarrollo</td><td>Alta</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
     <tr><th>Title</th><td colspan="3">Desplegar la Landing Page en GitHub Pages</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como equipo de desarrollo, queremos desplegar la Landing Page en GitHub Pages para presentar el producto y facilitar el acceso a la aplicación móvil de forma escalable.</td></tr>
@@ -3046,7 +3046,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-95</td><td>comerciante</td><td>Por definir</td><td>EPIC-01 - Gestión de inventario</td></tr>
+    <tr><td>US-95</td><td>comerciante</td><td>Media</td><td>EPIC-01 - Gestión de inventario</td></tr>
     <tr><th>Title</th><td colspan="3">Buscar lotes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante quiero contar con un buscador en el módulo móvil de Lotes para localizar rápidamente los lotes de un producto por su nombre o marca sin recorrer toda la lista.</td></tr>
@@ -3058,7 +3058,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-96</td><td>comerciante con acceso al panel "Suscripción"</td><td>Por definir</td><td>EPIC-04 - Configuración de suscripción</td></tr>
+    <tr><td>US-96</td><td>comerciante con acceso al panel "Suscripción"</td><td>Media</td><td>EPIC-04 - Configuración de suscripción</td></tr>
     <tr><th>Title</th><td colspan="3">Gestionar métodos de pago de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante con acceso al panel "Suscripción", quiero visualizar mis métodos de pago registrados y seleccionar cuál será el principal para que los pagos y renovaciones del Plan Control usen el medio correcto.</td></tr>
@@ -3070,7 +3070,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-97</td><td>comerciante</td><td>Por definir</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
+    <tr><td>US-97</td><td>comerciante</td><td>Alta</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar el historial de ventas del día</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero consultar el listado de las ventas registradas en un día seleccionado, para revisar la actividad comercial y verificar las transacciones sin salir del panel de ventas.</td></tr>
@@ -3082,7 +3082,7 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
 <table width="100%" style="width:100%; table-layout:fixed;">
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US-98</td><td>comerciante</td><td>Por definir</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
+    <tr><td>US-98</td><td>comerciante</td><td>Media</td><td>EPIC-06 - Control de Ingresos y Monitoreo de Caja</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar el detalle de una venta registrada</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como comerciante, quiero abrir el detalle de una venta del historial, para revisar los productos vendidos con sus cantidades o pesos y sus montos.</td></tr>
@@ -3362,9 +3362,20 @@ Los impactos del Comerciante se materializan mediante funcionalidades de inventa
 
 A continuación se presenta el Product Backlog de Entreprenly, conformado por las 98 User Stories especificadas para la Landing Page, la aplicación móvil y los servicios que la soportan. Las historias se organizan en cuatro bloques según la superficie o capa principal de entrega: Landing Page; aplicación móvil; backend, sistema e infraestructura; y autenticación, registro y perfil. La estimación conserva la escala de 1, 2, 3 y 5 story points, con un total de **245 story points**.
 
-La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende **41 HUs y 97 story points**, incluidas las ocho HUs de la Landing Page. Su asignación se identifica en la columna Sprint y su desglose se presenta en la sección 4.2.1.3. Las HUs de IAM (US-56 a US-61) corresponden a la base previa disponible para la integración; la reutilización de la Landing Page y el backend se describe en 4.2. La planificación de las HUs restantes se mantiene pendiente de refinamiento.
+La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende **41 HUs y 97 story points**, incluidas las ocho HUs de la Landing Page. Su asignación se identifica en la columna Sprint y su desglose se presenta en la sección 4.2.1.3. Las HUs de IAM (US-56 a US-61) corresponden a la base previa disponible para la integración; la reutilización de la Landing Page y el backend se describe en 4.2. La columna Sprint utiliza **1**, **2** y **3** conforme a la planificación del equipo y **Base previa** para las seis HUs de IAM. Las asignaciones de los sprints 2 y 3 corresponden a las capturas del tablero de Miro incluidas en el Anexo J.
 
 El Product Backlog se gestiona en el [tablero de Miro de Entreprenly](https://miro.com/app/board/uXjVEel-fbI=/), donde cada HU registra su orden, story points, sprint asignado y estado (ver Anexo J).
+
+| Asignación | User Stories | Story points |
+| :---: | :---: | :---: |
+| Sprint 1 | 41 | 97 |
+| Sprint 2 | 30 | 73 |
+| Sprint 3 | 21 | 57 |
+| Base previa — IAM (US-56 a US-61) | 6 | 18 |
+| **Total** | **98** | **245** |
+
+Cada HU tiene una única asignación y los tres sprints no comparten identificadores. Las 92 HUs planificadas y las seis HUs de IAM como base previa cubren el Product Backlog completo. La asignación de una HU a un sprint posterior no cambia la disponibilidad del código reutilizado de autenticación, persistencia o despliegue que se utiliza en el Sprint 1.
+
 
 <p align="center">
   <img src="images/capitulo2/product-backlog-miro.png" alt="Product Backlog en Miro" width="800"/>
@@ -3385,96 +3396,96 @@ El Product Backlog se gestiona en el [tablero de Miro de Entreprenly](https://mi
     <tr><td>6</td><td>US-88</td><td>Acceder a la aplicación móvil desde la landing page</td><td>1</td><td>1</td></tr>
     <tr><td>7</td><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>1</td><td>1</td></tr>
     <tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>3</td><td>1</td></tr>
-    <tr><td>9</td><td>US-02</td><td>Editar lotes</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>9</td><td>US-02</td><td>Editar lotes</td><td>2</td><td>2</td></tr>
     <tr><td>10</td><td>US-03</td><td>Agregar lotes</td><td>2</td><td>1</td></tr>
-    <tr><td>11</td><td>US-04</td><td>Eliminar lotes</td><td>1</td><td>Por definir</td></tr>
+    <tr><td>11</td><td>US-04</td><td>Eliminar lotes</td><td>1</td><td>2</td></tr>
     <tr><td>12</td><td>US-05</td><td>Editar productos</td><td>2</td><td>1</td></tr>
     <tr><td>13</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>2</td><td>1</td></tr>
     <tr><td>14</td><td>US-07</td><td>Visualizar detalles de producto</td><td>2</td><td>1</td></tr>
     <tr><td>15</td><td>US-08</td><td>Buscar productos</td><td>3</td><td>1</td></tr>
-    <tr><td>16</td><td>US-95</td><td>Buscar lotes</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>17</td><td>US-09</td><td>Crear lotes</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>18</td><td>US-10</td><td>Escanear código QR en inventario</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>19</td><td>US-90</td><td>Eliminar productos</td><td>1</td><td>Por definir</td></tr>
+    <tr><td>16</td><td>US-95</td><td>Buscar lotes</td><td>2</td><td>2</td></tr>
+    <tr><td>17</td><td>US-09</td><td>Crear lotes</td><td>3</td><td>2</td></tr>
+    <tr><td>18</td><td>US-10</td><td>Escanear código QR en inventario</td><td>3</td><td>3</td></tr>
+    <tr><td>19</td><td>US-90</td><td>Eliminar productos</td><td>1</td><td>2</td></tr>
     <tr><td>20</td><td>US-11</td><td>Detectar stock agotado</td><td>3</td><td>1</td></tr>
-    <tr><td>21</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>21</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>2</td><td>2</td></tr>
     <tr><td>22</td><td>US-13</td><td>Visualizar dashboard móvil de lotes</td><td>3</td><td>1</td></tr>
-    <tr><td>23</td><td>US-14</td><td>Recibir notificación de caducidad de lote</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>23</td><td>US-14</td><td>Recibir notificación de caducidad de lote</td><td>3</td><td>2</td></tr>
     <tr><td>24</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>2</td><td>1</td></tr>
     <tr><td>25</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>2</td><td>1</td></tr>
     <tr><td>26</td><td>US-17</td><td>Registrar datos de facturación</td><td>3</td><td>1</td></tr>
     <tr><td>27</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>5</td><td>1</td></tr>
-    <tr><td>28</td><td>US-19</td><td>Activar suscripción</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>28</td><td>US-19</td><td>Activar suscripción</td><td>3</td><td>2</td></tr>
     <tr><td>29</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>2</td><td>1</td></tr>
     <tr><td>30</td><td>US-21</td><td>Consultar estado de suscripción</td><td>1</td><td>1</td></tr>
     <tr><td>31</td><td>US-22</td><td>Renovar suscripción</td><td>3</td><td>1</td></tr>
-    <tr><td>32</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>33</td><td>US-24</td><td>Cancelar suscripción</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>34</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>35</td><td>US-96</td><td>Gestionar métodos de pago de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>36</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>37</td><td>US-27</td><td>Descargar historial de suscripción</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>32</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>2</td><td>2</td></tr>
+    <tr><td>33</td><td>US-24</td><td>Cancelar suscripción</td><td>3</td><td>2</td></tr>
+    <tr><td>34</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>3</td><td>2</td></tr>
+    <tr><td>35</td><td>US-96</td><td>Gestionar métodos de pago de suscripción</td><td>2</td><td>2</td></tr>
+    <tr><td>36</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>2</td><td>3</td></tr>
+    <tr><td>37</td><td>US-27</td><td>Descargar historial de suscripción</td><td>2</td><td>3</td></tr>
     <tr><td>38</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>3</td><td>1</td></tr>
     <tr><td>39</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>2</td><td>1</td></tr>
-    <tr><td>40</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>5</td><td>Por definir</td></tr>
+    <tr><td>40</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>5</td><td>2</td></tr>
     <tr><td>41</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>3</td><td>1</td></tr>
     <tr><td>42</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>2</td><td>1</td></tr>
     <tr><td>43</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>3</td><td>1</td></tr>
-    <tr><td>44</td><td>US-34</td><td>Cancelar venta en curso</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>45</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>44</td><td>US-34</td><td>Cancelar venta en curso</td><td>1</td><td>2</td></tr>
+    <tr><td>45</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>3</td><td>2</td></tr>
     <tr><td>46</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>2</td><td>1</td></tr>
     <tr><td>47</td><td>US-97</td><td>Consultar el historial de ventas del día</td><td>2</td><td>1</td></tr>
-    <tr><td>48</td><td>US-98</td><td>Consultar el detalle de una venta registrada</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>48</td><td>US-98</td><td>Consultar el detalle de una venta registrada</td><td>2</td><td>2</td></tr>
     <tr><td>49</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business desde el dispositivo móvil</td><td>5</td><td>1</td></tr>
     <tr><td>50</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>2</td><td>1</td></tr>
     <tr><td>51</td><td>US-39</td><td>Visualizar conversaciones de clientes en la aplicación móvil</td><td>3</td><td>1</td></tr>
     <tr><td>52</td><td>US-40</td><td>Responder mensajes de clientes desde la aplicación móvil</td><td>3</td><td>1</td></tr>
-    <tr><td>53</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>54</td><td>US-71</td><td>Visualizar estado del chatbot en la pantalla de Inicio</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>55</td><td>US-72</td><td>Visualizar alertas de inventario en la pantalla de Inicio</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>56</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en la pantalla de Inicio</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>57</td><td>US-74</td><td>Visualizar pedidos recientes en la pantalla de Inicio</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>53</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>2</td><td>2</td></tr>
+    <tr><td>54</td><td>US-71</td><td>Visualizar estado del chatbot en la pantalla de Inicio</td><td>2</td><td>2</td></tr>
+    <tr><td>55</td><td>US-72</td><td>Visualizar alertas de inventario en la pantalla de Inicio</td><td>2</td><td>2</td></tr>
+    <tr><td>56</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en la pantalla de Inicio</td><td>1</td><td>3</td></tr>
+    <tr><td>57</td><td>US-74</td><td>Visualizar pedidos recientes en la pantalla de Inicio</td><td>2</td><td>3</td></tr>
     <tr><td>58</td><td>US-75</td><td>Acceder a módulos desde accesos directos de la pantalla de Inicio</td><td>1</td><td>1</td></tr>
-    <tr><td>59</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>60</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>61</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>62</td><td>US-79</td><td>Reportar un problema</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>63</td><td>US-80</td><td>Confirmar envío del reporte</td><td>1</td><td>Por definir</td></tr>
+    <tr><td>59</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>2</td><td>3</td></tr>
+    <tr><td>60</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>2</td><td>3</td></tr>
+    <tr><td>61</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>2</td><td>3</td></tr>
+    <tr><td>62</td><td>US-79</td><td>Reportar un problema</td><td>3</td><td>3</td></tr>
+    <tr><td>63</td><td>US-80</td><td>Confirmar envío del reporte</td><td>1</td><td>3</td></tr>
     <tr><td>64</td><td>US-81</td><td>Navegar entre módulos desde el menú de navegación móvil</td><td>2</td><td>1</td></tr>
-    <tr><td>65</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>66</td><td>US-83</td><td>Gestionar destinos de navegación no disponibles</td><td>1</td><td>Por definir</td></tr>
-    <tr><td>67</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>68</td><td>US-42</td><td>Sugerir alternativas ante producto no disponible</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>69</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>70</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>71</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>65</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>2</td><td>3</td></tr>
+    <tr><td>66</td><td>US-83</td><td>Gestionar destinos de navegación no disponibles</td><td>1</td><td>3</td></tr>
+    <tr><td>67</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>3</td><td>2</td></tr>
+    <tr><td>68</td><td>US-42</td><td>Sugerir alternativas ante producto no disponible</td><td>2</td><td>2</td></tr>
+    <tr><td>69</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>3</td><td>2</td></tr>
+    <tr><td>70</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>2</td><td>2</td></tr>
+    <tr><td>71</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>3</td><td>2</td></tr>
     <tr><td>72</td><td>US-46</td><td>Validar comprobante de pago desde la aplicación móvil</td><td>3</td><td>1</td></tr>
-    <tr><td>73</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>74</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>75</td><td>US-49</td><td>Registrar venta en el sistema</td><td>2</td><td>Por definir</td></tr>
-    <tr><td>76</td><td>US-50</td><td>Manejar stock insuficiente en pedido</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>77</td><td>US-51</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>78</td><td>US-52</td><td>Rechazar comprobante de pago inválido</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>79</td><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>80</td><td>US-55</td><td>Validar y registrar pagos mediante API</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>81</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>82</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>83</td><td>US-93</td><td>Persistir datos mediante JPA por bounded context</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>73</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>2</td><td>2</td></tr>
+    <tr><td>74</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>3</td><td>3</td></tr>
+    <tr><td>75</td><td>US-49</td><td>Registrar venta en el sistema</td><td>2</td><td>3</td></tr>
+    <tr><td>76</td><td>US-50</td><td>Manejar stock insuficiente en pedido</td><td>3</td><td>3</td></tr>
+    <tr><td>77</td><td>US-51</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>3</td><td>3</td></tr>
+    <tr><td>78</td><td>US-52</td><td>Rechazar comprobante de pago inválido</td><td>3</td><td>3</td></tr>
+    <tr><td>79</td><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>5</td><td>3</td></tr>
+    <tr><td>80</td><td>US-55</td><td>Validar y registrar pagos mediante API</td><td>5</td><td>3</td></tr>
+    <tr><td>81</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>5</td><td>3</td></tr>
+    <tr><td>82</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>5</td><td>3</td></tr>
+    <tr><td>83</td><td>US-93</td><td>Persistir datos mediante JPA por bounded context</td><td>3</td><td>2</td></tr>
     <tr><td>84</td><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>3</td><td>1</td></tr>
-    <tr><td>85</td><td>US-56</td><td>Registrar cuenta con email</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>86</td><td>US-57</td><td>Verificar email</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>87</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>88</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>5</td><td>Por definir</td></tr>
-    <tr><td>89</td><td>US-60</td><td>Recuperar contraseña</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>90</td><td>US-61</td><td>Cerrar sesión</td><td>1</td><td>Por definir</td></tr>
+    <tr><td>85</td><td>US-56</td><td>Registrar cuenta con email</td><td>3</td><td>Base previa</td></tr>
+    <tr><td>86</td><td>US-57</td><td>Verificar email</td><td>3</td><td>Base previa</td></tr>
+    <tr><td>87</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>3</td><td>Base previa</td></tr>
+    <tr><td>88</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>5</td><td>Base previa</td></tr>
+    <tr><td>89</td><td>US-60</td><td>Recuperar contraseña</td><td>3</td><td>Base previa</td></tr>
+    <tr><td>90</td><td>US-61</td><td>Cerrar sesión</td><td>1</td><td>Base previa</td></tr>
     <tr><td>91</td><td>US-62</td><td>Visualizar perfil actual</td><td>1</td><td>1</td></tr>
     <tr><td>92</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>2</td><td>1</td></tr>
-    <tr><td>93</td><td>US-64</td><td>Subir foto de perfil</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>94</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>95</td><td>US-66</td><td>Cambiar contraseña</td><td>3</td><td>Por definir</td></tr>
+    <tr><td>93</td><td>US-64</td><td>Subir foto de perfil</td><td>3</td><td>2</td></tr>
+    <tr><td>94</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>3</td><td>2</td></tr>
+    <tr><td>95</td><td>US-66</td><td>Cambiar contraseña</td><td>3</td><td>2</td></tr>
     <tr><td>96</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>3</td><td>1</td></tr>
     <tr><td>97</td><td>US-68</td><td>Configurar notificaciones</td><td>2</td><td>1</td></tr>
-    <tr><td>98</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>2</td><td>Por definir</td></tr>
+    <tr><td>98</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>2</td><td>2</td></tr>
   </tbody>
 </table>
 

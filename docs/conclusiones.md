@@ -1,20 +1,17 @@
 # Conclusiones
 
-- La separación del inventario en dos jerarquías paralelas por unidad y por peso evita columnas nulas y ordena el catálogo por tipo de medida.
-- La gestión de lotes por fecha de vencimiento y las alertas de stock bajo, agotado y por vencer permiten priorizar la rotación de perecederos; su efecto sobre la merma requiere validación con usuarios y datos de operación.
-- La exposición del catálogo mediante fachada hacia venta presencial y pedidos por WhatsApp con validación de balanza inteligente mantiene la consistencia entre el stock digital y el físico.
-
-## Avance del TB1
-
-- La adaptación de Entreprenly a Android conserva la identidad del producto y establece una referencia compartida de estilo para los contextos. La navegación táctil, los formularios de una columna y el tratamiento de permisos del dispositivo orientan el diseño hacia las condiciones de uso del comerciante.
-- La selección de 41 HUs y 97 story points distribuye el Sprint 1 entre la Landing Page, Profile y navegación, Inventory, Chatbot, Subscription y Sales. La trazabilidad entre Product Backlog, responsables y Work-items permite revisar el avance respecto del alcance acordado.
-- La reutilización de la Landing Page, el backend y el avance previo de IAM proporciona una base para la implementación móvil. El cumplimiento del objetivo del TB1, incluido el alcance desplegado del backend, se determina con las evidencias de ejecución, servicios y despliegue del Sprint Review.
-- La elaboración y corrección de los diagramas de Profile fortalece la distinción entre estructura de pantallas, acciones de navegación y decisiones del usuario. La separación por HU facilita relacionar cada recorrido con los criterios de aceptación.
+- La organización del producto por Bounded Context permite delimitar las responsabilidades de Profile, Inventory, Sales, Chatbot, Subscription e IAM. En Inventory, la separación de productos por unidad y por peso conserva reglas y datos propios de cada tipo de medida, y ofrece una base común para las ventas presenciales y los pedidos por WhatsApp.
+- La gestión de lotes y las alertas de stock y vencimiento proporcionan información para priorizar la reposición y la rotación de productos. Su utilidad fue valorada en las entrevistas de validación; la reducción efectiva de merma requiere seguimiento con datos de operación del negocio.
+- El diseño de la aplicación Android conserva la identidad de Entreprenly y adapta la navegación, los formularios y los controles al uso táctil. Los wireframes, mock-ups, wireflows y user flows relacionan las tareas del comerciante con sus pantallas, decisiones y estados alternativos, manteniendo una referencia compartida entre los contextos.
+- La planificación del Sprint 1 integra 41 HUs y 97 story points, desglosados en 127 Work-items. La relación entre historias, responsables, tareas y evidencias permite revisar el alcance de la Landing Page y los módulos móviles respecto de los criterios de aceptación.
+- La reutilización de la Landing Page, el backend y la base de IAM facilita la continuidad del producto hacia Android. El WhatsApp Bridge incorpora sesiones por comerciante y el intercambio de mensajes y comprobantes con Chatbot; la integración completa depende de la coherencia de sus contratos y de la disponibilidad de los componentes durante la ejecución.
+- Las entrevistas con comerciantes y clientes finales aportan evidencia sobre la comprensión de los recorridos y señalan mejoras concretas: ampliar la visualización del comprobante, facilitar la lectura del catálogo y mejorar la interpretación de cantidades. La evaluación heurística complementa estos hallazgos con mejoras de cancelación, recuperación y legibilidad. Los pagos simulados utilizados en la validación delimitan el alcance de los resultados obtenidos.
 
 ## Recomendaciones
 
-- Mantener el aislamiento por propietario sin llaves foráneas entre contextos.
-- Conservar el borrado en cascada de lotes al eliminar su producto.
-- Sostener el monitoreo con umbral de vencimiento a 7 días para priorizar la rotación.
-- Consolidar los contratos y estados de carga, error y recuperación entre módulos antes de aceptar las HUs del Sprint 1.
-- Registrar por separado el código reutilizado, el esfuerzo planificado y las funcionalidades aceptadas para que las métricas del sprint reflejen el avance verificable.
+- Mantener el aislamiento de datos por propietario y las responsabilidades de cada Bounded Context. Verificar la consistencia del stock al registrar ventas, validar pedidos y modificar o eliminar productos y lotes.
+- Alinear los contratos entre la aplicación, el backend y el WhatsApp Bridge, incluida la ruta de desconexión de la sesión. Registrar la configuración del entorno y evidencias de disponibilidad del bridge junto con las de la Landing Page y el backend.
+- Incorporar las mejoras identificadas en la validación: comprobantes ampliables, catálogo legible, interpretación de cantidades, confirmaciones claras y opciones de cancelar o deshacer. Mantener estados de carga, error y recuperación consistentes entre módulos.
+- Adjuntar los resultados de ejecución de la suite y una matriz de funcionalidades del backend con sus evidencias y el cálculo del alcance desplegado exigido para la entrega. Relacionar estos resultados con los criterios de aceptación de las HUs.
+- Evaluar los recorridos con datos de operación y pagos reales en un entorno controlado antes de atribuir resultados comerciales al producto. Ajustar las alertas de vencimiento a las necesidades del negocio y medir su efecto sobre la rotación y la merma.
+- Conservar la trazabilidad del backlog y registrar por separado el código reutilizado, las estimaciones y las funcionalidades aceptadas, para que las métricas de cada incremento reflejen el trabajo verificable.

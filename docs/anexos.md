@@ -62,19 +62,35 @@ URL del Repositorio del Frontend: https://github.com/LernenLabs/adm-entreprenly-
 
 URL del Repositorio del Backend: https://github.com/LernenLabs/adm-entreprenly-backend
 
+URL del Repositorio del WhatsApp Bridge: https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge
+
 Estos repositorios constituyen la referencia de código del curso actual. La aplicación utiliza Kotlin y Jetpack Compose; la landing y el backend se adaptan de los proyectos existentes. La documentación del backend registra [Render como URL del servicio](https://adm-entreprenly-backend.onrender.com) y [Swagger UI como referencia de sus contratos](https://adm-entreprenly-backend.onrender.com/swagger-ui.html).
+
+El WhatsApp Bridge utiliza Node.js, Express y whatsapp-web.js para vincular las cuentas de los comerciantes, recibir mensajes y comprobantes y entregar las respuestas del backend. Su [guía de despliegue](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/blob/main/DEPLOY.md) describe Docker y la conexión del backend mediante un túnel HTTPS. La configuración y los contratos se detallan en 4.1.4 y 4.2.1.7.
 
 ## Anexo I — Referencia del proyecto anterior
 
 Informe utilizado como antecedente de marca, diseño y estructura documental: [daop-entreprenly](https://github.com/Kauflink/daop-entreprenly). Sus fechas, integrantes y resultados de sprints corresponden al curso anterior; la planificación y las responsabilidades actuales se documentan en el capítulo IV del presente informe.
 
-## Anexo J — Product Backlog y Sprint Backlog en Miro
+## Anexo J — Product Backlog y Sprint Backlogs en Miro
 
 Tablero utilizado por Lernen Labs para gestionar el Product Backlog y el seguimiento de los sprints:
 
 Enlace: https://miro.com/app/board/uXjVEel-fbI=/
 
-El tablero contiene el Product Backlog descrito en la sección 2.4.3, el Sprint Backlog 1 y la tabla de Work-items del Sprint 1 vinculada a cada HU, descritos en la sección 4.2.1.3.
+El tablero contiene el Product Backlog descrito en la sección 2.4.3, el Sprint Backlog 1 y la tabla de Work-items del Sprint 1 vinculada a cada HU, descritos en la sección 4.2.1.3. Las siguientes capturas documentan la planificación de los sprints 2 y 3 y sustentan su asignación en el Product Backlog.
+
+<p align="center">
+  <img src="images/capitulo2/sprint-backlog-2-miro.png" alt="Sprint Backlog 2 en Miro con las 30 HUs planificadas" width="800"/>
+</p>
+
+**Sprint 2:** 30 HUs y 73 story points, distribuidos entre Profile e Inicio, Inventory, Chatbot, Subscription y Sales con backend. Las historias se registran en estado To Do.
+
+<p align="center">
+  <img src="images/capitulo2/sprint-backlog-3-miro.png" alt="Sprint Backlog 3 en Miro con las 21 HUs planificadas" width="800"/>
+</p>
+
+**Sprint 3:** 21 HUs y 57 story points, distribuidos entre Inicio, soporte y navegación, Inventory, Chatbot, Subscription y backend. Las historias se registran en estado To Do.
 
 ## Anexo K — Productos desplegados en producción
 

@@ -1,3 +1,3 @@
 # Video About the Product
 
-Por completar.
+Este apartado no corresponde al alcance de la entrega TB1.
