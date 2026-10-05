@@ -1674,7 +1674,7 @@ En esta sección se especifican las épicas y las User Stories que definen el al
     </tr>
     <tr>
       <td>US-94</td>
-      <td colspan="2">Desplegar la Landing Page en Firebase Hosting</td>
+      <td colspan="2">Desplegar la Landing Page en GitHub Pages</td>
     </tr>
   </tbody>
 </table>
@@ -3035,11 +3035,11 @@ Las épicas agrupan los requisitos identificados y cada User Story incluye usuar
   <tbody>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
     <tr><td>US-94</td><td>equipo de desarrollo</td><td>Por definir</td><td>EPIC-13 - Technical Stories – Implementar RESTful API</td></tr>
-    <tr><th>Title</th><td colspan="3">Desplegar la Landing Page en Firebase Hosting</td></tr>
+    <tr><th>Title</th><td colspan="3">Desplegar la Landing Page en GitHub Pages</td></tr>
     <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como equipo de desarrollo, queremos desplegar la Landing Page en Firebase Hosting para presentar el producto y facilitar el acceso a la aplicación móvil de forma escalable.</td></tr>
+    <tr><td colspan="4">Como equipo de desarrollo, queremos desplegar la Landing Page en GitHub Pages para presentar el producto y facilitar el acceso a la aplicación móvil de forma escalable.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Build de producción de la Landing Page</strong><br>Dado que el código de la Landing Page está listo para una versión,<br>Cuando se ejecuta el build de producción,<br>Entonces el sistema genera los artefactos optimizados sin errores.<br><br><strong>Escenario 2: Despliegue exitoso en Firebase</strong><br>Dado que existe un build de producción válido,<br>Cuando se ejecuta el despliegue a Firebase Hosting,<br>Entonces la Landing Page queda publicada y accesible mediante su URL.<br><br><strong>Escenario 3: Reversión ante despliegue fallido</strong><br>Dado que un despliegue presenta errores,<br>Cuando el equipo lo detecta,<br>Entonces Firebase Hosting permite revertir a la versión estable previamente publicada.</td></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Build de producción de la Landing Page</strong><br>Dado que el código de la Landing Page está listo para una versión,<br>Cuando se ejecuta el build de producción,<br>Entonces el sistema genera los artefactos optimizados sin errores.<br><br><strong>Escenario 2: Despliegue exitoso en GitHub Pages</strong><br>Dado que existe un build de producción válido,<br>Cuando se ejecuta el despliegue a GitHub Pages,<br>Entonces la Landing Page queda publicada y accesible mediante su URL.<br><br><strong>Escenario 3: Reversión ante despliegue fallido</strong><br>Dado que un despliegue presenta errores,<br>Cuando el equipo lo detecta,<br>Entonces el equipo vuelve a publicar en GitHub Pages la versión estable previa desde el historial del repositorio.</td></tr>
   </tbody>
 </table>
 
@@ -3460,7 +3460,7 @@ El Product Backlog se gestiona en el [tablero de Miro de Entreprenly](https://mi
     <tr><td>81</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>5</td><td>Por definir</td></tr>
     <tr><td>82</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>5</td><td>Por definir</td></tr>
     <tr><td>83</td><td>US-93</td><td>Persistir datos mediante JPA por bounded context</td><td>3</td><td>Por definir</td></tr>
-    <tr><td>84</td><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>3</td><td>1</td></tr>
+    <tr><td>84</td><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>3</td><td>1</td></tr>
     <tr><td>85</td><td>US-56</td><td>Registrar cuenta con email</td><td>3</td><td>Por definir</td></tr>
     <tr><td>86</td><td>US-57</td><td>Verificar email</td><td>3</td><td>Por definir</td></tr>
     <tr><td>87</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>3</td><td>Por definir</td></tr>

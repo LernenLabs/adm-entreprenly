@@ -24,13 +24,15 @@
 
   <p style="padding-left:2em; text-indent:-2em;">Zhao, P. (2024). Challenges and solutions of fresh retail supply chain: A case study of Wal-Mart. <em>Frontiers in Business, Economics and Management</em>, <em>14</em>(3), 165–168. https://doi.org/10.54097/0e0ezb98</p>
 
-  <p style="padding-left:2em; text-indent:-2em;">Angular. (s.f.). <em>Angular coding style guide</em>. Angular. https://angular.io/guide/styleguide</p>
+  <p style="padding-left:2em; text-indent:-2em;">Android Developers. (s.f.). <em>Android Kotlin style guide</em>. https://developer.android.com/kotlin/style-guide</p>
+
+  <p style="padding-left:2em; text-indent:-2em;">Android Developers. (s.f.). <em>Compose API guidelines</em>. https://developer.android.com/develop/ui/compose/api-guidelines</p>
 
   <p style="padding-left:2em; text-indent:-2em;">Google. (s.f.-a). <em>Google HTML/CSS style guide</em>. https://google.github.io/styleguide/htmlcssguide.html</p>
 
   <p style="padding-left:2em; text-indent:-2em;">Google. (s.f.-b). <em>Google Java style guide</em>. https://google.github.io/styleguide/javaguide.html</p>
 
-  <p style="padding-left:2em; text-indent:-2em;">Google. (s.f.-c). <em>Google TypeScript style guide</em>. https://google.github.io/styleguide/tsguide.html</p>
+  <p style="padding-left:2em; text-indent:-2em;">JetBrains. (s.f.). <em>Kotlin coding conventions</em>. https://kotlinlang.org/docs/coding-conventions.html</p>
 
   <p style="padding-left:2em; text-indent:-2em;">SpecFlow. (s.f.). <em>Gherkin conventions for readable specifications</em>. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/</p>
 

@@ -8,11 +8,77 @@ El criterio del TB1 exige una Landing Page desplegada, un backend desplegado con
 
 ## 4.1. Software Configuration Management
 
-Por completar.
+En esta sección se describe cómo el equipo **Lernen Labs** gestiona la configuración de los productos de Entreprenly. Se presentan las herramientas del entorno de trabajo (4.1.1), la organización de los repositorios y el flujo de ramas (4.1.2), las convenciones de código por lenguaje (4.1.3) y la configuración de despliegue de la Landing Page, la aplicación Android y los servicios web (4.1.4).
 
 ### 4.1.1. Software Development Environment Configuration
 
-Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-backend` (Spring Boot, DDD + CQRS por contextos `iam, inventory, sales, subscription, profile, chatbot, shared`).
+En esta sección se detallan las herramientas, frameworks y plataformas que el equipo utiliza para el desarrollo colaborativo de Entreprenly. Se consideran las actividades de Project Management, Requirements Management, Product UX/UI Design, Software Development, Software Testing, Software Documentation y Software Deployment.
+
+**Project Management**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Miro</strong></td><td>Gestión del Product Backlog y del Sprint Backlog. El tablero organiza las HUs y sus Work-items con los estados <em>To Do</em>, <em>In Process</em>, <em>To Review</em> y <em>Done</em>.</td><td>https://miro.com/app/board/uXjVEel-fbI=/</td></tr>
+  <tr><td><strong>Google Meet</strong></td><td>Reuniones de planificación, revisión y coordinación del equipo.</td><td>https://meet.google.com/</td></tr>
+</table>
+
+**Requirements Management**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Miro</strong></td><td>Registro de User Stories, story points, sprint asignado y estado de cada HU, junto con los artefactos de Event Storming del capítulo II.</td><td>https://miro.com/</td></tr>
+  <tr><td><strong>Gherkin</strong></td><td>Redacción de los criterios de aceptación de las User Stories con la estructura <code>Dado – Cuando – Entonces</code>.</td><td>https://cucumber.io/docs/gherkin/</td></tr>
+</table>
+
+**Product UX/UI Design**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Figma</strong></td><td>Diseño de wireframes, mock-ups, prototipos y Style Guidelines. La página <strong>Mobile</strong> reúne las pantallas de la aplicación Android y la página <strong>Web</strong>, las referencias de la Landing Page.</td><td>https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly</td></tr>
+</table>
+
+**Software Development**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Android Studio</strong></td><td>IDE para el desarrollo, la ejecución en emulador y la depuración de la aplicación Android.</td><td>https://developer.android.com/studio</td></tr>
+  <tr><td><strong>Kotlin / Jetpack Compose</strong></td><td>Lenguaje y toolkit de UI declarativa de la aplicación móvil, con Material 3 y Navigation Compose.</td><td>https://developer.android.com/compose</td></tr>
+  <tr><td><strong>Retrofit / OkHttp</strong></td><td>Consumo de los servicios REST del backend desde la aplicación Android.</td><td>https://square.github.io/retrofit/</td></tr>
+  <tr><td><strong>Spring Boot / Java</strong></td><td>Desarrollo de los RESTful Web Services organizados por Bounded Context con DDD y CQRS.</td><td>https://spring.io/projects/spring-boot</td></tr>
+  <tr><td><strong>PostgreSQL</strong></td><td>Base de datos relacional del backend: local en desarrollo y Supabase en el entorno desplegado.</td><td>https://www.postgresql.org/</td></tr>
+  <tr><td><strong>Docker</strong></td><td>Empaquetado del backend en la imagen <code>entreprenly-platform</code> (puerto <code>8092</code>).</td><td>https://www.docker.com/</td></tr>
+  <tr><td><strong>HTML5 / Tailwind CSS / JavaScript</strong></td><td>Desarrollo de la Landing Page; Node.js se utiliza para compilar la hoja de estilos de Tailwind.</td><td>https://tailwindcss.com/</td></tr>
+  <tr><td><strong>Git / GitHub</strong></td><td>Control de versiones y alojamiento de los repositorios de la organización Lernen Labs.</td><td>https://github.com/LernenLabs</td></tr>
+</table>
+
+**Software Testing**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>JUnit 5 / Mockito</strong></td><td>Pruebas unitarias y de integración de los servicios y agregados del backend.</td><td>https://junit.org/junit5/</td></tr>
+  <tr><td><strong>Spring Boot Test / MockMvc</strong></td><td>Pruebas de los controladores REST: códigos HTTP, serialización JSON y manejo de errores.</td><td>https://docs.spring.io/spring-boot/reference/testing/</td></tr>
+  <tr><td><strong>JUnit / Compose UI Test</strong></td><td>Pruebas unitarias e instrumentadas de la aplicación Android.</td><td>https://developer.android.com/develop/ui/compose/testing</td></tr>
+  <tr><td><strong>Swagger UI / Postman</strong></td><td>Verificación manual de los endpoints desplegados con datos de muestra.</td><td>https://www.postman.com/</td></tr>
+</table>
+
+**Software Documentation**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>Swagger / OpenAPI</strong></td><td>Documentación de los endpoints del backend mediante SpringDoc OpenAPI.</td><td>https://adm-entreprenly-backend.onrender.com/swagger-ui.html</td></tr>
+  <tr><td><strong>Markdown</strong></td><td>Redacción del informe del proyecto y de los README de cada repositorio.</td><td>https://www.markdownguide.org/</td></tr>
+</table>
+
+**Software Deployment**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Propósito de uso</th><th>Ruta de Referencia / Descarga</th></tr>
+  <tr><td><strong>GitHub Pages / GitHub Actions</strong></td><td>Publicación automática de la Landing Page en cada push a <code>main</code>.</td><td>https://pages.github.com/</td></tr>
+  <tr><td><strong>Render</strong></td><td>Despliegue del backend como servicio Docker.</td><td>https://render.com/</td></tr>
+  <tr><td><strong>Supabase</strong></td><td>Base de datos PostgreSQL del backend desplegado.</td><td>https://supabase.com/</td></tr>
+</table>
+
+**Configuración local del backend**
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
@@ -20,48 +86,81 @@ Backend reutilizado y en avance: `https://github.com/LernenLabs/adm-entreprenly-
   </tr>
   <tr><td style="vertical-align:middle; text-align:center;">Java JDK</td><td style="vertical-align:middle; text-align:center;">26</td><td>Lenguaje del backend.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Spring Boot</td><td style="vertical-align:middle; text-align:center;">4.0.6</td><td>WebMVC, JPA, Security, Validation.</td></tr>
-  <tr><td style="vertical-align:middle; text-align:center;">PostgreSQL</td><td style="vertical-align:middle; text-align:center;">15+</td><td>Local en desarrollo; Cloud SQL en producción.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">PostgreSQL</td><td style="vertical-align:middle; text-align:center;">15+</td><td>Local en desarrollo; Supabase en el entorno desplegado.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Maven Wrapper</td><td style="vertical-align:middle; text-align:center;">—</td><td>Compilación con `./mvnw spring-boot:run` y `./mvnw clean package`.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">JWT + BCrypt</td><td style="vertical-align:middle; text-align:center;">jjwt 0.12.6</td><td>Autenticación por token.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">SpringDoc OpenAPI</td><td style="vertical-align:middle; text-align:center;">3.0.3</td><td>Swagger UI.</td></tr>
   <tr><td style="vertical-align:middle; text-align:center;">Docker</td><td style="vertical-align:middle; text-align:center;">—</td><td>Imagen `entreprenly-platform` en puerto `8092`.</td></tr>
 </table>
 
-- Crear base local `daop-entreprenly` antes del primer arranque; las tablas se crean al iniciar.
+- Crear la base local `daop-entreprenly` antes del primer arranque; las tablas se crean al iniciar.
 - Configuración por `.env.example` → `.env` o variables de entorno. API base `/api/v1`, Swagger local `http://localhost:8092/swagger-ui.html`.
+
+**Configuración de la aplicación Android**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;">
+    <th>Herramienta</th><th>Versión</th><th>Uso</th>
+  </tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Android Gradle Plugin</td><td style="vertical-align:middle; text-align:center;">9.4.1</td><td>Compilación con `./gradlew assembleDebug`.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Kotlin</td><td style="vertical-align:middle; text-align:center;">2.2.10</td><td>Lenguaje de la aplicación; compatibilidad con Java 11.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Jetpack Compose (BOM)</td><td style="vertical-align:middle; text-align:center;">2026.02.01</td><td>UI declarativa con Material 3.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Navigation Compose</td><td style="vertical-align:middle; text-align:center;">2.9.5</td><td>Navegación entre pantallas por Bounded Context.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Retrofit / OkHttp</td><td style="vertical-align:middle; text-align:center;">3.0.0 / 4.12.0</td><td>Cliente HTTP y registro de peticiones.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">DataStore Preferences</td><td style="vertical-align:middle; text-align:center;">1.1.7</td><td>Persistencia local de la sesión y las preferencias.</td></tr>
+  <tr><td style="vertical-align:middle; text-align:center;">Android SDK</td><td style="vertical-align:middle; text-align:center;">min 30 / target 37</td><td>Compatibilidad desde Android 11.</td></tr>
+</table>
 
 ### 4.1.2. Source Code Management
 
-La gestión del código fuente es una parte importante del proceso de desarrollo colaborativo de software, ya que permite un control eficiente de los cambios y versiones del código fuente. En esta sección se describe el sistema de control de versiones implementado por **Lernen Labs**, utilizando GitHub como plataforma de alojamiento de repositorios. Además se detallan las convenciones de trabajo, como el modelo GitFlow y versionado semántico (Conventional Commits).
+Para la gestión del código fuente y el seguimiento de modificaciones, el equipo **Lernen Labs** utiliza GitHub como plataforma principal y Git como sistema de control de versiones distribuido. Cada producto de la solución tiene un repositorio independiente dentro de la organización, y el informe del proyecto se mantiene en un repositorio propio.
 
-<br>
+**Repositorios del Proyecto**
 
-**URL de los Repositorios**: 
+| Producto               | URL del Repositorio                                    |
+| :--------------------- | :----------------------------------------------------- |
+| **Organización**       | https://github.com/LernenLabs                          |
+| **Reporte**            | https://github.com/LernenLabs/adm-entreprenly          |
+| **Landing Page**       | https://github.com/LernenLabs/adm-entreprenly-landing  |
+| **Aplicación Android** | https://github.com/LernenLabs/adm-entreprenly-frontend |
+| **Web Services**       | https://github.com/LernenLabs/adm-entreprenly-backend  |
 
-* Organización: https://github.com/LernenLabs
-* Reporte: https://github.com/LernenLabs/adm-entreprenly
-* Landing Page: https://github.com/LernenLabs/adm-entreprenly-landing
-* Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
-* Backend: https://github.com/LernenLabs/adm-entreprenly-backend
+**Estrategia de Flujo de Trabajo: GitFlow**
 
-**Estructura de Ramas**: 
+El equipo implementa el modelo GitFlow para organizar el desarrollo colaborativo. Este flujo permite trabajar en varios Bounded Contexts en paralelo sin afectar la estabilidad de la rama principal.
 
-Para mantener un flujo organizado en el desarrollo, se ha implementado el modelo GitFlow a través de las siguientes ramas:
+- **main**: rama principal con el código en estado de producción. Cada versión integrada aquí se etiqueta con su número de versión.
+- **develop**: rama base de desarrollo, donde se integran las funcionalidades terminadas antes de pasar a `main` al cierre de cada sprint.
+- **feature**: ramas temporales para desarrollar una funcionalidad o un Bounded Context; se crean desde `develop` y se fusionan nuevamente en ella.
+- **release**: ramas para preparar un lanzamiento, con ajustes menores y correcciones finales.
+- **hotfix**: ramas creadas desde `main` para corregir errores críticos del entorno de producción.
 
-* main: Rama principal (main) que contiene las versiones estables del proyecto. Todas las demás ramas derivan de esta.
-* develop: Rama de desarrollo (develop) que contiene las características en desarrollo y se fusiona con la Main Branch al final de cada sprint.
-* feat/nombre-de-la-funcionalidad: Ramas de características (feature) que se crean para desarrollar nuevas funcionalidades y se fusionan con la Develop Branch al finalizar.
+**Convenciones de Nombres para Ramas**
+
+- **Feature Branches**: `feature/[bounded-context]` o `feature/[descripcion]` (por ejemplo, `feature/inventory`, `feature/chatbot` o `feature/render-deploy-hook`).
+- **Release Branches**: `release/v[Major.Minor.Patch]`.
+- **Hotfix Branches**: `hotfix/[descripcion-error]`.
+
+**Versionamiento Semántico**
+
+El equipo adopta Semantic Versioning 2.0.0 para nombrar los lanzamientos, con el formato MAJOR.MINOR.PATCH:
+
+1. MAJOR: se incrementa con cambios incompatibles en la API.
+2. MINOR: se incrementa al añadir funcionalidad compatible con versiones anteriores.
+3. PATCH: se incrementa con correcciones de errores compatibles con versiones anteriores.
 
 **Estándar de Mensajes de Commit**
 
-Para asegurar un historial de cambios legible y facilitar la automatización, se utiliza la especificacion de Conventional Commits para todos los mensajes de commit. La estructura utilizada es [tipo]:[descripción breve], empleando los siguientes prefijos:
+Para asegurar un historial de cambios legible y facilitar la automatización, se utiliza la especificación de Conventional Commits para todos los mensajes de commit. La estructura utilizada es [tipo]:[descripción breve], empleando los siguientes prefijos:
 
 - feat: Incorporación de una nueva funcionalidad.
 - fix: Corrección de un error o bug.
 - docs: Modificaciones exclusivamente en la documentación.
 - style: Cambios de formato o estética que no afectan la lógica del código.
 - refactor: Reestructuración de código que no añade funciones ni corrige errores.
-- test: Adición o actualización de pruebas
+- test: Adición o actualización de pruebas.
+
+Los repositorios de la aplicación Android y del backend validan este formato con el workflow `commit-policy.yml` de GitHub Actions.
 
 ### 4.1.3. Source Code Style Guide & Conventions
 
@@ -111,34 +210,33 @@ Las convenciones aplicadas son las siguientes:
 - El código se organiza en funciones con una única responsabilidad, evitando bloques de lógica demasiado extensos.
 - Se incluyen comentarios descriptivos en funciones no triviales, explicando el propósito y no el mecanismo.
 
-#### TypeScript
+#### Kotlin
 
-Para el desarrollo del Frontend Web Application de Entreprenly con Angular, el equipo adopta la **Google TypeScript Style Guide** como referencia principal.
-
-Las convenciones aplicadas son las siguientes:
-
-- Los nombres de **clases, interfaces y enumeraciones** se escriben en **PascalCase**: `UserProfile`, `AuthService`, `PaymentStatus`.
-- Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchUserData()`.
-- Los nombres de **constantes globales** se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
-- Los nombres de **archivos** de Angular siguen la convención **kebab-case** con sufijo descriptivo según su rol: `product-item.component.ts`, `inventory-api.service.ts`, `sale.entity.ts`, `payment-method.enum.ts` y `app.routes.ts`.
-- Se declaran **tipos explícitos** para todos los parámetros de funciones y valores de retorno; se evita el uso de `any`.
-- Se utilizan **interfaces** para describir la forma de los objetos del dominio: `interface Entrepreneur { id: number; name: string; }`.
-- Se prefiere el uso de **Observables** de RxJS sobre Promises para el manejo de operaciones asíncronas, coherente con el modelo reactivo de Angular.
-- Se habilita el modo estricto de TypeScript (`"strict": true`) en el `tsconfig.json` del proyecto.
-- Las importaciones se organizan en bloques separados: primero módulos de Angular, luego librerías de terceros y finalmente módulos internos del proyecto.
-
-#### Angular Framework
-
-Además de las convenciones de TypeScript, el equipo adopta la **Angular Coding Style Guide** oficial para la organización y estructura de los componentes, servicios y módulos de la aplicación.
+Para el desarrollo de la aplicación Android de Entreprenly, el equipo adopta las **Kotlin Coding Conventions** oficiales y la **Android Kotlin Style Guide** como referencias principales.
 
 Las convenciones aplicadas son las siguientes:
 
-- Cada componente, servicio o módulo reside en **su propio archivo**, siguiendo el principio de una clase por archivo.
-- Los nombres de **componentes** siguen el patrón `[Feature]Component`: `DashboardComponent`, `ProjectCardComponent`.
-- Los nombres de **servicios** siguen el patrón `[Feature]Service`: `AuthService`, `ProjectService`.
-- Los **selectores** de los componentes se escriben en **kebab-case** con el prefijo único del proyecto (`app-`, configurado en `angular.json`): `app-conversation-list`, `app-message-bubble`, `app-qr-connection-card`.
-- La aplicación utiliza **componentes standalone** (sin `NgModule`); el enrutamiento se organiza por bounded context mediante archivos de rutas lazy-loaded (`*.routes.ts`) registrados en `app.routes.ts` y `app.config.ts`.
-- Los métodos del ciclo de vida de Angular (`ngOnInit`, `ngOnDestroy`) se implementan a través de sus interfaces correspondientes (`OnInit`, `OnDestroy`).
+- Los nombres de **clases, interfaces, objetos y enumeraciones** se escriben en **PascalCase**: `ChatOrder`, `ProductRepository`, `OrderStatus`.
+- Los nombres de **funciones, propiedades y variables** se escriben en **camelCase**: `loadProducts()`, `isLoading`.
+- Las **constantes** (`const val` y valores inmutables de nivel superior) se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
+- Los nombres de **archivos** coinciden con la clase principal que contienen y usan **PascalCase**: `ChatScreen.kt`, `ChatbotViewModels.kt`.
+- Se prefiere `val` sobre `var` y los tipos **no nulos**; los valores opcionales se manejan con `?.`, `?:` y `let`, evitando el operador `!!`.
+- Se utilizan **data classes** para recursos y valores del dominio, y **sealed classes** o enumeraciones para representar estados finitos.
+- Las operaciones asíncronas se implementan con **corrutinas** y `suspend fun`, y su resultado se expone a la UI mediante `StateFlow`.
+- Se aplica **indentación de 4 espacios** y un máximo de 100 caracteres por línea.
+
+#### Jetpack Compose y arquitectura Android
+
+Además de las convenciones de Kotlin, el equipo sigue las **Compose API guidelines** y la arquitectura recomendada por Android para organizar la aplicación.
+
+Las convenciones aplicadas son las siguientes:
+
+- Las funciones **@Composable** que emiten UI se nombran en **PascalCase** como sustantivos: `OrderDetailScreen`, `ProductCard`.
+- Las pantallas siguen el patrón `[Feature]Screen` y sus ViewModels el patrón `[Feature]ViewModel`.
+- Cada Composable recibe un parámetro `modifier: Modifier = Modifier` como primer parámetro opcional, y el estado se eleva al ViewModel (_state hoisting_).
+- Los colores, la tipografía y los espaciados se toman del tema de **Material 3**, en coherencia con las Style Guidelines del capítulo III.
+- Los paquetes se escriben en **minúsculas** y se organizan por bounded context con la estructura `online.entreprenly.entreprenlyapp.[boundedcontext].[layer]`, con las capas `domain`, `application`, `infrastructure` e `interfaces` (`ui/screens`, `ui/components`, `ui/viewmodels`, `ui/navigation`).
+- La navegación de cada contexto se define en su propio archivo `[Feature]Navigation.kt` y se registra en el grafo principal de la aplicación.
 
 #### Java y Spring Boot
 
@@ -159,7 +257,7 @@ Las convenciones aplicadas son las siguientes:
 
 #### Gherkin (Acceptance Criteria)
 
-Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo III), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas del Backend se implementan con **JUnit** sobre los servicios y agregados de cada bounded context.
+Para la redacción de los criterios de aceptación de las User Stories (detallados en el Capítulo III), el equipo adopta el estilo **Gherkin** en su variante en español (`Dado – Cuando – Entonces`). Las pruebas automatizadas se implementan con **JUnit** sobre los servicios y agregados de cada bounded context del backend y sobre la lógica de la aplicación Android.
 
 Las convenciones aplicadas son las siguientes:
 
@@ -172,14 +270,53 @@ Las convenciones aplicadas son las siguientes:
 **Ejemplo de criterio de aceptación de una User Story:**
 
 ```gherkin
-Dado que el comerciante está en el formulario de productos en "/dashboard/inventory/products"
-Cuando ingresa nombre, descripción, precio por unidad, stock inicial, categoría y tipo "unitario" y presiona "Guardar"
-Entonces el producto se registra en el inventario y aparece en el listado con tipo "Unit Product"
+Dado que el comerciante está en la pantalla "Agregar producto" del módulo Inventario
+Cuando ingresa nombre, precio por unidad, stock inicial, categoría y tipo "Por unidad" y presiona "Guardar"
+Entonces el producto se registra en el inventario y aparece en la lista de productos
 ```
 
 ### 4.1.4. Software Deployment Configuration
 
-Despliegue del backend con Docker por perfiles `default/cloud/prod`.
+En esta sección se especifica la configuración de despliegue de cada producto digital de **Entreprenly**: **Landing Page**, **Aplicación Android** y **RESTful Web Services**. Para cada producto se documenta el camino desde el repositorio de código fuente hasta su publicación; las capturas del despliegue se presentan en la sección 4.2.1.8.
+
+**Productos desplegados y URLs públicas**
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color:#2c3e50; color:white;"><th>Producto</th><th>Tecnología / Plataforma de despliegue</th><th>URL pública</th></tr>
+  <tr><td>Landing Page</td><td>HTML5 + Tailwind CSS / GitHub Pages</td><td>https://lernenlabs.github.io/adm-entreprenly-landing/</td></tr>
+  <tr><td>Aplicación Android</td><td>Kotlin + Jetpack Compose / APK generado con Gradle</td><td>Instalación en emulador o dispositivo con Android 11 o superior</td></tr>
+  <tr><td>RESTful Web Services (API)</td><td>Spring Boot + Docker / Render + Supabase</td><td>https://adm-entreprenly-backend.onrender.com/swagger-ui.html</td></tr>
+</table>
+
+**Deployment Diagram (C4 Model)**
+
+El diagrama de despliegue, elaborado en la sección 2.5.3.3, muestra cómo se distribuyen la Landing Page, la aplicación móvil, los servicios web y la base de datos en sus entornos de ejecución.
+
+<p align="center">
+  <img src="images/capitulo2/Deployment Diagram.png" alt="Deployment Diagram de Entreprenly (C4 Model)" width="600"/>
+</p>
+
+#### Landing Page (GitHub Pages)
+
+La Landing Page se desarrolla con **HTML5**, **Tailwind CSS** y **JavaScript**, y se publica con **GitHub Pages** mediante el workflow `deploy.yml` de **GitHub Actions**.
+
+1. El workflow se ejecuta en cada push a la rama `main`.
+2. El job `build` instala las dependencias con Node.js 20 y ejecuta `npm run build` para generar la hoja de estilos de Tailwind.
+3. El sitio se empaqueta con `actions/upload-pages-artifact` y el job `deploy` lo publica con `actions/deploy-pages` en el entorno `github-pages`.
+4. La publicación se valida accediendo a https://lernenlabs.github.io/adm-entreprenly-landing/.
+
+#### Aplicación Android
+
+La aplicación se construye con **Gradle** desde Android Studio o desde la línea de comandos.
+
+1. Clonar el repositorio `adm-entreprenly-frontend` y abrirlo en Android Studio.
+2. La URL del backend se define en `app/build.gradle.kts` con el campo `API_BASE_URL`, que apunta a `https://adm-entreprenly-backend.onrender.com/`.
+3. Generar el APK con `./gradlew assembleDebug`.
+4. Instalar el APK en un emulador o dispositivo con Android 11 (API 30) o superior y verificar el inicio de sesión contra el backend desplegado.
+
+#### RESTful Web Services (Render + Supabase)
+
+El backend se despliega con Docker por perfiles `default/cloud/prod`.
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
@@ -192,19 +329,22 @@ Despliegue del backend con Docker por perfiles `default/cloud/prod`.
   <tr><td style="vertical-align:middle; text-align:center;">CLOUD_SQL_CONNECTION_NAME</td><td>Solo Cloud Run (<code>project:region:instance</code>) con rol <code>roles/cloudsql.client</code>.</td></tr>
 </table>
 
-- Opción A Render + Supabase: servicio Docker desde el repositorio con las variables anteriores; despliegue verificado en `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
-- Opción B Cloud Run + Cloud SQL: trigger que construye el `Dockerfile` y publica nueva revisión en cada push a `main`.
-- El plan gratuito de Render se suspende tras ~15 minutos sin tráfico; la primera petición posterior puede tardar alrededor de un minuto.
+1. Crear en Render un servicio web de tipo Docker conectado al repositorio `adm-entreprenly-backend`.
+2. Registrar las variables de entorno anteriores con el perfil `cloud` y las credenciales del pooler de Supabase.
+3. Render construye la imagen a partir del `Dockerfile` y publica el servicio.
+4. Validar el despliegue en `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
+
+Como alternativa, el backend puede desplegarse en **Cloud Run + Cloud SQL** con un trigger que construye el `Dockerfile` y publica una nueva revisión en cada push a `main`. El plan gratuito de Render se suspende tras unos 15 minutos sin tráfico, por lo que la primera petición posterior puede tardar alrededor de un minuto.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
 La implementación se organiza en tres proyectos de Lernen Labs. La Landing Page presenta Entreprenly y sus planes; la aplicación Android permite al comerciante operar desde su dispositivo; y el backend expone los servicios REST de IAM, Profile, Inventory, Sales, Chatbot y Subscription.
 
-| Proyecto | Repositorio | Base de implementación |
-| :---: | :---: | :---: |
-| Landing Page | [adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing) | HTML, JavaScript y Tailwind CSS; reutilización de la landing existente y revisión del contenido y los accesos al producto móvil |
-| Aplicación Android | [adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend) | Kotlin y Jetpack Compose; navegación y organización por Bounded Context |
-| Backend | [adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend) | Java y Spring Boot; servicios REST, JWT y persistencia PostgreSQL |
+|      Proyecto      |                                    Repositorio                                     |                                                     Base de implementación                                                      |
+| :----------------: | :--------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
+|    Landing Page    |  [adm-entreprenly-landing](https://github.com/LernenLabs/adm-entreprenly-landing)  | HTML, JavaScript y Tailwind CSS; reutilización de la landing existente y revisión del contenido y los accesos al producto móvil |
+| Aplicación Android | [adm-entreprenly-frontend](https://github.com/LernenLabs/adm-entreprenly-frontend) |                             Kotlin y Jetpack Compose; navegación y organización por Bounded Context                             |
+|      Backend       |  [adm-entreprenly-backend](https://github.com/LernenLabs/adm-entreprenly-backend)  |                                Java y Spring Boot; servicios REST, JWT y persistencia PostgreSQL                                |
 
 El backend se adapta a partir de `daop-entreprenly-web-services` y la landing a partir de `landing-entreprenly`. El frontend móvil se desarrolla como aplicación nativa, tomando las interfaces de la página **Mobile** de Figma como referencia de interacción y estilo. Los repositorios actuales conservan su propia trazabilidad de cambios y colaboración.
 
@@ -220,41 +360,38 @@ IAM se considera un avance previo disponible para la integración. El backend fo
 
 El objetivo del sprint es que el comerciante acceda con su cuenta y utilice los recorridos core de la aplicación Android para consultar y actualizar su perfil, gestionar productos y lotes, atender conversaciones y pagos, administrar su suscripción y registrar ventas. La revisión del TB1 incluye la continuidad entre estas pantallas y los servicios desplegados que las soportan.
 
-| Responsable | Aspecto principal | HUs seleccionadas | Story points |
-| :---: | :---: | :---: | :---: |
-| Chavez Carrasco, Lionel Abraham | Landing Page, Profile y navegación compartida | US-53, US-84, US-85, US-86, US-87, US-88, US-89, US-94, US-62, US-63, US-67, US-68, US-81, US-75 | 26 |
-| Laura Acosta, Victor Jhosef | Inventory | US-01, US-05, US-07, US-08, US-03, US-06, US-11, US-13 | 20 |
-| Palma De Los Santos, Elynor Mikela | Chatbot | US-37, US-38, US-39, US-40, US-46 | 16 |
-| Villon Amez, Enrique Manuel | Subscription | US-15, US-16, US-17, US-18, US-20, US-21, US-22 | 18 |
-| Gonza Morales, Anderson | Sales | US-28, US-29, US-31, US-32, US-33, US-36, US-97 | 17 |
-| **Total** | **Seis aspectos de trabajo** | **41 User Stories** | **97** |
+|            Responsable             |               Aspecto principal               |                                        HUs seleccionadas                                         | Story points |
+| :--------------------------------: | :-------------------------------------------: | :----------------------------------------------------------------------------------------------: | :----------: |
+|  Chavez Carrasco, Lionel Abraham   | Landing Page, Profile y navegación compartida | US-53, US-84, US-85, US-86, US-87, US-88, US-89, US-94, US-62, US-63, US-67, US-68, US-81, US-75 |      26      |
+|    Laura Acosta, Victor Jhosef     |                   Inventory                   |                      US-01, US-05, US-07, US-08, US-03, US-06, US-11, US-13                      |      20      |
+| Palma De Los Santos, Elynor Mikela |                    Chatbot                    |                                US-37, US-38, US-39, US-40, US-46                                 |      16      |
+|    Villon Amez, Enrique Manuel     |                 Subscription                  |                         US-15, US-16, US-17, US-18, US-20, US-21, US-22                          |      18      |
+|      Gonza Morales, Anderson       |                     Sales                     |                         US-28, US-29, US-31, US-32, US-33, US-36, US-97                          |      17      |
+|             **Total**              |         **Seis aspectos de trabajo**          |                                       **41 User Stories**                                        |    **97**    |
 
 Las HUs de Profile sobre fotografía, cambio de correo, cambio de contraseña y verificación del teléfono (US-64, US-65, US-66 y US-69) mantienen sus diseños como insumo para siguientes iteraciones. No forman parte de la selección del Sprint 1.
 
 #### 4.2.1.1. Sprint Planning 1
 
-La planificación se realizó por **Google Meet el 28 de septiembre de 2026 a las 10:00 p. m.**, con la selección de HUs y la distribución de responsabilidades por Bounded Context. Lionel coordina la consolidación del Sprint 1 y del informe; los cinco integrantes participan en la integración de los recorridos y las revisiones cruzadas.
+La planificación se realizó por **Google Meet el 28 de septiembre de 2026 a las 10:00 p. m.** (America/Lima), con la selección de HUs y la distribución de responsabilidades por Bounded Context. El sprint se desarrolla del 28 de septiembre al 4 de octubre de 2026 y su resultado se presenta en el TB1 (semana 7). Lionel coordina la consolidación del Sprint 1 y del informe; los cinco integrantes participan en la integración de los recorridos y las revisiones cruzadas.
 
 El registro adapta la estructura del Sprint Planning de `daop-entreprenly` al equipo y al alcance del curso actual. De acuerdo con la [Scrum Guide](https://scrumguides.org/scrum-guide.html), el Sprint Backlog reúne el objetivo, las historias seleccionadas y el plan de trabajo para el incremento.
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:center;">
   <tbody>
-    <tr><th colspan="2">Sprint 1</th></tr>
+    <tr><th>Sprint #</th><td>Sprint 1</td></tr>
     <tr><th colspan="2">Sprint Planning Background</th></tr>
-    <tr><th>Date</th><td>28 / 09 / 2026</td></tr>
-    <tr><th>Time</th><td>10:00 p. m. — America/Lima (UTC−05:00)</td></tr>
+    <tr><th>Date</th><td>2026-09-28</td></tr>
+    <tr><th>Time</th><td>10:00 PM</td></tr>
     <tr><th>Location</th><td>Reunión virtual por Google Meet</td></tr>
     <tr><th>Prepared By</th><td>Chavez Carrasco, Lionel Abraham</td></tr>
-    <tr><th>Attendees (to planning meeting)</th><td>Chavez Carrasco, Lionel Abraham; Palma De Los Santos, Elynor Mikela; Laura Acosta, Victor Jhosef; Villon Amez, Enrique Manuel; Gonza Morales, Anderson</td></tr>
-    <tr><th>Delivery / Stage Review</th><td>TB1 — Semana 7</td></tr>
-    <tr><th>Sprint period</th><td>Del 28 de septiembre al domingo 4 de octubre de 2026. Cierre: 4 de octubre a las 10:00 p. m., America/Lima (UTC−05:00).</td></tr>
-    <tr><th>Sprint 1 − 1 Review Summary</th><td>Primer sprint del curso actual. Se revisan los artefactos corregidos del AV1, la Landing Page y el backend reutilizados del ciclo anterior, así como el avance previo de IAM.</td></tr>
-    <tr><th>Sprint 1 − 1 Retrospective Summary</th><td>La retroalimentación del AV1 se incorpora mediante la reformulación del Problem Statement y el ajuste de las tablas de User Stories y Product Backlog. Se adopta el trabajo colaborativo con liderazgo por Bounded Context y componentes móviles compartidos.</td></tr>
+    <tr><th>Attendees (to planning meeting)</th><td>Chavez Carrasco, Lionel Abraham / Palma De Los Santos, Elynor Mikela / Laura Acosta, Victor Jhosef / Villon Amez, Enrique Manuel / Gonza Morales, Anderson</td></tr>
+    <tr><th>Sprint 1 – 1 Review Summary</th><td>Al ser el primer sprint del curso, no existe un sprint anterior que revisar. Se parte de los artefactos corregidos del AV1, de la Landing Page y el backend reutilizados del ciclo anterior y del avance previo de IAM.</td></tr>
+    <tr><th>Sprint 1 – 1 Retrospective Summary</th><td>Al ser el primer sprint, no existe retrospectiva previa. La retroalimentación del AV1 se incorpora mediante la reformulación del Problem Statement y el ajuste de las User Stories y el Product Backlog; el equipo acuerda trabajar con liderazgo por Bounded Context y componentes móviles compartidos.</td></tr>
     <tr><th colspan="2">Sprint Goal &amp; User Stories</th></tr>
-    <tr><th>Sprint 1 Goal</th><td>Presentar un incremento de Entreprenly para Android que permita al comerciante recorrer las operaciones core de Profile, Inventory, Chatbot, Subscription y Sales, utilizando IAM y los servicios reutilizados, y que la Landing Page desplegada presente el producto, con pantallas y evidencias trazables a las 41 HUs seleccionadas para el TB1.</td></tr>
-    <tr><th>Selected User Stories</th><td>41 HUs distribuidas entre los cinco responsables, según el cuadro de la sección 4.2.1.</td></tr>
-    <tr><th>Sum of Story Points</th><td>97 story points, conservados del Product Backlog.</td></tr>
-    <tr><th>Sprint 1 Velocity</th><td>Se determina al cierre con las HUs que cumplen la Definition of Done. Los 97 puntos representan alcance planificado; IAM y los componentes reutilizados no se contabilizan nuevamente como velocidad del sprint.</td></tr>
+    <tr><th>Sprint 1 Goal</th><td>Nuestro enfoque está en que el comerciante gestione su perfil, su inventario, sus ventas, sus pedidos por WhatsApp y su suscripción desde la aplicación Android, y en presentar el producto mediante la Landing Page desplegada. Creemos que esto brinda a los dueños de minimarkets, bodegas y puestos de mercado un control diario de su negocio desde el celular. Esto se confirmará cuando un comerciante pueda iniciar sesión, registrar un producto, registrar una venta, revisar un pedido del chatbot y consultar su plan en la aplicación conectada al backend desplegado, y cuando la Landing Page esté disponible en su URL pública.</td></tr>
+    <tr><th>Sprint 1 Velocity</th><td>97</td></tr>
+    <tr><th>Sum of Story Points</th><td>97</td></tr>
   </tbody>
 </table>
 
@@ -277,17 +414,31 @@ Una pantalla diseñada, un componente reutilizado o una HU con código disponibl
 
 #### 4.2.1.2. Aspect Leaders and Collaborators
 
-El equipo mantiene un responsable principal por Bounded Context y la colaboración de los demás integrantes. **L** identifica el liderazgo sobre el aspecto y **C**, la colaboración en dependencias, componentes comunes y revisión. El liderazgo por contexto organiza el trabajo y la integración permite presentar un solo incremento del producto.
+En el Sprint 1, el equipo organizó su trabajo en torno a seis aspectos principales: la Landing Page, Profile y la navegación compartida, Inventory, Chatbot, Subscription y Sales. Cada aspecto tiene un líder (**L**) responsable de su avance y de la trazabilidad con sus HUs, y colaboradores (**C**) que apoyan en las dependencias, los componentes comunes y la revisión cruzada. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
 
-| Team Member (Last Name, First Name) | GitHub Username | Aspect Leader (L) | Collaboration (C) |
-| :---: | :---: | :---: | :---: |
-| Chavez Carrasco, Lionel Abraham | LioTG | Profile, US-75 y US-81; coordinación del Sprint 1, Style Guidelines, Registro de Versiones, Student Outcome e integración del informe | Sesión de IAM, navegación y revisión cruzada de los contextos |
-| Palma De Los Santos, Elynor Mikela | elynorpalma | Chatbot y referencia inicial del diseño móvil en Figma | Coherencia del diseño compartido y coordinación de conversaciones y pedidos con Inventory y Sales |
-| Laura Acosta, Victor Jhosef | Zatrynox | Inventory | Disponibilidad de productos y lotes para Sales y Chatbot; coherencia de alertas y datos de inventario |
-| Villon Amez, Enrique Manuel | enriquevillon25 | Subscription | Estado del plan y coordinación con Profile y los servicios de cobro |
-| Gonza Morales, Anderson | Ander-U | Sales | Disponibilidad de inventario, preferencias de presentación y continuidad con pedidos y pagos |
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse; text-align:center;">
+  <thead>
+    <tr>
+      <th>Team Member (Last Name, First Name)</th>
+      <th>GitHub Username</th>
+      <th>Landing Page<br>Leader (L) / Collaborator (C)</th>
+      <th>Profile y Navegación Compartida<br>Leader (L) / Collaborator (C)</th>
+      <th>Inventory<br>Leader (L) / Collaborator (C)</th>
+      <th>Chatbot<br>Leader (L) / Collaborator (C)</th>
+      <th>Subscription<br>Leader (L) / Collaborator (C)</th>
+      <th>Sales<br>Leader (L) / Collaborator (C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Chavez Carrasco, Lionel Abraham</td><td>LioTG</td><td>L</td><td>L</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+    <tr><td>Palma De Los Santos, Elynor Mikela</td><td>elynorpalma</td><td>C</td><td>C</td><td>C</td><td>L</td><td>C</td><td>C</td></tr>
+    <tr><td>Laura Acosta, Victor Jhosef</td><td>Zatrynox</td><td>C</td><td>C</td><td>L</td><td>C</td><td>C</td><td>C</td></tr>
+    <tr><td>Villon Amez, Enrique Manuel</td><td>enriquevillon25</td><td>C</td><td>C</td><td>C</td><td>C</td><td>L</td><td>C</td></tr>
+    <tr><td>Gonza Morales, Anderson</td><td>Ander-U</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td><td>L</td></tr>
+  </tbody>
+</table>
 
-Las tareas transversales de diseño, integración y revisión requieren participación de los cinco integrantes. Cada responsable mantiene la trazabilidad entre las HUs asignadas, sus pantallas, las operaciones de los servicios y las evidencias que aporta al Sprint Review. Lionel consolida los avances y revisa la consistencia del informe.
+Además de liderar Landing Page y Profile, Lionel coordina el Sprint 1 y consolida el informe (Style Guidelines, Registro de Versiones y Student Outcome). Elynor elaboró la referencia inicial del diseño móvil en Figma. Cada líder mantiene la trazabilidad entre sus HUs, las pantallas, las operaciones de los servicios y las evidencias que aporta al Sprint Review.
 
 #### 4.2.1.3. Sprint Backlog 1
 
@@ -444,9 +595,9 @@ Las horas de la siguiente tabla son **estimaciones iniciales propuestas para des
 <tr><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>S1-T40.1</td><td>Botón Empezar gratis</td><td>Llamado a la acción principal del Hero orientado a la descarga de la aplicación.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
 <tr><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>S1-T40.2</td><td>Enlace según el dispositivo</td><td>Enlace de descarga compatible con el sistema operativo y apertura del registro si la aplicación está instalada.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
 <tr><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>S1-T40.3</td><td>Revisión del llamado a la acción</td><td>Evidencias de la descarga sugerida y de la apertura del registro en la aplicación.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
-<tr><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>S1-T41.1</td><td>Build de producción</td><td>Generación de los artefactos optimizados de la landing page sin errores.</td><td>2</td><td>Lionel Chavez</td><td>Done</td></tr>
-<tr><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>S1-T41.2</td><td>Despliegue en Firebase Hosting</td><td>Publicación del build en Firebase Hosting y verificación de la URL pública.</td><td>3</td><td>Lionel Chavez</td><td>Done</td></tr>
-<tr><td>US-94</td><td>Desplegar la Landing Page en Firebase Hosting</td><td>S1-T41.3</td><td>Revisión del despliegue</td><td>Evidencias de la URL publicada y del procedimiento de reversión ante un despliegue fallido.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
+<tr><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>S1-T41.1</td><td>Build de producción</td><td>Generación de los artefactos optimizados de la landing page sin errores.</td><td>2</td><td>Lionel Chavez</td><td>Done</td></tr>
+<tr><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>S1-T41.2</td><td>Despliegue en GitHub Pages</td><td>Publicación del build en GitHub Pages y verificación de la URL pública.</td><td>3</td><td>Lionel Chavez</td><td>Done</td></tr>
+<tr><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>S1-T41.3</td><td>Revisión del despliegue</td><td>Evidencias de la URL publicada y del procedimiento de reversión ante un despliegue fallido.</td><td>1</td><td>Lionel Chavez</td><td>Done</td></tr>
   </tbody>
 </table>
 
@@ -458,30 +609,29 @@ Las horas de la siguiente tabla son **estimaciones iniciales propuestas para des
 
 **Distribución de Work-items por responsable**
 
-| Responsable | Bounded Context / aspecto | HUs | Work-items | Horas propuestas |
-| :---: | :---: | :---: | :---: | :---: |
-| Lionel Chavez | Landing Page, Profile y navegación | 14 | 44 | 57 |
-| Victor Laura | Inventory | 8 | 24 | 40 |
-| Elynor Palma | Chatbot | 5 | 17 | 30 |
-| Enrique Villon | Subscription | 7 | 21 | 35 |
-| Anderson Gonza | Sales | 7 | 21 | 34 |
-| **Total** | **Seis aspectos** | **41** | **127** | **196** |
+|  Responsable   |     Bounded Context / aspecto      |  HUs   | Work-items | Horas propuestas |
+| :------------: | :--------------------------------: | :----: | :--------: | :--------------: |
+| Lionel Chavez  | Landing Page, Profile y navegación |   14   |     44     |        57        |
+|  Victor Laura  |             Inventory              |   8    |     24     |        40        |
+|  Elynor Palma  |              Chatbot               |   5    |     17     |        30        |
+| Enrique Villon |            Subscription            |   7    |     21     |        35        |
+| Anderson Gonza |               Sales                |   7    |     21     |        34        |
+|   **Total**    |         **Seis aspectos**          | **41** |  **127**   |     **196**      |
 
 **Trabajo transversal del Sprint 1**
 
-| Work-item | Entregable | Responsable | Estado del registro |
-| :---: | :---: | :---: | :---: |
-| S1-X01 | Repositorios de landing y backend reutilizados bajo Lernen Labs | Lionel, con revisión del equipo | Base disponible |
-| S1-X02 | Lineamientos de estilo móvil y referencia común en Figma | Lionel y Elynor, con revisión del equipo | Documentado |
-| S1-X03 | Wireframes, mock-ups, wireflows y user flows de Profile | Lionel | Diseños disponibles; selección del sprint: US-62, US-63, US-67 y US-68 |
-| S1-X04 | Integración de los contextos con IAM, navegación y contratos compartidos | Cada responsable de BC y Lionel en la consolidación | En seguimiento |
-| S1-X05 | Evidencias de ejecución, servicios y despliegue para la meta backend del TB1 | Cada responsable de BC | Por consolidar en las secciones 4.2.1.4 a 4.2.1.9 |
-| S1-X06 | Registro de Versiones, Student Outcome e integración del informe | Lionel | Actualización documental del TB1 |
+| Work-item |                                  Entregable                                  |                     Responsable                     |                                 Status                                 |
+| :-------: | :--------------------------------------------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------------------------: |
+|  S1-X01   |       Repositorios de landing y backend reutilizados bajo Lernen Labs        |           Lionel, con revisión del equipo           |                                  Done                                  |
+|  S1-X02   |           Lineamientos de estilo móvil y referencia común en Figma           |      Lionel y Elynor, con revisión del equipo       |                                  Done                                  |
+|  S1-X03   |           Wireframes, mock-ups, wireflows y user flows de Profile            |                       Lionel                        |                                  Done                                  |
+|  S1-X04   |   Integración de los contextos con IAM, navegación y contratos compartidos   | Cada responsable de BC y Lionel en la consolidación |                                  Done                                  |
+|  S1-X05   | Evidencias de ejecución, servicios y despliegue para la meta backend del TB1 |               Cada responsable de BC                |                                  Done                                  |
+|  S1-X06   |       Registro de Versiones, Student Outcome e integración del informe       |                       Lionel                        |                                  Done                                  |
 
 En Profile y navegación, el estado **Done** se sustenta en la integración registrada en el frontend, incluida la [implementación de pantallas, preferencias, notificaciones y navegación](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/9e25a06) y la [incorporación de Reddit Sans](https://github.com/LernenLabs/adm-entreprenly-frontend/commit/3bef09c). La evidencia de los demás Bounded Contexts se presenta en las secciones 4.2.1.4 a 4.2.1.9. Las tareas S1-X01 a S1-X06 son actividades de soporte y consolidación; no incorporan nuevas HUs ni duplican las estimaciones del Product Backlog.
 
 **Trazabilidad de Profile:** los diseños se consultan en el [archivo de Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=AdJBMXva6dlVX206-1) (ver Anexo G), donde los wireflows y los user flows se encuentran separados por HU. La implementación de US-67 se revisa con cada preferencia y US-68 con la configuración de avisos y el permiso del sistema.
-
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
@@ -554,7 +704,7 @@ Las herramientas y marcos de trabajo empleados para la suite de pruebas son:
 
 - **Backend (Spring Boot & Java):**
   - **JUnit 5 (Jupiter):** Framework principal para la definición, estructuración y ejecución del ciclo de vida de las pruebas unitarias y de integración.
-  - **Mockito:** Librería para la creación de objetos simulados (*mocks* y *spies*), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
+  - **Mockito:** Librería para la creación de objetos simulados (_mocks_ y _spies_), permitiendo aislar la lógica de servicios de aplicación y repositorios de infraestructura.
   - **Spring Boot Test & MockMvc:** Utilizados para pruebas de integración sobre los controladores REST de los Bounded Contexts, verificando códigos de estado HTTP, serialización JSON y manejo global de excepciones.
   - **AssertJ:** Librería de aserciones fluidas para mejorar la legibilidad y expresividad de las comprobaciones de estado y comportamiento.
 
@@ -653,8 +803,6 @@ Durante el Sprint 1, el equipo de **Lernen Labs** coordinó el desarrollo de Ent
 
 A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
 
-
-
 ## 4.3. Validation Interviews
 
 Las entrevistas de validación recogen la experiencia de los dos segmentos objetivo: los comerciantes durante la gestión del negocio desde la aplicación móvil y los clientes finales durante la compra por WhatsApp. Su propósito es identificar dificultades de comprensión, navegación y ejecución de tareas, y relacionar los hallazgos con las necesidades identificadas en el capítulo II. Las preguntas se presentan por segmento en la sección 4.3.1; las respuestas y evidencias se registran en la sección 4.3.2 y sustentan la evaluación de la sección 4.3.3.
@@ -707,7 +855,6 @@ Las entrevistas de validación recogen la experiencia de los dos segmentos objet
 
 ### 4.3.2. Registro de Entrevistas
 
-
 A continuación se registran las entrevistas de validación realizadas por segmento. Para cada entrevista se indica el nombre del participante, su edad, su distrito, una captura del video, el enlace a la grabación (con el minuto donde empieza la entrevista y su duración) y un resumen de sus principales comentarios sobre las tareas realizadas. Se realizaron dos entrevistas al Segmento 1 (comerciantes) y una al Segmento 2 (clientes finales).
 
 **Segmento 1: Comerciantes**
@@ -718,23 +865,21 @@ A continuación se registran las entrevistas de validación realizadas por segme
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
   <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">Entrevista de Validación – App Móvil</div>
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo4/val_movil_comerciante_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo4/validation1-segment1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Hercilio Carrasco Herrera</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 59</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Lionel Chavez Carrasco</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> San Miguel, Lima</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 00:24</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 09:41</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBP-W_XUfEoRYZCVwRaLNJCATXks06Sh8_yPnRqqPLV7lI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iSmzhu">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN: cómo le fue en cada una de las 5 tareas, dónde se trabó, qué le gustó, qué sugirió y su puntaje del 1 al 5 de probabilidad de uso.]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">Hercilio recorrió la aplicación sin mayores dificultades y reconoció rápidamente las secciones de Inicio, Inventario, Ventas y Pedidos. Registró un producto por unidad y otro por peso; en este último dudó un momento sobre la unidad de medida, pero lo completó sin ayuda. Lo que más valoró fueron las alertas de lotes sin stock o próximos a vencer, porque hoy revisa esas fechas a mano y a veces se le pasan. También le gustó el chatbot de WhatsApp, ya que sus clientes podrían hacer pedidos sin que él tenga que responder cada mensaje. Al registrar una venta comprobó el total y el medio de pago en el resumen final. Sugirió que los botones y textos sean un poco más grandes para leerlos con facilidad. Calificó con 5 de 5 la probabilidad de usar la aplicación en su negocio.</td></tr>
   </table>
 </div>
 </div>
-
-
 
 - Segunda entrevista:
 
@@ -742,22 +887,21 @@ A continuación se registran las entrevistas de validación realizadas por segme
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
   <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">Entrevista de Validación – App Móvil</div>
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo4/val_movil_comerciante_2.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo4/validation2-segment1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> María Encarnación Velasquez</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 62</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Lionel Chavez Carrasco</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> San Miguel, Lima</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 01:00</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 12:45</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQBDnN2F2sR4Q45gqWIVxSh_AV_5Vca7N9NzFYjrPBQJ32o?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=V9OAOc">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">María exploró la aplicación con interés y comentó que la navegación entre secciones le pareció ordenada y fácil de seguir. Registró productos y realizó una venta sin problemas, y destacó que el resumen le permite revisar las cantidades y el total antes de confirmar. Le gustaron especialmente las alertas de stock y vencimiento, así como el chatbot de WhatsApp para recibir pedidos y comprobantes de pago en un solo lugar. En la revisión de pedidos entendió cómo aprobar o rechazar un comprobante, aunque pidió que la imagen del comprobante se vea más grande. Como sugerencia principal, mencionó que sería útil emitir facturas además de boletas, ya que algunos de sus clientes son negocios que se las solicitan. Calificó con 5 de 5 la probabilidad de usar la aplicación en su negocio.</td></tr>
   </table>
 </div>
 </div>
-
 
 **Segmento 2: Clientes finales**
 
@@ -767,22 +911,21 @@ A continuación se registran las entrevistas de validación realizadas por segme
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
   <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">Entrevista de Validación – Chatbot de WhatsApp</div>
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo4/val_movil_cliente_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo4/val_movil_cliente_2.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Catherine Villar</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 21</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Elynor Palma</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> San Martin</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 0:00</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 12:02</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQAQo6NbfgoWQopNMRPgr2y8AacvNs6HtfVko-w9hyr-fNA?e=ljKMzz&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">Catherine es estudiante y compra con frecuencia en bodegas y tiendas de conveniencia, aunque nunca había hecho un pedido por WhatsApp. Aun así, completó todo el recorrido de compra con el chatbot: consultó productos, pidió el catálogo y recibió los precios, armó su pedido, envió su comprobante de pago y recibió la confirmación de aprobación. Le pareció una propuesta interesante. Destacó que el pago fue la parte más fácil, porque el chatbot solo le pidió la dirección y la captura del comprobante. También dijo que los mensajes de aprobación del pago son muy claros y bien redactados, y que le permitieron verificar fácilmente que la compra se realizó y que el pedido ya se estaba preparando. El resumen del pedido le sirvió para comprobar la cantidad y el precio de los productos. Como oportunidades de mejora, sugirió que el chatbot muestre el catálogo al iniciar la conversación, que entienda mejor las cantidades escritas en texto o en número, que avise cuando un producto no está disponible y que el catálogo se presente con los productos separados en líneas para leerlo más rápido.</td></tr>
   </table>
 </div>
 </div>
-
 
 - Segunda entrevista:
 
@@ -793,52 +936,52 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <img src="images/capitulo4/val_movil_cliente_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Sofia Diaz</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 19</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Elynor Palma</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> Callao</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 12:02</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 11:34</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQAQo6NbfgoWQopNMRPgr2y8AacvNs6HtfVko-w9hyr-fNA?e=ljKMzz&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">Sofía vive en el Callao y ya había hecho compras por WhatsApp antes. Completó el recorrido sin dificultades: pidió una Coca-Cola, el chatbot registró el pedido con su número de orden y el total, le pidió la dirección de entrega y, después de enviar el comprobante, recibió el mensaje de pago aprobado y pedido en preparación. Le pareció una experiencia muy buena e interactiva, porque toda la compra se hace en el mismo chat. Valoró mucho que el chatbot responda al instante, sin las esperas que suelen tener las tiendas por WhatsApp. Dijo que la información de productos y precios está "muy al alcance", que la cantidad se registró correctamente y que el resumen le permitió comprobar los productos y el total. Los mensajes de aprobación le parecieron muy claros. Lo único que mencionó para el futuro es que la verificación del comprobante funcione con pagos reales, ya que en el prototipo es una simulación. Fuera de eso, consideró que el recorrido está muy bien.</td></tr>
   </table>
 </div>
 </div>
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-
 En esta sección el equipo evalúa las pantallas de la aplicación móvil de Entreprenly en tres grupos: heurísticas de usabilidad de Nielsen, arquitectura de información e inclusive design. Cada criterio tiene un puntaje del 1 al 5, la evidencia observada (referenciada por figura) y una mejora sugerida.
 
 #### Catálogo de figuras
 
-| Fig. | Pantalla | Archivo |
-|---|---|---|
-| Fig. 1 | Inicio (Dashboard) | `Fig-01-panel-de-inicio.png` |
-| Fig. 2 | Lista de productos | `Fig-02-lista-de-productos.png` |
-| Fig. 3 | Agregar producto con errores de validación | `Fig-03-agregar-producto-errores.png` |
-| Fig. 4 | Lotes con aviso de vencimiento | `Fig-04-lotes-con-alerta.png` |
-| Fig. 5 | Selector de fecha de vencimiento | `Fig-05-selector-de-fecha.png` |
-| Fig. 6 | Detalle de lote con alerta | `Fig-06-detalle-de-lote-alerta.png` |
-| Fig. 7 | Venta con peso ingresado a mano | `Fig-07-venta-peso-manual.png` |
-| Fig. 8 | Venta con stock insuficiente | `Fig-08-venta-stock-insuficiente.png` |
-| Fig. 9 | Método de pago | `Fig-09-metodo-de-pago.png` |
-| Fig. 10 | Venta registrada | `Fig-10-venta-registrada.png` |
-| Fig. 11 | Detalle de pedido del chatbot | `Fig-11-detalle-de-pedido.png` |
-| Fig. 12 | Rechazar pago con motivo | `Fig-12-rechazar-pago.png` |
-| Fig. 13 | Pedido bloqueado | `Fig-13-pedido-bloqueado.png` |
-| Fig. 14 | Planes sin selección | `Fig-14-planes-sin-seleccion.png` |
-| Fig. 15 | Cobro de suscripción rechazado | `Fig-15-cobro-rechazado.png` |
-| Fig. 16 | Centro de ayuda | `Fig-16-centro-de-ayuda.png` |
-| Fig. 17 | Artículo de ayuda | `Fig-17-articulo-de-ayuda.png` |
-| Fig. 18 | Configuración de notificaciones | `Fig-18-notificaciones.png` |
-| Fig. 19 | Inventario sin conexión | `Fig-19-inventario-sin-conexion.png` |
-| Fig. 20 | Vincular WhatsApp con código | `Fig-20-vincular-whatsapp.png` |
-| Fig. 21 | Confirmar eliminación de producto | `Fig-21-confirmar-eliminacion.png` |
-| Fig. 22 | Preferencias | `Fig-22-preferencias.png` |
+| Fig.    | Pantalla                                   | Archivo                               |
+| ------- | ------------------------------------------ | ------------------------------------- |
+| Fig. 1  | Inicio (Dashboard)                         | `Fig-01-panel-de-inicio.png`          |
+| Fig. 2  | Lista de productos                         | `Fig-02-lista-de-productos.png`       |
+| Fig. 3  | Agregar producto con errores de validación | `Fig-03-agregar-producto-errores.png` |
+| Fig. 4  | Lotes con aviso de vencimiento             | `Fig-04-lotes-con-alerta.png`         |
+| Fig. 5  | Selector de fecha de vencimiento           | `Fig-05-selector-de-fecha.png`        |
+| Fig. 6  | Detalle de lote con alerta                 | `Fig-06-detalle-de-lote-alerta.png`   |
+| Fig. 7  | Venta con peso ingresado a mano            | `Fig-07-venta-peso-manual.png`        |
+| Fig. 8  | Venta con stock insuficiente               | `Fig-08-venta-stock-insuficiente.png` |
+| Fig. 9  | Método de pago                             | `Fig-09-metodo-de-pago.png`           |
+| Fig. 10 | Venta registrada                           | `Fig-10-venta-registrada.png`         |
+| Fig. 11 | Detalle de pedido del chatbot              | `Fig-11-detalle-de-pedido.png`        |
+| Fig. 12 | Rechazar pago con motivo                   | `Fig-12-rechazar-pago.png`            |
+| Fig. 13 | Pedido bloqueado                           | `Fig-13-pedido-bloqueado.png`         |
+| Fig. 14 | Planes sin selección                       | `Fig-14-planes-sin-seleccion.png`     |
+| Fig. 15 | Cobro de suscripción rechazado             | `Fig-15-cobro-rechazado.png`          |
+| Fig. 16 | Centro de ayuda                            | `Fig-16-centro-de-ayuda.png`          |
+| Fig. 17 | Artículo de ayuda                          | `Fig-17-articulo-de-ayuda.png`        |
+| Fig. 18 | Configuración de notificaciones            | `Fig-18-notificaciones.png`           |
+| Fig. 19 | Inventario sin conexión                    | `Fig-19-inventario-sin-conexion.png`  |
+| Fig. 20 | Vincular WhatsApp con código               | `Fig-20-vincular-whatsapp.png`        |
+| Fig. 21 | Confirmar eliminación de producto          | `Fig-21-confirmar-eliminacion.png`    |
+| Fig. 22 | Preferencias                               | `Fig-22-preferencias.png`             |
 
 #### 4.3.3.1. Heurísticas de usabilidad
+
 Evaluación basada en las 10 heurísticas de Nielsen.
 
 ##### Visibilidad del estado del sistema — 5/5
@@ -847,13 +990,11 @@ El Inicio, los lotes y los pedidos muestran su estado con etiquetas de color, y 
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-06-detalle-de-lote-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250">
 
-
 **Evidencia:** Fig. 1, Fig. 4, Fig. 6, Fig. 11, Fig. 19.
 
 **Mejora:** Mostrar la hora de la última actualización en el Inicio.
 
 ##### Relación entre el sistema y el mundo real — 5/5
-
 
 Usa palabras del comerciante: "Vender", "Caja", "Boleta", "Yape / Plin", "Vence en 2 días".
 
@@ -869,7 +1010,7 @@ Los formularios se pueden cerrar y eliminar un producto pide confirmación, pero
 
 <img src="images/capitulo4/Fig-03-agregar-producto-errores.png" width="250"> <img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="250"> <img src="images/capitulo4/Fig-12-rechazar-pago.png" width="250">
 
-**Evidencia:** Fig. 3, Fig. 21, Fig. 12. 
+**Evidencia:** Fig. 3, Fig. 21, Fig. 12.
 
 **Mejora:** Agregar "Cancelar" al panel de rechazo y "Deshacer" tras eliminar.
 
@@ -879,7 +1020,7 @@ Todas las pantallas usan la misma cabecera, barra inferior, botones y colores de
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 4, Fig. 16. 
+**Evidencia:** Fig. 2, Fig. 4, Fig. 16.
 
 **Mejora:** Usar el mismo texto ("Guardar") en los botones de confirmación.
 
@@ -889,7 +1030,7 @@ Se bloquea guardar con campos vacíos, elegir fechas pasadas, vender sin stock y
 
 <img src="images/capitulo4/Fig-03-agregar-producto-errores.png" width="250"> <img src="images/capitulo4/Fig-05-selector-de-fecha.png" width="250"> <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" width="250"> <img src="images/capitulo4/Fig-14-planes-sin-seleccion.png" width="250">
 
-**Evidencia:** Fig. 3, Fig. 5, Fig. 8, Fig. 14. 
+**Evidencia:** Fig. 3, Fig. 5, Fig. 8, Fig. 14.
 
 **Mejora:** Avisar si la fecha de vencimiento de un lote es muy cercana.
 
@@ -899,7 +1040,7 @@ El comerciante elige productos de listas, filtros o QR en vez de recordar nombre
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 7. 
+**Evidencia:** Fig. 2, Fig. 7.
 
 **Mejora:** Mostrar los últimos productos vendidos al abrir el buscador.
 
@@ -909,7 +1050,7 @@ Se puede buscar por texto, voz o QR, vincular WhatsApp por código o QR y usar a
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-**Evidencia:** Fig. 1, Fig. 2, Fig. 20. 
+**Evidencia:** Fig. 1, Fig. 2, Fig. 20.
 
 **Mejora:** Permitir aprobar varios pedidos a la vez.
 
@@ -919,7 +1060,7 @@ Las pantallas son limpias, pero el detalle del pedido junta demasiada informaci�
 
 <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250">
 
-**Evidencia:** Fig. 10, Fig. 11. 
+**Evidencia:** Fig. 10, Fig. 11.
 
 **Mejora:** Mostrar la trazabilidad del pedido plegada por defecto.
 
@@ -939,7 +1080,7 @@ Hay un centro de ayuda con buscador y artículos paso a paso, pero solo se llega
 
 <img src="images/capitulo4/Fig-16-centro-de-ayuda.png" width="250"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="250">
 
-**Evidencia:** Fig. 16, Fig. 17. 
+**Evidencia:** Fig. 16, Fig. 17.
 
 **Mejora:** Agregar un ícono de ayuda en la vinculación de WhatsApp.
 
@@ -953,7 +1094,7 @@ Las cinco secciones están siempre en la barra inferior e Inventario tiene busca
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250">
 
-**Evidencia:** Fig. 1, Fig. 2. 
+**Evidencia:** Fig. 1, Fig. 2.
 
 **Mejora:** Agregar un buscador general en el Inicio.
 
@@ -963,7 +1104,7 @@ Botones grandes y estados con texto además de color, aunque algunos textos son 
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-22-preferencias.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 4, Fig. 22. 
+**Evidencia:** Fig. 9, Fig. 4, Fig. 22.
 
 **Mejora:** Agregar una opción para agrandar la letra.
 
@@ -973,7 +1114,7 @@ Cada pantalla tiene un título y una acción principal; los montos se ven grande
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 10. 
+**Evidencia:** Fig. 9, Fig. 10.
 
 **Mejora:** Ninguna relevante.
 
@@ -983,7 +1124,7 @@ Cada acción muestra un mensaje breve y los avisos usan colores según su import
 
 <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250">
 
-**Evidencia:** Fig. 4, Fig. 19. 
+**Evidencia:** Fig. 4, Fig. 19.
 
 **Mejora:** Agregar una vibración corta al confirmar una venta.
 
@@ -993,7 +1134,7 @@ Las tareas frecuentes toman pocos pasos, pero vincular WhatsApp requiere pasos f
 
 <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-**Evidencia:** Fig. 7, Fig. 20. 
+**Evidencia:** Fig. 7, Fig. 20.
 
 **Mejora:** Agregar imágenes de cada paso de la vinculación.
 
@@ -1003,7 +1144,7 @@ Muestra boletas numeradas, trazabilidad de pedidos y el detalle del cobro.
 
 <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250"> <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-15-cobro-rechazado.png" width="250">
 
-**Evidencia:** Fig. 11, Fig. 10, Fig. 15. 
+**Evidencia:** Fig. 11, Fig. 10, Fig. 15.
 
 **Mejora:** Agregar una nota de pago seguro en el paso de la tarjeta.
 
@@ -1013,7 +1154,7 @@ El comerciante confirma las acciones importantes y elige qué notificaciones rec
 
 <img src="images/capitulo4/Fig-18-notificaciones.png" width="250"> <img src="images/capitulo4/Fig-21-confirmar-eliminacion.png" width="250">
 
-**Evidencia:** Fig. 18, Fig. 21. 
+**Evidencia:** Fig. 18, Fig. 21.
 
 **Mejora:** Agregar "Deshacer" después de eliminar.
 
@@ -1023,7 +1164,7 @@ Permite controlar stock, vencimientos, caja y pedidos de WhatsApp desde el celul
 
 <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" width="250">
 
-**Evidencia:** Fig. 1, Fig. 4, Fig. 11. 
+**Evidencia:** Fig. 1, Fig. 4, Fig. 11.
 
 **Mejora:** Mostrar en el Inicio los lotes que vencen esta semana.
 
@@ -1033,7 +1174,7 @@ Las pantallas repiten los mismos patrones y hay artículos de ayuda paso a paso.
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250"> <img src="images/capitulo4/Fig-17-articulo-de-ayuda.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 4, Fig. 17. 
+**Evidencia:** Fig. 2, Fig. 4, Fig. 17.
 
 **Mejora:** Mostrar una guía corta la primera vez que se entra a cada módulo.
 
@@ -1043,7 +1184,7 @@ La interfaz es ordenada y las pantallas de éxito dan sensación de logro.
 
 <img src="images/capitulo4/Fig-10-venta-registrada.png" width="250"> <img src="images/capitulo4/Fig-01-panel-de-inicio.png" width="250">
 
-**Evidencia:** Fig. 10, Fig. 1. 
+**Evidencia:** Fig. 10, Fig. 1.
 
 **Mejora:** Agregar pequeñas animaciones al registrar una venta.
 
@@ -1057,7 +1198,7 @@ Se puede buscar por texto, voz o QR, y registrar el peso con balanza o a mano.
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 7. 
+**Evidencia:** Fig. 2, Fig. 7.
 
 **Mejora:** Agregar etiquetas de accesibilidad a los íconos.
 
@@ -1067,7 +1208,7 @@ Se usa con una mano, funciona sin internet y avisa con la app cerrada.
 
 <img src="images/capitulo4/Fig-07-venta-peso-manual.png" width="250"> <img src="images/capitulo4/Fig-19-inventario-sin-conexion.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia:** Fig. 7, Fig. 19, Fig. 4. 
+**Evidencia:** Fig. 7, Fig. 19, Fig. 4.
 
 **Mejora:** Agregar un modo de alto contraste.
 
@@ -1087,7 +1228,7 @@ El comerciante elige tema, notificaciones y el motivo al rechazar un pago.
 
 <img src="images/capitulo4/Fig-18-notificaciones.png" width="250"> <img src="images/capitulo4/Fig-22-preferencias.png" width="250"> <img src="images/capitulo4/Fig-12-rechazar-pago.png" width="250">
 
-**Evidencia:** Fig. 18, Fig. 22, Fig. 12. 
+**Evidencia:** Fig. 18, Fig. 22, Fig. 12.
 
 **Mejora:** Agregar "Cancelar" al panel de rechazo.
 
@@ -1097,7 +1238,7 @@ Varias formas de cobrar (efectivo, tarjeta, Yape, Plin) y de vincular WhatsApp.
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 20. 
+**Evidencia:** Fig. 9, Fig. 20.
 
 **Mejora:** Permitir mostrar la boleta en pantalla para clientes sin WhatsApp.
 
@@ -1107,7 +1248,7 @@ Lo más importante va primero: el total a cobrar y los lotes por vencer.
 
 <img src="images/capitulo4/Fig-09-metodo-de-pago.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia:** Fig. 9, Fig. 4. 
+**Evidencia:** Fig. 9, Fig. 4.
 
 **Mejora:** Ninguna relevante.
 
@@ -1117,16 +1258,16 @@ Aprovecha la cámara, el micrófono y las notificaciones del celular.
 
 <img src="images/capitulo4/Fig-02-lista-de-productos.png" width="250"> <img src="images/capitulo4/Fig-04-lotes-con-alerta.png" width="250">
 
-**Evidencia:** Fig. 2, Fig. 4. 
+**Evidencia:** Fig. 2, Fig. 4.
 
 **Mejora:** Usar la cámara para fotografiar comprobantes en efectivo.
 
 #### Resumen de puntajes
 
-| Grupo | Criterios evaluados | Promedio |
-|---|---|---|
-| Heurísticas de usabilidad | 10 | 4.6 / 5 |
-| Arquitectura de información | 10 | 4.4 / 5 |
-| Inclusive design | 7 | 4.9 / 5 |
+| Grupo                       | Criterios evaluados | Promedio |
+| --------------------------- | ------------------- | -------- |
+| Heurísticas de usabilidad   | 10                  | 4.6 / 5  |
+| Arquitectura de información | 10                  | 4.4 / 5  |
+| Inclusive design            | 7                   | 4.9 / 5  |
 
 En general, la app móvil obtiene buenos resultados en visibilidad del estado, prevención de errores y uso en el contexto real del comerciante. Las principales oportunidades de mejora son agregar "Cancelar" y "Deshacer", simplificar el detalle del pedido, agrandar la letra y guiar mejor la vinculación de WhatsApp.

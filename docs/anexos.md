@@ -75,3 +75,11 @@ Tablero utilizado por Lernen Labs para gestionar el Product Backlog y el seguimi
 Enlace: https://miro.com/app/board/uXjVEel-fbI=/
 
 El tablero contiene el Product Backlog descrito en la sección 2.4.3, el Sprint Backlog 1 y la tabla de Work-items del Sprint 1 vinculada a cada HU, descritos en la sección 4.2.1.3.
+
+## Anexo K — Productos desplegados en producción
+
+URL de la Landing Page: https://lernenlabs.github.io/adm-entreprenly-landing/
+
+URL del Backend: https://adm-entreprenly-backend.onrender.com
+
+URL de la documentación del Backend (Swagger UI): https://adm-entreprenly-backend.onrender.com/swagger-ui.html
