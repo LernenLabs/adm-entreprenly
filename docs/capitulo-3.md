@@ -704,7 +704,6 @@ En esta sección se presentan los Wireflow Diagrams de la aplicación móvil de 
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
-<<<<<<< Updated upstream
 Los mock-ups aplican los lineamientos de 3.1.1.1 sobre la estructura de los wireframes: naranja de marca para las acciones principales, superficies claras, tarjetas con bordes redondeados y una barra inferior común para Inicio, Inventario, Vender, Pedidos y Más. Los formularios, confirmaciones y mensajes mantienen el mismo estilo entre Bounded Contexts.
 
 El archivo editable está disponible en [Entreprenly en Figma](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly). Las siguientes capturas presentan las pantallas core y sus estados; también se utilizan como referencia en la evaluación heurística de 4.3.3.
@@ -728,40 +727,143 @@ El archivo editable está disponible en [Entreprenly en Figma](https://www.figma
 
 Inicio concentra los accesos y el resumen del negocio. Preferencias reúne idioma, zona horaria, tema y moneda; Notificaciones permite configurar los avisos. Las acciones de guardar se ubican al final del formulario.
 
-**Inventory**
+**Registro e inicio de sesión**
 
 <p align="center">
-  <img src="images/capitulo4/Inventario - MOCKUP.png" alt="Mock-ups de Inventory: catálogo, registro, edición, búsqueda, detalle y estados alternativos" width="800"/>
-</p>
-
-El catálogo distingue productos por unidad y peso. Los mock-ups incluyen inventario vacío, validaciones de registro, resultados de búsqueda, detalle con stock y lotes asociados, confirmación de eliminación y estado sin conexión.
-
-**Chatbot**
-
-<p align="center">
-  <img src="images/capitulo4/Fig-20-vincular-whatsapp.png" alt="Mock-up de vinculación de WhatsApp" width="250"/>
-  <img src="images/capitulo4/Fig-11-detalle-de-pedido.png" alt="Mock-up de detalle de pedido y revisión del pago" width="250"/>
-  <img src="images/capitulo4/Fig-12-rechazar-pago.png" alt="Mock-up de rechazo del comprobante" width="250"/>
-</p>
-
-El comerciante consulta la vinculación y revisa los pedidos con sus productos, total y comprobante. La aprobación requiere confirmación; el rechazo solicita un motivo. El diseño contempla alternativas de vinculación, mientras que la integración documentada del WhatsApp Bridge utiliza QR.
-
-**Subscription y Sales**
-
-<p align="center">
-  <img src="images/capitulo4/Fig-14-planes-sin-seleccion.png" alt="Mock-up de selección de plan" width="250"/>
-  <img src="images/capitulo4/Fig-15-cobro-rechazado.png" alt="Mock-up de cobro de suscripción rechazado" width="250"/>
+  <img src="images/capitulo3/MockUp Registrar e Iniciar sesión 1.png" alt="Mock-ups de Registro e inicio de sesión: lámina 1" width="800"/>
 </p>
 
 <p align="center">
-  <img src="images/capitulo4/Fig-08-venta-stock-insuficiente.png" alt="Mock-up de validación de stock en venta" width="250"/>
-  <img src="images/capitulo4/Fig-09-metodo-de-pago.png" alt="Mock-up de selección de método de pago" width="250"/>
-  <img src="images/capitulo4/Fig-10-venta-registrada.png" alt="Mock-up de venta registrada" width="250"/>
+  <img src="images/capitulo3/MockUp Registrar e Iniciar sesión 2.png" alt="Mock-ups de Registro e inicio de sesión: lámina 2" width="800"/>
 </p>
 
-Subscription presenta los planes y los estados del proceso de cobro. Sales permite revisar el ticket, elegir el método de pago y confirmar el registro de la venta. Las pantallas alternativas explican el error y conservan el contexto para corregirlo.
+<p align="center">
+  <img src="images/capitulo3/MockUp Registrar e Iniciar sesión 3.png" alt="Mock-ups de Registro e inicio de sesión: lámina 3" width="800"/>
+</p>
 
-Los mock-ups describen el diseño del producto; la selección de HUs y la evidencia de implementación del TB1 se presentan en 3.1.1. Las funciones diseñadas para incrementos posteriores, como balanza IoT o sincronización sin conexión, se distinguen de las HUs aceptadas en este sprint.
+<p align="center">
+  <img src="images/capitulo3/MockUp Registrar e Iniciar sesión 4.png" alt="Mock-ups de Registro e inicio de sesión: lámina 4" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Registrar e Iniciar sesión 5.png" alt="Mock-ups de Registro e inicio de sesión: lámina 5" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Registrar e Iniciar sesión 6.png" alt="Mock-ups de Registro e inicio de sesión: lámina 6" width="800"/>
+</p>
+
+**Inventory: productos**
+
+<p align="center">
+  <img src="images/capitulo3/MockUp inventario 1.png" alt="Mock-ups de Inventory: productos: lámina 1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp inventario 2.png" alt="Mock-ups de Inventory: productos: lámina 2" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp inventario 3.png" alt="Mock-ups de Inventory: productos: lámina 3" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp inventario 4.png" alt="Mock-ups de Inventory: productos: lámina 4" width="800"/>
+</p>
+
+**Inventory: lotes**
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Lote 1.png" alt="Mock-ups de Inventory: lotes: lámina 1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Lote 2.png" alt="Mock-ups de Inventory: lotes: lámina 2" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Lote 3.png" alt="Mock-ups de Inventory: lotes: lámina 3" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Lote 4.png" alt="Mock-ups de Inventory: lotes: lámina 4" width="800"/>
+</p>
+
+**Sales**
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Venta 1.png" alt="Mock-ups de Sales: lámina 1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Venta 2.png" alt="Mock-ups de Sales: lámina 2" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Venta 3.png" alt="Mock-ups de Sales: lámina 3" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Venta 4.png" alt="Mock-ups de Sales: lámina 4" width="800"/>
+</p>
+
+**Chatbot y pedidos**
+
+<p align="center">
+  <img src="images/capitulo3/ChatBotPedidos 1.png" alt="Mock-ups de Chatbot y pedidos: lámina 1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/ChatBotPedidos 2.png" alt="Mock-ups de Chatbot y pedidos: lámina 2" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/ChatBotPedidos 3.png" alt="Mock-ups de Chatbot y pedidos: lámina 3" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/ChatBotPedidos 4.png" alt="Mock-ups de Chatbot y pedidos: lámina 4" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/ChatBotPedidos 5.png" alt="Mock-ups de Chatbot y pedidos: lámina 5" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/ChatBotPedidos 6.png" alt="Mock-ups de Chatbot y pedidos: lámina 6" width="800"/>
+</p>
+
+**Subscription**
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Subscripition 1.png" alt="Mock-ups de Subscription: lámina 1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Subscripition 2.png" alt="Mock-ups de Subscription: lámina 2" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Subscripition 3.png" alt="Mock-ups de Subscription: lámina 3" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Subscripition 4.png" alt="Mock-ups de Subscription: lámina 4" width="800"/>
+</p>
+
+**Ayuda y soporte**
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Ayuda 1.png" alt="Mock-ups de Ayuda y soporte: lámina 1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/capitulo3/MockUp Ayuda 2.png" alt="Mock-ups de Ayuda y soporte: lámina 2" width="800"/>
+</p>
+
+El diseño de Chatbot contempla alternativas de vinculación; la integración documentada del WhatsApp Bridge utiliza QR.
+
+Los mock-ups describen el diseño de la aplicación móvil Android. La selección de HUs y la evidencia de implementación del TB1 se presentan en 4.2.1. Las capturas también incluyen funciones previstas para los sprints 2 y 3, como balanza IoT y ayuda; su presencia en el diseño no implica que estén implementadas en el Sprint 1.
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
