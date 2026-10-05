@@ -911,18 +911,18 @@ A continuación se registran las entrevistas de validación realizadas por segme
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
   <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">Entrevista de Validación – Chatbot de WhatsApp</div>
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/capitulo4/val_movil_cliente_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo4/val_movil_cliente_2.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Catherine Villar</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 21</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Elynor Palma</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> San Martin</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 0:00</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 12:02</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQAQo6NbfgoWQopNMRPgr2y8AacvNs6HtfVko-w9hyr-fNA?e=ljKMzz&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">Catherine es estudiante y compra con frecuencia en bodegas y tiendas de conveniencia, aunque nunca había hecho un pedido por WhatsApp. Aun así, completó todo el recorrido de compra con el chatbot: consultó productos, pidió el catálogo y recibió los precios, armó su pedido, envió su comprobante de pago y recibió la confirmación de aprobación. Le pareció una propuesta interesante. Destacó que el pago fue la parte más fácil, porque el chatbot solo le pidió la dirección y la captura del comprobante. También dijo que los mensajes de aprobación del pago son muy claros y bien redactados, y que le permitieron verificar fácilmente que la compra se realizó y que el pedido ya se estaba preparando. El resumen del pedido le sirvió para comprobar la cantidad y el precio de los productos. Como oportunidades de mejora, sugirió que el chatbot muestre el catálogo al iniciar la conversación, que entienda mejor las cantidades escritas en texto o en número, que avise cuando un producto no está disponible y que el catálogo se presente con los productos separados en líneas para leerlo más rápido.</td></tr>
   </table>
 </div>
 </div>
@@ -936,15 +936,15 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <img src="images/capitulo4/val_movil_cliente_1.png" alt="Captura de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> [COMPLETAR]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> [COMPLETAR]</td></tr>
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> [mm:ss]</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> [mm:ss]</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Entrevistado(a):</strong> Sofia Diaz</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;"><strong>Edad:</strong> 19</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Entrevistador(a):</strong> Elynor Palma</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Distrito:</strong> Callao</td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Inicio de la entrevista:</strong> 12:02</td><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Duración:</strong> 11:34</td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="[LINK]">[LINK]</a></td></tr>
+    <tr><td style="padding: 7px 14px; border: 1px solid #cfd8dc;"><strong>Link de la entrevista (Microsoft Stream):</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQAQo6NbfgoWQopNMRPgr2y8AacvNs6HtfVko-w9hyr-fNA?e=ljKMzz&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista</a></td></tr>
   </table>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
-    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">[RESUMEN]</td></tr>
+    <tr><td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">Sofía vive en el Callao y ya había hecho compras por WhatsApp antes. Completó el recorrido sin dificultades: pidió una Coca-Cola, el chatbot registró el pedido con su número de orden y el total, le pidió la dirección de entrega y, después de enviar el comprobante, recibió el mensaje de pago aprobado y pedido en preparación. Le pareció una experiencia muy buena e interactiva, porque toda la compra se hace en el mismo chat. Valoró mucho que el chatbot responda al instante, sin las esperas que suelen tener las tiendas por WhatsApp. Dijo que la información de productos y precios está "muy al alcance", que la cantidad se registró correctamente y que el resumen le permitió comprobar los productos y el total. Los mensajes de aprobación le parecieron muy claros. Lo único que mencionó para el futuro es que la verificación del comprobante funcione con pagos reales, ya que en el prototipo es una simulación. Fuera de eso, consideró que el recorrido está muy bien.</td></tr>
   </table>
 </div>
 </div>
