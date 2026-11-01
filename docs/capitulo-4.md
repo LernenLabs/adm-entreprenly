@@ -879,6 +879,10 @@ Las capturas corresponden a las evidencias incluidas en Project Report Collabora
 #### 4.2.2.8 Software Deployment Evidence for Sprint Review
 #### 4.2.2.9 Team Collaboration Insights during Sprint
 
+Durante el Sprint 2, el equipo de Lernen Labs coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page, WhatsApp Bridge y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia develop tras revisión colaborativa.
+
+A continuación, se presentan las métricas de GitHub Insights que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
 
 ## 4.3. Validation Interviews
 
