@@ -1038,6 +1038,16 @@ Para el Review se debe conservar por ejecución: fecha y hora, commit, comando, 
 
 **Estado de la suite:** esta actualización documental no ejecuta Maven, Gradle ni pruebas con dispositivo y no reporta porcentajes de cobertura o éxito. El resultado del Sprint 2 se completará con los reportes del incremento y la aceptación de las HUs al cierre del período.
 
+#### 4.2.2.6 Execution Evidence for Sprint Review
+#### 4.2.2.7 Services Documentation Evidence for Sprint Review
+#### 4.2.2.8 Software Deployment Evidence for Sprint Review
+#### 4.2.2.9 Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo de Lernen Labs coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page, WhatsApp Bridge y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia develop tras revisión colaborativa.
+
+A continuación, se presentan las métricas de GitHub Insights que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
+
 ## 4.3. Validation Interviews
 
 Las entrevistas de validación recogen la experiencia de los dos segmentos objetivo: los comerciantes durante la gestión del negocio desde la aplicación móvil y los clientes finales durante la compra por WhatsApp. Su propósito es identificar dificultades de comprensión, navegación y ejecución de tareas, y relacionar los hallazgos con las necesidades identificadas en el capítulo II. Las preguntas se presentan por segmento en la sección 4.3.1; las respuestas y evidencias se registran en la sección 4.3.2 y sustentan la evaluación de la sección 4.3.3.
