@@ -870,6 +870,184 @@ A continuación, se presentan las métricas de **GitHub Insights** que evidencia
 
 Las capturas corresponden a las evidencias incluidas en Project Report Collaboration Insights. Presentan el historial acumulado del informe hasta el TB1, incluido el trabajo previo del AV1; no se interpretan como commits exclusivos del Sprint 1. La responsabilidad por contexto se identifica en 4.2.1.2 y la trazabilidad de las 41 HUs mediante sus 127 Work-items en 4.2.1.3. La colaboración sobre la integración de WhatsApp se consulta en el [historial del bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/commits/main/).
 
+### 4.2.2. Sprint 2
+
+El Sprint 2 corresponde al avance AV2 de Entreprenly y se desarrolla del **26 de octubre al 9 de noviembre de 2026**. Su planificación se realizó el **miércoles 21 de octubre de 2026 a las 8:00 p. m. (America/Lima)**. El alcance conserva las **30 HUs y 73 story points** asignados al Sprint 2 en el Product Backlog de la sección 2.4.3 y en el tablero de Miro del Anexo J.
+
+El incremento previsto amplía la gestión de cuenta, los indicadores de Inicio, las operaciones de inventario, el flujo de pedidos por WhatsApp, la gestión de suscripciones y las ventas por peso. La Landing Page y las capacidades del Sprint 1 se utilizan como base de integración. La existencia de código previo no acredita por sí sola la aceptación de una HU del Sprint 2.
+
+**Corte de documentación: 1 de noviembre de 2026.** El sprint está en curso. Las secciones de desarrollo y pruebas identifican la base técnica disponible y los entregables pendientes para el Sprint Review; no constituyen un acta de cierre ni atribuyen al Sprint 2 resultados del TB1.
+
+#### 4.2.2.1. Sprint Planning 2
+
+La planificación parte del incremento presentado en el TB1, del Product Backlog y de las observaciones de validación de la sección 4.3. Se mantiene la organización por Bounded Context para integrar los nuevos recorridos con la sesión autenticada, los servicios y los componentes móviles existentes.
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+  <tbody>
+    <tr><th>Sprint #</th><td>Sprint 2</td></tr>
+    <tr><th colspan="2">Sprint Planning Background</th></tr>
+    <tr><th>Date</th><td>2026-10-21</td></tr>
+    <tr><th>Time</th><td>8:00 p. m. (America/Lima)</td></tr>
+    <tr><th>Location</th><td>Medio de reunión pendiente de confirmar.</td></tr>
+    <tr><th>Prepared By</th><td>Chavez Carrasco, Lionel Abraham — consolidación del informe.</td></tr>
+    <tr><th>Attendees (to planning meeting)</th><td>Asistencia pendiente de confirmar con el registro de la reunión.</td></tr>
+    <tr><th>Sprint Period</th><td>Del 26 de octubre al 9 de noviembre de 2026.</td></tr>
+    <tr><th>Sprint 2 – 1 Review Summary</th><td>El Sprint 1 documenta 41 HUs y 97 puntos, con recorridos de Profile, Inventory, Sales, Chatbot y Subscription y la Landing Page publicada. El Sprint 2 amplía ese alcance con las 30 HUs de la sección 4.2.2.3. Los archivos de pruebas existentes se conservan como base de regresión; sus resultados requieren un registro de ejecución.</td></tr>
+    <tr><th>Sprint 2 – 1 Retrospective Summary</th><td>No se dispone de un acta específica de retrospectiva del Sprint 1. Como insumo se consideran las oportunidades de mejora de 4.3, especialmente la confirmación de acciones, la recuperación ante errores y la orientación en los flujos de WhatsApp. Su inclusión se limita a los criterios de las HUs seleccionadas.</td></tr>
+    <tr><th colspan="2">Sprint Goal &amp; User Stories</th></tr>
+    <tr><th>Sprint 2 Goal</th><td>Permitir que el comerciante amplíe el control de su negocio desde Android: actualizar datos de su cuenta, consultar indicadores de Inicio, mantener productos y lotes, atender consultas y pagos por WhatsApp, administrar su suscripción y completar ventas por peso. Se verificará mediante los criterios de aceptación de las 30 HUs, recorridos integrados con el backend y evidencias reproducibles de desarrollo y pruebas.</td></tr>
+    <tr><th>Sum of Story Points</th><td>73 puntos planificados.</td></tr>
+    <tr><th>Sprint 2 Velocity</th><td>Pendiente al cierre: suma de puntos de las HUs aceptadas que cumplan la Definition of Done. Los 73 puntos representan alcance planificado.</td></tr>
+  </tbody>
+</table>
+
+**Dependencias e integración**
+
+- Profile coordina con IAM el cambio de correo y contraseña; verificar teléfono requiere demostrar el mecanismo de envío y validación del código.
+- Inicio consume los datos de Sales, Chatbot e Inventory para US-70, US-71 y US-72; cada contexto conserva la responsabilidad sobre sus datos.
+- Inventory mantiene la coherencia del stock al editar o eliminar lotes y productos. US-14 requiere comprobar la entrega de notificaciones y el respeto de las preferencias configuradas en US-68.
+- Chatbot consume disponibilidad del catálogo y coordina mensajes, confirmación del pedido, instrucciones de pago y recepción del comprobante. El descuento de stock y registro de la venta del flujo conversacional corresponden a las HUs asignadas al Sprint 3.
+- Subscription integra activación, cancelación y métodos de pago con el estado del plan; una pasarela simulada se identifica expresamente como tal.
+- Sales integra el peso, la cancelación del ticket, los ingresos por medio de pago y el detalle de ventas. La balanza de US-30 requiere evidencia del dispositivo y su calibración; el ingreso manual no acredita la integración IoT.
+- US-93 coordina la persistencia JPA entre los líderes de los contextos, verificando que cada comerciante acceda únicamente a sus propios datos.
+
+**Definition of Done**
+
+Una HU se considera terminada cuando cumple sus criterios del capítulo II, tiene código integrado y revisado, presenta un recorrido consistente con el diseño móvil y adjunta evidencia de ejecución. Las pruebas registran versión del código, entorno, datos de entrada, resultado esperado y obtenido. Los errores de validación y recuperación se incluyen cuando correspondan. El cambio de estado a **Done** requiere esa evidencia; diseños, archivos de pruebas y contratos API aislados no bastan para acreditar el cierre.
+
+#### 4.2.2.2. Aspect Leaders and Collaborators
+
+La siguiente matriz mantiene el liderazgo por contexto documentado en el Sprint 1 como distribución de trabajo para AV2. **L** identifica al líder del aspecto y **C** a quienes colaboran en integración y revisión. La distribución no acredita asistencia a la reunión de planificación.
+
+| Team Member (Last Name, First Name) | GitHub Username | Profile e Inicio | Inventory | Chatbot | Subscription | Sales |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Chavez Carrasco, Lionel Abraham | LioTG | L | C | C | C | C |
+| Palma De Los Santos, Elynor Mikela | elynorpalma | C | C | L | C | C |
+| Laura Acosta, Victor Jhosef | Zatrynox | C | L | C | C | C |
+| Villon Amez, Enrique Manuel | enriquevillon25 | C | C | C | L | C |
+| Gonza Morales, Anderson | Ander-U | C | C | C | C | L |
+
+Lionel consolida los indicadores de Inicio con los responsables de sus fuentes y la documentación de estas secciones. Para US-93 se propone a Anderson como coordinador de la evidencia de persistencia, con la participación de los cinco líderes; esta asignación transversal queda sujeta a ratificación del equipo. Cada líder aporta los commits, capturas y resultados de pruebas correspondientes a sus HUs.
+
+#### 4.2.2.3. Sprint Backlog 2
+
+El backlog conserva los identificadores, títulos y estimaciones del Product Backlog. La captura existente del [tablero de Miro de Entreprenly](https://miro.com/app/board/uXjVEel-fbI=/), reproducida en el Anexo J, registra las historias en **To Do**. Ese es el estado de planificación disponible; el estado actual debe contrastarse con el seguimiento del sprint y las evidencias de cada líder.
+
+<p align="center">
+  <img src="images/capitulo2/sprint-backlog-2-miro.png" alt="Planificación del Sprint Backlog 2 en Miro con 30 HUs y 73 story points" width="800"/>
+</p>
+
+**Distribución del alcance**
+
+| Aspecto | Responsable de referencia | HUs | Story points |
+| :--- | :--- | :---: | :---: |
+| Profile e Inicio | Lionel Chavez | 7 | 17 |
+| Inventory | Victor Laura | 7 | 14 |
+| Chatbot | Elynor Palma | 6 | 15 |
+| Subscription | Enrique Villon | 5 | 13 |
+| Sales | Anderson Gonza | 4 | 11 |
+| Persistencia JPA transversal | Anderson Gonza y líderes de BC — coordinación propuesta | 1 | 3 |
+| **Total** | **Equipo Lernen Labs** | **30** | **73** |
+
+**User Stories y Work-items propuestos**
+
+Para cada HU se proponen dos Work-items: **.1**, implementación e integración del recorrido; y **.2**, pruebas de aceptación y registro de evidencia. Los identificadores S2-T01.1 a S2-T30.2 permiten relacionar las 60 tareas con su historia. El desglose es una propuesta documental para trasladar al tablero; no implica que las tareas ya estén registradas o ejecutadas. No se asignan horas sin validación de capacidad del equipo. Los story points se contabilizan una sola vez por HU.
+
+| HU | Título | SP | Assigned To | Work-item .1 — desarrollo | Work-item .2 — prueba y evidencia |
+| :---: | :--- | :---: | :--- | :--- | :--- |
+| US-02 | Editar lotes | 2 | Victor Laura | S2-T01.1: Integrar edición de cantidad y fechas del lote | S2-T01.2: Verificar validaciones, persistencia y stock resultante |
+| US-04 | Eliminar lotes | 1 | Victor Laura | S2-T02.1: Integrar confirmación y eliminación del lote | S2-T02.2: Probar cancelación, eliminación y actualización del stock |
+| US-95 | Buscar lotes | 2 | Victor Laura | S2-T03.1: Integrar búsqueda de lotes según sus criterios | S2-T03.2: Probar coincidencias y estado sin resultados |
+| US-09 | Crear lotes | 3 | Victor Laura | S2-T04.1: Completar creación de lotes según el alcance diferencial de la HU | S2-T04.2: Verificar creación, fechas y cantidades frente a US-03 |
+| US-90 | Eliminar productos | 1 | Victor Laura | S2-T05.1: Integrar confirmación y eliminación de productos | S2-T05.2: Comprobar restricciones, cancelación y catálogo actualizado |
+| US-12 | Mostrar alertas de estado al visualizar detalles | 2 | Victor Laura | S2-T06.1: Mostrar alertas de estado en el detalle | S2-T06.2: Contrastar estado mostrado con stock y vencimiento |
+| US-14 | Recibir notificación de caducidad de lote | 3 | Victor Laura | S2-T07.1: Integrar aviso de caducidad y preferencias de notificación | S2-T07.2: Probar permisos, preferencias y entrega en segundo plano |
+| US-19 | Activar suscripción | 3 | Enrique Villon | S2-T08.1: Integrar activación y actualización del estado del plan | S2-T08.2: Probar aprobación, rechazo y persistencia del estado |
+| US-23 | Solicitar cancelación de suscripción | 2 | Enrique Villon | S2-T09.1: Integrar solicitud y confirmación previa de cancelación | S2-T09.2: Probar confirmación y retorno sin cancelar |
+| US-24 | Cancelar suscripción | 3 | Enrique Villon | S2-T10.1: Aplicar cancelación y reflejar el estado del plan | S2-T10.2: Verificar efecto y persistencia según los criterios de la HU |
+| US-25 | Agregar método de pago de suscripción | 3 | Enrique Villon | S2-T11.1: Integrar formulario y registro del método de pago | S2-T11.2: Probar datos inválidos y registro con datos enmascarados |
+| US-96 | Gestionar métodos de pago de suscripción | 2 | Enrique Villon | S2-T12.1: Integrar gestión de métodos de pago según la HU | S2-T12.2: Verificar cambios persistidos y errores de operación |
+| US-30 | Capturar el peso mediante balanza IoT o ingreso manual | 5 | Anderson Gonza | S2-T13.1: Integrar captura de peso por balanza y entrada manual | S2-T13.2: Probar calibración, desconexión, unidad y cálculo del importe |
+| US-34 | Cancelar venta en curso | 1 | Anderson Gonza | S2-T14.1: Integrar cancelación del ticket en curso | S2-T14.2: Verificar que cancelar no registre venta ni descuente stock |
+| US-35 | Clasificar automáticamente los ingresos según el medio de pago | 3 | Anderson Gonza | S2-T15.1: Integrar clasificación de ingresos por medio de pago | S2-T15.2: Contrastar los acumulados con las ventas registradas |
+| US-98 | Consultar el detalle de una venta registrada | 2 | Anderson Gonza | S2-T16.1: Integrar consulta y vista del detalle de venta | S2-T16.2: Contrastar ítems, importes, medio de pago y propietario |
+| US-70 | Visualizar resumen de ventas del día | 2 | Lionel Chavez | S2-T17.1: Integrar resumen del día en Inicio con Sales | S2-T17.2: Contrastar montos y estados de carga, vacío y error |
+| US-71 | Visualizar estado del chatbot en la pantalla de Inicio | 2 | Lionel Chavez | S2-T18.1: Integrar estado del chatbot en Inicio | S2-T18.2: Contrastar estado del servicio y cambios de vinculación |
+| US-72 | Visualizar alertas de inventario en la pantalla de Inicio | 2 | Lionel Chavez | S2-T19.1: Integrar alertas de Inventory en Inicio | S2-T19.2: Contrastar alertas y estados de carga, vacío y error |
+| US-41 | Responder consulta de producto disponible | 3 | Elynor Palma | S2-T20.1: Integrar respuesta de disponibilidad y precio del catálogo | S2-T20.2: Probar producto disponible y cantidades solicitadas |
+| US-42 | Sugerir alternativas ante producto no disponible | 2 | Elynor Palma | S2-T21.1: Integrar sugerencias de productos alternativos | S2-T21.2: Probar falta de disponibilidad y catálogo sin alternativas |
+| US-43 | Confirmar pedido con el cliente | 3 | Elynor Palma | S2-T22.1: Integrar confirmación del pedido con el cliente | S2-T22.2: Verificar contenido confirmado y transición del pedido |
+| US-44 | Recibir instrucciones de pago por WhatsApp | 2 | Elynor Palma | S2-T23.1: Integrar envío de instrucciones de pago | S2-T23.2: Contrastar importe, destino y asociación al pedido |
+| US-45 | Reportar comprobante de pago digital | 3 | Elynor Palma | S2-T24.1: Integrar recepción y asociación del comprobante | S2-T24.2: Verificar archivo recibido y tratamiento de entrada inválida |
+| US-47 | Notificar resultado de validación al cliente | 2 | Elynor Palma | S2-T25.1: Integrar envío del resultado de validación al cliente | S2-T25.2: Probar aprobación, rechazo y fallo de envío |
+| US-93 | Persistir datos mediante JPA por bounded context | 3 | Anderson y líderes de BC (propuesto) | S2-T26.1: Consolidar integración JPA de los contextos participantes | S2-T26.2: Probar persistencia, relaciones y aislamiento por comerciante |
+| US-64 | Subir foto de perfil | 3 | Lionel Chavez | S2-T27.1: Integrar selección, carga y actualización de foto | S2-T27.2: Probar imagen válida, archivo inválido y persistencia |
+| US-65 | Cambiar email con re-verificación | 3 | Lionel Chavez | S2-T28.1: Integrar cambio de correo con re-verificación en IAM | S2-T28.2: Probar validación, verificación y tratamiento de la sesión |
+| US-66 | Cambiar contraseña | 3 | Lionel Chavez | S2-T29.1: Integrar cambio de contraseña mediante IAM | S2-T29.2: Probar credenciales inválidas y acceso con la nueva contraseña |
+| US-69 | Registrar y verificar número de teléfono | 2 | Lionel Chavez | S2-T30.1: Integrar registro y verificación del teléfono | S2-T30.2: Probar código correcto, inválido y vencido |
+
+US-03 y US-09 conservan su distinción en el capítulo II; al refinar la creación de lotes se deben cotejar sus criterios para identificar el incremento de US-09 y evitar contabilizar nuevamente el trabajo aceptado en el Sprint 1. El mismo criterio se aplica a las capacidades reutilizadas de US-93.
+
+#### 4.2.2.4. Development Evidence for Sprint Review
+
+La revisión utiliza los repositorios de [Android](https://github.com/LernenLabs/adm-entreprenly-frontend) y [backend](https://github.com/LernenLabs/adm-entreprenly-backend). Las versiones locales consultadas corresponden a los commits **d83b63f** (Android, 5 de octubre de 2026) y **49fab1f** (backend, 3 de octubre de 2026). Son una base anterior al período del Sprint 2; por tanto, la siguiente matriz identifica componentes reutilizables y la evidencia adicional que debe aportar el incremento AV2.
+
+| Aspecto / HUs | Base técnica identificada | Evidencia requerida del Sprint 2 |
+| :--- | :--- | :--- |
+| Profile — US-64, US-65, US-66, US-69 | Android: `ProfileScreen.kt`, `EditProfileScreen.kt` y operaciones `changeEmail` y `changePassword` de `AccountViewModel`. Backend: `ProfilesController`. | Commit o PR y capturas de carga y persistencia de foto, cambio de correo con re-verificación, cambio de contraseña y verificación del teléfono. Demostrar validaciones, rechazo de código inválido y tratamiento de la sesión al cambiar credenciales. |
+| Inicio — US-70, US-71, US-72 | Android: `HomeScreen.kt`; los contextos fuente mantienen los datos de ventas, chatbot e inventario. | Recorrido con datos verificables del comerciante: resumen del día, estado del chatbot y alertas; incluir estados de carga, vacío y error. Vincular cada indicador con la respuesta de su servicio. |
+| Inventory — US-02, US-04, US-95, US-09, US-90, US-12, US-14 | Backend: `UnitLotsController`, `WeightLotsController`, `LotsController` y `UnitProductsController`. Android: reglas y pruebas de inventario. | Edición, eliminación confirmada, búsqueda y creación de lotes; eliminación de productos y alertas de estado. Registrar stock antes y después. Para US-14, adjuntar entrega en dispositivo, permiso del sistema y comportamiento con preferencias desactivadas. |
+| Chatbot — US-41, US-42, US-43, US-44, US-45, US-47 | Pruebas del compositor de respuestas, del servicio de conversación y de comandos del pedido; contratos del bridge descritos en 4.2.1.7. | Conversación con consulta de disponibilidad y alternativas, confirmación del pedido, instrucciones de pago, recepción del comprobante y comunicación del resultado. Relacionar mensajes con el pedido y ocultar datos personales en las capturas. |
+| Subscription — US-19, US-23, US-24, US-25, US-96 | Backend: `SubscriptionsController`, `SubscriptionDashboardController`, `SubscriptionTests` y `FakePaymentGatewayTests`. | Activación y estado del plan, solicitud y confirmación de cancelación, alta y gestión de métodos de pago. Identificar el entorno de pago y adjuntar escenarios de aprobación y rechazo con datos de prueba enmascarados. |
+| Sales — US-30, US-34, US-35, US-98 | Android: `SalesScreen.kt`, `SalesViewModel.kt`, `SalesRepositoryImpl.kt` y `SalesApi.kt`. | Lectura de peso con dispositivo y alternativa manual; cancelación sin registrar venta; clasificación por medio de pago y detalle de una venta persistida. Adjuntar datos esperados y obtenidos, unidad de medida y comprobación del stock. |
+| Persistencia — US-93 | Backend organizado por Bounded Context con persistencia JPA, reutilizada por los servicios. | Datos creados y consultados tras una nueva sesión o reinicio del servicio, relaciones coherentes y aislamiento entre comerciantes. Adjuntar pruebas de integración y referencia al cambio o validación realizado durante el sprint. |
+
+**Registro pendiente del incremento:** cada líder debe asociar HU, Work-item, commit o PR integrado, archivo o servicio afectado y captura o demostración de ejecución. Al corte de esta sección no se incorpora una evidencia exclusiva del Sprint 2 que permita declarar estas 30 HUs como **Done**. Las capturas del Sprint 1 se mantienen en sus apartados originales.
+
+#### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+La suite existente sirve como base de regresión para el Sprint 2. El inventario siguiente distingue los casos comprobados en el código de los resultados de ejecución, que deben registrarse contra la versión presentada en AV2.
+
+| Componente | Archivo de prueba existente | Casos identificados y relación con Sprint 2 | Límite de la evidencia |
+| :--- | :--- | :--- | :--- |
+| Android — Inventory | `InventoryRulesTest.kt` | Estados de lotes en fechas límite, stock por unidad y peso, alertas de stock bajo y validación de cantidades y fechas. Base para US-09 y US-12. | La búsqueda comprobada corresponde a productos; no acredita por sí sola US-95. Tampoco demuestra eliminación, integración REST ni entrega de notificaciones de US-14. |
+| Backend — Chatbot | `RuleBasedProductReplyComposerTest.java` | Precio y disponibilidad, total por cantidad, catálogo sin productos agotados y alternativas cuando no se encuentra un producto. Base para US-41 y parte de US-42. | No demuestra el recorrido completo por WhatsApp ni todos los criterios de alternativas ante falta de stock. |
+| Backend — Chatbot | `ChatbotConversationServiceImplTest.java`, `ChatOrderCommandServiceImplTest.java`, `ChatOrderTest.java` | Base de servicios de conversación y pedidos inventariada en 4.2.1.5, reutilizable para la regresión de US-43 a US-47. | Requiere contrastar cada criterio con su caso y ejecutar la suite del incremento; los dobles de prueba no acreditan la entrega real del bridge. |
+| Backend — Subscription | `SubscriptionTests.java` | `approvedPaymentActivatesSubscription` comprueba activación y vigencia; `declinedPaymentLeavesSubscriptionPendingPayment` conserva el estado pendiente ante rechazo. Base para US-19. | Usa pagos construidos para la prueba; no demuestra un cobro real, cancelación ni gestión de métodos de pago. |
+| Backend — pasarela simulada | `FakePaymentGatewayTests.java` | Base de aprobación y rechazo de pagos simulados, inventariada en 4.2.1.5. | Debe reportarse como simulación y acompañarse de evidencia de los flujos nuevos. |
+| Android — Subscription | `SubscriptionRulesTest.kt`, `SubscriptionRepositoryTest.kt`, `SubscriptionFlowTest.kt` | Suite unitaria e instrumentada disponible para regresión del contexto, descrita en 4.2.1.5. | Su existencia no acredita por sí sola las cinco HUs del Sprint 2. |
+
+**Casos de aceptación a completar para AV2**
+
+| Identificador | HUs | Verificación requerida | Resultado al corte |
+| :---: | :--- | :--- | :---: |
+| S2-TS01 | US-64, US-65, US-66, US-69 | Foto válida e inválida; re-verificación de correo; contraseña incorrecta y cambio válido; teléfono con código correcto, inválido y vencido. Verificar sesión y acceso a datos propios. | Pendiente de evidencia |
+| S2-TS02 | US-70, US-71, US-72 | Contrastar indicadores con los servicios del comerciante; probar carga, ausencia de datos, error y actualización. | Pendiente de evidencia |
+| S2-TS03 | US-02, US-04, US-95, US-09, US-90, US-12 | Guardar y recuperar cambios; cancelar y confirmar eliminación; buscar lotes con y sin resultados; validar fechas, cantidades y estados; comprobar consistencia del stock y aislamiento por propietario. | Pendiente de evidencia |
+| S2-TS04 | US-14 | Notificación de vencimiento con permiso concedido y denegado, preferencia activada y desactivada, y aplicación en segundo plano. | Pendiente de evidencia |
+| S2-TS05 | US-41, US-42, US-43, US-44, US-45, US-47 | Disponibilidad y alternativas; confirmación e instrucciones de pago; comprobante recibido y asociado al pedido; notificación del resultado al cliente y manejo de fallos de envío. | Pendiente de evidencia |
+| S2-TS06 | US-19, US-23, US-24, US-25, US-96 | Activación tras aprobación y estado tras rechazo; solicitud y confirmación de cancelación; alta y gestión de métodos de pago con validación y datos enmascarados. | Pendiente de evidencia |
+| S2-TS07 | US-30, US-34, US-35, US-98 | Peso de referencia con balanza calibrada y entrada manual; cancelación sin persistir venta; ingresos por medio de pago; detalle consistente con la venta registrada y acceso del propietario. | Pendiente de evidencia |
+| S2-TS08 | US-93 | Persistencia tras nueva sesión o reinicio, consistencia de relaciones y rechazo de lectura o modificación de datos de otro comerciante. | Pendiente de evidencia |
+
+**Reproducción y registro de resultados**
+
+En el repositorio backend se utiliza `mvn test`. En Android, desde PowerShell, se utiliza `.\gradlew.bat testDebugUnitTest` para pruebas locales y `.\gradlew.bat connectedDebugAndroidTest` para pruebas instrumentadas con dispositivo o emulador conectado. Los reportes se consultan en `target/surefire-reports/` del backend y en `app/build/reports/tests/` y `app/build/reports/androidTests/` de Android.
+
+Para el Review se debe conservar por ejecución: fecha y hora, commit, comando, entorno o dispositivo, casos ejecutados, aprobados, fallidos y omitidos, además del reporte y las incidencias. Las verificaciones manuales registran datos de entrada, resultado esperado, resultado observado y captura. Los casos pendientes o bloqueados mantienen ese estado hasta disponer de evidencia.
+
+**Estado de la suite:** esta actualización documental no ejecuta Maven, Gradle ni pruebas con dispositivo y no reporta porcentajes de cobertura o éxito. El resultado del Sprint 2 se completará con los reportes del incremento y la aceptación de las HUs al cierre del período.
+
+#### 4.2.2.6 Execution Evidence for Sprint Review
+#### 4.2.2.7 Services Documentation Evidence for Sprint Review
+#### 4.2.2.8 Software Deployment Evidence for Sprint Review
+#### 4.2.2.9 Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo de Lernen Labs coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page, WhatsApp Bridge y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia develop tras revisión colaborativa.
+
+A continuación, se presentan las métricas de GitHub Insights que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
+
 ## 4.3. Validation Interviews
 
 Las entrevistas de validación recogen la experiencia de los dos segmentos objetivo: los comerciantes durante la gestión del negocio desde la aplicación móvil y los clientes finales durante la compra por WhatsApp. Su propósito es identificar dificultades de comprensión, navegación y ejecución de tareas, y relacionar los hallazgos con las necesidades identificadas en el capítulo II. Las preguntas se presentan por segmento en la sección 4.3.1; las respuestas y evidencias se registran en la sección 4.3.2 y sustentan la evaluación de la sección 4.3.3.

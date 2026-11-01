@@ -3097,14 +3097,14 @@ Además de las User Stories, el equipo definió cinco **Spike Stories**: trabajo
 
 **Contexto**
 
-Entreprenly se compone de una aplicación móvil construida con Flutter para Android e iOS, una Landing Page estática desplegada en hosting de la nube, y un backend en Spring Boot con Java que expone servicios REST organizados por bounded context bajo Clean Architecture y separación CQRS, con persistencia en PostgreSQL mediante JPA y autenticación basada en JWT. El canal conversacional se resuelve con un puente de WhatsApp desplegado como contenedor Node independiente del backend principal, y el control de inventario por peso se apoya en una balanza inteligente (IoT) que el backend expone a la aplicación móvil mediante el endpoint `/api/v1/iot-scale`. Sobre esta arquitectura, cinco decisiones quedaron abiertas al cerrar el Product Backlog: cómo leer el peso de la balanza, cómo sostener la sesión de WhatsApp, qué pasarela de pago usar para la suscripción, con qué librería escanear códigos QR y cómo entregar las notificaciones push. Cada una de ellas se abordó como un spike con su propio *timebox*.
+Entreprenly se compone de una aplicación móvil construida con Flutter para Android e iOS, una Landing Page estática desplegada en hosting de la nube, y un backend en Spring Boot con Java que expone servicios REST organizados por bounded context bajo Clean Architecture y separación CQRS, con persistencia en PostgreSQL mediante JPA y autenticación basada en JWT. El canal conversacional se resuelve con un puente de WhatsApp desplegado como contenedor Node independiente del backend principal, y el control de inventario por peso se apoya en una balanza inteligente (IoT) que el backend expone a la aplicación móvil mediante el endpoint `/api/v1/iot-scale`. Sobre esta arquitectura, cinco decisiones quedaron abiertas al cerrar el Product Backlog: cómo leer el peso de la balanza, cómo sostener la sesión de WhatsApp, qué pasarela de pago usar para la suscripción, con qué librería escanear códigos QR y cómo entregar las notificaciones push. Cada una de ellas se abordó como un spike con su propio _timebox_.
 
 **Definition of Done (aplicable a los cinco spikes)**
 
-- El código del *proof of concept* está registrado en una rama del repositorio.
+- El código del _proof of concept_ está registrado en una rama del repositorio.
 - El informe de hallazgos se comparte y se revisa en una reunión de equipo o sesión de refinamiento del backlog.
 - Los hallazgos se utilizan para crear o refinar las historias de implementación asociadas.
-- El spike se completa dentro de su *timebox* y del sprint en curso.
+- El spike se completa dentro de su _timebox_ y del sprint en curso.
 
 <table>
   <tbody>
@@ -3366,16 +3366,15 @@ La selección del **Sprint 1**, acordada el 28 de septiembre de 2026, comprende 
 
 El Product Backlog se gestiona en el [tablero de Miro de Entreprenly](https://miro.com/app/board/uXjVEel-fbI=/), donde cada HU registra su orden, story points, sprint asignado y estado (ver Anexo J).
 
-| Asignación | User Stories | Story points |
-| :---: | :---: | :---: |
-| Sprint 1 | 41 | 97 |
-| Sprint 2 | 30 | 73 |
-| Sprint 3 | 21 | 57 |
-| Base previa — IAM (US-56 a US-61) | 6 | 18 |
-| **Total** | **98** | **245** |
+|            Asignación             | User Stories | Story points |
+| :-------------------------------: | :----------: | :----------: |
+|             Sprint 1              |      41      |      97      |
+|             Sprint 2              |      30      |      73      |
+|             Sprint 3              |      21      |      57      |
+| Base previa — IAM (US-56 a US-61) |      6       |      18      |
+|             **Total**             |    **98**    |   **245**    |
 
 Cada HU tiene una única asignación y los tres sprints no comparten identificadores. Las 92 HUs planificadas y las seis HUs de IAM como base previa cubren el Product Backlog completo. La asignación de una HU a un sprint posterior no cambia la disponibilidad del código reutilizado de autenticación, persistencia o despliegue que se utiliza en el Sprint 1.
-
 
 <p align="center">
   <img src="images/capitulo2/product-backlog-miro.png" alt="Product Backlog en Miro" width="800"/>
@@ -3388,104 +3387,104 @@ Cada HU tiene una única asignación y los tres sprints no comparten identificad
     <tr><th># Orden</th><th>User Story Id</th><th>Título</th><th>Story Points<br>(1 / 2 / 3 / 5 / 8)</th><th>Sprint</th></tr>
   </thead>
   <tbody>
-    <tr><td>1</td><td>US-53</td><td>Conocer propuesta de valor en landing page</td><td>3</td><td>1</td></tr>
-    <tr><td>2</td><td>US-84</td><td>Visualizar la propuesta de valor</td><td>2</td><td>1</td></tr>
-    <tr><td>3</td><td>US-85</td><td>Explorar las funciones principales</td><td>2</td><td>1</td></tr>
-    <tr><td>4</td><td>US-86</td><td>Revisar los planes de suscripción</td><td>2</td><td>1</td></tr>
-    <tr><td>5</td><td>US-87</td><td>Consultar las preguntas frecuentes</td><td>1</td><td>1</td></tr>
-    <tr><td>6</td><td>US-88</td><td>Acceder a la aplicación móvil desde la landing page</td><td>1</td><td>1</td></tr>
-    <tr><td>7</td><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>1</td><td>1</td></tr>
-    <tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>3</td><td>1</td></tr>
-    <tr><td>9</td><td>US-02</td><td>Editar lotes</td><td>2</td><td>2</td></tr>
-    <tr><td>10</td><td>US-03</td><td>Agregar lotes</td><td>2</td><td>1</td></tr>
-    <tr><td>11</td><td>US-04</td><td>Eliminar lotes</td><td>1</td><td>2</td></tr>
-    <tr><td>12</td><td>US-05</td><td>Editar productos</td><td>2</td><td>1</td></tr>
-    <tr><td>13</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>2</td><td>1</td></tr>
-    <tr><td>14</td><td>US-07</td><td>Visualizar detalles de producto</td><td>2</td><td>1</td></tr>
-    <tr><td>15</td><td>US-08</td><td>Buscar productos</td><td>3</td><td>1</td></tr>
-    <tr><td>16</td><td>US-95</td><td>Buscar lotes</td><td>2</td><td>2</td></tr>
-    <tr><td>17</td><td>US-09</td><td>Crear lotes</td><td>3</td><td>2</td></tr>
-    <tr><td>18</td><td>US-10</td><td>Escanear código QR en inventario</td><td>3</td><td>3</td></tr>
-    <tr><td>19</td><td>US-90</td><td>Eliminar productos</td><td>1</td><td>2</td></tr>
-    <tr><td>20</td><td>US-11</td><td>Detectar stock agotado</td><td>3</td><td>1</td></tr>
-    <tr><td>21</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>2</td><td>2</td></tr>
-    <tr><td>22</td><td>US-13</td><td>Visualizar dashboard móvil de lotes</td><td>3</td><td>1</td></tr>
-    <tr><td>23</td><td>US-14</td><td>Recibir notificación de caducidad de lote</td><td>3</td><td>2</td></tr>
-    <tr><td>24</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>2</td><td>1</td></tr>
-    <tr><td>25</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>2</td><td>1</td></tr>
-    <tr><td>26</td><td>US-17</td><td>Registrar datos de facturación</td><td>3</td><td>1</td></tr>
-    <tr><td>27</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>5</td><td>1</td></tr>
-    <tr><td>28</td><td>US-19</td><td>Activar suscripción</td><td>3</td><td>2</td></tr>
-    <tr><td>29</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>2</td><td>1</td></tr>
-    <tr><td>30</td><td>US-21</td><td>Consultar estado de suscripción</td><td>1</td><td>1</td></tr>
-    <tr><td>31</td><td>US-22</td><td>Renovar suscripción</td><td>3</td><td>1</td></tr>
-    <tr><td>32</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>2</td><td>2</td></tr>
-    <tr><td>33</td><td>US-24</td><td>Cancelar suscripción</td><td>3</td><td>2</td></tr>
-    <tr><td>34</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>3</td><td>2</td></tr>
-    <tr><td>35</td><td>US-96</td><td>Gestionar métodos de pago de suscripción</td><td>2</td><td>2</td></tr>
-    <tr><td>36</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>2</td><td>3</td></tr>
-    <tr><td>37</td><td>US-27</td><td>Descargar historial de suscripción</td><td>2</td><td>3</td></tr>
-    <tr><td>38</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>3</td><td>1</td></tr>
-    <tr><td>39</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>2</td><td>1</td></tr>
-    <tr><td>40</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>5</td><td>2</td></tr>
-    <tr><td>41</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>3</td><td>1</td></tr>
-    <tr><td>42</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>2</td><td>1</td></tr>
-    <tr><td>43</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>3</td><td>1</td></tr>
-    <tr><td>44</td><td>US-34</td><td>Cancelar venta en curso</td><td>1</td><td>2</td></tr>
-    <tr><td>45</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>3</td><td>2</td></tr>
-    <tr><td>46</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>2</td><td>1</td></tr>
-    <tr><td>47</td><td>US-97</td><td>Consultar el historial de ventas del día</td><td>2</td><td>1</td></tr>
-    <tr><td>48</td><td>US-98</td><td>Consultar el detalle de una venta registrada</td><td>2</td><td>2</td></tr>
-    <tr><td>49</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business desde el dispositivo móvil</td><td>5</td><td>1</td></tr>
-    <tr><td>50</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>2</td><td>1</td></tr>
-    <tr><td>51</td><td>US-39</td><td>Visualizar conversaciones de clientes en la aplicación móvil</td><td>3</td><td>1</td></tr>
-    <tr><td>52</td><td>US-40</td><td>Responder mensajes de clientes desde la aplicación móvil</td><td>3</td><td>1</td></tr>
-    <tr><td>53</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>2</td><td>2</td></tr>
-    <tr><td>54</td><td>US-71</td><td>Visualizar estado del chatbot en la pantalla de Inicio</td><td>2</td><td>2</td></tr>
-    <tr><td>55</td><td>US-72</td><td>Visualizar alertas de inventario en la pantalla de Inicio</td><td>2</td><td>2</td></tr>
-    <tr><td>56</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en la pantalla de Inicio</td><td>1</td><td>3</td></tr>
-    <tr><td>57</td><td>US-74</td><td>Visualizar pedidos recientes en la pantalla de Inicio</td><td>2</td><td>3</td></tr>
-    <tr><td>58</td><td>US-75</td><td>Acceder a módulos desde accesos directos de la pantalla de Inicio</td><td>1</td><td>1</td></tr>
-    <tr><td>59</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>2</td><td>3</td></tr>
-    <tr><td>60</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>2</td><td>3</td></tr>
-    <tr><td>61</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>2</td><td>3</td></tr>
-    <tr><td>62</td><td>US-79</td><td>Reportar un problema</td><td>3</td><td>3</td></tr>
-    <tr><td>63</td><td>US-80</td><td>Confirmar envío del reporte</td><td>1</td><td>3</td></tr>
-    <tr><td>64</td><td>US-81</td><td>Navegar entre módulos desde el menú de navegación móvil</td><td>2</td><td>1</td></tr>
-    <tr><td>65</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>2</td><td>3</td></tr>
-    <tr><td>66</td><td>US-83</td><td>Gestionar destinos de navegación no disponibles</td><td>1</td><td>3</td></tr>
-    <tr><td>67</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>3</td><td>2</td></tr>
-    <tr><td>68</td><td>US-42</td><td>Sugerir alternativas ante producto no disponible</td><td>2</td><td>2</td></tr>
-    <tr><td>69</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>3</td><td>2</td></tr>
-    <tr><td>70</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>2</td><td>2</td></tr>
-    <tr><td>71</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>3</td><td>2</td></tr>
-    <tr><td>72</td><td>US-46</td><td>Validar comprobante de pago desde la aplicación móvil</td><td>3</td><td>1</td></tr>
-    <tr><td>73</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>2</td><td>2</td></tr>
-    <tr><td>74</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>3</td><td>3</td></tr>
-    <tr><td>75</td><td>US-49</td><td>Registrar venta en el sistema</td><td>2</td><td>3</td></tr>
-    <tr><td>76</td><td>US-50</td><td>Manejar stock insuficiente en pedido</td><td>3</td><td>3</td></tr>
-    <tr><td>77</td><td>US-51</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>3</td><td>3</td></tr>
-    <tr><td>78</td><td>US-52</td><td>Rechazar comprobante de pago inválido</td><td>3</td><td>3</td></tr>
-    <tr><td>79</td><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>5</td><td>3</td></tr>
-    <tr><td>80</td><td>US-55</td><td>Validar y registrar pagos mediante API</td><td>5</td><td>3</td></tr>
-    <tr><td>81</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>5</td><td>3</td></tr>
-    <tr><td>82</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>5</td><td>3</td></tr>
-    <tr><td>83</td><td>US-93</td><td>Persistir datos mediante JPA por bounded context</td><td>3</td><td>2</td></tr>
-    <tr><td>84</td><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>3</td><td>1</td></tr>
-    <tr><td>85</td><td>US-56</td><td>Registrar cuenta con email</td><td>3</td><td>Base previa</td></tr>
-    <tr><td>86</td><td>US-57</td><td>Verificar email</td><td>3</td><td>Base previa</td></tr>
-    <tr><td>87</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>3</td><td>Base previa</td></tr>
-    <tr><td>88</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>5</td><td>Base previa</td></tr>
-    <tr><td>89</td><td>US-60</td><td>Recuperar contraseña</td><td>3</td><td>Base previa</td></tr>
-    <tr><td>90</td><td>US-61</td><td>Cerrar sesión</td><td>1</td><td>Base previa</td></tr>
-    <tr><td>91</td><td>US-62</td><td>Visualizar perfil actual</td><td>1</td><td>1</td></tr>
-    <tr><td>92</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>2</td><td>1</td></tr>
-    <tr><td>93</td><td>US-64</td><td>Subir foto de perfil</td><td>3</td><td>2</td></tr>
-    <tr><td>94</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>3</td><td>2</td></tr>
-    <tr><td>95</td><td>US-66</td><td>Cambiar contraseña</td><td>3</td><td>2</td></tr>
-    <tr><td>96</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>3</td><td>1</td></tr>
-    <tr><td>97</td><td>US-68</td><td>Configurar notificaciones</td><td>2</td><td>1</td></tr>
-    <tr><td>98</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>2</td><td>2</td></tr>
+   <tr><td>1</td><td>US-53</td><td>Conocer propuesta de valor en landing page</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>US-84</td><td>Visualizar la propuesta de valor</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>US-85</td><td>Explorar las funciones principales</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>US-86</td><td>Revisar los planes de suscripción</td><td>2</td><td>1</td></tr>
+<tr><td>5</td><td>US-87</td><td>Consultar las preguntas frecuentes</td><td>1</td><td>1</td></tr>
+<tr><td>6</td><td>US-88</td><td>Acceder a la aplicación móvil desde la landing page</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>US-89</td><td>Descargar la aplicación mediante el botón de acción principal</td><td>1</td><td>1</td></tr>
+<tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>3</td><td>1</td></tr>
+<tr><td>9</td><td>US-03</td><td>Agregar lotes</td><td>2</td><td>1</td></tr>
+<tr><td>10</td><td>US-05</td><td>Editar productos</td><td>2</td><td>1</td></tr>
+<tr><td>11</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>2</td><td>1</td></tr>
+<tr><td>12</td><td>US-07</td><td>Visualizar detalles de producto</td><td>2</td><td>1</td></tr>
+<tr><td>13</td><td>US-08</td><td>Buscar productos</td><td>3</td><td>1</td></tr>
+<tr><td>14</td><td>US-11</td><td>Detectar stock agotado</td><td>3</td><td>1</td></tr>
+<tr><td>15</td><td>US-13</td><td>Visualizar dashboard móvil de lotes</td><td>3</td><td>1</td></tr>
+<tr><td>16</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>2</td><td>1</td></tr>
+<tr><td>17</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>2</td><td>1</td></tr>
+<tr><td>18</td><td>US-17</td><td>Registrar datos de facturación</td><td>3</td><td>1</td></tr>
+<tr><td>19</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>5</td><td>1</td></tr>
+<tr><td>20</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>2</td><td>1</td></tr>
+<tr><td>21</td><td>US-21</td><td>Consultar estado de suscripción</td><td>1</td><td>1</td></tr>
+<tr><td>22</td><td>US-22</td><td>Renovar suscripción</td><td>3</td><td>1</td></tr>
+<tr><td>23</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>3</td><td>1</td></tr>
+<tr><td>24</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>2</td><td>1</td></tr>
+<tr><td>25</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>3</td><td>1</td></tr>
+<tr><td>26</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>2</td><td>1</td></tr>
+<tr><td>27</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>3</td><td>1</td></tr>
+<tr><td>28</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>2</td><td>1</td></tr>
+<tr><td>29</td><td>US-97</td><td>Consultar el historial de ventas del día</td><td>2</td><td>1</td></tr>
+<tr><td>30</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business desde el dispositivo móvil</td><td>5</td><td>1</td></tr>
+<tr><td>31</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>2</td><td>1</td></tr>
+<tr><td>32</td><td>US-39</td><td>Visualizar conversaciones de clientes en la aplicación móvil</td><td>3</td><td>1</td></tr>
+<tr><td>33</td><td>US-40</td><td>Responder mensajes de clientes desde la aplicación móvil</td><td>3</td><td>1</td></tr>
+<tr><td>34</td><td>US-75</td><td>Acceder a módulos desde accesos directos de la pantalla de Inicio</td><td>1</td><td>1</td></tr>
+<tr><td>35</td><td>US-81</td><td>Navegar entre módulos desde el menú de navegación móvil</td><td>2</td><td>1</td></tr>
+<tr><td>36</td><td>US-46</td><td>Validar comprobante de pago desde la aplicación móvil</td><td>3</td><td>1</td></tr>
+<tr><td>37</td><td>US-94</td><td>Desplegar la Landing Page en GitHub Pages</td><td>3</td><td>1</td></tr>
+<tr><td>38</td><td>US-62</td><td>Visualizar perfil actual</td><td>1</td><td>1</td></tr>
+<tr><td>39</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>2</td><td>1</td></tr>
+<tr><td>40</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>3</td><td>1</td></tr>
+<tr><td>41</td><td>US-68</td><td>Configurar notificaciones</td><td>2</td><td>1</td></tr>
+<tr><td>42</td><td>US-02</td><td>Editar lotes</td><td>2</td><td>2</td></tr>
+<tr><td>43</td><td>US-04</td><td>Eliminar lotes</td><td>1</td><td>2</td></tr>
+<tr><td>44</td><td>US-95</td><td>Buscar lotes</td><td>2</td><td>2</td></tr>
+<tr><td>45</td><td>US-09</td><td>Crear lotes</td><td>3</td><td>2</td></tr>
+<tr><td>46</td><td>US-90</td><td>Eliminar productos</td><td>1</td><td>2</td></tr>
+<tr><td>47</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>2</td><td>2</td></tr>
+<tr><td>48</td><td>US-14</td><td>Recibir notificación de caducidad de lote</td><td>3</td><td>2</td></tr>
+<tr><td>49</td><td>US-19</td><td>Activar suscripción</td><td>3</td><td>2</td></tr>
+<tr><td>50</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>2</td><td>2</td></tr>
+<tr><td>51</td><td>US-24</td><td>Cancelar suscripción</td><td>3</td><td>2</td></tr>
+<tr><td>52</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>3</td><td>2</td></tr>
+<tr><td>53</td><td>US-96</td><td>Gestionar métodos de pago de suscripción</td><td>2</td><td>2</td></tr>
+<tr><td>54</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>5</td><td>2</td></tr>
+<tr><td>55</td><td>US-34</td><td>Cancelar venta en curso</td><td>1</td><td>2</td></tr>
+<tr><td>56</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>3</td><td>2</td></tr>
+<tr><td>57</td><td>US-98</td><td>Consultar el detalle de una venta registrada</td><td>2</td><td>2</td></tr>
+<tr><td>58</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>2</td><td>2</td></tr>
+<tr><td>59</td><td>US-71</td><td>Visualizar estado del chatbot en la pantalla de Inicio</td><td>2</td><td>2</td></tr>
+<tr><td>60</td><td>US-72</td><td>Visualizar alertas de inventario en la pantalla de Inicio</td><td>2</td><td>2</td></tr>
+<tr><td>61</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>3</td><td>2</td></tr>
+<tr><td>62</td><td>US-42</td><td>Sugerir alternativas ante producto no disponible</td><td>2</td><td>2</td></tr>
+<tr><td>63</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>3</td><td>2</td></tr>
+<tr><td>64</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>2</td><td>2</td></tr>
+<tr><td>65</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>3</td><td>2</td></tr>
+<tr><td>66</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>2</td><td>2</td></tr>
+<tr><td>67</td><td>US-93</td><td>Persistir datos mediante JPA por bounded context</td><td>3</td><td>2</td></tr>
+<tr><td>68</td><td>US-64</td><td>Subir foto de perfil</td><td>3</td><td>2</td></tr>
+<tr><td>69</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>3</td><td>2</td></tr>
+<tr><td>70</td><td>US-66</td><td>Cambiar contraseña</td><td>3</td><td>2</td></tr>
+<tr><td>71</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>2</td><td>2</td></tr>
+<tr><td>72</td><td>US-10</td><td>Escanear código QR en inventario</td><td>3</td><td>3</td></tr>
+<tr><td>73</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>2</td><td>3</td></tr>
+<tr><td>74</td><td>US-27</td><td>Descargar historial de suscripción</td><td>2</td><td>3</td></tr>
+<tr><td>75</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en la pantalla de Inicio</td><td>1</td><td>3</td></tr>
+<tr><td>76</td><td>US-74</td><td>Visualizar pedidos recientes en la pantalla de Inicio</td><td>2</td><td>3</td></tr>
+<tr><td>77</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>2</td><td>3</td></tr>
+<tr><td>78</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>2</td><td>3</td></tr>
+<tr><td>79</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>2</td><td>3</td></tr>
+<tr><td>80</td><td>US-79</td><td>Reportar un problema</td><td>3</td><td>3</td></tr>
+<tr><td>81</td><td>US-80</td><td>Confirmar envío del reporte</td><td>1</td><td>3</td></tr>
+<tr><td>82</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>2</td><td>3</td></tr>
+<tr><td>83</td><td>US-83</td><td>Gestionar destinos de navegación no disponibles</td><td>1</td><td>3</td></tr>
+<tr><td>84</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>3</td><td>3</td></tr>
+<tr><td>85</td><td>US-49</td><td>Registrar venta en el sistema</td><td>2</td><td>3</td></tr>
+<tr><td>86</td><td>US-50</td><td>Manejar stock insuficiente en pedido</td><td>3</td><td>3</td></tr>
+<tr><td>87</td><td>US-51</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>3</td><td>3</td></tr>
+<tr><td>88</td><td>US-52</td><td>Rechazar comprobante de pago inválido</td><td>3</td><td>3</td></tr>
+<tr><td>89</td><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>5</td><td>3</td></tr>
+<tr><td>90</td><td>US-55</td><td>Validar y registrar pagos mediante API</td><td>5</td><td>3</td></tr>
+<tr><td>91</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>5</td><td>3</td></tr>
+<tr><td>92</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>5</td><td>3</td></tr>
+<tr><td>93</td><td>US-56</td><td>Registrar cuenta con email</td><td>3</td><td>Base previa</td></tr>
+<tr><td>94</td><td>US-57</td><td>Verificar email</td><td>3</td><td>Base previa</td></tr>
+<tr><td>95</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>3</td><td>Base previa</td></tr>
+<tr><td>96</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>5</td><td>Base previa</td></tr>
+<tr><td>97</td><td>US-60</td><td>Recuperar contraseña</td><td>3</td><td>Base previa</td></tr>
+<tr><td>98</td><td>US-61</td><td>Cerrar sesión</td><td>1</td><td>Base previa</td></tr>
   </tbody>
 </table>
 
@@ -3547,16 +3546,16 @@ Este diagrama muestra la integración y comunicación entre los diferentes Bound
 
 #### 2.5.1.1. Candidate Context Discovery
 
-En esta sección se aplica la técnica de Candidate Context Discovery para identificar y separar los posibles Bounded Contexts del sistema. Se utilizó la técnica *look-for-pivotal-events* para analizar los eventos que marcan un cambio de estado relevante dentro del modelo de negocio de Entreprenly. Al identificar eventos pivote fundamentales como **UserSignedUp**, **ProductCreated**, **StockDecremented**, **WhatsAppOrderConfirmed**, **SaleCompleted** y **SubscriptionActivated**, se detectó que cada uno implicaba responsabilidades, límites transaccionales y reglas de negocio distintas, lo que llevó a definir los siguientes Bounded Contexts:
+En esta sección se aplica la técnica de Candidate Context Discovery para identificar y separar los posibles Bounded Contexts del sistema. Se utilizó la técnica _look-for-pivotal-events_ para analizar los eventos que marcan un cambio de estado relevante dentro del modelo de negocio de Entreprenly. Al identificar eventos pivote fundamentales como **UserSignedUp**, **ProductCreated**, **StockDecremented**, **WhatsAppOrderConfirmed**, **SaleCompleted** y **SubscriptionActivated**, se detectó que cada uno implicaba responsabilidades, límites transaccionales y reglas de negocio distintas, lo que llevó a definir los siguientes Bounded Contexts:
 
-| Bounded Context | Descripción | Eventos clave |
-|---|---|---|
-| **IAM** | Maneja la autenticación, registro y autorización de los comerciantes mediante credenciales seguras (hashing con BCrypt) y emisión de tokens JWT. | `UserSignedUp`, `UserAuthenticated`, `PasswordResetRequested`, `PasswordChanged` |
-| **Profile** | Administra la información del perfil del comerciante, datos de contacto y preferencias operativas (moneda, idioma, zona horaria, tema visual y notificaciones push). | `ProfileCreated`, `ProfileUpdated`, `ProfilePictureUploaded`, `PreferencesConfigured` |
-| **Subscription** | Gestiona los planes de suscripción (Free, Pro), el procesamiento de pagos mediante pasarela y el ciclo de vida (activación, renovación o cancelación) del servicio. | `SubscriptionPlanSelected`, `PaymentProcessed`, `SubscriptionActivated`, `SubscriptionCancelled` |
-| **Inventory** | Controla el catálogo de productos (por unidad y por peso), gestión de lotes con fechas de vencimiento, balance de existencias y generación de alertas de stock. | `ProductCreated`, `ProductUpdated`, `BatchRegistered`, `StockDecremented`, `LowStockAlertTriggered` |
-| **WhatsApp Sales** | Canal conversacional automatizado que atiende a los clientes finales vía WhatsApp, consultando disponibilidad de productos, registrando pedidos y confirmando compras. | `CustomerMessageReceived`, `ProductAvailabilityQueried`, `WhatsAppOrderCreated`, `WhatsAppOrderConfirmed` |
-| **Sales** | Administra el registro de ventas presenciales en el punto de venta móvil, procesando ítems por unidad y peso, emisión de comprobantes y validación de pagos (Yape, Plin y efectivo). | `SaleInitiated`, `ItemAddedToSale`, `PaymentReceived`, `SaleCompleted` |
+| Bounded Context    | Descripción                                                                                                                                                                          | Eventos clave                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **IAM**            | Maneja la autenticación, registro y autorización de los comerciantes mediante credenciales seguras (hashing con BCrypt) y emisión de tokens JWT.                                     | `UserSignedUp`, `UserAuthenticated`, `PasswordResetRequested`, `PasswordChanged`                          |
+| **Profile**        | Administra la información del perfil del comerciante, datos de contacto y preferencias operativas (moneda, idioma, zona horaria, tema visual y notificaciones push).                 | `ProfileCreated`, `ProfileUpdated`, `ProfilePictureUploaded`, `PreferencesConfigured`                     |
+| **Subscription**   | Gestiona los planes de suscripción (Free, Pro), el procesamiento de pagos mediante pasarela y el ciclo de vida (activación, renovación o cancelación) del servicio.                  | `SubscriptionPlanSelected`, `PaymentProcessed`, `SubscriptionActivated`, `SubscriptionCancelled`          |
+| **Inventory**      | Controla el catálogo de productos (por unidad y por peso), gestión de lotes con fechas de vencimiento, balance de existencias y generación de alertas de stock.                      | `ProductCreated`, `ProductUpdated`, `BatchRegistered`, `StockDecremented`, `LowStockAlertTriggered`       |
+| **WhatsApp Sales** | Canal conversacional automatizado que atiende a los clientes finales vía WhatsApp, consultando disponibilidad de productos, registrando pedidos y confirmando compras.               | `CustomerMessageReceived`, `ProductAvailabilityQueried`, `WhatsAppOrderCreated`, `WhatsAppOrderConfirmed` |
+| **Sales**          | Administra el registro de ventas presenciales en el punto de venta móvil, procesando ítems por unidad y peso, emisión de comprobantes y validación de pagos (Yape, Plin y efectivo). | `SaleInitiated`, `ItemAddedToSale`, `PaymentReceived`, `SaleCompleted`                                    |
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
@@ -4147,6 +4146,7 @@ Este Bounded Context es responsable de la administración del inventario del com
 **Relaciones:** `inventory_unit_lots.product_id` → `inventory_unit_products.id`; `inventory_weight_lots.product_id` → `inventory_weight_products.id`. Sin FK físicas hacia otros BCs para preservar autonomía; `owner_email` referencia lógica a `users.email`.
 
 ### 2.6.3. Bounded Context: Chatbot
+
 Este Bounded Context es responsable de la interacción conversacional entre el comerciante y sus clientes a través de WhatsApp: registro y actualización de conversaciones, procesamiento de mensajes entrantes y salientes, interpretación de solicitudes de productos contra el catálogo, generación y actualización de pedidos, validación de comprobantes de pago y administración de la sesión/puente (bridge) de conexión con WhatsApp. Está diseñado bajo Clean Architecture y DDD táctico con separación CQRS, exponiendo puertos de salida que son implementados como adaptadores ACL en Infrastructure para consumir, sin acoplamiento directo, información de Gestión de Inventario, IAM, Perfil y Configuración y Ventas.
 
 #### 2.6.3.1. Domain Layer
@@ -4184,6 +4184,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 </table>
 
 **Sub-capa Model - Value Objects:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4198,6 +4199,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 </table>
 
 **Sub-capa Model - Commands:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4213,6 +4215,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 </table>
 
 **Sub-capa Model - Queries:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4236,6 +4239,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 </table>
 
 **Sub-capa Services:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4257,6 +4261,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 #### 2.6.3.2. Interface Layer
 
 **REST - Controllers:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4272,6 +4277,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 </table>
 
 **Cross-cutting - Guard:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4287,6 +4293,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 #### 2.6.3.3. Application Layer
 
 **Internal - Command Services:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4300,6 +4307,7 @@ Este Bounded Context es responsable de la interacción conversacional entre el c
 Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de errores de aplicación.
 
 **Internal - Query Services:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4311,6 +4319,7 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 </table>
 
 **Internal - Outbound Services (Ports):**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4328,6 +4337,7 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 #### 2.6.3.4. Infrastructure Layer
 
 **Adaptadores ACL (Anti-Corruption Layer):**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4340,6 +4350,7 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 </table>
 
 **Adaptadores de mensajería WhatsApp y tiempo real:**
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Responsabilidad Principal</th><th>Relación con otros elementos</th>
@@ -4351,6 +4362,7 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 </table>
 
 **Reglas de infraestructura y seguridad:**
+
 - Monolito modular Spring Boot con PostgreSQL/MySQL compartida y límites lógicos por Bounded Context.
 - `owner_email` / `seller_id` se manejan como referencias lógicas a IAM, sin FK física inter-BC, igual que en Profile e Inventory.
 - Los endpoints requieren JWT válido y son protegidos por `ChatbotSubscriptionGuard`, que verifica el plan activo del comerciante antes de exponer cualquier dato de conversaciones, mensajes, pedidos o sesiones.
@@ -4381,9 +4393,9 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 </p>
 
 **Figura 2.6.3.3:** Diagrama de base de datos (modelo con énfasis en Chatbot). Fuente: `Entreprenly_database_diagram` del proyecto original.
- 
+
 **Diccionario de datos — Chatbot:**
- 
+
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
   <tr style="background-color:#2c3e50; color:white;">
     <th>Tabla</th><th>Campo</th><th>Key</th><th>Descripción</th>
@@ -4438,7 +4450,6 @@ Todos retornan `Result&lt;T, ApplicationError&gt;`, estandarizando el manejo de 
 Este Bounded Context administra la relación de suscripción del comerciante con Entreprenly. Comprende el catálogo de planes Free y Control, la contratación, los datos de facturación, los métodos de pago, los cobros, la activación, la renovación, la cancelación y la consulta del historial. Free se establece como plan efectivo al crear la cuenta y permite el acceso básico sin vencimiento; Control habilita los beneficios contratados durante un periodo mensual o anual, una vez aprobado el pago correspondiente.
 
 El diseño sigue DDD táctico y Clean Architecture mediante las capas Domain, Interface, Application e Infrastructure. Subscription es responsable de las reglas de vigencia y de los cambios del plan efectivo. Una solicitud de cancelación conserva los beneficios hasta el final del periodo contratado; al concluir, se cancela la suscripción de pago y se restablece Free. Las consultas de acceso evalúan tanto el estado como las fechas, de modo que una ejecución tardía del procesamiento de vencimientos no prolongue el acceso premium.
-
 
 #### 2.6.4.1. Domain Layer
 
@@ -4788,7 +4799,7 @@ Los datos de auditoría created_at y updated_at complementan las tablas de agreg
 
 ### 2.6.5. Bounded Context: Sales
 
-Este Bounded Context es el núcleo transaccional responsable del registro, procesamiento y consolidación de las ventas comerciales en Entreprenly. Su propósito principal es permitir a los comerciantes gestionar tanto las ventas presenciales en el punto de venta móvil (POS para bodegas y puestos de mercado) como las ventas originadas de manera omnicanal a través del canal conversacional de WhatsApp. 
+Este Bounded Context es el núcleo transaccional responsable del registro, procesamiento y consolidación de las ventas comerciales en Entreprenly. Su propósito principal es permitir a los comerciantes gestionar tanto las ventas presenciales en el punto de venta móvil (POS para bodegas y puestos de mercado) como las ventas originadas de manera omnicanal a través del canal conversacional de WhatsApp.
 
 Sales gestiona de forma integral la composición de los ítems de venta (diferenciando productos unitarios de productos por peso con integración a balanza), el cálculo automático de subtotales e importes finales, la validación de métodos de pago peruanos populares (Yape, Plin y efectivo con cálculo de cambio), y la emisión del comprobante de venta digital. Asimismo, se comunica de manera desacoplada con el Bounded Context de Inventory para la deducción oportuna del stock físico y expone una fachada de Anti-Corruption Layer (ACL) para registrar ventas provenientes de pedidos confirmados por el Chatbot. El diseño respeta los estándares de Domain-Driven Design (DDD) y Clean Architecture, organizándose en las capas Domain, Interface, Application e Infrastructure.
 
@@ -5005,7 +5016,7 @@ A continuación se presenta el diagrama de componentes del Bounded Context de Ve
   <img src="images/capitulo2/structurizr-104049-SalesComponent.png" alt="Diagrama de componentes del Bounded Context Sales" width="1000"/>
 </p>
 
-**Figura 2.6.5.1:** *Diagrama de componentes de Sales BC. Las peticiones web externas ingresan por la capa de API / Security Layer con validación JWT hacia `SalesController`. Las ventas originadas desde el Chatbot de WhatsApp ingresan vía ACL a través de `SalesContextFacade`. El flujo de comandos delega la lógica de negocio a `SaleCommandService`, mientras las consultas de historial y fecha son resueltas por `SaleQueryService`. La persistencia se resuelve mediante `SaleRepository` sobre la base de datos PostgreSQL (Google Cloud SQL).*
+**Figura 2.6.5.1:** _Diagrama de componentes de Sales BC. Las peticiones web externas ingresan por la capa de API / Security Layer con validación JWT hacia `SalesController`. Las ventas originadas desde el Chatbot de WhatsApp ingresan vía ACL a través de `SalesContextFacade`. El flujo de comandos delega la lógica de negocio a `SaleCommandService`, mientras las consultas de historial y fecha son resueltas por `SaleQueryService`. La persistencia se resuelve mediante `SaleRepository` sobre la base de datos PostgreSQL (Google Cloud SQL)._
 
 #### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -5017,7 +5028,7 @@ El modelo del Bounded Context de Sales separa rigurosamente la raíz de agregado
   <img src="images/capitulo2/sales-class-diagram.png" alt="Diagrama de clases del Bounded Context Sales" width="1000"/>
 </p>
 
-**Figura 2.6.5.2:** *Diagrama de clases del modelo de dominio de Sales. El agregado raíz `Sale` encapsula sus entidades subordinadas `SaleItem` y `SalePayment`, garantizando el cálculo inmutable de los importes y aplicando los objetos de valor `Money`, `SaleNumber`, `ItemType` y `PaymentMethodType`.*
+**Figura 2.6.5.2:** _Diagrama de clases del modelo de dominio de Sales. El agregado raíz `Sale` encapsula sus entidades subordinadas `SaleItem` y `SalePayment`, garantizando el cálculo inmutable de los importes y aplicando los objetos de valor `Money`, `SaleNumber`, `ItemType` y `PaymentMethodType`._
 
 ##### 2.6.5.6.2. Bounded Context Database Design Diagram
 
@@ -5025,7 +5036,7 @@ El modelo del Bounded Context de Sales separa rigurosamente la raíz de agregado
   <img src="images/capitulo2/sales-database.png" alt="Diagrama de base de datos del Bounded Context Sales" width="800"/>
 </p>
 
-**Figura 2.6.5.3:** *Modelo relacional de base de datos del Bounded Context Sales en PostgreSQL (Google Cloud SQL), compuesto por las tablas transaccionales de ventas, líneas de detalle, pagos y la tabla de Outbox para publicación de eventos.*
+**Figura 2.6.5.3:** _Modelo relacional de base de datos del Bounded Context Sales en PostgreSQL (Google Cloud SQL), compuesto por las tablas transaccionales de ventas, líneas de detalle, pagos y la tabla de Outbox para publicación de eventos._
 
 **Diccionario de persistencia:**
 
