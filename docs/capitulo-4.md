@@ -870,6 +870,16 @@ A continuación, se presentan las métricas de **GitHub Insights** que evidencia
 
 Las capturas corresponden a las evidencias incluidas en Project Report Collaboration Insights. Presentan el historial acumulado del informe hasta el TB1, incluido el trabajo previo del AV1; no se interpretan como commits exclusivos del Sprint 1. La responsabilidad por contexto se identifica en 4.2.1.2 y la trazabilidad de las 41 HUs mediante sus 127 Work-items en 4.2.1.3. La colaboración sobre la integración de WhatsApp se consulta en el [historial del bridge](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/commits/main/).
 
+
+### 4.2.2. Sprint 2
+
+
+#### 4.2.2.6 Execution Evidence for Sprint Review 
+#### 4.2.2.7 Services Documentation Evidence for Sprint Review
+#### 4.2.2.8 Software Deployment Evidence for Sprint Review
+#### 4.2.2.9 Team Collaboration Insights during Sprint
+
+
 ## 4.3. Validation Interviews
 
 Las entrevistas de validación recogen la experiencia de los dos segmentos objetivo: los comerciantes durante la gestión del negocio desde la aplicación móvil y los clientes finales durante la compra por WhatsApp. Su propósito es identificar dificultades de comprensión, navegación y ejecución de tareas, y relacionar los hallazgos con las necesidades identificadas en el capítulo II. Las preguntas se presentan por segmento en la sección 4.3.1; las respuestas y evidencias se registran en la sección 4.3.2 y sustentan la evaluación de la sección 4.3.3.
