@@ -1093,6 +1093,53 @@ Los recorridos descritos corresponden al alcance funcional del Sprint 2 y se rel
 Ver diseño en 3.1.4; pruebas en 4.2.2.5; servicios en 4.2.2.7 y despliegue en 4.2.2.8.
 
 #### 4.2.2.7 Services Documentation Evidence for Sprint Review
+
+#### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+Para el Sprint 2 se revisaron los contratos REST del backend de Entreprenly relacionados con las 30 historias de usuario planificadas. La revisión comprende los servicios de Profile, Inventory, Sales, Subscription y Chatbot, manteniendo como base las operaciones documentadas durante el Sprint 1.
+
+La documentación de los servicios se encuentra disponible mediante SpringDoc OpenAPI:
+
+- Swagger UI: `https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html`.
+- OpenAPI JSON: `https://adm-entreprenly-backend.onrender.com/v3/api-docs`.
+- Base local: `http://localhost:8092/swagger-ui.html`, con API bajo `/api/v1`.
+
+**Servicios relacionados con el alcance del Sprint 2**
+
+| Grupo                         | Endpoints                                                                                                                                                                                                                                                                                                                           |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Profile**                   | `GET /api/v1/profiles/{profileId}`, `GET /api/v1/profiles?userId={userId}` y `PUT /api/v1/profiles/{profileId}`. Permiten consultar y actualizar los campos editables del perfil, incluyendo el avatar, relacionados con US-64.                                                                                                     |
+| **Subscription**              | `POST /api/v1/subscriptions`, `GET /api/v1/subscriptions/active`, `GET /api/v1/subscriptions/{subscriptionId}`, `POST /api/v1/subscriptions/{subscriptionId}/cancellations` y `POST/GET /api/v1/subscriptions/{subscriptionId}/payments`. Contratos relacionados con la activación y cancelación de suscripciones de US-19 y US-24. |
+| **Inventory**                 | `GET /api/v1/inventory-lots`, `GET /api/v1/inventory-lots/{lotId}` y operaciones de creación, consulta, edición y eliminación en `/api/v1/inventory-unit-lots` y `/api/v1/inventory-weight-lots`. Se utilizan como base para las operaciones de lotes contempladas en US-02, US-04, US-09 y US-95.                                  |
+| **Inventory — Alertas**       | `GET /api/v1/inventory-stock-alerts` y `GET /api/v1/inventory-stock-alerts/{stockAlertId}`. Permiten consultar las alertas calculadas a partir del estado del inventario, relacionadas con US-12 y US-72.                                                                                                                           |
+| **Sales**                     | `GET /api/v1/sales?date=YYYY-MM-DD` y `GET /api/v1/sales/{saleId}`. Permiten recuperar las ventas de una fecha y consultar el detalle de una transacción, relacionados con US-70 y US-98.                                                                                                                                           |
+| **Chatbot / WhatsApp Bridge** | Se reutilizan los endpoints de vinculación, consulta de QR y recepción de mensajes y comprobantes documentados en 4.2.1.7, como base para los recorridos de US-41, US-42, US-43, US-44, US-45 y US-47.                                                                                                                              |
+
+**Integración de servicios por Bounded Context**
+
+En **Profile**, el contrato de actualización permite modificar los campos editables del perfil, incluido el avatar. Los cambios de correo electrónico y contraseña, así como la verificación del teléfono de US-65, US-66 y US-69, requieren complementar la integración con los mecanismos de IAM. La actualización del campo de avatar no acredita por sí sola la carga de un archivo de imagen.
+
+En **Subscription**, los servicios permiten consultar el estado de la suscripción, registrar pagos simulados y ejecutar la cancelación del plan. La solicitud de cancelación de US-23 corresponde al recorrido de confirmación previo a ejecutar la operación de US-24. Para US-25 y US-96, la gestión de métodos de pago requiere evidencia adicional de los contratos utilizados para registrar, consultar o modificar dichos métodos.
+
+En **Inventory**, se mantienen las operaciones de productos y lotes del Sprint 1. Para el Sprint 2, estas se relacionan con la edición, eliminación y creación de lotes, la eliminación de productos y la consulta de alertas. La búsqueda de US-95 puede utilizar el listado de lotes disponible, aunque debe verificarse si el filtrado se realiza en Android o mediante una operación específica del backend. La entrega de notificaciones al dispositivo de US-14 requiere una comprobación adicional y no queda acreditada únicamente mediante el servicio de alertas.
+
+En **Sales**, los servicios permiten recuperar transacciones por fecha y consultar sus detalles. Estas consultas proporcionan información para el resumen diario de US-70 y la visualización de US-98. La captura del peso de US-30 y la cancelación del ticket en curso de US-34 corresponden a recorridos que también deben verificarse en la aplicación Android. La clasificación de ingresos de US-35 requiere contrastar los cálculos con las ventas registradas.
+
+En **Chatbot**, se conserva la integración con WhatsApp Bridge presentada durante el Sprint 1. Los webhooks existentes permiten recibir mensajes y comprobantes, mientras que los servicios de conversación y pedidos del backend proporcionan la lógica correspondiente a las consultas de disponibilidad, alternativas, confirmaciones e instrucciones de pago contempladas en el Sprint 2. La existencia de estos contratos no demuestra por sí sola la ejecución completa de los recorridos en WhatsApp.
+
+**Persistencia mediante JPA**
+
+La historia US-93 contempla la persistencia de datos por Bounded Context mediante JPA. Esta funcionalidad corresponde a la capa de infraestructura del backend y no requiere un endpoint REST independiente. Su verificación debe considerar la recuperación de información, la consistencia de las relaciones y el aislamiento de los registros de cada comerciante.
+
+**Evidencias de documentación de servicios**
+
+Los contratos de Inventory, Sales y WhatsApp Bridge ya cuentan con referencias en la sección 4.2.1.7. Para el Sprint 2, la documentación complementaria se concentra en las operaciones de Profile y Subscription, así como en la relación de los servicios existentes con las funcionalidades del nuevo incremento.
+
+Las capturas de Swagger correspondientes al Sprint 2 deben mostrar los grupos de endpoints utilizados, sus métodos HTTP, parámetros y estructuras de solicitud y respuesta. Estas evidencias deben corresponder a la versión del backend presentada durante AV2.
+
+La documentación de los controladores permite identificar las operaciones disponibles en el código fuente, pero su incorporación durante el Sprint 2 y su funcionamiento en el entorno desplegado deben sustentarse mediante las evidencias de desarrollo, pruebas y ejecución de las secciones 4.2.2.4, 4.2.2.5 y 4.2.2.6.
+
+
 #### 4.2.2.8 Software Deployment Evidence for Sprint Review
 
 Despliegues reutilizados y verificados:
