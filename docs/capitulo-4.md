@@ -1100,6 +1100,16 @@ Durante el Sprint 2, el equipo de Lernen Labs coordinó el desarrollo de Entrepr
 
 A continuación, se presentan las métricas de GitHub Insights que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
 
+A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+
+<p align="center">
+  <img src="images/readme/contribuciones_tb2_p1.png" alt="Actividad de commits del informe hasta el TB1" width="800"/>
+</p>
+
+<p align="center">
+  <img src="images/readme/contribuciones_tb2_p2.png" alt="Contribuciones de los cinco integrantes al informe hasta el TB1" width="800"/>
+</p>
+
 
 ## 4.3. Validation Interviews
 
