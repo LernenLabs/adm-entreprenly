@@ -1039,6 +1039,59 @@ Para el Review se debe conservar por ejecución: fecha y hora, commit, comando, 
 **Estado de la suite:** esta actualización documental no ejecuta Maven, Gradle ni pruebas con dispositivo y no reporta porcentajes de cobertura o éxito. El resultado del Sprint 2 se completará con los reportes del incremento y la aceptación de las HUs al cierre del período.
 
 #### 4.2.2.6 Execution Evidence for Sprint Review
+
+Durante el Sprint 2 se continuó con la ampliación de las funcionalidades de Entreprenly, tomando como base los componentes desarrollados en el Sprint 1. El avance comprende la gestión de perfil, inventario, ventas, suscripciones y chatbot, así como su integración con los servicios del backend.
+
+Inventory BC:
+
+US-02 y US-04: edición de lotes con actualización de cantidades y fechas, y eliminación mediante confirmación.
+
+US-95 y US-09: búsqueda de lotes con resultados o estado vacío, y creación de nuevos lotes con validación de cantidades y fechas.
+
+US-90 y US-12: eliminación de productos y visualización de alertas de estado según las condiciones del inventario.
+
+US-14: notificaciones de caducidad de lotes considerando los permisos y preferencias del usuario.
+
+Sales BC:
+
+US-30: captura de peso mediante balanza IoT o ingreso manual para el cálculo del importe de venta.
+
+US-34 y US-35: cancelación de ventas en curso sin afectar el stock y clasificación de ingresos según el método de pago.
+
+US-98: consulta del detalle de ventas registradas, incluyendo productos, cantidades, importes y método de pago.
+
+Profile e Inicio BC:
+
+US-64 y US-65: actualización de fotografía de perfil y cambio de correo electrónico mediante re-verificación.
+
+US-66 y US-69: cambio de contraseña y registro de número telefónico con validación.
+
+US-70, US-71 y US-72: visualización del resumen de ventas del día, estado del chatbot y alertas de inventario en la pantalla de Inicio.
+
+Subscription BC:
+
+US-19: activación de suscripción mediante la aprobación del pago y actualización del estado del plan.
+
+US-23 y US-24: solicitud y confirmación de cancelación de suscripción con actualización de su estado.
+
+US-25 y US-96: registro y gestión de métodos de pago, incluyendo validación de datos y visualización de información enmascarada.
+
+Chatbot BC:
+
+US-41 y US-42: respuesta a consultas de disponibilidad de productos y sugerencia de alternativas mediante WhatsApp.
+
+US-43 y US-44: confirmación de pedidos y envío de instrucciones de pago al cliente.
+
+US-45 y US-47: recepción de comprobantes digitales y notificación del resultado de su validación al cliente.
+
+Backend — Persistencia JPA:
+
+US-93: integración de la persistencia de información mediante JPA por Bounded Context, considerando la recuperación de registros y la consistencia de los datos del comerciante.
+
+Los recorridos descritos corresponden al alcance funcional del Sprint 2 y se relacionan con las historias de usuario del Sprint Backlog 2. La implementación se apoya en los componentes existentes de la aplicación Android y los servicios REST del backend.
+
+Ver diseño en 3.1.4; pruebas en 4.2.2.5; servicios en 4.2.2.7 y despliegue en 4.2.2.8.
+
 #### 4.2.2.7 Services Documentation Evidence for Sprint Review
 #### 4.2.2.8 Software Deployment Evidence for Sprint Review
 #### 4.2.2.9 Team Collaboration Insights during Sprint
