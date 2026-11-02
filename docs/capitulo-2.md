@@ -3384,7 +3384,7 @@ Cada HU tiene una única asignación y los tres sprints no comparten identificad
 
 <table width="100%" style="width:100%; table-layout:fixed;">
   <thead>
-    <tr><th># Orden</th><th>User Story Id</th><th>Título</th><th>Story Points<br>(1 / 2 / 3 / 5 / 8)</th><th>Sprint</th></tr>
+    <tr><th>#</th><th>Id</th><th>Título</th><th>SP</th><th>Sprint</th></tr>
   </thead>
   <tbody>
    <tr><td>1</td><td>US-53</td><td>Conocer propuesta de valor en landing page</td><td>3</td><td>1</td></tr>
