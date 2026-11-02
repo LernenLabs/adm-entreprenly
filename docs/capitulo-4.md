@@ -1094,6 +1094,21 @@ Ver diseño en 3.1.4; pruebas en 4.2.2.5; servicios en 4.2.2.7 y despliegue en 4
 
 #### 4.2.2.7 Services Documentation Evidence for Sprint Review
 #### 4.2.2.8 Software Deployment Evidence for Sprint Review
+
+Despliegues reutilizados y verificados:
+
+- Backend: https://adm-entreprenly-backend.onrender.com/swagger-ui/index.html responde con la documentación de servicios.
+- Landing: https://lernenlabs.github.io/adm-entreprenly-landing/ restructuración y reorganización del diseño y la arquitectura de la información
+- Flujo: servicio Docker en Render con variables de 4.1.4; abrir primero Swagger en nube y luego validar endpoints de Inventory del Sprint 2.
+
+<p align="center">
+  <img src="images/capitulo4/Fig-26-landing-page-reniew.png" alt="Landing page desplegada renovada" width="800"/>
+</p>
+
+
+Figura : Landing desplegada con diseño renivada.
+
+
 #### 4.2.2.9 Team Collaboration Insights during Sprint
 
 Durante el Sprint 2, el equipo de Lernen Labs coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page, WhatsApp Bridge y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia develop tras revisión colaborativa.
