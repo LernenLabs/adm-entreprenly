@@ -1094,8 +1094,6 @@ Ver diseño en 3.1.4; pruebas en 4.2.2.5; servicios en 4.2.2.7 y despliegue en 4
 
 #### 4.2.2.7 Services Documentation Evidence for Sprint Review
 
-#### 4.2.2.7. Services Documentation Evidence for Sprint Review
-
 Para el Sprint 2 se revisaron los contratos REST del backend de Entreprenly relacionados con las 30 historias de usuario planificadas. La revisión comprende los servicios de Profile, Inventory, Sales, Subscription y Chatbot, manteniendo como base las operaciones documentadas durante el Sprint 1.
 
 La documentación de los servicios se encuentra disponible mediante SpringDoc OpenAPI:
@@ -1138,6 +1136,11 @@ Los contratos de Inventory, Sales y WhatsApp Bridge ya cuentan con referencias e
 Las capturas de Swagger correspondientes al Sprint 2 deben mostrar los grupos de endpoints utilizados, sus métodos HTTP, parámetros y estructuras de solicitud y respuesta. Estas evidencias deben corresponder a la versión del backend presentada durante AV2.
 
 La documentación de los controladores permite identificar las operaciones disponibles en el código fuente, pero su incorporación durante el Sprint 2 y su funcionamiento en el entorno desplegado deben sustentarse mediante las evidencias de desarrollo, pruebas y ejecución de las secciones 4.2.2.4, 4.2.2.5 y 4.2.2.6.
+
+<p align="center">
+  <img src="images/capitulo4/deploy-swager-render-tb2.jpeg" alt="Landing page desplegada renovada" width="800"/>
+</p>
+
 
 
 #### 4.2.2.8 Software Deployment Evidence for Sprint Review
