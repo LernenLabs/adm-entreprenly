@@ -1163,16 +1163,14 @@ Figura : Landing desplegada con diseño renivada.
 
 Durante el Sprint 2, el equipo de Lernen Labs coordinó el desarrollo de Entreprenly mediante reuniones de seguimiento y control de versiones en GitHub, integrando aportes en la aplicación móvil, backend, landing page, WhatsApp Bridge y el presente informe. Se trabajó con ramas por funcionalidad integradas hacia develop tras revisión colaborativa.
 
-A continuación, se presentan las métricas de GitHub Insights que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
-
-A continuación, se presentan las métricas de **GitHub Insights** que evidencian la actividad, commits y contribuciones de los cinco integrantes durante el sprint:
+Las capturas de **GitHub Insights** muestran la actividad acumulada del repositorio del informe disponible para el AV2 e incluyen contribuciones de entregas anteriores.
 
 <p align="center">
-  <img src="images/readme/contribuciones_tb2_p1.png" alt="Actividad de commits del informe hasta el TB1" width="800"/>
+  <img src="images/readme/contribuciones_av2_p1.png" alt="Actividad semanal acumulada del repositorio del informe al inicio de noviembre de 2026" width="800"/>
 </p>
 
 <p align="center">
-  <img src="images/readme/contribuciones_tb2_p2.png" alt="Contribuciones de los cinco integrantes al informe hasta el TB1" width="800"/>
+  <img src="images/readme/contribuciones_av2_p2.png" alt="Commits acumulados por integrante en el repositorio del informe" width="800"/>
 </p>
 
 

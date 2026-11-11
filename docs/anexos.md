@@ -60,11 +60,13 @@ URL del Repositorio de Landing Page: https://github.com/LernenLabs/adm-entrepren
 
 URL del Repositorio del Frontend: https://github.com/LernenLabs/adm-entreprenly-frontend
 
+URL del Repositorio de la App Flutter para Clientes: https://github.com/LernenLabs/adm-entreprenly-flutter
+
 URL del Repositorio del Backend: https://github.com/LernenLabs/adm-entreprenly-backend
 
 URL del Repositorio del WhatsApp Bridge: https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge
 
-Estos repositorios constituyen la referencia de código del curso actual. La aplicación utiliza Kotlin y Jetpack Compose; la landing y el backend se adaptan de los proyectos existentes. La documentación del backend registra [Render como URL del servicio](https://adm-entreprenly-backend.onrender.com) y [Swagger UI como referencia de sus contratos](https://adm-entreprenly-backend.onrender.com/swagger-ui.html).
+Estos repositorios constituyen la referencia de código del curso actual. El dashboard para comerciantes utiliza Kotlin y Jetpack Compose. La app para clientes finales utiliza Flutter. La landing y el backend se adaptan de los proyectos existentes. La documentación del backend registra [Render como URL del servicio](https://adm-entreprenly-backend.onrender.com) y [Swagger UI como referencia de sus contratos](https://adm-entreprenly-backend.onrender.com/swagger-ui.html).
 
 El WhatsApp Bridge utiliza Node.js, Express y whatsapp-web.js para vincular las cuentas de los comerciantes, recibir mensajes y comprobantes y entregar las respuestas del backend. Su [guía de despliegue](https://github.com/LernenLabs/adm-entreprenly-whatsapp-bridge/blob/main/DEPLOY.md) describe Docker y la conexión del backend mediante un túnel HTTPS. La configuración y los contratos se detallan en 4.1.4 y 4.2.1.7.
 
@@ -99,3 +101,8 @@ URL de la Landing Page: https://lernenlabs.github.io/adm-entreprenly-landing/
 URL del Backend: https://adm-entreprenly-backend.onrender.com
 
 URL de la documentación del Backend (Swagger UI): https://adm-entreprenly-backend.onrender.com/swagger-ui.html
+
+## Anexo L — Videos de la entrega AV2
+
+- [Video About the Product – Entreprenly](https://youtu.be/wMYRZ2yeuY4?si=XyZc2NLiUBcHmeyU)
+- [Video About the Team – Lernen Labs](https://youtu.be/FGsorqoEgyg)
